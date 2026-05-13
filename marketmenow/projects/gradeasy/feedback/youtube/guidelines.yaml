@@ -1,0 +1,190 @@
+guidelines:
+- id: b0169766-00cf-4c04-bbae-d3454a7431af
+  created_at: '2026-04-03 10:18:09.837942+00:00'
+  source_video_id: f8n_eBF-qSo
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Do not consider content with zero views as a data point for audience engagement
+    or content quality, as it signifies a publishing failure rather than a lack of
+    audience interest in the content itself.
+  evidence: The reel 'I gave a C to a student who wrote 'It's in my head' on his test'
+    received 0 views, 0 likes, and 0 comments, indicating a complete failure in platform
+    distribution, not a rejection of the content by an audience.
+  metrics_snapshot: null
+- id: a9332e38-5ac4-4ce8-98b9-bfe26e0696c3
+  created_at: '2026-04-03 10:18:10.332767+00:00'
+  source_video_id: wOYlhQsSpks
+  source_template_id: ''
+  guideline_type: avoid
+  rule: When framing an 'AITA' scenario around a student's excuse, ensure the excuse
+    itself is presented as genuinely plausible and impactful enough to create a complex
+    dilemma, preventing immediate audience dismissal and fostering debate.
+  evidence: "The extremely low like-to-view ratio (0.9%) and negative comments like\
+    \ \"@t44beck10: 'So the project was due Friday, but he had a family emergency\
+    \ on Saturday? That doesn\u2019t make sense.'\" and \"@sandrasutherland8001: 'And\
+    \ the cat being stuck in the wall is not a tragic emotional emergency.'\" demonstrate\
+    \ that the audience found the student's justification illogical and trivial, leading\
+    \ to disengagement rather than debate."
+  metrics_snapshot: null
+- id: 6727ea32-b836-4c6e-94c6-4d5bffd3d9f1
+  created_at: '2026-04-03 10:18:10.580305+00:00'
+  source_video_id: 1G4mhETfX20
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid using vague demonstrative pronouns like 'this' in titles when referring
+    to the specific item or subject an AI is acting upon, as it leaves the content's
+    relevance unclear.
+  evidence: The title 'Can AI actually grade this?' uses 'this' without clarifying
+    what 'this' refers to, leading to a low like-to-view ratio of 1.1% and zero comments.
+  metrics_snapshot: null
+- id: 2a251368-f46f-4f7c-bfda-e9274f09eae7
+  created_at: '2026-04-03 10:18:10.831928+00:00'
+  source_video_id: 1G4mhETfX20
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid titles that promise an outcome with a generic phrase like 'watch what
+    happens' without hinting at the nature of that outcome (e.g., surprising, funny,
+    problematic), as this fails to generate specific curiosity.
+  evidence: The phrase 'Watch what happens' in the title failed to generate specific
+    curiosity, contributing to the extremely low like-to-view ratio of 1.1% and zero
+    comments.
+  metrics_snapshot: null
+- id: 24e2bd82-049c-4fb0-ba7a-a71506cdb39f
+  created_at: '2026-04-03 10:18:11.087866+00:00'
+  source_video_id: 1G4mhETfX20
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid posing purely factual questions in titles about an AI's capability without
+    immediately hinting at a surprising outcome, a significant implication, or a clear
+    benefit that compels viewer engagement beyond a simple answer.
+  evidence: The factual question 'Can AI actually grade this?' in the title, without
+    a hint of a compelling outcome, resulted in a very low like-to-view ratio of 1.1%
+    and no comments.
+  metrics_snapshot: null
+- id: 9fee73c9-6487-4177-8ea6-7acaf6cb6497
+  created_at: '2026-04-03 10:18:11.334716+00:00'
+  source_video_id: 1G4mhETfX20
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Eliminate redundant hashtags like '#Shorts' from titles to optimize character
+    space for compelling keywords and essential context that enhances discoverability
+    and viewer interest.
+  evidence: The inclusion of the redundant '#shorts' hashtag in the title consumed
+    valuable character space without enhancing discoverability or engagement, as evidenced
+    by the low views and zero comments.
+  metrics_snapshot: null
+- id: 26e27887-07ae-49db-8d6b-ebe7a0e6f0fb
+  created_at: '2026-04-03 10:18:11.581588+00:00'
+  source_video_id: 1G4mhETfX20
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid publishing content that, despite being visible, fails to generate any
+    likes or comments, indicating a complete lack of audience resonance or compelling
+    call to action.
+  evidence: Despite receiving 945 views, the content garnered only 10 likes and 0
+    comments, clearly indicating a failure in audience resonance and engagement.
+  metrics_snapshot: null
+- id: 11187fb5-dbff-420c-9cf8-ca6e241e9942
+  created_at: '2026-04-03 10:18:11.827950+00:00'
+  source_video_id: 1G4mhETfX20
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Disregard average comment sentiment as a performance metric when the comment
+    count is zero, as such data is statistically meaningless and provides no actionable
+    insights.
+  evidence: The average comment sentiment of 5.0/10 is statistically meaningless and
+    provides no actionable insights because the comment count was zero.
+  metrics_snapshot: null
+- id: 1d74f977-03ab-4011-a4d0-4af17d052483
+  created_at: '2026-04-03 10:18:12.077184+00:00'
+  source_video_id: IJN7M7AqavI
+  source_template_id: ''
+  guideline_type: avoid
+  rule: When crafting an 'AITA' title, avoid presenting a protagonist's action that,
+    without further context, is overwhelmingly likely to be perceived as justified
+    by the audience, as this removes the core ethical tension needed to drive comments
+    and likes.
+  evidence: The title 'AITA for giving my student a zero?' describes an action often
+    seen as a legitimate consequence, leading to zero comments and a very low like-to-view
+    ratio (1.8%), indicating a failure to establish a compelling ethical dilemma.
+  metrics_snapshot: null
+- id: 645c4cb0-0f62-4a32-85fb-13ac1d7f2b37
+  created_at: '2026-04-03 10:18:12.326377+00:00'
+  source_video_id: x-x_t6645t0
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid using declarative statements in titles that describe a vague personal
+    problem, even when paired with an intense emotional tag, as this structure fails
+    to establish clear stakes or a compelling narrative hook to drive engagement.
+  evidence: 'The title ''Grading horror: her paper pile went wrong #Shorts'' uses
+    a declarative statement for a vague personal problem (''her paper pile went wrong''),
+    which, despite the ''horror'' tag, failed to establish clear stakes, resulting
+    in 0 likes and 0 comments from 50 views.'
+  metrics_snapshot: null
+- id: 91ad925a-07ff-4a94-8a6d-b333767ad731
+  created_at: '2026-04-03 10:18:12.576993+00:00'
+  source_video_id: kcVkRS2MulY
+  source_template_id: ''
+  guideline_type: avoid
+  rule: When posing a factual question in a title about an AI's capability, ensure
+    it immediately hints at a surprising outcome or explicitly invites audience opinion,
+    as a lack of either will result in a complete absence of likes and comments.
+  evidence: The title 'Can AI grade this assignment in seconds?' posed a factual question
+    without hinting at a surprising outcome or inviting opinion, leading to only 1
+    like and 0 comments from 458 views.
+  metrics_snapshot: null
+- id: 9c65cb6e-3ecd-45c8-85e1-2bf5418cf100
+  created_at: '2026-04-03 10:27:40.697620+00:00'
+  source_video_id: UxGXXObu0Mc
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid publishing content that fails to register any views, as this indicates
+    a critical failure in the distribution process that prevents any audience engagement
+    or feedback.
+  evidence: The content received 0 views, 0 likes, and 0 comments, indicating a complete
+    failure in initial distribution or discoverability, rendering all other content
+    metrics meaningless.
+  metrics_snapshot: null
+- id: 9ad9444b-062a-45f9-8045-bd1e58607751
+  created_at: '2026-04-03 10:27:41.228148+00:00'
+  source_video_id: gs2tTuH7vbY
+  source_template_id: ''
+  guideline_type: avoid
+  rule: When connecting an AI's capability to a personal consequence in a title, ensure
+    the consequence is either immediately understandable as a significant event or
+    clearly explained to establish compelling stakes, rather than leaving it ambiguous.
+  evidence: The title 'AI graded 150 essays in an hour... so I skipped prom.' features
+    a personal consequence ('skipped prom') that lacks a clear, compelling connection
+    to the AI's action, which likely contributed to the content's complete lack of
+    views by failing to generate viewer curiosity.
+  metrics_snapshot: null
+- id: b72aac4c-2cef-4083-97a3-ebeed0332843
+  created_at: '2026-04-06 05:35:16.653644+00:00'
+  source_video_id: LXXX6-Oigts
+  source_template_id: ''
+  guideline_type: avoid
+  rule: When an AI performs an action on an object, specify the nature or context
+    of that object in the title to enhance clarity and intrigue, rather than using
+    generic terms like 'this quiz'.
+  evidence: "The title 'AI graded this quiz a 65\u2026' uses the generic phrase 'this\
+    \ quiz,' which represents a missed opportunity to provide specific context that\
+    \ could attract a target audience, regardless of the video's zero views."
+  metrics_snapshot: null
+- id: 59d27f37-800d-4803-9c4c-142eafc16ce7
+  created_at: '2026-04-06T05:38:12.759383+00:00'
+  source_video_id: Y7AF1TAmaGE
+  source_template_id: ''
+  guideline_type: avoid
+  rule: Avoid concluding a title with a rhetorical question that hinges on vague or
+    generic terms, as this dilutes the intended shock or intrigue and fails to compel
+    viewer engagement.
+  evidence: "The title 'AI gave this student a 58 \u2013 for drawing squiggles?' uses\
+    \ a rhetorical question with vague terms like 'squiggles,' which, despite attempting\
+    \ intrigue, resulted in zero views, indicating a failure to capture audience attention."
+  metrics_snapshot:
+    video_id: Y7AF1TAmaGE
+    view_count: 0
+    like_count: 0
+    comment_count: 0
+    collected_at: 2026-04-06 05:37:48.480533+00:00
+last_updated: '2026-04-06T05:39:06.256205+00:00'

@@ -1,0 +1,54 @@
+slug: rkitect-ai
+brand:
+  name: rkitect.ai
+  url: https://rkitect.ai
+  tagline: Designed for real architects.
+  value_prop: AI-powered architectural rendering transforms sketches, photos, floor
+    plans, or 3D models into client-ready visuals with controlled revisions.
+  color: '#000000'
+  logo_letter: R
+  logo_suffix: .ai
+  features:
+  - "AI architectural rendering from sketches, photos, floor plans, 3D models, or text prompts"
+  - "Post-render AI segmentation for element-level edits without starting over"
+  - "Multi-style generation for architectural and interior concepts"
+  - "Floor plan to 3D render workflow for early-stage design exploration"
+  - "Video walkthrough generation for client presentations"
+  - "Presentation board export for project reviews and pitches"
+  - "Works with SketchUp exports, hand-drawn sketches, or a simple photo"
+  - "India-first pricing and workflow fit for small studios and teams"
+  - "Credit-based SaaS for free, starter, pro, and enterprise workflows"
+target_customer:
+  description: Independent architects and small-to-mid-size architecture firms (1-20
+    staff) working on residential, commercial, and mixed-use projects in India and
+    globally.
+  pain_points:
+  - Rendering takes too long for early client presentations
+  - Cannot afford a full-time visualisation specialist
+  - Each revision cycle from a client costs hours of rework
+  - Losing projects to larger firms with dedicated rendering departments
+  - Traditional rendering tools are expensive and workflow-heavy
+  keywords:
+  - AI architectural rendering
+  - architectural visualization India
+  - interior design render
+  - AI render tool
+  - Lumion alternative
+  - V-Ray alternative India
+  - SketchUp render AI
+  - floor plan 3D render
+  - real estate render India
+  - architecture visualization software
+  - photorealistic render free
+  - render revisions
+  - client presentation render
+  - B.Arch portfolio render
+  - interior design software India
+  platforms:
+  - twitter
+  - reddit
+  - instagram
+  - linkedin
+  - youtube
+default_persona: rkitect.ai
+env_overrides: {}

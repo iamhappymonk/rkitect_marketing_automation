@@ -1,0 +1,82 @@
+platform: twitter
+product:
+  name: rkitect.ai
+  url: https://rkitect.ai
+  tagline: Designed for real architects.
+  value_prop: AI-powered architectural rendering transforms sketches, photos, floor
+    plans, or 3D models into photorealistic client-ready renders in seconds.
+ideal_customer:
+  description: Independent architects and small-to-mid-size architecture firms (1-20
+    staff) working on residential, commercial, and mixed-use projects in India and
+    globally.
+  rubric:
+  - name: Architectural insight relevance
+    description: Lead with genuine architectural insight or solve a real stated problem
+      in the post.
+    max_points: 10
+  - name: Specificity of tool mention
+    description: Only mention rkitect.ai if it directly and specifically solves what
+      the person asked.
+    max_points: 10
+  - name: Trust-first engagement
+    description: Never drop a link in the first reply - build trust first.
+    max_points: 10
+  - name: Community register fit
+    description: Mirror the professional register of the community being engaged.
+    max_points: 10
+  - name: Value-first ratio
+    description: 90% pure value, 10% soft mention.
+    max_points: 10
+  min_score: 8
+  max_prospects_to_enrich: 50
+discovery:
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+- type: keyword
+  entries: []
+  max_per_entry: 5
+messaging:
+  tone: value-first, non-promotional, professional peer-to-peer
+  max_messages: 20
+  max_message_length: 280
+  min_score: 40

@@ -1,0 +1,79 @@
+# Twitter Cold Outreach Campaign Config
+# Copy this file, customise it for your ICP, and run:
+#   mmn run twitter-outreach --profile campaigns/your-campaign.yaml --dry-run
+
+platform: twitter
+
+product:
+  name: "Your Product"
+  url: "https://yourproduct.com"
+  tagline: "One-line description of what your product does"
+  value_prop: "The key benefit your target customer gets"
+
+ideal_customer:
+  description: >
+    Describe your ideal customer profile here. Who are they?
+    What problems do they face? What makes them a good fit?
+
+  rubric:
+    - name: "Role Fit"
+      description: >
+        Does this person match your target role / industry?
+        Look for bio keywords and post content that indicate fit.
+      max_points: 3
+
+    - name: "Pain Signal"
+      description: >
+        Have they expressed frustration with the problem your product solves?
+        Look for complaints, rants, or questions about the problem space.
+      max_points: 3
+
+    - name: "Tech Openness"
+      description: >
+        Do they use or discuss tools in your space? Mention AI, apps, etc.?
+        Are they curious about solutions rather than resistant?
+      max_points: 3
+
+    - name: "Engagement Level"
+      description: >
+        Are they actively posting (not a dormant account)?
+        Do they reply to others, participate in conversations?
+      max_points: 2
+
+    - name: "DM Receptiveness"
+      description: >
+        Follower count sweet spot (100-10K). Do they seem approachable in tone?
+      max_points: 2
+
+  min_score: 8
+  max_prospects_to_enrich: 50
+
+# Discovery vectors -- presence = enabled, remove an entry to disable that vector.
+discovery:
+  - type: pain_search
+    entries:
+      - '"your pain point query" -is:retweet'
+      - '"another pain point" OR "related complaint" -is:retweet'
+    max_per_entry: 5
+
+  - type: conversation_mining
+    entries:
+      - "@industry_influencer_1"
+      - "@industry_influencer_2"
+    max_per_entry: 5
+
+  - type: hashtag_scan
+    entries:
+      - "#yourindustry"
+      - "#relevanthashtag"
+    max_per_entry: 5
+
+messaging:
+  max_messages: 10
+  min_delay_seconds: 120
+  max_delay_seconds: 300
+  tone: "casual, helpful, peer-to-peer -- like someone sharing a find, not a salesperson"
+  reference_post: true
+  pause_every_n: 5
+  long_pause_seconds: 600
+  max_message_length: 280

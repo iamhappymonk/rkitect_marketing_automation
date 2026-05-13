@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}MarketMeNow{% endblock %}</title>
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/progress.js" defer></script>
+</head>
+<body class="bg-black text-zinc-300 font-sans antialiased min-h-screen flex flex-col">
+  <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 h-14 flex items-center gap-8">
+      <a href="/" class="font-bold text-lg text-white tracking-wide hover:text-zinc-300 transition-colors">MMN</a>
+      <div class="flex gap-1">
+        <a href="/" class="px-4 py-1.5 rounded-md text-sm font-medium transition-colors {% if request.url.path == '/' %}bg-white text-black{% else %}text-zinc-400 hover:text-white hover:bg-zinc-900{% endif %}">Dashboard</a>
+        <a href="/flows" class="px-4 py-1.5 rounded-md text-sm font-medium transition-colors {% if '/flows' in request.url.path %}bg-white text-black{% else %}text-zinc-400 hover:text-white hover:bg-zinc-900{% endif %}">Flows</a>
+        <a href="/outreach" class="px-4 py-1.5 rounded-md text-sm font-medium transition-colors {% if '/outreach' in request.url.path %}bg-white text-black{% else %}text-zinc-400 hover:text-white hover:bg-zinc-900{% endif %}">Outreach</a>
+        <a href="/credentials" class="px-4 py-1.5 rounded-md text-sm font-medium transition-colors {% if '/credentials' in request.url.path %}bg-white text-black{% else %}text-zinc-400 hover:text-white hover:bg-zinc-900{% endif %}">Credentials</a>
+        <a href="/queues" class="px-4 py-1.5 rounded-md text-sm font-medium transition-colors {% if '/queues' in request.url.path %}bg-white text-black{% else %}text-zinc-400 hover:text-white hover:bg-zinc-900{% endif %}">Queues</a>
+        <a href="/history" class="px-4 py-1.5 rounded-md text-sm font-medium transition-colors {% if '/history' in request.url.path %}bg-white text-black{% else %}text-zinc-400 hover:text-white hover:bg-zinc-900{% endif %}">History</a>
+      </div>
+      {% set projects_data = get_projects() %}
+      {% set projects = projects_data[0] %}
+      {% set active_project = projects_data[1] %}
+      <div class="ml-auto flex items-center gap-2">
+        <span class="text-xs text-zinc-500">Project:</span>
+        <form hx-post="/project/select" hx-swap="none" class="flex items-center">
+          <select name="slug" onchange="this.form.requestSubmit()"
+                  class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-sm rounded px-2 py-1 focus:outline-none focus:border-zinc-500">
+            <option value="">All projects</option>
+            {% for p in projects %}
+            <option value="{{ p.slug }}" {% if p.slug == active_project %}selected{% endif %}>{{ p.brand.name }}</option>
+            {% endfor %}
+          </select>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
+    {% block content %}{% endblock %}
+  </main>
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+</body>
+</html>

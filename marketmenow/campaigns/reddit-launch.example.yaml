@@ -1,0 +1,25 @@
+# Reddit Launch Campaign Config
+# Copy this file and fill in your product details.
+# Usage: mmn run reddit-launch --config campaigns/my-campaign.yaml
+
+product:
+  name: "Your Product"
+  url: "https://yourproduct.com"
+  description: "One-line description of your product and its key benefit"
+
+subreddits:
+  - buildinpublic
+  - microsaas
+  - SaaSDevelopers
+  # Add subreddits relevant to your industry / audience
+
+# Post type: "update", "milestone", or "launch"
+post_type: "update"
+
+# Extra context the AI should weave into the post (optional).
+# For richer content, use --brief on the CLI to pass a file or inline text.
+context: ""
+
+posting:
+  min_delay: 120   # seconds between posts
+  max_delay: 300
