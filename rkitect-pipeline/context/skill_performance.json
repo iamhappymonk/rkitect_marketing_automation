@@ -1,0 +1,39 @@
+{
+  "linkedin": [
+    {
+      "date": "2026-05-15",
+      "score": 86,
+      "passed": true,
+      "violations": []
+    }
+  ],
+  "reddit": [
+    {
+      "date": "2026-05-15",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    }
+  ],
+  "carousel": [
+    {
+      "date": "2026-05-15",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    }
+  ],
+  "twitter": [
+    {
+      "date": "2026-05-15",
+      "score": 52,
+      "passed": false,
+      "violations": [
+        "Hedging: 'Experience the difference for yourself' \u2014 state a fact or offer direct value instead.",
+        "Corporate tone: 'Transform your design process' is vague and does not present a specific pain point or solution.",
+        "No brand moat: Missing 'confirmed unmatched' or competitive claim; no mention of 'Agentic Spatial Intelligence' in context.",
+        "Weak CTA: 'Try it now, risk-free' lacks conviction; needs to be more assertive about the value of rkitect.ai."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": {
+    "__schema": {
+      "mutationType": {
+        "fields": [
+          {
+            "name": "deletePost",
+            "description": "Delete a post by id.",
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "name": null,
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "DeletePostInput",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createPost",
+            "description": "Create post for channel",
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "name": null,
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "CreatePostInput",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "editPost",
+            "description": "Edit post for channel",
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "name": null,
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "EditPostInput",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createIdea",
+            "description": "Create a new idea with the given content and metadata",
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "name": null,
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "CreateIdeaInput",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
