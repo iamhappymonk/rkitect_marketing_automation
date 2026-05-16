@@ -1,0 +1,32 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Pipeline output (generated daily)
+output/
+logs/
+
+# Prompt version archives (keep in git if you want history, exclude if too noisy)
+# prompts/versions/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Virtual environment
+.venv/
+venv/
+env/

@@ -41,7 +41,7 @@ This workspace is built for marketing only. Use this document to keep product na
 
 **Working assumptions to verify before public use:**
 
-- Under-60-second rendering claims
+- Under-3-mins rendering claims
 - DPDP / Startup India / DPIIT status
 - Current pricing tiers
 - Technical accuracy claims such as spatial fidelity
