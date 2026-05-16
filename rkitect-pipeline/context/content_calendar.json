@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-05-23",
+    "day_label": "Day 1",
+    "format": "Static graphic",
+    "psychological_hook": "Curiosity gap",
+    "topic": ""
+  },
+  {
+    "date": "2026-05-24",
+    "day_label": "Day 2",
+    "format": "Text post (LI)",
+    "psychological_hook": "Authority",
+    "topic": ""
+  },
+  {
+    "date": "2026-05-25",
+    "day_label": "Day 3",
+    "format": "Before/After graphic",
+    "psychological_hook": "Visual proof",
+    "topic": "Side-by-side: flat render vs. rkitect output. Caption: 'Spot the difference.'"
+  },
+  {
+    "date": "2026-05-26",
+    "day_label": "Day 4",
+    "format": "Poll (LI/IG Stories)",
+    "psychological_hook": "Engagement bait",
+    "topic": ""
+  },
+  {
+    "date": "2026-05-27",
+    "day_label": "Day 5",
+    "format": "Text/Carousel",
+    "psychological_hook": "Social proof",
+    "topic": ""
+  },
+  {
+    "date": "2026-05-28",
+    "day_label": "Day 6",
+    "format": "Video \u2014 screen record",
+    "psychological_hook": "Demonstration",
+    "topic": "30-sec screen record: rkitect generating + segmenting a render. No talking. Just music."
+  },
+  {
+    "date": "2026-05-29",
+    "day_label": "Day 7",
+    "format": "Countdown graphic",
+    "psychological_hook": "Scarcity + urgency",
+    "topic": ""
+  },
+  {
+    "date": "2026-05-30",
+    "day_label": "Day 8",
+    "format": "Founder note",
+    "psychological_hook": "Mimetic desire",
+    "topic": "A personal note from Bhavish: Why we built this. Raw, honest. Screenshot format."
+  }
+]

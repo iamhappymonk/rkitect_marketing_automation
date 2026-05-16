@@ -1,42 +1,47 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This is the marketing team workspace for rkitect.ai.
 
-## Status
+## Workspace Map
 
-Greenfield repo. No code yet. Intent: marketing automation layer for **rkitect.ai** covering the full suite — content generation + scheduling, lead gen + outreach, and ad campaign automation — under one orchestration layer.
+- `brand_alchemy/brand-bible/_context/` contains brand foundation context files.
+- `brand_alchemy/brand-bible/` contains approved brand strategy, messaging, audience, voice, and visual direction.
+- `brand_alchemy/company-os/` contains operating rules, ownership, decisions, glossary, and change logs.
+- `brand_alchemy/research/` contains market, audience, competitor, channel, and community intelligence.
+- `brand_alchemy/sops/` contains standard operating procedures for marketing workflows.
+- `brand_alchemy/templates/` contains reusable Markdown templates.
+- `brand_alchemy/tasks/` contains the active task board, milestones, open questions, and validation log.
+- `brand_alchemy/agents/` contains reusable agent role definitions.
+- `brand_alchemy/skills/` contains reusable process skills.
+- `brand_alchemy/archive/` contains superseded drafts and deprecated notes.
+- `skills/` contains vendored Codex skill directories that can be shared with the team through Git.
 
-User preference: start simple, grow incrementally. Do NOT scaffold a monorepo / multi-package layout up front. Add the minimum needed for the next concrete task.
+## Key Rules
 
-## Architecture intent (to be revisited as code lands)
+- All durable project outputs must be Markdown files.
+- All marketing outputs must follow the brand voice and positioning in `brand_alchemy/brand-bible/`.
+- Load additional files from `brand_alchemy/brand-bible/_context/` and `brand_alchemy/research/` when they are directly relevant to the task.
+- When creating skills for this project, keep them brand-agnostic. Skills define workflow and process only.
+- Vendored skills in `skills/` must also stay brand-agnostic. Do not bake rkitect.ai facts into them.
+- When creating agents, keep them brand-agnostic. Agents must not hardcode rkitect.ai-specific details.
+- Agents and skills should pull brand context at runtime from `brand_alchemy/brand-bible/_context/`, `brand_alchemy/research/`, and `brand_alchemy/brand-bible/_strategy/`.
+- Each agent must have a clear, non-overlapping role.
+- Public claims about speed, accuracy, pricing, compliance, registration, customer outcomes, and competitors must be checked against `brand_alchemy/brand-bible/_context/claims-and-proof.md` before use.
+- AI outputs are drafts until reviewed by a human owner.
+- Do not publish, send outreach, or make customer-facing claims without approval.
 
-- **rkitect.ai** is the parent product. This repo is the marketing-automation sidecar — not part of the rkitect.ai app itself. Keep boundaries clean: no cross-imports back into rkitect.ai's editor/canvas code.
-- Likely future shape: Next.js App Router surface (dashboards, approval queues, manual triggers) + a Python/agno or TS worker tier for long-running pipelines (content gen, outreach drips, ad-spend optimization). Decide per feature when the time comes — don't pre-commit.
-- Outbound integrations expected: X/LinkedIn/Instagram (content), email (outreach), Meta Ads + Google Ads (campaigns), plus an LLM provider (Vercel AI Gateway preferred).
+## Required Context Loading Order
 
-## Conventions in effect from day one
+1. `brand_alchemy/00-start-here.md`
+2. `brand_alchemy/brand-bible/_context/company-profile.md`
+3. `brand_alchemy/brand-bible/_context/brand-bible.md`
+4. Any relevant context, research, SOP, or template file for the specific task.
 
-- Edits happen on a worktree branch, never `main` (see global CLAUDE.md). Use the `worktree-create` skill before touching code.
-- Caveman mode is default-on for chat. Code, commit bodies, and security warnings stay normal.
-- Commits via `caveman:caveman-commit` (Conventional Commits, subject ≤50 chars). PRs via `superpowers:finishing-a-development-branch` (Option 2).
-- Before writing the first real module, run `superpowers:brainstorming` to lock the feature shape, then `superpowers:writing-plans`.
-- File-size caps from global CLAUDE.md apply (`small-files` skill). Don't grow god-files.
+## Output Rules
 
-## Build / test / lint
-
-None yet — no toolchain present. Update this section when `package.json` / `pyproject.toml` / `Makefile` is added. Common commands (build, test, lint, run-single-test, dev server) belong here.
-
-## Knowledge bank — `references/`
-
-Pre-existing rkitect.ai marketing work is stored under `references/drive_dump/HappyMonk/` (pulled from Drive folder `1cLY2iovNpgFq7ZIHwkfLj64s0MPh7O4B`). Treat this as ground truth before generating anything new — strategy docs, post examples, asset schemas, target-account lists, and finished sample outputs are all there. See `references/README.md` for the full index and gaps. Grep `marketing/_extracted/*.txt` for searchable text of the docx/xlsx files.
-
-Key shapes to reuse, not redesign:
-- `references/drive_dump/HappyMonk/sample-content/posts-final.json` — finished post record shape
-- `references/drive_dump/HappyMonk/before-after/manifest.json` and `posts/manifest.json` — asset metadata schema
-- `references/drive_dump/HappyMonk/reels/manifest.json` — reel + model selection record
-
-## Open questions for next session
-
-- Which surface ships first — content scheduler, outreach sequencer, or ad-campaign console?
-- TS-only, Python-only, or both? Decide when feature #1 is chosen, not before.
-- Deployment target — Vercel (default for rkitect.ai stack) vs. dedicated worker host for long-running automation jobs.
+- Use short, clear, studio-native language.
+- Avoid generic AI hype.
+- Prefer specific workflow language over abstract marketing language.
+- Mark assumptions clearly.
+- Add unresolved decisions to `brand_alchemy/tasks/open-questions.md`.
+- Add approved strategic changes to `brand_alchemy/company-os/change-log.md`.
