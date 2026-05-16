@@ -30,7 +30,7 @@ from utils.context_loader import (
     save_post_history,
 )
 from utils.calendar import get_calendar_entry_for_date
-from config import QA_MAX_RETRIES, OUTPUT_DIR, LOGS_DIR, FORMATS
+from config import QA_MAX_RETRIES, OUTPUT_DIR, LOGS_DIR, FORMATS, IMAGE_GENERATION_ENABLED
 
 
 def save_outputs(folder: Path, data: dict) -> None:
@@ -145,6 +145,30 @@ def main():
     ]
     print(f"      Outputs written -> {out_dir}/")
 
+    # ── Stage 3.5: IMAGE GENERATION ──────────────────────────────────────
+    image_paths = {}
+    if IMAGE_GENERATION_ENABLED:
+        print("[3.5/6] Image generation (carousel + LinkedIn)...")
+        try:
+            from agents.image_generator import run_image_generation
+            image_paths = run_image_generation(generated, out_dir)
+            carousel_count = len(image_paths.get("carousel", []))
+            linkedin_count = len(image_paths.get("linkedin", []))
+            print(f"      Carousel: {carousel_count} slides | LinkedIn: {linkedin_count} image(s)")
+            if image_paths.get("errors"):
+                for err in image_paths["errors"]:
+                    print(f"      [WARN] {err}")
+        except Exception as e:
+            print(f"[!] Image generation failed: {e}. Continuing with text-only publish.")
+            image_paths = {}
+    else:
+        print("[3.5/6] Image generation skipped (disabled in config).")
+
+    run_log["stages"]["image_generation"] = {
+        "carousel_slides": len(image_paths.get("carousel", [])),
+        "linkedin_images": len(image_paths.get("linkedin", [])),
+        "errors": image_paths.get("errors", []),
+    }
     # ── Stage 4: QA with retry loop ──────────────────────────────────────
     print("[4/6] QA agent...")
     qa_results = run_qa(generated)
@@ -193,7 +217,7 @@ def main():
     passed_count = sum(1 for v in qa_results.values() if v.get("passed"))
     print(f"[5/6] Publishing {passed_count} approved pieces via Buffer...")
     try:
-        publish_log = run_publish(qa_results, topic=topic)
+        publish_log = run_publish(qa_results, topic=topic, image_paths=image_paths)
     except Exception as e:
         print(f"[!] Publish failed: {e}")
         publish_log = {"error": str(e)}

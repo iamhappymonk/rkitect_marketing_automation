@@ -124,3 +124,14 @@ DASHBOARD_PORT = int(os.getenv("DASHBOARD_PORT", 5050))
 DASHBOARD_SECRET_KEY = os.getenv("DASHBOARD_SECRET_KEY", "dev-secret")
 DASHBOARD_USERNAME = os.getenv("DASHBOARD_USERNAME", "admin")
 DASHBOARD_PASSWORD = os.getenv("DASHBOARD_PASSWORD", "changeme")
+
+# ── Image Generation ─────────────────────────────────────────────────────────
+IMAGE_GENERATION_ENABLED = os.getenv("IMAGE_GENERATION_ENABLED", "true").lower() == "true"
+IMAGE_T2I_MODEL = "black-forest-labs/flux-1.1-pro"         # text-to-image (slide 1, LinkedIn)
+IMAGE_I2I_MODEL = "black-forest-labs/flux-kontext-pro"      # img2img (slides 2-N)
+IMAGE_CAROUSEL_SIZE = "1080x1350"                           # Instagram portrait
+IMAGE_LINKEDIN_SIZE = "1200x627"                            # LinkedIn hero
+IMAGE_TWITTER_SIZE = "1600x900"                              # Twitter card (16:9)
+IMAGE_I2I_STRENGTH = 0.6                                    # img2img deviation (0.3=tight, 0.8=loose)
+IMAGE_RATE_LIMIT_SLEEP = 1.5                                # seconds between API calls
+IMAGE_MAX_RETRIES = 3                                       # retries per slide
