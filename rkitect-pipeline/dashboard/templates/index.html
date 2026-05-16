@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rkitect.ai · Content Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="bg-gray-950 text-gray-100 font-mono min-h-screen p-6">
+    <div class="max-w-6xl mx-auto">
+      <div
+        class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8"
+      >
+        <div>
+          <h1 class="text-2xl font-bold text-white">rkitect.ai</h1>
+          <p class="text-gray-500 text-sm">Content Pipeline Dashboard</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span id="today-date" class="text-gray-500 text-sm"></span>
+          <a
+            href="/review"
+            class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700"
+          >
+            Review Queue
+          </a>
+          <button
+            onclick="toggleAutoPublish()"
+            id="auto-publish-btn"
+            class="px-4 py-2 text-sm rounded-lg transition border border-gray-700"
+          >
+            Auto Publish: ...
+          </button>
+          <button
+            onclick="triggerPipeline()"
+            class="px-4 py-2 bg-teal-600 hover:bg-teal-500 text-white text-sm rounded-lg transition"
+          >
+            ▶ Run Now
+          </button>
+        </div>
+      </div>
+
+      <div id="loading" class="text-center py-20 text-gray-600">
+        Loading pipeline data...
+      </div>
+
+      <div id="content" class="hidden">
+        <section class="mb-8 grid gap-4 md:grid-cols-4">
+          <div
+            id="publish-panel"
+            class="bg-gray-900 rounded-xl p-5 border border-gray-800"
+          ></div>
+          <div
+            id="cost-panel"
+            class="bg-gray-900 rounded-xl p-5 border border-gray-800 cursor-pointer"
+            onclick="cycleCostRange()"
+          >
+            <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">
+              Costs
+            </div>
+            <div id="cost-total" class="text-2xl font-bold text-white">
+              Loading…
+            </div>
+            <div id="cost-sub" class="text-sm text-gray-400 mt-1">
+              Last 30 days
+            </div>
+          </div>
+          <div class="bg-gray-900 rounded-xl p-5 border border-gray-800">
+            <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">
+              Review Queue
+            </div>
+            <div id="pending-count" class="text-3xl font-bold text-white">
+              0
+            </div>
+            <div class="text-sm text-gray-500 mt-1">
+              Posts waiting for human approval
+            </div>
+          </div>
+          <a
+            href="/review"
+            class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-teal-500 transition block"
+          >
+            <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">
+              Manual Review
+            </div>
+            <div class="text-lg font-semibold text-white mb-2">
+              Open the approval page
+            </div>
+            <div class="text-sm text-gray-400">
+              Approve or reject queued posts before they hit Buffer.
+            </div>
+          </a>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
+            QA Scores · Last 7 Runs
+          </h2>
+          <div
+            id="score-cards"
+            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+          ></div>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
+            Today's Topic
+          </h2>
+          <div
+            id="today-topic"
+            class="bg-gray-900 rounded-xl p-5 border border-gray-800"
+          ></div>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
+            Generated Content
+          </h2>
+          <div
+            class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+          >
+            <div
+              id="content-tabs"
+              class="flex border-b border-gray-800 overflow-x-auto"
+            ></div>
+            <div
+              id="content-body"
+              class="p-5 text-sm text-gray-300 whitespace-pre-wrap max-h-96 overflow-y-auto leading-relaxed"
+            ></div>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
+            Image Briefs
+          </h2>
+          <div id="image-briefs" class="space-y-3"></div>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
+            Scheduled in Buffer
+          </h2>
+          <div id="buffer-posts" class="space-y-3"></div>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
+            Recent Runs
+          </h2>
+          <div id="run-log" class="space-y-2"></div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      let currentTab = "linkedin";
+      let outputData = {};
+      let publishSettings = { auto_publish: false };
+      let costRanges = ["30d", "7d", "today", "month"];
+      let currentCostIndex = 0;
+      let costEntriesCache = [];
+
+      async function load() {
+        try {
+          const res = await fetch("/api/data");
+          const data = await res.json();
+
+          publishSettings = data.publish_settings || publishSettings;
+          document.getElementById("today-date").textContent = data.today;
+          document.getElementById("loading").classList.add("hidden");
+          document.getElementById("content").classList.remove("hidden");
+
+          renderAutoPublishButton();
+          renderPublishPanel(
+            data.publish_settings,
+            data.pending_review_count || 0,
+          );
+          renderScoreCards(data.score_summary);
+          renderTodayTopic(data.today_output);
+          renderContentTabs(data.today_output);
+          renderImageBriefs(data.today_output);
+          renderBufferPosts(data.scheduled);
+          renderRunLog(data.recent_logs);
+          outputData = data.today_output;
+          loadCosts();
+        } catch (e) {
+          document.getElementById("loading").textContent =
+            "Error loading data: " + e.message;
+        }
+      }
+
+      async function loadCosts(range) {
+        try {
+          const rng = range || costRanges[currentCostIndex];
+          const res = await fetch(`/api/costs?range=${rng}`);
+          const data = await res.json();
+          costEntriesCache = data.entries || [];
+          const total = (data.total || 0).toFixed(2);
+          document.getElementById("cost-total").textContent = `$${total}`;
+          const subtitle =
+            rng === "30d"
+              ? "Last 30 days"
+              : rng === "7d"
+                ? "Last 7 days"
+                : rng === "today"
+                  ? "Today"
+                  : "This month";
+          document.getElementById("cost-sub").textContent = subtitle;
+        } catch (e) {
+          document.getElementById("cost-total").textContent = "Error";
+          document.getElementById("cost-sub").textContent = e.message;
+        }
+      }
+
+      function cycleCostRange() {
+        currentCostIndex = (currentCostIndex + 1) % costRanges.length;
+        loadCosts();
+        // on double-click show details list
+        // single click just cycles ranges; long press could show details — simple approach: show alert with top entries
+        setTimeout(() => {
+          if ((costEntriesCache || []).length > 0) {
+            const preview = costEntriesCache
+              .slice(0, 10)
+              .map(
+                (e) =>
+                  `${e.timestamp || e.date} ${e.provider || ""} ${e.task || ""} $${e.cost || "N/A"}`,
+              )
+              .join("\n");
+            // show brief list
+            if (preview) alert(preview);
+          }
+        }, 200);
+      }
+
+      function renderAutoPublishButton() {
+        const btn = document.getElementById("auto-publish-btn");
+        const enabled = !!publishSettings.auto_publish;
+        btn.textContent = enabled ? "Auto Publish: ON" : "Auto Publish: OFF";
+        btn.className = enabled
+          ? "px-4 py-2 text-sm rounded-lg transition border border-teal-500 bg-teal-500/10 text-teal-300"
+          : "px-4 py-2 text-sm rounded-lg transition border border-red-500 bg-red-500/10 text-red-300";
+      }
+
+      function renderPublishPanel(settings, pendingCount) {
+        const el = document.getElementById("publish-panel");
+        const enabled = !!(settings && settings.auto_publish);
+        el.innerHTML = `
+        <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">Publish Mode</div>
+        <div class="text-xl font-semibold ${enabled ? "text-teal-300" : "text-red-300"} mb-1">${enabled ? "Auto publish enabled" : "Manual review required"}</div>
+        <div class="text-sm text-gray-400 mb-3">${enabled ? "QA-passed posts go straight to Buffer." : "QA-passed posts stop in the review queue before publishing."}</div>
+        <div class="text-xs text-gray-500">Pending review: <span class="text-white">${pendingCount}</span></div>`;
+      }
+
+      function renderScoreCards(scores) {
+        const el = document.getElementById("score-cards");
+        el.innerHTML = "";
+        for (const [fmt, s] of Object.entries(scores || {})) {
+          const color =
+            s.avg >= 80
+              ? "text-teal-400"
+              : s.avg >= 70
+                ? "text-yellow-400"
+                : "text-red-400";
+          el.innerHTML += `
+          <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+            <div class="text-xs text-gray-500 uppercase mb-2">${fmt}</div>
+            <div class="text-3xl font-bold ${color}">${s.avg}<span class="text-sm text-gray-600">/100</span></div>
+            <div class="text-xs text-gray-600 mt-1">${s.passes}/7 passed</div>
+          </div>`;
+        }
+        if (Object.keys(scores || {}).length === 0) {
+          el.innerHTML =
+            '<div class="text-gray-600 text-sm col-span-4">No QA data yet. Run the pipeline first.</div>';
+        }
+      }
+
+      function renderTodayTopic(outputs) {
+        const el = document.getElementById("today-topic");
+        const topicRaw = outputs["topics"] || "";
+        try {
+          const t = JSON.parse(topicRaw);
+          el.innerHTML = `
+          <div class="text-white font-bold mb-1">${t.selected_topic || "No topic yet"}</div>
+          <div class="text-xs text-teal-400 mb-3">${t.pillar || ""}</div>
+          <div class="text-gray-400 text-sm">${t.angle || ""}</div>`;
+        } catch {
+          el.innerHTML =
+            '<div class="text-gray-600 text-sm">No run today yet.</div>';
+        }
+      }
+
+      function renderContentTabs(outputs) {
+        const tabs = ["linkedin", "carousel", "twitter", "reddit"];
+        const tabEl = document.getElementById("content-tabs");
+        const bodyEl = document.getElementById("content-body");
+        tabEl.innerHTML = "";
+
+        tabs.forEach((t) => {
+          if (!outputs[t]) return;
+          const btn = document.createElement("button");
+          btn.textContent = t;
+          btn.className = `px-4 py-3 text-xs uppercase tracking-wide transition ${
+            t === currentTab
+              ? "text-teal-400 border-b-2 border-teal-400 bg-gray-800"
+              : "text-gray-500 hover:text-gray-300"
+          }`;
+          btn.onclick = () => {
+            currentTab = t;
+            renderContentTabs(outputs);
+          };
+          tabEl.appendChild(btn);
+        });
+
+        bodyEl.textContent =
+          outputs[currentTab] || "No content generated yet for this format.";
+      }
+
+      function renderImageBriefs(outputs) {
+        const el = document.getElementById("image-briefs");
+        const briefKeys = Object.keys(outputs).filter((k) =>
+          k.endsWith("_image_brief"),
+        );
+
+        if (briefKeys.length === 0) {
+          el.innerHTML =
+            '<div class="text-gray-600 text-sm">No image briefs generated yet.</div>';
+          return;
+        }
+
+        el.innerHTML = briefKeys
+          .map((key) => {
+            const platform = key.replace("_image_brief", "");
+            const content = outputs[key] || "";
+            const dims =
+              platform === "linkedin"
+                ? "1200×627"
+                : platform === "twitter"
+                  ? "1200×675"
+                  : "1080×1080";
+            return `
+          <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <span class="text-xs text-teal-400 uppercase font-bold">${platform}</span>
+                <span class="ml-2 text-xs text-gray-600 bg-gray-800 px-2 py-0.5 rounded">${dims}</span>
+              </div>
+              <button onclick="copyBrief('${key}')"
+                class="text-xs text-gray-500 hover:text-teal-400 transition px-2 py-1 border border-gray-700 rounded">
+                Copy Prompt
+              </button>
+            </div>
+            <pre id="brief-${key}" class="text-xs text-gray-400 whitespace-pre-wrap max-h-40 overflow-y-auto">${escapeHtml(content)}</pre>
+          </div>`;
+          })
+          .join("");
+      }
+
+      function copyBrief(key) {
+        const el = document.getElementById("brief-" + key);
+        if (el) {
+          navigator.clipboard.writeText(el.textContent).then(() => {
+            const btn = el.parentElement.querySelector("button");
+            btn.textContent = "Copied!";
+            setTimeout(() => (btn.textContent = "Copy Prompt"), 2000);
+          });
+        }
+      }
+
+      function escapeHtml(str) {
+        const div = document.createElement("div");
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      function renderBufferPosts(posts) {
+        const el = document.getElementById("buffer-posts");
+        if (!posts || posts.length === 0) {
+          el.innerHTML =
+            '<div class="text-gray-600 text-sm">No scheduled posts found.</div>';
+          return;
+        }
+        el.innerHTML = posts
+          .slice(0, 10)
+          .map(
+            (p) => `
+        <div class="bg-gray-900 rounded-lg p-4 border border-gray-800 flex gap-4">
+          <span class="text-xs text-teal-400 uppercase w-20 flex-shrink-0">${p.profile_service || "buffer"}</span>
+          <span class="text-sm text-gray-300 truncate">${(p.text || "").slice(0, 100)}…</span>
+          <span class="text-xs text-gray-600 flex-shrink-0">${p.due_time || ""}</span>
+        </div>`,
+          )
+          .join("");
+      }
+
+      function renderRunLog(logs) {
+        const el = document.getElementById("run-log");
+        if (!logs || logs.length === 0) {
+          el.innerHTML =
+            '<div class="text-gray-600 text-sm">No runs recorded yet.</div>';
+          return;
+        }
+        el.innerHTML = logs
+          .slice(0, 7)
+          .map((log) => {
+            const qa = log.stages?.qa || {};
+            const scores = Object.entries(qa)
+              .map(
+                ([fmt, d]) =>
+                  `<span class="${d.passed ? "text-teal-400" : "text-red-400"}">${fmt} ${d.score}</span>`,
+              )
+              .join("  ");
+            return `
+          <div class="bg-gray-900 rounded-lg px-4 py-3 border border-gray-800 flex items-center gap-6 text-xs">
+            <span class="text-gray-500 w-24 flex-shrink-0">${log.date}</span>
+            <span class="text-gray-400 flex-shrink-0 truncate max-w-xs">${log.stages?.filter?.selected_topic || "—"}</span>
+            <div class="flex gap-3 ml-auto">${scores}</div>
+          </div>`;
+          })
+          .join("");
+      }
+
+      async function toggleAutoPublish() {
+        const nextValue = !publishSettings.auto_publish;
+        await fetch("/api/publish-settings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ auto_publish: nextValue }),
+        });
+        await load();
+      }
+
+      async function triggerPipeline() {
+        if (!confirm("Trigger a pipeline run now?")) return;
+        await fetch("/api/trigger", { method: "POST" });
+        alert("Pipeline triggered. Check back in a few minutes.");
+      }
+
+      load();
+      setInterval(load, 60000);
+    </script>
+  </body>
+</html>
