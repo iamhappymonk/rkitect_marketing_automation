@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>rkitect.ai · the architect's agent</title>
+<meta name="description" content="An agent that draws. Multi-model orchestration for architects: thesis, plan, render — in under a minute, at $0.20 per render." />
+<link rel="icon" href="assets/brand/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="refs/before-after/P01/before.jpg" />
+<link rel="preload" as="image" href="refs/before-after/P01/after.jpg" />
+<link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+
+<div class="preloader" aria-hidden="true">
+  <div class="mark">rkitect<span class="dot">.</span>ai</div>
+</div>
+
+<div class="progress-rule" id="prog" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a class="brand" href="#top" aria-label="rkitect.ai home">
+    <img src="assets/brand/rkitect-lockup-light.svg" alt="rkitect.ai" />
+  </a>
+  <div class="links">
+    <a href="#agents">The studio</a>
+    <a href="#proof">Selected work</a>
+    <a href="#compare">The math</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="#cta">Request access</a>
+  </div>
+  <a class="btn btn-primary" href="#cta"><span class="dot"></span>Request beta access</a>
+</nav>
+
+<div class="trust-strip" aria-label="Beta cohort">
+  <span class="ts-eyebrow">Beta cohort</span>
+  <span class="ts-stat"><b>14</b> studios</span>
+  <span class="ts-dot">·</span>
+  <span class="ts-stat"><b>6</b> cities</span>
+  <span class="ts-dot">·</span>
+  <span class="ts-stat"><b>342</b> renders shipped</span>
+  <span class="ts-dot">·</span>
+  <span class="ts-stat">Built by an architect after losing pitches to render queues</span>
+</div>
+
+<header class="hero" id="top">
+  <div>
+    <p class="eyebrow">For architects · pre-launch</p>
+    <h1 style="margin-top: var(--space-md);">
+      <span class="mreveal"><span class="l1">Five interior options</span></span><br/>
+      <span class="mreveal"><span class="l2">before your <span class="italic-display">next pitch</span>.</span></span>
+    </h1>
+    <p class="lede">A studio of specialists you brief like a senior architect — Chief Architect, Interior Designer, Space Planner, 3D Artist, Renderer. Photoreal interiors from your floor plan in under a minute, at $0.20 per render. Unlimited revisions. Same-day delivery. Built by an architect who lost three pitches to render queues.</p>
+    <p class="hero-quote">&ldquo;Pitch at 10. I sent five interior options at 9:48. We won.&rdquo; <span class="hero-quote-who">&mdash; A.M., principal, NYC studio</span></p>
+    <div class="type-chips">
+      <span>Residential</span><span>Commercial</span><span>Hospitality</span><span>Outdoor</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#cta"><span class="dot" style="background: var(--color-bg); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-bg) 18%, transparent);"></span>Request beta access</a>
+      <a class="text-link" href="how-it-works.html">See how the studio works &rarr;</a>
+    </div>
+    <div class="hero-meta">
+      <div class="cell"><div class="v"><span class="counter" data-to="60" data-suffix="s">0s</span></div><div class="l">Per render</div></div>
+      <div class="cell"><div class="v"><span class="counter" data-to="92" data-suffix="%">0%</span></div><div class="l">Room accuracy</div></div>
+      <div class="cell"><div class="v"><span class="counter" data-prefix="$" data-decimals="2" data-to="0.20">$0.00</span></div><div class="l">Per output</div></div>
+      <div class="cell"><div class="v">Same day</div><div class="l">Delivery</div></div>
+    </div>
+  </div>
+
+  <div class="demo-wrap" id="slider-wrap">
+    <div class="demo" id="demo" data-style="japandi">
+      <div class="stage">
+        <img class="img before" src="refs/before-after/P01/before.jpg" alt="Empty living room before AI render" />
+        <img class="img after"  src="refs/before-after/P01/after.jpg"  alt="Same living room rendered with sofa added" />
+      </div>
+
+      <span class="badge">Try it · living room</span>
+      <span class="meta-final"><span class="dot"></span>Rendered in 58 seconds</span>
+      <button class="demo-replay" id="demo-replay" type="button" aria-label="Replay demo">↻ Replay</button>
+
+      <!-- Segmentation overlay (viewBox normalized 100×125, matches 4/5 aspect) -->
+      <svg class="seg-svg" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true">
+        <!-- Wall (back) -->
+        <rect x="6" y="8" width="88" height="44" rx="1.2"/>
+        <rect class="lbl-bg" x="6" y="2.5" width="22" height="5"/>
+        <text x="7.5" y="6.2">95% wall</text>
+        <!-- Floor -->
+        <rect x="4" y="78" width="92" height="42" rx="1.2"/>
+        <rect class="lbl-bg" x="4" y="72.5" width="22" height="5"/>
+        <text x="5.5" y="76.2">91% floor</text>
+        <!-- Sofa zone (target slot) -->
+        <rect x="22" y="58" width="56" height="22" rx="1.2"/>
+        <rect class="lbl-bg" x="22" y="52.5" width="22" height="5"/>
+        <text x="23.5" y="56.2">92% sofa</text>
+      </svg>
+
+      <div class="sofa-ghost" aria-hidden="true"></div>
+
+      <div class="console" id="console">
+        <div class="step" data-step="1" id="s1">
+          <div class="n">1</div>
+          <div class="row">
+            <button class="chip run" id="btn-segment">Run segmentation</button>
+            <span class="label">Identify surfaces</span>
+          </div>
+        </div>
+        <div class="step" data-step="2" id="s2">
+          <div class="n">2</div>
+          <div class="row">
+            <button class="chip" data-style="japandi">Japandi</button>
+            <button class="chip" data-style="industrial">Industrial</button>
+            <button class="chip" data-style="scandinavian">Scandinavian</button>
+            <button class="chip" data-style="midcentury">Mid-century</button>
+          </div>
+        </div>
+        <div class="step" data-step="3" id="s3">
+          <div class="n">3</div>
+          <div class="row">
+            <button class="chip" id="btn-sofa">+ Add sofa</button>
+            <button class="chip" id="btn-lamp" disabled>+ Lamp</button>
+            <button class="chip" id="btn-rug"  disabled>+ Rug</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     AGENTS — meet the orchestra
+========================================================= -->
+<section id="agents" class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">The studio</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Five&nbsp;</span><span class="w">specialists.&nbsp;</span><span class="w italic-display">One&nbsp;senior&nbsp;architect.&nbsp;</span><span class="w">Coordinated&nbsp;</span><span class="w">for&nbsp;</span><span class="w">you.</span></span></h2>
+    </div>
+    <p class="desc">The Chief Architect reads your brief, decomposes it into tasks, and hands each one to the right specialist. Interior Designer develops the thesis. Space Planner draws the floor plan. 3D Artist sets the isometric. Renderer produces the photoreal. Every step narrates back so you can intervene, redirect, or branch at any moment.</p>
+  </div>
+  <div class="agents stagger">
+    <div class="agent live">
+      <div class="head"><div class="who"><span class="conductor-dot"></span>Chief Architect</div></div>
+      <p class="role">Reads the brief. Routes work to the right specialist. Synthesises the response back to you.</p>
+      <div class="meta-row"><span>Conductor</span><span>Always on</span></div>
+      <div class="tools"><span>Brief intake</span><span>Routing</span><span>Synthesis</span></div>
+      <div class="pulse" aria-hidden="true"></div>
+    </div>
+    <div class="agent live">
+      <div class="head"><div class="who">Interior Designer</div></div>
+      <p class="role">Develops the design thesis. Picks the material palette, lighting strategy and starting style references.</p>
+      <div class="meta-row"><span>Specialist</span><span>Materials &amp; mood</span></div>
+      <div class="tools"><span>Material thesis</span><span>Palette</span><span>Lighting</span><span>Style references</span></div>
+      <div class="pulse" aria-hidden="true"></div>
+    </div>
+    <div class="agent live">
+      <div class="head"><div class="who">Space Planner</div></div>
+      <p class="role">Builds the room programme, validates adjacency and clearances, draws scaled floor plans with dimensions.</p>
+      <div class="meta-row"><span>Specialist</span><span>Plans &amp; adjacency</span></div>
+      <div class="tools"><span>Room programme</span><span>Floor plan</span><span>Dimensions</span><span>Adjacency check</span></div>
+      <div class="pulse" aria-hidden="true"></div>
+    </div>
+    <div class="agent live">
+      <div class="head"><div class="who">Renderer</div></div>
+      <p class="role">Photoreal output. Multiple variations on the same plan, multi-view from one comprehension pass.</p>
+      <div class="meta-row"><span>Specialist</span><span>Photoreal</span></div>
+      <div class="tools"><span>Photoreal render</span><span>Variations</span><span>Multi-view</span><span>Upscale</span></div>
+      <div class="pulse" aria-hidden="true"></div>
+    </div>
+  </div>
+  <p class="agents-trailing">+ 3D Artist sets the isometric and room geometry. Edit specialists handle small revisions — move a lamp, swap a finish, change the time of day — without re-rendering the whole room. <a class="text-link" href="how-it-works.html">See the full studio &rarr;</a></p>
+</section>
+
+<!-- =========================================================
+     PROOF
+========================================================= -->
+<section id="proof" class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">Selected work</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Real&nbsp;</span><span class="w">rooms.&nbsp;</span><span class="w italic-display">One&nbsp;prompt.&nbsp;</span><span class="w">Receipts&nbsp;</span><span class="w">attached.</span></span></h2>
+    </div>
+    <p class="desc">Five renders from the beta cohort, each generated in under sixty seconds from a single comprehension pass. Hover for project context.</p>
+  </div>
+  <div class="grid">
+    <div class="tile wide"><img src="refs/before-after/P03/after.jpg" alt="P03 — luxury modern interior render" /><div class="cap">P03 · Luxury Modern · 47s</div></div>
+    <div class="tile"><img src="refs/before-after/P02/after.jpg" alt="P02 — industrial interior render" /><div class="cap">P02 · Industrial</div></div>
+    <div class="tile"><img src="refs/before-after/P05/after.jpg" alt="P05 — Scandinavian interior render" /><div class="cap">P05 · Scandinavian</div></div>
+    <div class="tile"><img src="refs/before-after/P07/after.jpg" alt="P07 — mid-century interior render" /><div class="cap">P07 · Mid-century</div></div>
+    <div class="tile"><img src="refs/before-after/P09/after.jpg" alt="P09 — brutalist interior render" /><div class="cap">P09 · Brutalist</div></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     COMPARE
+========================================================= -->
+<section id="compare" class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">The math, briefly</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Traditional&nbsp;</span><span class="w">pipeline&nbsp;</span><span class="w">vs.&nbsp;</span><span class="w italic-display">the&nbsp;agent.</span></span></h2>
+    </div>
+    <p class="desc">Per revision cycle, on a typical interior visualisation. Excludes one-time setup and post-production. Numbers from beta cohort timing logs and AEC studio averages.</p>
+  </div>
+  <div class="compare">
+    <div class="col">
+      <h3 class="col-h">Traditional<span class="meta">In-house viz · render farm</span></h3>
+      <div class="row"><span>Brief revision</span><span class="t">Day 1 · 0:00</span></div>
+      <div class="row"><span>Re-model the room</span><span class="t">Day 1 → 2</span></div>
+      <div class="row"><span>Re-light, set materials</span><span class="t">Day 2</span></div>
+      <div class="row"><span>Queue render farm</span><span class="t">Day 2 → 3</span></div>
+      <div class="row"><span>Review · client unhappy</span><span class="t">Day 3+</span></div>
+      <div class="row"><span>Cost per cycle</span><span class="t">$300 – 1,200</span></div>
+    </div>
+    <div class="col ours">
+      <h3 class="col-h">rkitect.ai<span class="meta">Studio of specialists · in-app</span></h3>
+      <div class="row"><span>Brief revision</span><span class="t">0:00</span></div>
+      <div class="row"><span>Chief Architect routes</span><span class="t">0:04</span></div>
+      <div class="row"><span>Interior Designer · thesis</span><span class="t">0:18</span></div>
+      <div class="row"><span>Studio reviews · passes</span><span class="t">0:25</span></div>
+      <div class="row"><span>Renderer · photoreal</span><span class="t">0:55</span></div>
+      <div class="row"><span>Cost per cycle</span><span class="t">$0.60</span></div>
+    </div>
+  </div>
+  <p class="pricing-line">Pilots from <b>$199/mo</b> · Studio plans from <b>$499/mo</b> · founder onboards every cohort.</p>
+</section>
+
+<!-- FAQ — pre-empt top 4 architect objections -->
+<section id="faq" class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">Before you ask</p>
+      <h2 style="margin-top: var(--space-md);">Four questions architects always ask.</h2>
+    </div>
+    <p class="desc">If your question isn't here, the founder will answer it personally on your onboarding call.</p>
+  </div>
+  <div class="faq">
+    <details>
+      <summary>Will my client recognise the room?</summary>
+      <p>Yes. Segmentation maps every surface before we render — the sofa stays where you placed it, the windows keep their proportions, the floor plane respects your dimensions. We don't generate "a room." We render <em>your</em> room.</p>
+    </details>
+    <details>
+      <summary>Can I export to Revit, SketchUp, or my BIM tool?</summary>
+      <p>Floor plans export as DXF and SVG. 3D output exports as GLB and IFC. Revit + SketchUp + ArchiCAD round-trip is on the beta roadmap — beta members vote priority.</p>
+    </details>
+    <details>
+      <summary>Who owns the renders?</summary>
+      <p>You do. Outputs are yours, commercially. We don't reuse your renders to train, market, or showcase without your written sign-off — beta members get a one-line opt-in for case studies.</p>
+    </details>
+    <details>
+      <summary>How does it learn my studio's voice?</summary>
+      <p>After every project, the studio absorbs your accepted palettes, vetoed materials, and won precedents. Your sixth brief proposes from your fifth brief's wins — not from a generic library.</p>
+    </details>
+  </div>
+</section>
+
+<!-- =========================================================
+     QUOTE
+========================================================= -->
+<section class="s fade-in">
+  <div class="q-row">
+    <div>
+      <p class="eyebrow">From the beta</p>
+      <p class="quote" style="margin-top: var(--space-md);"><span class="w">Client&nbsp;</span><span class="w">called&nbsp;</span><span class="w">at&nbsp;</span><span class="w">nine.&nbsp;</span><span class="w">Pitch&nbsp;</span><span class="w">at&nbsp;</span><span class="w">ten.&nbsp;</span><span class="w">The&nbsp;</span><span class="w">agent&nbsp;</span><span class="w">sent&nbsp;</span><span class="w">five&nbsp;</span><span class="w">options&nbsp;</span><span class="w">at&nbsp;</span><span class="w">nine&nbsp;</span><span class="w">forty-eight.&nbsp;</span><span class="w">We&nbsp;</span><span class="w">won&nbsp;</span><span class="w">the&nbsp;</span><span class="w">work.</span></p>
+      <p class="who"><strong>A. M.</strong> · Principal architect, boutique studio · beta cohort</p>
+    </div>
+    <div class="stub">
+      <img src="refs/before-after/P04/side-by-side.jpg" alt="P04 before/after side by side" />
+      <div class="cap"><span>P04 · Coastal · thesis 91</span><span>52s</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+<section id="cta" class="cta-final fade-in">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Request access</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Stop&nbsp;</span><span class="w">briefing&nbsp;</span><span class="w">juniors.&nbsp;</span><span class="w italic-display">Brief&nbsp;the&nbsp;agent.</span></span></h2>
+      <p class="seats"><span class="n">·</span> <span class="counter" data-to="14">0</span>&nbsp;beta seats open this cohort</p>
+    </div>
+    <div>
+      <form id="wl">
+        <input type="email" required placeholder="you@studio.com" aria-label="email" />
+        <button type="submit" id="wl-btn"><span class="lbl">Request beta access</span></button>
+      </form>
+      <p class="small">No spam. No render farms. Beta cohorts open monthly.</p>
+      <div class="post-submit" id="post-submit" hidden>
+        <p class="ps-line"><span class="ps-tick">✓</span> Confirmation sent to <b id="ps-email">your inbox</b>.</p>
+        <p class="ps-line">Founder replies within <b>48 hours</b> with a Calendly slot.</p>
+        <p class="ps-line"><b>14 seats</b> open this cohort &mdash; closing on rolling basis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>rkitect.ai · render studio · 2026</span>
+  <span>Built quietly · for the studios who refuse the wait</span>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>

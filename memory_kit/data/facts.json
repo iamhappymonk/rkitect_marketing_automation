@@ -1,0 +1,368 @@
+[
+  {
+    "id": "10dbd1fc-c8b6-4853-a99b-46ca410247af",
+    "memory": "Content strategy includes Pillar 2: Build in Public",
+    "hash": "df4bbdaf79a6e4f7f64ec676e227ddd1",
+    "metadata": {
+      "kind": "strategy",
+      "channel": "linkedin",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/references/drive_dump/HappyMonk/marketing/_extracted/linkedin-strat.txt",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:39:38.884271+00:00",
+    "updated_at": "2026-05-15T03:39:38.884271+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "brand:linkedin-strategy"
+  },
+  {
+    "id": "31316bf0-b15f-42da-b05c-05327d213779",
+    "memory": "Secondary posting time is 5:30 PM - 7:00 PM IST",
+    "hash": "88a9dcef093aa17a3b5512daa0b830a3",
+    "metadata": {
+      "kind": "strategy",
+      "channel": "linkedin",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/references/drive_dump/HappyMonk/marketing/_extracted/linkedin-strat.txt",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:39:38.881710+00:00",
+    "updated_at": "2026-05-15T03:39:38.881710+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "brand:linkedin-strategy"
+  },
+  {
+    "id": "56bf2885-0396-435c-a234-1c0ce0b6fb3f",
+    "memory": "Plans to post 5-6 times per week",
+    "hash": "d75141d088bbe8ecd7990313fb00186b",
+    "metadata": {
+      "kind": "strategy",
+      "channel": "linkedin",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/references/drive_dump/HappyMonk/marketing/_extracted/linkedin-strat.txt",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:39:38.877038+00:00",
+    "updated_at": "2026-05-15T03:39:38.877038+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "brand:linkedin-strategy"
+  },
+  {
+    "id": "6ca3dab4-96cd-4291-9ac5-829ef2d3d6a9",
+    "memory": "User convention: Before writing the first real module, run `superpowers:brainstorming` to lock the feature shape, then `superpowers:writing-plans`",
+    "hash": "0fc7cce06fa4583cb96eb9aaa9fc460e",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.794070+00:00",
+    "updated_at": "2026-05-15T03:44:11.794070+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "6fd08034-fc02-4e52-bea0-3e71c07930f0",
+    "memory": "User preference: Keep boundaries clean, no cross-imports back into rkitect.ai's editor/canvas code",
+    "hash": "d6d8004d28b5c8118c3ba3ff19bd1c15",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.786324+00:00",
+    "updated_at": "2026-05-15T03:44:11.786324+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "7aa142b3-1504-442b-bada-b0a43ff1c0bf",
+    "memory": "User preference: Treat `references/drive_dump/HappyMonk/` as ground truth before generating anything new",
+    "hash": "70f0be6b69ad0f45115c5782701dd4a8",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.797868+00:00",
+    "updated_at": "2026-05-15T03:44:11.797868+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "83496296-3ec9-4531-b073-a05cdf3f1ff9",
+    "memory": "User preference: Decide per feature when the time comes, don't pre-commit",
+    "hash": "a8b3453a96490274736997dd5a887494",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.787296+00:00",
+    "updated_at": "2026-05-15T03:44:11.787296+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "851321aa-b4c5-4f47-96e8-9681bf520af7",
+    "memory": "Content strategy includes Pillar 3: Industry Insight / Contrarian Takes",
+    "hash": "002515c09b5b79db68116881c47ec5e9",
+    "metadata": {
+      "kind": "strategy",
+      "channel": "linkedin",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/references/drive_dump/HappyMonk/marketing/_extracted/linkedin-strat.txt",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:39:38.885575+00:00",
+    "updated_at": "2026-05-15T03:39:38.885575+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "brand:linkedin-strategy"
+  },
+  {
+    "id": "919fe6d6-2510-47ea-8817-663cbad8edb6",
+    "memory": "User preference: Do NOT scaffold a monorepo / multi-package layout up front",
+    "hash": "42cd6576e186d37489f372722d5424f0",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.781783+00:00",
+    "updated_at": "2026-05-15T03:44:11.781783+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "96744a95-e26a-46ac-a47d-6ff3d656ae14",
+    "memory": "User preference: Reuse key shapes from `references/drive_dump/HappyMonk/sample-content/posts-final.json`, `references/drive_dump/HappyMonk/before-after/manifest.json`, `posts/manifest.json`, and `references/drive_dump/HappyMonk/reels/manifest.json`",
+    "hash": "0cdf1ef27312cb5bd69ccc3c5e1b567d",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.798976+00:00",
+    "updated_at": "2026-05-15T03:44:11.798976+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "96a1f951-5651-4433-a9e5-89192d1c58db",
+    "memory": "rkitect.ai is the parent product",
+    "hash": "cf03c74066557d07f4086771d11bd1e4",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.784214+00:00",
+    "updated_at": "2026-05-15T03:44:11.784214+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "97d30e77-419a-433d-8e4e-53a09d881e35",
+    "memory": "User preference: start simple, grow incrementally",
+    "hash": "685103944f3e53eb195046bfada2e074",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.777349+00:00",
+    "updated_at": "2026-05-15T03:44:11.777349+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "9dd84230-9de4-4e11-9508-a04a1bddb1f1",
+    "memory": "User convention: Edits happen on a worktree branch, never `main`",
+    "hash": "ddc579faa68d947d295cdc7c7d6f0f37",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.788516+00:00",
+    "updated_at": "2026-05-15T03:44:11.788516+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "ad2eabda-c20a-4957-a2b4-9117d208bfb7",
+    "memory": "User convention: Caveman mode is default-on for chat",
+    "hash": "8e0c827026fd47b853878d0f6c4f1cb1",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.790773+00:00",
+    "updated_at": "2026-05-15T03:44:11.790773+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "b0360190-92bd-454b-b25f-b7cc3ec638e2",
+    "memory": "User convention: File-size caps from global CLAUDE.md apply (`small-files` skill)",
+    "hash": "47b88ea2e119a47ec58cfe608b2cfaf7",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.794963+00:00",
+    "updated_at": "2026-05-15T03:44:11.794963+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "b436b93f-1d91-4ed8-b4c0-0eca71af3a7a",
+    "memory": "Pre-existing rkitect.ai marketing work is stored under `references/drive_dump/HappyMonk/`",
+    "hash": "18d5b5c0dc650df240388e65e586c37b",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.797009+00:00",
+    "updated_at": "2026-05-15T03:44:11.797009+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "be5478e6-462b-4375-85f0-88dddd41c9e0",
+    "memory": "This repo is the marketing-automation sidecar for rkitect.ai",
+    "hash": "09167c0805fee9698dccf15def243d41",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.785210+00:00",
+    "updated_at": "2026-05-15T03:44:11.785210+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "c21b34a7-ba87-4d8e-8ed9-6277040e4abb",
+    "memory": "User convention: Use the `worktree-create` skill before touching code",
+    "hash": "3a822ba9f7fd4babed3e067df108faf9",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.789570+00:00",
+    "updated_at": "2026-05-15T03:44:11.789570+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "c2f1a5a1-ee59-4fee-9e69-0fec1a1643be",
+    "memory": "Content strategy includes Pillar 1: AI + Architecture Visuals",
+    "hash": "9dc9565da168c5f9254c2b3806ba7b4c",
+    "metadata": {
+      "kind": "strategy",
+      "channel": "linkedin",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/references/drive_dump/HappyMonk/marketing/_extracted/linkedin-strat.txt",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:39:38.882987+00:00",
+    "updated_at": "2026-05-15T03:39:38.882987+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "brand:linkedin-strategy"
+  },
+  {
+    "id": "c46d567f-235b-4eaf-a658-b67f0991f1b2",
+    "memory": "User convention: Commits via `caveman:caveman-commit` (Conventional Commits, subject \u226450 chars)",
+    "hash": "4f1951546e4b861e5307ffbd2caa6e33",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.791788+00:00",
+    "updated_at": "2026-05-15T03:44:11.791788+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "d0de3eff-4e00-4c75-a629-cd6703a15c9a",
+    "memory": "Primary posting time is 8:30 AM - 10:00 AM IST",
+    "hash": "7c6b77bde47aba786bb965fcd3e65e68",
+    "metadata": {
+      "kind": "strategy",
+      "channel": "linkedin",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/references/drive_dump/HappyMonk/marketing/_extracted/linkedin-strat.txt",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:39:38.880290+00:00",
+    "updated_at": "2026-05-15T03:39:38.880290+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "brand:linkedin-strategy"
+  },
+  {
+    "id": "d444f770-dd25-4102-a02c-3189c840c466",
+    "memory": "User convention: PRs via `superpowers:finishing-a-development-branch` (Option 2)",
+    "hash": "68ff837377728c5ac39d8343a2b5d35a",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.792961+00:00",
+    "updated_at": "2026-05-15T03:44:11.792961+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "dee79c98-8593-4582-8d25-2d9b47dd0316",
+    "memory": "User convention: Don't grow god-files",
+    "hash": "0d621d83f4a2c800611c91754cbb1e38",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.796021+00:00",
+    "updated_at": "2026-05-15T03:44:11.796021+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  },
+  {
+    "id": "fa54af96-c640-4bf3-a4cc-fca9e1fb9e0c",
+    "memory": "User preference: Add the minimum needed for the next concrete task",
+    "hash": "d2e7b1af1b8bdbaab4fdff4a73ead406",
+    "metadata": {
+      "kind": "project-context",
+      "source_path": "/Users/b/Documents/GitHub/marketing_automation_rkitect/CLAUDE.md",
+      "chunk": 1,
+      "of": 1
+    },
+    "created_at": "2026-05-15T03:44:11.783097+00:00",
+    "updated_at": "2026-05-15T03:44:11.783097+00:00",
+    "user_id": "rkitect-marketing",
+    "agent_id": "project:claude-md"
+  }
+]

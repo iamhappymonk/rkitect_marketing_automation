@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>rkitect.ai · how the studio works</title>
+<meta name="description" content="The studio behind rkitect.ai — discovery, narration, rubric review, memory. The detail behind the agent." />
+<link rel="icon" href="assets/brand/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+
+<div class="progress-rule" id="prog" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a class="brand" href="./" aria-label="rkitect.ai home">
+    <img src="assets/brand/rkitect-lockup-light.svg" alt="rkitect.ai" />
+  </a>
+  <div class="links">
+    <a href="landing.html#agents">The studio</a>
+    <a href="landing.html#proof">Selected work</a>
+    <a href="landing.html#compare">The math</a>
+    <a href="how-it-works.html" aria-current="page">How it works</a>
+    <a href="landing.html#cta">Request access</a>
+  </div>
+  <a class="btn btn-primary" href="landing.html#cta"><span class="dot"></span>Request beta access</a>
+</nav>
+
+<header class="hero" id="top" style="grid-template-columns: 1fr; padding-bottom: var(--space-3xl);">
+  <div>
+    <p class="eyebrow">How the studio works</p>
+    <h1 style="margin-top: var(--space-md);">
+      <span>Inside the studio.</span><br/>
+      <span class="italic-display">The detail behind the agent.</span>
+    </h1>
+    <p class="lede">Discovery before any render. Narration as it works. A 42-point rubric that refuses weak briefs. A memory of your studio's voice across projects. The pages on rkitect.ai that didn't fit on the landing — for the architect who wants to look under the hood before signing on.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="landing.html#cta"><span class="dot" style="background: var(--color-bg); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-bg) 18%, transparent);"></span>Request beta access</a>
+      <a class="text-link" href="landing.html">&larr; Back to landing</a>
+    </div>
+  </div>
+</header>
+
+<!-- Discovery -->
+<section id="discovery" class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">Discovery flow</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Three&nbsp;</span><span class="w">phases&nbsp;</span><span class="w">before&nbsp;</span><span class="w">the&nbsp;</span><span class="w italic-display">first&nbsp;render.</span></span></h2>
+    </div>
+    <p class="desc">Domain-aware intake, gated by project type. Residential, commercial, hospitality and outdoor each get a tailored question set. The studio never starts rendering until it understands the brief.</p>
+  </div>
+  <div class="phases">
+    <div class="phase">
+      <div class="num">i</div>
+      <h3>Context</h3>
+      <p>Site diagram drawn on the fly. Type-specific questions surface — orientation, programme, constraints, climate, brief.</p>
+      <div class="yields"><b>Output ·</b> Site diagram + your brief, captured in your voice</div>
+    </div>
+    <div class="phase">
+      <div class="num">ii</div>
+      <h3>Precedents</h3>
+      <p>A small set of precedent images, drawn to your brief. Pick one or two — the studio uses them as anchors for the thesis.</p>
+      <div class="yields"><b>Output ·</b> 1–2 anchor precedents + a starting palette</div>
+    </div>
+    <div class="phase">
+      <div class="num">iii</div>
+      <h3>Direction</h3>
+      <p>A bubble diagram and parti sketch — the studio's reading of your brief, shown for confirmation or refinement before a single render is spent.</p>
+      <div class="yields"><b>Output ·</b> Bubble diagram + parti, ready to refine</div>
+    </div>
+  </div>
+</section>
+
+<!-- Stream -->
+<section id="stream" class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">Watch the studio work</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Every&nbsp;</span><span class="w">decision,&nbsp;</span><span class="w italic-display">narrated&nbsp;back.</span></span></h2>
+    </div>
+    <p class="desc">You see the room being comprehended before you see the render. Specialists check in as they hand off. You can interrupt, redirect, or branch at any moment. Step away and come back — the studio kept working; nothing was lost.</p>
+  </div>
+  <div class="stream">
+    <div class="narrative">
+      <h3>Like sitting next to your senior architect.</h3>
+      <p>Not a black box. Not a spinner. Each step shows you what the studio is doing, what it has decided, and where it is going next — written the way a colleague would tell you, not the way a machine would log it.</p>
+      <div class="legend">
+        <span>Comprehending</span><span>Drafting thesis</span><span>Asking questions</span><span>Drawing the plan</span><span>Reviewing</span><span>Rendering</span><span>Branching</span><span>Refining</span><span>Edit mode</span>
+      </div>
+    </div>
+    <div class="feed" id="feed" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- Thesis Deep Mode -->
+<section class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">Rubric review</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">Forty-two&nbsp;</span><span class="w">points.&nbsp;</span><span class="w italic-display">A&nbsp;second&nbsp;pass</span> <span class="w">refuses&nbsp;weak&nbsp;briefs.</span></span></h2>
+    </div>
+    <p class="desc">Every thesis is composed against a 42-point rubric — palette, programme, lighting strategy, precedent justification, materials defensibility. A second pass reviews the result. If it isn't strong enough, the studio refines and tries again before showing it to you.</p>
+  </div>
+  <div class="thesis">
+    <div>
+      <div class="grid42" id="grid42"></div>
+      <div class="legend">
+        <span><span class="sw pass"></span>Passed first try</span>
+        <span><span class="sw warn"></span>Refined once</span>
+      </div>
+    </div>
+    <div class="gauge">
+      <p class="eyebrow" style="display:block">Last review</p>
+      <div class="score" style="margin-top:var(--space-sm);"><span class="counter" data-to="87">0</span><sub>/100</sub></div>
+      <div class="bar"><div class="fill" style="--w: 87%;"></div></div>
+      <p class="pass">● Above the bar · refined once before passing</p>
+      <div class="meta">
+        <span>Programme · validated</span>
+        <span>Materials · 4 named</span>
+        <span>Precedents · 2 referenced</span>
+        <span>Lighting · resolved</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Memory -->
+<section class="s fade-in">
+  <div class="s-head">
+    <div>
+      <p class="eyebrow">Memory</p>
+      <h2 style="margin-top: var(--space-md);"><span class="split-words"><span class="w">It&nbsp;</span><span class="w">remembers&nbsp;</span><span class="w">your&nbsp;</span><span class="w italic-display">studio.</span></span></h2>
+    </div>
+    <p class="desc">Past projects, preferences, vetoes — all carried into the next brief. Your studio's voice compounds across projects instead of resetting every session.</p>
+  </div>
+  <div class="memory">
+    <div class="left">
+      <h3>The studio learns your voice over time.</h3>
+      <p>After every project, the studio absorbs what you chose, what you rejected, and which precedents won. Next time you brief it, those decisions are already on the table — proposed before you have to ask.</p>
+      <div class="stores">
+        <div class="row"><span class="name">Voice</span><span class="desc">Your studio's tone — warm minimal, brutalist precision, hospitality-first — recognised and maintained across briefs.</span></div>
+        <div class="row"><span class="name">Vetoes</span><span class="desc">Materials and forms you've rejected once never come back uninvited. Your "no" sticks.</span></div>
+        <div class="row"><span class="name">Wins</span><span class="desc">Palettes and precedents that won client work surface earlier on the next brief, not last.</span></div>
+      </div>
+    </div>
+    <div class="right">
+      <p class="label">From your last seven projects</p>
+      <p class="past">Studio voice · <b>warm minimal, never all-glass</b></p>
+      <p class="past">Avoided · <b>polished chrome, high-gloss marble</b></p>
+      <p class="past">Preferred palettes · <b>clay · oak · linen · graphite · brass · ash</b></p>
+      <p class="past">Precedents that won · <b>P03 Luxury Modern, P05 Scandinavian</b></p>
+      <p class="arrow">↓</p>
+      <p class="now">New brief opens with your voice already in it</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final fade-in">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Request access</p>
+      <h2 style="margin-top: var(--space-md);">Seen enough? <span class="italic-display">Brief the studio.</span></h2>
+    </div>
+    <div>
+      <a class="btn btn-primary" href="landing.html#cta" style="margin-top: var(--space-md);"><span class="dot" style="background: var(--color-bg); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-bg) 18%, transparent);"></span>Request beta access</a>
+      <p class="small">Beta cohorts open monthly · Founder replies within 48h.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>rkitect.ai · render studio · 2026</span>
+  <span>Built quietly · for the studios who refuse the wait</span>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+[
+  {
+    "id": "C01",
+    "post": "#23",
+    "section": "section-c",
+    "caption": "\"This was generated in 40 seconds.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a98935b/H7GDV_hbNUprek876E1IA_9976883ae753414ba0d8f77206265f8d.jpg",
+    "local": "section-c/c01.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C02",
+    "post": "#24",
+    "section": "section-c",
+    "caption": "\"Golden hour doesn't wait for your render to finish.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a98935c/LeHrigmLD7oGM3xYS36su_959a90fac1b74b35ad51875d0910e2d6.jpg",
+    "local": "section-c/c02.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C03",
+    "post": "#25",
+    "section": "section-c",
+    "caption": "\"Nobody talks about dark kitchens enough.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a98935d/13F-ERvL1BkwK2aj6rjF0_188c3b27cf774dbf85ce440f1f845080.jpg",
+    "local": "section-c/c03.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C04",
+    "post": "#26",
+    "section": "section-c",
+    "caption": "\"Concrete. Silence. Geometry.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a98935f/KZcfA5BTQIMbyOyzsA8Fu_af0f1549f2704b2fafed3cbb22c2f73e.jpg",
+    "local": "section-c/c04.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C05",
+    "post": "#27",
+    "section": "section-c",
+    "caption": "\"Terracotta is the colour of 2025.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a989360/1gRrpdNWoiku1uSC7ZkcW_b4bab0de480d4e77878fa3bbf3aa887e.jpg",
+    "local": "section-c/c05.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C06",
+    "post": "#28",
+    "section": "section-c",
+    "caption": "\"This lobby was designed in an afternoon.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a989361/-9e-hr9zqr7xMs71Rmrh9_b72f09f76b8141f2a8da19d8672724cd.jpg",
+    "local": "section-c/c06.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C07",
+    "post": "#29",
+    "section": "section-c",
+    "caption": "\"People keep asking if this is a photograph.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a989363/3wGeRSpa5yu4nte2k7JTK_1091865b20e642b6a37ece37c1ea3ae2.jpg",
+    "local": "section-c/c07.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "C08",
+    "post": "#30",
+    "section": "section-c",
+    "caption": "\"We call this the 1,000-save bathroom.\" — rkitect.ai",
+    "image_url": "https://v3b.fal.media/files/b/0a989364/szhDf_A6wEb1N_m786C8h_6bf95a1c59dd4fad9893ea5d9d2d8f04.jpg",
+    "local": "section-c/c08.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "S03",
+    "post": "#13-style3",
+    "section": "styles-carousel",
+    "caption": "3 — Maximalist",
+    "image_url": "https://v3b.fal.media/files/b/0a989365/Qj125BXya6uaKdW5fwU6y_ed97281c197d4c759654cb90f4e6906e.jpg",
+    "local": "styles-carousel/s03.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "S04",
+    "post": "#13-style4",
+    "section": "styles-carousel",
+    "caption": "4 — Scandinavian",
+    "image_url": "https://v3b.fal.media/files/b/0a989366/pp7_vkzJHXWULprG9PQ8b_79b814ed2cfc4cdebb168bd0772d4b4f.jpg",
+    "local": "styles-carousel/s04.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "S05",
+    "post": "#13-style5",
+    "section": "styles-carousel",
+    "caption": "5 — Biophilic",
+    "image_url": "https://v3b.fal.media/files/b/0a989368/Hb4jD49eDlQP0trOof75P_d608bcd97f864bc0a8df9c4b4d780f53.jpg",
+    "local": "styles-carousel/s05.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "E01",
+    "post": "#20-facade1",
+    "section": "exteriors-carousel",
+    "caption": "Residential Villa",
+    "image_url": "https://v3b.fal.media/files/b/0a989369/zZjwbdtPTwR-vt5xlAI9F_5791130026874af78b609b4251fec8c4.jpg",
+    "local": "exteriors-carousel/e01.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "E02",
+    "post": "#20-facade2",
+    "section": "exteriors-carousel",
+    "caption": "Office Tower",
+    "image_url": "https://v3b.fal.media/files/b/0a98936a/KQbvFGiiajXC78vjTs5ki_429881ba805b465ca93e6432bcf0d188.jpg",
+    "local": "exteriors-carousel/e02.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "E03",
+    "post": "#20-facade3",
+    "section": "exteriors-carousel",
+    "caption": "School Campus",
+    "image_url": "https://v3b.fal.media/files/b/0a98936c/-B3MGNrOGljBQ_jtlsttR_3b26a33985b74d0183be6492a2eb8db1.jpg",
+    "local": "exteriors-carousel/e03.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "E04",
+    "post": "#20-facade4",
+    "section": "exteriors-carousel",
+    "caption": "Mixed-Use Development",
+    "image_url": "https://v3b.fal.media/files/b/0a98936d/dsYSi5qE5upmNOlfT8H9X_cdea1b4364c44255952efe3d2bf3d121.jpg",
+    "local": "exteriors-carousel/e04.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "E05",
+    "post": "#20-facade5",
+    "section": "exteriors-carousel",
+    "caption": "Cultural Centre",
+    "image_url": "https://v3b.fal.media/files/b/0a98936e/XPCtaZMkj--F40sz-ZJqU_7c64542beac9408b9188494a1d93cafe.jpg",
+    "local": "exteriors-carousel/e05.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "LT1",
+    "post": "#21-light1",
+    "section": "lighting-carousel",
+    "caption": "1 — Harsh Midday",
+    "image_url": "https://v3b.fal.media/files/b/0a989370/fC0WkUYoEakWWTTt4fTYs_3c96deac7618491eacf17f0c7e02fb52.jpg",
+    "local": "lighting-carousel/lt1.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "LT2",
+    "post": "#21-light2",
+    "section": "lighting-carousel",
+    "caption": "2 — Golden Hour",
+    "image_url": "https://v3b.fal.media/files/b/0a989371/Qj_5lrSlT0Q_asuqjpika_428d8204412f40669974cbc112b23c66.jpg",
+    "local": "lighting-carousel/lt2.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "LT3",
+    "post": "#21-light3",
+    "section": "lighting-carousel",
+    "caption": "3 — Soft Evening",
+    "image_url": "https://v3b.fal.media/files/b/0a989372/hpdLuLuo8s_XIiUeetkbP_d57ab3e7d4a541bd991cf0f278957ae8.jpg",
+    "local": "lighting-carousel/lt3.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "LT4",
+    "post": "#21-light4",
+    "section": "lighting-carousel",
+    "caption": "4 — Dramatic Night",
+    "image_url": "https://v3b.fal.media/files/b/0a989374/qabop1zDzmV_v0Y90I7Hx_97e7b97de34843e1a23db3817868a618.jpg",
+    "local": "lighting-carousel/lt4.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA01",
+    "post": "#14-bath1",
+    "section": "bathrooms-carousel",
+    "caption": "Industrial",
+    "image_url": "https://v3b.fal.media/files/b/0a989375/ZVKH6trMKX6Bhk0YMS2oj_d30d9eafafdb459cbbe48b07ad4600d6.jpg",
+    "local": "bathrooms-carousel/ba01.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA02",
+    "post": "#14-bath2",
+    "section": "bathrooms-carousel",
+    "caption": "Japanese Soaking",
+    "image_url": "https://v3b.fal.media/files/b/0a989376/8b0OlQbpZL5waAoO3IbaB_bc44010777934c4bb5cc2cf7a66ee3a0.jpg",
+    "local": "bathrooms-carousel/ba02.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA03",
+    "post": "#14-bath3",
+    "section": "bathrooms-carousel",
+    "caption": "Coastal",
+    "image_url": "https://v3b.fal.media/files/b/0a989377/AFA1kmzmC0KRDQS2UspAa_9e5c9226361a4dcbb620bddc51a757f6.jpg",
+    "local": "bathrooms-carousel/ba03.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA04",
+    "post": "#14-bath4",
+    "section": "bathrooms-carousel",
+    "caption": "Dark & Moody",
+    "image_url": "https://v3b.fal.media/files/b/0a989379/SkqWIgnmYxeE9PXhTPw2y_54d7293e899747f18928811f60e72383.jpg",
+    "local": "bathrooms-carousel/ba04.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA05",
+    "post": "#14-bath5",
+    "section": "bathrooms-carousel",
+    "caption": "Vintage",
+    "image_url": "https://v3b.fal.media/files/b/0a98937a/5cvSWW9ZZ91jvqu5J5Qi3_e0ab0e625ee140ffab1633ddb2dc078e.jpg",
+    "local": "bathrooms-carousel/ba05.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA06",
+    "post": "#14-bath6",
+    "section": "bathrooms-carousel",
+    "caption": "Open Plan",
+    "image_url": "https://v3b.fal.media/files/b/0a98937b/e0MB2L6XPanKTpCZ7B2w__845c699cd08a4b5993665bd16c8e2971.jpg",
+    "local": "bathrooms-carousel/ba06.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA07",
+    "post": "#14-bath7",
+    "section": "bathrooms-carousel",
+    "caption": "Futuristic",
+    "image_url": "https://v3b.fal.media/files/b/0a98937d/Yz1f3TNj0EmfK-NyU01sE_56e6b8e04128417785bad1c6c2fb3f38.jpg",
+    "local": "bathrooms-carousel/ba07.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA08",
+    "post": "#14-bath8",
+    "section": "bathrooms-carousel",
+    "caption": "Earthy",
+    "image_url": "https://v3b.fal.media/files/b/0a98937f/dykFy7SPOTVXj7-jzEoOD_44d91ecdcc334e62b24454a57830acc3.jpg",
+    "local": "bathrooms-carousel/ba08.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BA09",
+    "post": "#14-bath9",
+    "section": "bathrooms-carousel",
+    "caption": "Maximalist",
+    "image_url": "https://v3b.fal.media/files/b/0a989380/qPEp8TFFFWp3aJXYCfKTk_0cf4ff7957d244deb62e661dfb4bb451.jpg",
+    "local": "bathrooms-carousel/ba09.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BT01",
+    "post": "#15-bed1",
+    "section": "bedroom-trends",
+    "caption": "Terracotta Revival",
+    "image_url": "https://v3b.fal.media/files/b/0a989382/YtdGIG3x4hKB_V4SMY8z7_e94b4e0317ac42c3864dd93923447403.jpg",
+    "local": "bedroom-trends/bt01.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BT02",
+    "post": "#15-bed2",
+    "section": "bedroom-trends",
+    "caption": "Coastal Grandmother",
+    "image_url": "https://v3b.fal.media/files/b/0a989383/n8JTyzy8q5PfguF-gmKb3_30ba73e28b4d49c28312cc5c56f24343.jpg",
+    "local": "bedroom-trends/bt02.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BT03",
+    "post": "#15-bed3",
+    "section": "bedroom-trends",
+    "caption": "Biophilic Maximalism",
+    "image_url": "https://v3b.fal.media/files/b/0a989385/w1XE8uibXBw0VeLJEVhzX_37f191312ed346d5935f87cad5207d8a.jpg",
+    "local": "bedroom-trends/bt03.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BT04",
+    "post": "#15-bed4",
+    "section": "bedroom-trends",
+    "caption": "Quiet Luxury",
+    "image_url": "https://v3b.fal.media/files/b/0a989386/LGAB_LlsgW2KDMFsMKICx_b2a1591dbfcc44648f237d69b5405c0e.jpg",
+    "local": "bedroom-trends/bt04.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BT05",
+    "post": "#15-bed5",
+    "section": "bedroom-trends",
+    "caption": "Japandi 2.0",
+    "image_url": "https://v3b.fal.media/files/b/0a989387/tAj_po3rTJy7vb1QR8CXQ_987f17ac53ec47cdbb53d8a11ad1cec7.jpg",
+    "local": "bedroom-trends/bt05.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "BT06",
+    "post": "#15-bed6",
+    "section": "bedroom-trends",
+    "caption": "Arc Deco Modern",
+    "image_url": "https://v3b.fal.media/files/b/0a989389/EaAyyAlvIUrKUhq4dSsr1_2965e21fc5a5446a846fca48ac7d73ca.jpg",
+    "local": "bedroom-trends/bt06.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M01",
+    "post": "#22-mat1",
+    "section": "material-palettes",
+    "caption": "Warm Nordic",
+    "image_url": "https://v3b.fal.media/files/b/0a98938b/VC0i8djiwILE-EeV3glqL_image.png",
+    "local": "material-palettes/m01.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M02",
+    "post": "#22-mat2",
+    "section": "material-palettes",
+    "caption": "Dark Drama",
+    "image_url": "https://v3b.fal.media/files/b/0a98938d/Y1DCdoLWjT1wFsM5Keb66_image.png",
+    "local": "material-palettes/m02.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M03",
+    "post": "#22-mat3",
+    "section": "material-palettes",
+    "caption": "Calacatta Luxe",
+    "image_url": "https://v3b.fal.media/files/b/0a989391/27GIJxRZ7TXt25HdZqSsC_image.png",
+    "local": "material-palettes/m03.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M04",
+    "post": "#22-mat4",
+    "section": "material-palettes",
+    "caption": "Raw Industrial",
+    "image_url": "https://v3b.fal.media/files/b/0a989393/xM5ueSA5PM7VwBOx7H2jF_image.png",
+    "local": "material-palettes/m04.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M05",
+    "post": "#22-mat5",
+    "section": "material-palettes",
+    "caption": "Mediterranean Warm",
+    "image_url": "https://v3b.fal.media/files/b/0a989395/2LuTsGtcAF_YFWdZViDkW_image.png",
+    "local": "material-palettes/m05.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M06",
+    "post": "#22-mat6",
+    "section": "material-palettes",
+    "caption": "Japandi Neutral",
+    "image_url": "https://v3b.fal.media/files/b/0a989398/SjQBgLUzYxdP32JIE7KLY_image.png",
+    "local": "material-palettes/m06.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M07",
+    "post": "#22-mat7",
+    "section": "material-palettes",
+    "caption": "Jewel Maximalist",
+    "image_url": "https://v3b.fal.media/files/b/0a98939a/hLqDdzBD4Wie7b-Z6qCoK_image.png",
+    "local": "material-palettes/m07.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M08",
+    "post": "#22-mat8",
+    "section": "material-palettes",
+    "caption": "Biophilic Earth",
+    "image_url": "https://v3b.fal.media/files/b/0a98939c/QlhlPP8Lq50ZD5hq-mtWW_image.png",
+    "local": "material-palettes/m08.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M09",
+    "post": "#22-mat9",
+    "section": "material-palettes",
+    "caption": "Coastal Bleached",
+    "image_url": "https://v3b.fal.media/files/b/0a98939f/nnQD5OSMoPbA4fAhMiy_v_image.png",
+    "local": "material-palettes/m09.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "M10",
+    "post": "#22-mat10",
+    "section": "material-palettes",
+    "caption": "Dark Academia",
+    "image_url": "https://v3b.fal.media/files/b/0a9893a2/_Hth0UC6QzcY0yiSHHSe0_image.png",
+    "local": "material-palettes/m10.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "T01",
+    "post": "#36",
+    "section": "typography",
+    "caption": "The 5-part prompt formula. Screenshot this.",
+    "image_url": "https://v3b.fal.media/files/b/0a9893a5/S2w4vs9A6HGV_LhSEx0JJ_image.png",
+    "local": "typography/t01.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "T02",
+    "post": "#42",
+    "section": "typography",
+    "caption": "The best architects render 10x before they build anything.",
+    "image_url": "https://v3b.fal.media/files/b/0a9893a8/sw_E0drT-MGlb4wmHm2od_image.png",
+    "local": "typography/t02.jpg",
+    "status": "ok"
+  },
+  {
+    "id": "T03",
+    "post": "#44",
+    "section": "typography",
+    "caption": "Weekly challenge — render this brief.",
+    "status": "error"
+  },
+  {
+    "id": "T04",
+    "post": "#48",
+    "section": "typography",
+    "caption": "Free renders for architecture students.",
+    "status": "error"
+  }
+]

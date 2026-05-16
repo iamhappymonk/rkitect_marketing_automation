@@ -1,0 +1,3808 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "0.20_dollars_per_render",
+        "label": "0.20 dollars per render"
+      }
+    },
+    {
+      "data": {
+        "id": "0_20_per_render",
+        "label": "0 20 per render"
+      }
+    },
+    {
+      "data": {
+        "id": "199_per_month",
+        "label": "199 per month"
+      }
+    },
+    {
+      "data": {
+        "id": "200_plus_materials",
+        "label": "200 plus materials"
+      }
+    },
+    {
+      "data": {
+        "id": "2d_floorplans_into_cinematic_renders",
+        "label": "2d floorplans into cinematic renders"
+      }
+    },
+    {
+      "data": {
+        "id": "42_point_rubric",
+        "label": "42 point rubric"
+      }
+    },
+    {
+      "data": {
+        "id": "5_minute_feedback_loop",
+        "label": "5 minute feedback loop"
+      }
+    },
+    {
+      "data": {
+        "id": "5_to_6_posts_per_week",
+        "label": "5 to 6 posts per week"
+      }
+    },
+    {
+      "data": {
+        "id": "60_second_turnaround",
+        "label": "60 second turnaround"
+      }
+    },
+    {
+      "data": {
+        "id": "6_render_engines",
+        "label": "6 render engines"
+      }
+    },
+    {
+      "data": {
+        "id": "94_percent_accuracy",
+        "label": "94 percent accuracy"
+      }
+    },
+    {
+      "data": {
+        "id": "94_percent_segmentation_accuracy",
+        "label": "94 percent segmentation accuracy"
+      }
+    },
+    {
+      "data": {
+        "id": "ad_campaign_automation",
+        "label": "ad campaign automation"
+      }
+    },
+    {
+      "data": {
+        "id": "aec_professionals",
+        "label": "aec professionals"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_architectural_rendering",
+        "label": "ai architectural rendering"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_architecture_visuals",
+        "label": "ai architecture visuals"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_assisted_rendering",
+        "label": "ai assisted rendering"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_render_studio",
+        "label": "ai render studio"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_rendering",
+        "label": "ai rendering"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_segmentation_accuracy",
+        "label": "ai segmentation accuracy"
+      }
+    },
+    {
+      "data": {
+        "id": "ai_segmentation_engine",
+        "label": "ai segmentation engine"
+      }
+    },
+    {
+      "data": {
+        "id": "architect",
+        "label": "architect"
+      }
+    },
+    {
+      "data": {
+        "id": "architect_language",
+        "label": "architect language"
+      }
+    },
+    {
+      "data": {
+        "id": "architect_pain_points",
+        "label": "architect pain points"
+      }
+    },
+    {
+      "data": {
+        "id": "architects",
+        "label": "architects"
+      }
+    },
+    {
+      "data": {
+        "id": "architectural_visualization",
+        "label": "architectural visualization"
+      }
+    },
+    {
+      "data": {
+        "id": "architectural_visualizations",
+        "label": "architectural visualizations"
+      }
+    },
+    {
+      "data": {
+        "id": "architectural_workflow",
+        "label": "architectural workflow"
+      }
+    },
+    {
+      "data": {
+        "id": "architecture_students",
+        "label": "architecture students"
+      }
+    },
+    {
+      "data": {
+        "id": "archivinciai",
+        "label": "archivinciai"
+      }
+    },
+    {
+      "data": {
+        "id": "artificial_intelligence",
+        "label": "artificial intelligence"
+      }
+    },
+    {
+      "data": {
+        "id": "authoritative",
+        "label": "authoritative"
+      }
+    },
+    {
+      "data": {
+        "id": "authority",
+        "label": "authority"
+      }
+    },
+    {
+      "data": {
+        "id": "bathroom",
+        "label": "bathroom"
+      }
+    },
+    {
+      "data": {
+        "id": "bathroom_styles",
+        "label": "bathroom styles"
+      }
+    },
+    {
+      "data": {
+        "id": "bedroom",
+        "label": "bedroom"
+      }
+    },
+    {
+      "data": {
+        "id": "bedroom_trends",
+        "label": "bedroom trends"
+      }
+    },
+    {
+      "data": {
+        "id": "before_after_renders",
+        "label": "before after renders"
+      }
+    },
+    {
+      "data": {
+        "id": "beta_cohort",
+        "label": "beta cohort"
+      }
+    },
+    {
+      "data": {
+        "id": "biophilic_2_0_design",
+        "label": "biophilic 2 0 design"
+      }
+    },
+    {
+      "data": {
+        "id": "biophilic_design",
+        "label": "biophilic design"
+      }
+    },
+    {
+      "data": {
+        "id": "biophilic_style",
+        "label": "biophilic style"
+      }
+    },
+    {
+      "data": {
+        "id": "brand_voice",
+        "label": "brand voice"
+      }
+    },
+    {
+      "data": {
+        "id": "build_in_public",
+        "label": "build in public"
+      }
+    },
+    {
+      "data": {
+        "id": "call_to_action",
+        "label": "call to action"
+      }
+    },
+    {
+      "data": {
+        "id": "campaigns",
+        "label": "campaigns"
+      }
+    },
+    {
+      "data": {
+        "id": "caption",
+        "label": "caption"
+      }
+    },
+    {
+      "data": {
+        "id": "carousel_marketing",
+        "label": "carousel marketing"
+      }
+    },
+    {
+      "data": {
+        "id": "chief_architect",
+        "label": "chief architect"
+      }
+    },
+    {
+      "data": {
+        "id": "cinematic_storytelling",
+        "label": "cinematic storytelling"
+      }
+    },
+    {
+      "data": {
+        "id": "client_approval_rates",
+        "label": "client approval rates"
+      }
+    },
+    {
+      "data": {
+        "id": "client_communication",
+        "label": "client communication"
+      }
+    },
+    {
+      "data": {
+        "id": "client_delays",
+        "label": "client delays"
+      }
+    },
+    {
+      "data": {
+        "id": "client_presentations",
+        "label": "client presentations"
+      }
+    },
+    {
+      "data": {
+        "id": "client_ready_designs",
+        "label": "client ready designs"
+      }
+    },
+    {
+      "data": {
+        "id": "close_projects_faster",
+        "label": "close projects faster"
+      }
+    },
+    {
+      "data": {
+        "id": "cohesive_design",
+        "label": "cohesive design"
+      }
+    },
+    {
+      "data": {
+        "id": "communities",
+        "label": "communities"
+      }
+    },
+    {
+      "data": {
+        "id": "confidence_scores",
+        "label": "confidence scores"
+      }
+    },
+    {
+      "data": {
+        "id": "content",
+        "label": "content"
+      }
+    },
+    {
+      "data": {
+        "id": "content_generation",
+        "label": "content generation"
+      }
+    },
+    {
+      "data": {
+        "id": "content_generation_tracker",
+        "label": "content generation tracker"
+      }
+    },
+    {
+      "data": {
+        "id": "content_pillars",
+        "label": "content pillars"
+      }
+    },
+    {
+      "data": {
+        "id": "content_pipeline",
+        "label": "content pipeline"
+      }
+    },
+    {
+      "data": {
+        "id": "creative_brief",
+        "label": "creative brief"
+      }
+    },
+    {
+      "data": {
+        "id": "design_ideation",
+        "label": "design ideation"
+      }
+    },
+    {
+      "data": {
+        "id": "design_trends",
+        "label": "design trends"
+      }
+    },
+    {
+      "data": {
+        "id": "dining_room",
+        "label": "dining room"
+      }
+    },
+    {
+      "data": {
+        "id": "distribution",
+        "label": "distribution"
+      }
+    },
+    {
+      "data": {
+        "id": "diverse_design_styles",
+        "label": "diverse design styles"
+      }
+    },
+    {
+      "data": {
+        "id": "dramatic_night_lighting",
+        "label": "dramatic night lighting"
+      }
+    },
+    {
+      "data": {
+        "id": "edit_specialists",
+        "label": "edit specialists"
+      }
+    },
+    {
+      "data": {
+        "id": "email",
+        "label": "email"
+      }
+    },
+    {
+      "data": {
+        "id": "empty_spaces",
+        "label": "empty spaces"
+      }
+    },
+    {
+      "data": {
+        "id": "fal_ai_bytedance_seedance",
+        "label": "fal ai bytedance seedance"
+      }
+    },
+    {
+      "data": {
+        "id": "fal_ai_kling_video",
+        "label": "fal ai kling video"
+      }
+    },
+    {
+      "data": {
+        "id": "fal_ai_minimax_video_01_live",
+        "label": "fal ai minimax video 01 live"
+      }
+    },
+    {
+      "data": {
+        "id": "fal_media_urls",
+        "label": "fal media urls"
+      }
+    },
+    {
+      "data": {
+        "id": "finished_post_record_shape",
+        "label": "finished post record shape"
+      }
+    },
+    {
+      "data": {
+        "id": "firm_owners",
+        "label": "firm owners"
+      }
+    },
+    {
+      "data": {
+        "id": "five_items",
+        "label": "five items"
+      }
+    },
+    {
+      "data": {
+        "id": "free_renders",
+        "label": "free renders"
+      }
+    },
+    {
+      "data": {
+        "id": "future_architecture_concepts",
+        "label": "future architecture concepts"
+      }
+    },
+    {
+      "data": {
+        "id": "golden_hour_lighting",
+        "label": "golden hour lighting"
+      }
+    },
+    {
+      "data": {
+        "id": "google_ads",
+        "label": "google ads"
+      }
+    },
+    {
+      "data": {
+        "id": "hand_sketch",
+        "label": "hand sketch"
+      }
+    },
+    {
+      "data": {
+        "id": "happymonk_drive_dump",
+        "label": "happymonk drive dump"
+      }
+    },
+    {
+      "data": {
+        "id": "heavy_hardware_requirements",
+        "label": "heavy hardware requirements"
+      }
+    },
+    {
+      "data": {
+        "id": "high_quality_renders",
+        "label": "high quality renders"
+      }
+    },
+    {
+      "data": {
+        "id": "high_rendering_costs",
+        "label": "high rendering costs"
+      }
+    },
+    {
+      "data": {
+        "id": "highest_reach",
+        "label": "highest reach"
+      }
+    },
+    {
+      "data": {
+        "id": "highest_trust",
+        "label": "highest trust"
+      }
+    },
+    {
+      "data": {
+        "id": "home_office",
+        "label": "home office"
+      }
+    },
+    {
+      "data": {
+        "id": "hook",
+        "label": "hook"
+      }
+    },
+    {
+      "data": {
+        "id": "human_designer",
+        "label": "human designer"
+      }
+    },
+    {
+      "data": {
+        "id": "humor",
+        "label": "humor"
+      }
+    },
+    {
+      "data": {
+        "id": "hundreds_of_hours_on_revisions",
+        "label": "hundreds of hours on revisions"
+      }
+    },
+    {
+      "data": {
+        "id": "india",
+        "label": "india"
+      }
+    },
+    {
+      "data": {
+        "id": "indian_architects",
+        "label": "indian architects"
+      }
+    },
+    {
+      "data": {
+        "id": "industry_insight",
+        "label": "industry insight"
+      }
+    },
+    {
+      "data": {
+        "id": "instagram",
+        "label": "instagram"
+      }
+    },
+    {
+      "data": {
+        "id": "instagram_as_marketing_channel",
+        "label": "instagram as marketing channel"
+      }
+    },
+    {
+      "data": {
+        "id": "instant_client_revisions",
+        "label": "instant client revisions"
+      }
+    },
+    {
+      "data": {
+        "id": "interior_designer",
+        "label": "interior designer"
+      }
+    },
+    {
+      "data": {
+        "id": "interior_designers",
+        "label": "interior designers"
+      }
+    },
+    {
+      "data": {
+        "id": "interior_variations",
+        "label": "interior variations"
+      }
+    },
+    {
+      "data": {
+        "id": "iteration_speed_bottleneck",
+        "label": "iteration speed bottleneck"
+      }
+    },
+    {
+      "data": {
+        "id": "iterative_design",
+        "label": "iterative design"
+      }
+    },
+    {
+      "data": {
+        "id": "japandi_design",
+        "label": "japandi design"
+      }
+    },
+    {
+      "data": {
+        "id": "kitchen",
+        "label": "kitchen"
+      }
+    },
+    {
+      "data": {
+        "id": "kling_v2_1",
+        "label": "kling v2 1"
+      }
+    },
+    {
+      "data": {
+        "id": "lead_generation",
+        "label": "lead generation"
+      }
+    },
+    {
+      "data": {
+        "id": "light_studies",
+        "label": "light studies"
+      }
+    },
+    {
+      "data": {
+        "id": "linkedin",
+        "label": "linkedin"
+      }
+    },
+    {
+      "data": {
+        "id": "linkedin_as_marketing_channel",
+        "label": "linkedin as marketing channel"
+      }
+    },
+    {
+      "data": {
+        "id": "linkedin_for_strategy",
+        "label": "linkedin for strategy"
+      }
+    },
+    {
+      "data": {
+        "id": "linkedin_strategy",
+        "label": "linkedin strategy"
+      }
+    },
+    {
+      "data": {
+        "id": "living_room",
+        "label": "living room"
+      }
+    },
+    {
+      "data": {
+        "id": "long_render_nights",
+        "label": "long render nights"
+      }
+    },
+    {
+      "data": {
+        "id": "long_render_times",
+        "label": "long render times"
+      }
+    },
+    {
+      "data": {
+        "id": "lumion",
+        "label": "lumion"
+      }
+    },
+    {
+      "data": {
+        "id": "luxury_interior",
+        "label": "luxury interior"
+      }
+    },
+    {
+      "data": {
+        "id": "marketing_automation_layer",
+        "label": "marketing automation layer"
+      }
+    },
+    {
+      "data": {
+        "id": "marketing_carousels",
+        "label": "marketing carousels"
+      }
+    },
+    {
+      "data": {
+        "id": "marketing_channel",
+        "label": "marketing channel"
+      }
+    },
+    {
+      "data": {
+        "id": "marketing_content",
+        "label": "marketing content"
+      }
+    },
+    {
+      "data": {
+        "id": "marketing_post",
+        "label": "marketing post"
+      }
+    },
+    {
+      "data": {
+        "id": "marketing_reels",
+        "label": "marketing reels"
+      }
+    },
+    {
+      "data": {
+        "id": "material_palettes",
+        "label": "material palettes"
+      }
+    },
+    {
+      "data": {
+        "id": "material_thesis",
+        "label": "material thesis"
+      }
+    },
+    {
+      "data": {
+        "id": "material_transitions",
+        "label": "material transitions"
+      }
+    },
+    {
+      "data": {
+        "id": "material_visualization_difficulty",
+        "label": "material visualization difficulty"
+      }
+    },
+    {
+      "data": {
+        "id": "maximalist_style",
+        "label": "maximalist style"
+      }
+    },
+    {
+      "data": {
+        "id": "media",
+        "label": "media"
+      }
+    },
+    {
+      "data": {
+        "id": "memory_feature",
+        "label": "memory feature"
+      }
+    },
+    {
+      "data": {
+        "id": "meta_ads",
+        "label": "meta ads"
+      }
+    },
+    {
+      "data": {
+        "id": "midjourney_outputs",
+        "label": "midjourney outputs"
+      }
+    },
+    {
+      "data": {
+        "id": "mnml_ai",
+        "label": "mnml ai"
+      }
+    },
+    {
+      "data": {
+        "id": "multiple_design_styles",
+        "label": "multiple design styles"
+      }
+    },
+    {
+      "data": {
+        "id": "office_towers",
+        "label": "office towers"
+      }
+    },
+    {
+      "data": {
+        "id": "outreach",
+        "label": "outreach"
+      }
+    },
+    {
+      "data": {
+        "id": "photoreal_interior_renders",
+        "label": "photoreal interior renders"
+      }
+    },
+    {
+      "data": {
+        "id": "photorealistic_details",
+        "label": "photorealistic details"
+      }
+    },
+    {
+      "data": {
+        "id": "photorealistic_interior",
+        "label": "photorealistic interior"
+      }
+    },
+    {
+      "data": {
+        "id": "photorealistic_renders",
+        "label": "photorealistic renders"
+      }
+    },
+    {
+      "data": {
+        "id": "photos",
+        "label": "photos"
+      }
+    },
+    {
+      "data": {
+        "id": "pillar_1_content",
+        "label": "pillar 1 content"
+      }
+    },
+    {
+      "data": {
+        "id": "pillar_2_content",
+        "label": "pillar 2 content"
+      }
+    },
+    {
+      "data": {
+        "id": "pillar_3_content",
+        "label": "pillar 3 content"
+      }
+    },
+    {
+      "data": {
+        "id": "pilot_sprint_tier",
+        "label": "pilot sprint tier"
+      }
+    },
+    {
+      "data": {
+        "id": "post_render_segmentation",
+        "label": "post render segmentation"
+      }
+    },
+    {
+      "data": {
+        "id": "posting_cadence",
+        "label": "posting cadence"
+      }
+    },
+    {
+      "data": {
+        "id": "posts_final_json",
+        "label": "posts final json"
+      }
+    },
+    {
+      "data": {
+        "id": "pre_launch",
+        "label": "pre launch"
+      }
+    },
+    {
+      "data": {
+        "id": "pre_launch_phase",
+        "label": "pre launch phase"
+      }
+    },
+    {
+      "data": {
+        "id": "problem_statement_visuals",
+        "label": "problem statement visuals"
+      }
+    },
+    {
+      "data": {
+        "id": "project_closure",
+        "label": "project closure"
+      }
+    },
+    {
+      "data": {
+        "id": "project_revision_cycles",
+        "label": "project revision cycles"
+      }
+    },
+    {
+      "data": {
+        "id": "prompt_formula",
+        "label": "prompt formula"
+      }
+    },
+    {
+      "data": {
+        "id": "prompts",
+        "label": "prompts"
+      }
+    },
+    {
+      "data": {
+        "id": "quick_client_presentations",
+        "label": "quick client presentations"
+      }
+    },
+    {
+      "data": {
+        "id": "quick_renders",
+        "label": "quick renders"
+      }
+    },
+    {
+      "data": {
+        "id": "rapid_design_iteration",
+        "label": "rapid design iteration"
+      }
+    },
+    {
+      "data": {
+        "id": "rapid_rendering",
+        "label": "rapid rendering"
+      }
+    },
+    {
+      "data": {
+        "id": "reels",
+        "label": "reels"
+      }
+    },
+    {
+      "data": {
+        "id": "reels_manifest",
+        "label": "reels manifest"
+      }
+    },
+    {
+      "data": {
+        "id": "render_farm_delays",
+        "label": "render farm delays"
+      }
+    },
+    {
+      "data": {
+        "id": "rendering_costs",
+        "label": "rendering costs"
+      }
+    },
+    {
+      "data": {
+        "id": "rendering_time_pain",
+        "label": "rendering time pain"
+      }
+    },
+    {
+      "data": {
+        "id": "renders",
+        "label": "renders"
+      }
+    },
+    {
+      "data": {
+        "id": "renders_in_60_seconds",
+        "label": "renders in 60 seconds"
+      }
+    },
+    {
+      "data": {
+        "id": "residential_projects",
+        "label": "residential projects"
+      }
+    },
+    {
+      "data": {
+        "id": "residential_villas",
+        "label": "residential villas"
+      }
+    },
+    {
+      "data": {
+        "id": "results_quickly",
+        "label": "results quickly"
+      }
+    },
+    {
+      "data": {
+        "id": "revision_anxiety",
+        "label": "revision anxiety"
+      }
+    },
+    {
+      "data": {
+        "id": "rkitect.ai",
+        "label": "rkitect.ai"
+      }
+    },
+    {
+      "data": {
+        "id": "rkitect_ai",
+        "label": "rkitect ai"
+      }
+    },
+    {
+      "data": {
+        "id": "rkitect_ai_marketing_work",
+        "label": "rkitect ai marketing work"
+      }
+    },
+    {
+      "data": {
+        "id": "sales_led",
+        "label": "sales led"
+      }
+    },
+    {
+      "data": {
+        "id": "sales_motion",
+        "label": "sales motion"
+      }
+    },
+    {
+      "data": {
+        "id": "scandinavian_style",
+        "label": "scandinavian style"
+      }
+    },
+    {
+      "data": {
+        "id": "scenario_hooks",
+        "label": "scenario hooks"
+      }
+    },
+    {
+      "data": {
+        "id": "seedance_1_5",
+        "label": "seedance 1 5"
+      }
+    },
+    {
+      "data": {
+        "id": "segmentation_features",
+        "label": "segmentation features"
+      }
+    },
+    {
+      "data": {
+        "id": "sketch_to_reality_gap",
+        "label": "sketch to reality gap"
+      }
+    },
+    {
+      "data": {
+        "id": "sketchup",
+        "label": "sketchup"
+      }
+    },
+    {
+      "data": {
+        "id": "slow_architecture_revisions",
+        "label": "slow architecture revisions"
+      }
+    },
+    {
+      "data": {
+        "id": "slow_rendering_times",
+        "label": "slow rendering times"
+      }
+    },
+    {
+      "data": {
+        "id": "small_architecture_studios",
+        "label": "small architecture studios"
+      }
+    },
+    {
+      "data": {
+        "id": "social_community_intel_report",
+        "label": "social community intel report"
+      }
+    },
+    {
+      "data": {
+        "id": "spatial_intelligence",
+        "label": "spatial intelligence"
+      }
+    },
+    {
+      "data": {
+        "id": "strategy_documents",
+        "label": "strategy documents"
+      }
+    },
+    {
+      "data": {
+        "id": "student_render_pain_points",
+        "label": "student render pain points"
+      }
+    },
+    {
+      "data": {
+        "id": "studio",
+        "label": "studio"
+      }
+    },
+    {
+      "data": {
+        "id": "studio_voice",
+        "label": "studio voice"
+      }
+    },
+    {
+      "data": {
+        "id": "surgical_small_region_edits",
+        "label": "surgical small region edits"
+      }
+    },
+    {
+      "data": {
+        "id": "target_account_lists",
+        "label": "target account lists"
+      }
+    },
+    {
+      "data": {
+        "id": "thesis_deep_mode",
+        "label": "thesis deep mode"
+      }
+    },
+    {
+      "data": {
+        "id": "thought_leaders",
+        "label": "thought leaders"
+      }
+    },
+    {
+      "data": {
+        "id": "time_comparison_benefits",
+        "label": "time comparison benefits"
+      }
+    },
+    {
+      "data": {
+        "id": "time_consumption_pain",
+        "label": "time consumption pain"
+      }
+    },
+    {
+      "data": {
+        "id": "time_efficiency",
+        "label": "time efficiency"
+      }
+    },
+    {
+      "data": {
+        "id": "time_on_revisions",
+        "label": "time on revisions"
+      }
+    },
+    {
+      "data": {
+        "id": "traditional_pinterest_moodboards",
+        "label": "traditional pinterest moodboards"
+      }
+    },
+    {
+      "data": {
+        "id": "traditional_render_farms",
+        "label": "traditional render farms"
+      }
+    },
+    {
+      "data": {
+        "id": "traditional_rendering",
+        "label": "traditional rendering"
+      }
+    },
+    {
+      "data": {
+        "id": "traditional_rendering_delays",
+        "label": "traditional rendering delays"
+      }
+    },
+    {
+      "data": {
+        "id": "traditional_rendering_methods",
+        "label": "traditional rendering methods"
+      }
+    },
+    {
+      "data": {
+        "id": "twitter",
+        "label": "twitter"
+      }
+    },
+    {
+      "data": {
+        "id": "two_d_floorplan",
+        "label": "two d floorplan"
+      }
+    },
+    {
+      "data": {
+        "id": "unlimited_interpretations",
+        "label": "unlimited interpretations"
+      }
+    },
+    {
+      "data": {
+        "id": "unlimited_renders",
+        "label": "unlimited renders"
+      }
+    },
+    {
+      "data": {
+        "id": "unrealistic_ai_lighting_issues",
+        "label": "unrealistic ai lighting issues"
+      }
+    },
+    {
+      "data": {
+        "id": "users_with_challenges",
+        "label": "users with challenges"
+      }
+    },
+    {
+      "data": {
+        "id": "video_prompt",
+        "label": "video prompt"
+      }
+    },
+    {
+      "data": {
+        "id": "visualization_studios",
+        "label": "visualization studios"
+      }
+    },
+    {
+      "data": {
+        "id": "visualization_time",
+        "label": "visualization time"
+      }
+    },
+    {
+      "data": {
+        "id": "visualization_time_pain_point",
+        "label": "visualization time pain point"
+      }
+    },
+    {
+      "data": {
+        "id": "vray",
+        "label": "vray"
+      }
+    },
+    {
+      "data": {
+        "id": "work",
+        "label": "work"
+      }
+    },
+    {
+      "data": {
+        "id": "x",
+        "label": "x"
+      }
+    },
+    {
+      "data": {
+        "id": "x_accounts",
+        "label": "x accounts"
+      }
+    },
+    {
+      "data": {
+        "id": "x_twitter",
+        "label": "x twitter"
+      }
+    },
+    {
+      "data": {
+        "id": "youtube_shorts_as_marketing_channel",
+        "label": "youtube shorts as marketing channel"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "id": "0",
+        "source": "ai_rendering",
+        "target": "60_second_turnaround",
+        "label": "has",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "1",
+        "source": "ai_rendering",
+        "target": "0.20_dollars_per_render",
+        "label": "priced_at",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "2",
+        "source": "ai_segmentation_engine",
+        "target": "94_percent_accuracy",
+        "label": "achieves",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "3",
+        "source": "ai_segmentation_engine",
+        "target": "confidence_scores",
+        "label": "provides",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "4",
+        "source": "architects",
+        "target": "client_delays",
+        "label": "experience",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "5",
+        "source": "architects",
+        "target": "material_visualization_difficulty",
+        "label": "experience",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "6",
+        "source": "architects",
+        "target": "render_farm_delays",
+        "label": "experience",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "7",
+        "source": "architects",
+        "target": "rendering_time_pain",
+        "label": "experience",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "8",
+        "source": "architects",
+        "target": "revision_anxiety",
+        "label": "experience",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "9",
+        "source": "architects",
+        "target": "photos",
+        "label": "upload",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "10",
+        "source": "architects",
+        "target": "hundreds_of_hours_on_revisions",
+        "label": "waste",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "11",
+        "source": "brand_voice",
+        "target": "authoritative",
+        "label": "is",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "12",
+        "source": "brand_voice",
+        "target": "architect_language",
+        "label": "uses",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "13",
+        "source": "carousel_marketing",
+        "target": "creative_brief",
+        "label": "is_a",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "14",
+        "source": "chief_architect",
+        "target": "work",
+        "label": "routes",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "15",
+        "source": "content_generation_tracker",
+        "target": "content_pipeline",
+        "label": "monitors",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "16",
+        "source": "edit_specialists",
+        "target": "surgical_small_region_edits",
+        "label": "perform",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "17",
+        "source": "email",
+        "target": "outreach",
+        "label": "channel_for",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "18",
+        "source": "happymonk_drive_dump",
+        "target": "strategy_documents",
+        "label": "contains",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "19",
+        "source": "happymonk_drive_dump",
+        "target": "target_account_lists",
+        "label": "contains",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "20",
+        "source": "interior_designer",
+        "target": "material_thesis",
+        "label": "defines",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "21",
+        "source": "linkedin",
+        "target": "marketing_channel",
+        "label": "is_a",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "22",
+        "source": "linkedin",
+        "target": "distribution",
+        "label": "is_primary_channel_for",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "23",
+        "source": "linkedin_strategy",
+        "target": "content_pillars",
+        "label": "defines",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "24",
+        "source": "linkedin_strategy",
+        "target": "posting_cadence",
+        "label": "defines",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "25",
+        "source": "linkedin_strategy",
+        "target": "5_to_6_posts_per_week",
+        "label": "includes",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "26",
+        "source": "marketing_automation_layer",
+        "target": "instagram",
+        "label": "integrates_with",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "27",
+        "source": "marketing_automation_layer",
+        "target": "linkedin",
+        "label": "integrates_with",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "28",
+        "source": "marketing_automation_layer",
+        "target": "x",
+        "label": "integrates_with",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "29",
+        "source": "marketing_automation_layer",
+        "target": "ad_campaign_automation",
+        "label": "manages",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "30",
+        "source": "marketing_automation_layer",
+        "target": "content_generation",
+        "label": "manages",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "31",
+        "source": "marketing_automation_layer",
+        "target": "lead_generation",
+        "label": "manages",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "32",
+        "source": "marketing_automation_layer",
+        "target": "rkitect_ai",
+        "label": "serves",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "33",
+        "source": "marketing_automation_layer",
+        "target": "email",
+        "label": "uses",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "34",
+        "source": "marketing_automation_layer",
+        "target": "google_ads",
+        "label": "uses",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "35",
+        "source": "marketing_automation_layer",
+        "target": "meta_ads",
+        "label": "uses",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "36",
+        "source": "marketing_post",
+        "target": "call_to_action",
+        "label": "has_component",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "37",
+        "source": "marketing_post",
+        "target": "caption",
+        "label": "has_component",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "38",
+        "source": "marketing_post",
+        "target": "hook",
+        "label": "has_component",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "39",
+        "source": "marketing_post",
+        "target": "video_prompt",
+        "label": "has_component",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "40",
+        "source": "marketing_reels",
+        "target": "architect_pain_points",
+        "label": "address",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "41",
+        "source": "marketing_reels",
+        "target": "traditional_rendering_methods",
+        "label": "compare",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "42",
+        "source": "marketing_reels",
+        "target": "scenario_hooks",
+        "label": "employ",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "43",
+        "source": "marketing_reels",
+        "target": "time_efficiency",
+        "label": "showcase",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "44",
+        "source": "marketing_reels",
+        "target": "humor",
+        "label": "utilize",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "45",
+        "source": "memory_feature",
+        "target": "studio_voice",
+        "label": "persists",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "46",
+        "source": "meta_ads",
+        "target": "campaigns",
+        "label": "channel_for",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "47",
+        "source": "pillar_1_content",
+        "target": "ai_architecture_visuals",
+        "label": "focuses_on",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "48",
+        "source": "pillar_1_content",
+        "target": "highest_reach",
+        "label": "targets",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "49",
+        "source": "pillar_2_content",
+        "target": "build_in_public",
+        "label": "focuses_on",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "50",
+        "source": "pillar_2_content",
+        "target": "highest_trust",
+        "label": "targets",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "51",
+        "source": "pillar_3_content",
+        "target": "industry_insight",
+        "label": "focuses_on",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "52",
+        "source": "pillar_3_content",
+        "target": "authority",
+        "label": "targets",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "53",
+        "source": "pilot_sprint_tier",
+        "target": "unlimited_renders",
+        "label": "includes",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "54",
+        "source": "pilot_sprint_tier",
+        "target": "199_per_month",
+        "label": "priced_at",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "55",
+        "source": "posts_final_json",
+        "target": "finished_post_record_shape",
+        "label": "defines",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "56",
+        "source": "reels",
+        "target": "kling_v2_1",
+        "label": "uses_model",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "57",
+        "source": "reels",
+        "target": "seedance_1_5",
+        "label": "uses_model",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "58",
+        "source": "reels_manifest",
+        "target": "five_items",
+        "label": "contains",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "59",
+        "source": "reels_manifest",
+        "target": "marketing_content",
+        "label": "documents",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "60",
+        "source": "rkitect.ai",
+        "target": "ai_architectural_rendering",
+        "label": "delivers",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "61",
+        "source": "rkitect.ai",
+        "target": "quick_renders",
+        "label": "delivers",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "62",
+        "source": "rkitect.ai",
+        "target": "cinematic_storytelling",
+        "label": "enables",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "63",
+        "source": "rkitect.ai",
+        "target": "rapid_design_iteration",
+        "label": "enables",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "64",
+        "source": "rkitect.ai",
+        "target": "users_with_challenges",
+        "label": "engages",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "65",
+        "source": "rkitect.ai",
+        "target": "design_trends",
+        "label": "features",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "66",
+        "source": "rkitect.ai",
+        "target": "post_render_segmentation",
+        "label": "features",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "67",
+        "source": "rkitect.ai",
+        "target": "client_approval_rates",
+        "label": "improves",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "68",
+        "source": "rkitect.ai",
+        "target": "pre_launch_phase",
+        "label": "is_in",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "69",
+        "source": "rkitect.ai",
+        "target": "dramatic_night_lighting",
+        "label": "offers",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "70",
+        "source": "rkitect.ai",
+        "target": "free_renders",
+        "label": "offers",
+        "sources": [
+          "brand:content-generation-pipeline",
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "71",
+        "source": "rkitect.ai",
+        "target": "golden_hour_lighting",
+        "label": "offers",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "72",
+        "source": "rkitect.ai",
+        "target": "photorealistic_renders",
+        "label": "produces",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "73",
+        "source": "rkitect.ai",
+        "target": "iterative_design",
+        "label": "promotes",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "74",
+        "source": "rkitect.ai",
+        "target": "5_minute_feedback_loop",
+        "label": "provides",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "75",
+        "source": "rkitect.ai",
+        "target": "material_palettes",
+        "label": "provides",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "76",
+        "source": "rkitect.ai",
+        "target": "rendering_costs",
+        "label": "reduces",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "77",
+        "source": "rkitect.ai",
+        "target": "visualization_time",
+        "label": "reduces",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "78",
+        "source": "rkitect.ai",
+        "target": "bathroom_styles",
+        "label": "renders",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "79",
+        "source": "rkitect.ai",
+        "target": "bedroom_trends",
+        "label": "renders",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "80",
+        "source": "rkitect.ai",
+        "target": "office_towers",
+        "label": "renders",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "81",
+        "source": "rkitect.ai",
+        "target": "residential_villas",
+        "label": "renders",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "82",
+        "source": "rkitect.ai",
+        "target": "high_rendering_costs",
+        "label": "solves",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "83",
+        "source": "rkitect.ai",
+        "target": "slow_rendering_times",
+        "label": "solves",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "84",
+        "source": "rkitect.ai",
+        "target": "visualization_time_pain_point",
+        "label": "solves",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "85",
+        "source": "rkitect.ai",
+        "target": "biophilic_2_0_design",
+        "label": "supports",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "86",
+        "source": "rkitect.ai",
+        "target": "biophilic_style",
+        "label": "supports",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "87",
+        "source": "rkitect.ai",
+        "target": "japandi_design",
+        "label": "supports",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "88",
+        "source": "rkitect.ai",
+        "target": "maximalist_style",
+        "label": "supports",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "89",
+        "source": "rkitect.ai",
+        "target": "scandinavian_style",
+        "label": "supports",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "90",
+        "source": "rkitect.ai",
+        "target": "aec_professionals",
+        "label": "targets",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "91",
+        "source": "rkitect.ai",
+        "target": "architects",
+        "label": "targets",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "92",
+        "source": "rkitect.ai",
+        "target": "architecture_students",
+        "label": "targets",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "93",
+        "source": "rkitect.ai",
+        "target": "firm_owners",
+        "label": "targets",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "94",
+        "source": "rkitect.ai",
+        "target": "indian_architects",
+        "label": "targets",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "95",
+        "source": "rkitect.ai",
+        "target": "instagram_as_marketing_channel",
+        "label": "uses",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "96",
+        "source": "rkitect.ai",
+        "target": "linkedin_as_marketing_channel",
+        "label": "uses",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "97",
+        "source": "rkitect.ai",
+        "target": "prompt_formula",
+        "label": "uses",
+        "sources": [
+          "brand:posts-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "98",
+        "source": "rkitect.ai",
+        "target": "youtube_shorts_as_marketing_channel",
+        "label": "uses",
+        "sources": [
+          "brand:content-generation-pipeline"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "99",
+        "source": "rkitect_ai",
+        "target": "architectural_workflow",
+        "label": "accelerates",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "100",
+        "source": "rkitect_ai",
+        "target": "project_closure",
+        "label": "accelerates",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "101",
+        "source": "rkitect_ai",
+        "target": "94_percent_segmentation_accuracy",
+        "label": "achieves",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "102",
+        "source": "rkitect_ai",
+        "target": "iteration_speed_bottleneck",
+        "label": "addresses",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "103",
+        "source": "rkitect_ai",
+        "target": "slow_architecture_revisions",
+        "label": "addresses",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "104",
+        "source": "rkitect_ai",
+        "target": "student_render_pain_points",
+        "label": "addresses",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "105",
+        "source": "rkitect_ai",
+        "target": "sketch_to_reality_gap",
+        "label": "bridges",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "106",
+        "source": "rkitect_ai",
+        "target": "architect",
+        "label": "built_by",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "107",
+        "source": "rkitect_ai",
+        "target": "instagram",
+        "label": "channel_for",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "108",
+        "source": "rkitect_ai",
+        "target": "linkedin",
+        "label": "channel_for",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "109",
+        "source": "rkitect_ai",
+        "target": "twitter",
+        "label": "channel_for",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "110",
+        "source": "rkitect_ai",
+        "target": "traditional_rendering",
+        "label": "cheaper_than",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "111",
+        "source": "rkitect_ai",
+        "target": "human_designer",
+        "label": "compares_against",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "112",
+        "source": "rkitect_ai",
+        "target": "midjourney_outputs",
+        "label": "compares_to",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "113",
+        "source": "rkitect_ai",
+        "target": "archivinciai",
+        "label": "competes_with",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "114",
+        "source": "rkitect_ai",
+        "target": "mnml_ai",
+        "label": "competes_with",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "115",
+        "source": "rkitect_ai",
+        "target": "traditional_pinterest_moodboards",
+        "label": "competes_with",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "116",
+        "source": "rkitect_ai",
+        "target": "traditional_render_farms",
+        "label": "competes_with",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "117",
+        "source": "rkitect_ai",
+        "target": "hand_sketch",
+        "label": "converts",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "118",
+        "source": "rkitect_ai",
+        "target": "client_ready_designs",
+        "label": "creates",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "119",
+        "source": "rkitect_ai",
+        "target": "ai_rendering",
+        "label": "delivers",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "120",
+        "source": "rkitect_ai",
+        "target": "ai_segmentation_accuracy",
+        "label": "delivers",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "121",
+        "source": "rkitect_ai",
+        "target": "architectural_visualization",
+        "label": "delivers",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "122",
+        "source": "rkitect_ai",
+        "target": "cohesive_design",
+        "label": "delivers",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "123",
+        "source": "rkitect_ai",
+        "target": "photoreal_interior_renders",
+        "label": "delivers",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "124",
+        "source": "rkitect_ai",
+        "target": "rapid_rendering",
+        "label": "delivers",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "125",
+        "source": "rkitect_ai",
+        "target": "results_quickly",
+        "label": "delivers",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "126",
+        "source": "rkitect_ai",
+        "target": "instant_client_revisions",
+        "label": "enables",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "127",
+        "source": "rkitect_ai",
+        "target": "material_transitions",
+        "label": "enables",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "128",
+        "source": "rkitect_ai",
+        "target": "quick_client_presentations",
+        "label": "enables",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "129",
+        "source": "rkitect_ai",
+        "target": "rapid_design_iteration",
+        "label": "enables",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "130",
+        "source": "rkitect_ai",
+        "target": "linkedin",
+        "label": "engages_on",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "131",
+        "source": "rkitect_ai",
+        "target": "x",
+        "label": "engages_on",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "132",
+        "source": "rkitect_ai",
+        "target": "client_presentations",
+        "label": "facilitates",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "133",
+        "source": "rkitect_ai",
+        "target": "traditional_rendering",
+        "label": "faster_than",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "134",
+        "source": "rkitect_ai",
+        "target": "architects",
+        "label": "focuses_on",
+        "sources": [
+          "brand:linkedin-strategy",
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "135",
+        "source": "rkitect_ai",
+        "target": "interior_variations",
+        "label": "generates",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "136",
+        "source": "rkitect_ai",
+        "target": "luxury_interior",
+        "label": "generates",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "137",
+        "source": "rkitect_ai",
+        "target": "multiple_design_styles",
+        "label": "generates",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "138",
+        "source": "rkitect_ai",
+        "target": "photorealistic_details",
+        "label": "generates",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "139",
+        "source": "rkitect_ai",
+        "target": "problem_statement_visuals",
+        "label": "generates",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "140",
+        "source": "rkitect_ai",
+        "target": "renders",
+        "label": "generates",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "141",
+        "source": "rkitect_ai",
+        "target": "renders_in_60_seconds",
+        "label": "generates",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "142",
+        "source": "rkitect_ai",
+        "target": "fal_ai_bytedance_seedance",
+        "label": "generates_videos_with",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "143",
+        "source": "rkitect_ai",
+        "target": "fal_ai_kling_video",
+        "label": "generates_videos_with",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "144",
+        "source": "rkitect_ai",
+        "target": "fal_ai_minimax_video_01_live",
+        "label": "generates_videos_with",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "145",
+        "source": "rkitect_ai",
+        "target": "before_after_renders",
+        "label": "has_asset",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "146",
+        "source": "rkitect_ai",
+        "target": "marketing_carousels",
+        "label": "has_asset",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "147",
+        "source": "rkitect_ai",
+        "target": "marketing_reels",
+        "label": "has_asset",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "148",
+        "source": "rkitect_ai",
+        "target": "close_projects_faster",
+        "label": "helps",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "149",
+        "source": "rkitect_ai",
+        "target": "visualization_studios",
+        "label": "impacts",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "150",
+        "source": "rkitect_ai",
+        "target": "client_communication",
+        "label": "improves",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "151",
+        "source": "rkitect_ai",
+        "target": "lumion",
+        "label": "integrates_with",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "152",
+        "source": "rkitect_ai",
+        "target": "sketchup",
+        "label": "integrates_with",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "153",
+        "source": "rkitect_ai",
+        "target": "vray",
+        "label": "integrates_with",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "154",
+        "source": "rkitect_ai",
+        "target": "ai_render_studio",
+        "label": "is_a",
+        "sources": [
+          "brand:before-after-manifest",
+          "brand:carousel-doc",
+          "brand:linkedin-strategy",
+          "brand:posts-final",
+          "brand:social-community-intel",
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "155",
+        "source": "rkitect_ai",
+        "target": "pre_launch_phase",
+        "label": "is_in",
+        "sources": [
+          "brand:linkedin-strategy",
+          "brand:reels-manifest",
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "156",
+        "source": "rkitect_ai",
+        "target": "beta_cohort",
+        "label": "is_pre_launch_with",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "157",
+        "source": "rkitect_ai",
+        "target": "instagram",
+        "label": "markets_on",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "158",
+        "source": "rkitect_ai",
+        "target": "linkedin",
+        "label": "markets_on",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "159",
+        "source": "rkitect_ai",
+        "target": "x_twitter",
+        "label": "markets_on",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "160",
+        "source": "rkitect_ai",
+        "target": "200_plus_materials",
+        "label": "offers",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "161",
+        "source": "rkitect_ai",
+        "target": "6_render_engines",
+        "label": "offers",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "162",
+        "source": "rkitect_ai",
+        "target": "ai_assisted_rendering",
+        "label": "offers",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "163",
+        "source": "rkitect_ai",
+        "target": "future_architecture_concepts",
+        "label": "offers",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "164",
+        "source": "rkitect_ai",
+        "target": "segmentation_features",
+        "label": "offers",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "165",
+        "source": "rkitect_ai",
+        "target": "0_20_per_render",
+        "label": "priced_at",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "166",
+        "source": "rkitect_ai",
+        "target": "high_quality_renders",
+        "label": "produces",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "167",
+        "source": "rkitect_ai",
+        "target": "photorealistic_interior",
+        "label": "produces",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "168",
+        "source": "rkitect_ai",
+        "target": "spatial_intelligence",
+        "label": "promotes",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "169",
+        "source": "rkitect_ai",
+        "target": "200_plus_materials",
+        "label": "provides",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "170",
+        "source": "rkitect_ai",
+        "target": "time_comparison_benefits",
+        "label": "provides",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "171",
+        "source": "rkitect_ai",
+        "target": "unlimited_interpretations",
+        "label": "provides",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "172",
+        "source": "rkitect_ai",
+        "target": "long_render_nights",
+        "label": "reduces",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "173",
+        "source": "rkitect_ai",
+        "target": "project_revision_cycles",
+        "label": "reduces",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "174",
+        "source": "rkitect_ai",
+        "target": "revision_anxiety",
+        "label": "reduces",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "175",
+        "source": "rkitect_ai",
+        "target": "time_on_revisions",
+        "label": "reduces",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "176",
+        "source": "rkitect_ai",
+        "target": "architectural_visualizations",
+        "label": "renders",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "177",
+        "source": "rkitect_ai",
+        "target": "bathroom",
+        "label": "renders",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "178",
+        "source": "rkitect_ai",
+        "target": "bedroom",
+        "label": "renders",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "179",
+        "source": "rkitect_ai",
+        "target": "dining_room",
+        "label": "renders",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "180",
+        "source": "rkitect_ai",
+        "target": "home_office",
+        "label": "renders",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "181",
+        "source": "rkitect_ai",
+        "target": "kitchen",
+        "label": "renders",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "182",
+        "source": "rkitect_ai",
+        "target": "living_room",
+        "label": "renders",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "183",
+        "source": "rkitect_ai",
+        "target": "residential_projects",
+        "label": "serves",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "184",
+        "source": "rkitect_ai",
+        "target": "heavy_hardware_requirements",
+        "label": "solves",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "185",
+        "source": "rkitect_ai",
+        "target": "long_render_times",
+        "label": "solves",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "186",
+        "source": "rkitect_ai",
+        "target": "material_visualization_difficulty",
+        "label": "solves",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "187",
+        "source": "rkitect_ai",
+        "target": "time_consumption_pain",
+        "label": "solves",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "188",
+        "source": "rkitect_ai",
+        "target": "traditional_rendering_delays",
+        "label": "solves",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "189",
+        "source": "rkitect_ai",
+        "target": "unrealistic_ai_lighting_issues",
+        "label": "solves",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "190",
+        "source": "rkitect_ai",
+        "target": "pre_launch",
+        "label": "status",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "191",
+        "source": "rkitect_ai",
+        "target": "6_render_engines",
+        "label": "supports",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "192",
+        "source": "rkitect_ai",
+        "target": "biophilic_design",
+        "label": "supports",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "193",
+        "source": "rkitect_ai",
+        "target": "design_ideation",
+        "label": "supports",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "194",
+        "source": "rkitect_ai",
+        "target": "diverse_design_styles",
+        "label": "supports",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "195",
+        "source": "rkitect_ai",
+        "target": "japandi_design",
+        "label": "supports",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "196",
+        "source": "rkitect_ai",
+        "target": "light_studies",
+        "label": "supports",
+        "sources": [
+          "brand:posts-final"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "197",
+        "source": "rkitect_ai",
+        "target": "architects",
+        "label": "targets",
+        "sources": [
+          "brand:before-after-manifest",
+          "brand:carousel-doc",
+          "brand:posts-final",
+          "brand:reels-manifest",
+          "brand:sample-posts",
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "198",
+        "source": "rkitect_ai",
+        "target": "interior_designers",
+        "label": "targets",
+        "sources": [
+          "brand:posts-final",
+          "brand:sample-posts",
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "199",
+        "source": "rkitect_ai",
+        "target": "small_architecture_studios",
+        "label": "targets",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "200",
+        "source": "rkitect_ai",
+        "target": "india",
+        "label": "targets_market",
+        "sources": [
+          "brand:social-community-intel"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "201",
+        "source": "rkitect_ai",
+        "target": "linkedin",
+        "label": "targets_platform",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "202",
+        "source": "rkitect_ai",
+        "target": "x_twitter",
+        "label": "targets_platform",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "203",
+        "source": "rkitect_ai",
+        "target": "2d_floorplans_into_cinematic_renders",
+        "label": "transforms",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "204",
+        "source": "rkitect_ai",
+        "target": "empty_spaces",
+        "label": "transforms",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "205",
+        "source": "rkitect_ai",
+        "target": "two_d_floorplan",
+        "label": "transforms",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "206",
+        "source": "rkitect_ai",
+        "target": "ai_segmentation_engine",
+        "label": "uses",
+        "sources": [
+          "brand:sample-posts"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "207",
+        "source": "rkitect_ai",
+        "target": "artificial_intelligence",
+        "label": "uses",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "208",
+        "source": "rkitect_ai",
+        "target": "carousel_marketing",
+        "label": "uses",
+        "sources": [
+          "brand:carousel-doc"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "209",
+        "source": "rkitect_ai",
+        "target": "fal_media_urls",
+        "label": "uses",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "210",
+        "source": "rkitect_ai",
+        "target": "linkedin_for_strategy",
+        "label": "uses",
+        "sources": [
+          "brand:linkedin-strategy"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "211",
+        "source": "rkitect_ai",
+        "target": "marketing_reels",
+        "label": "uses",
+        "sources": [
+          "brand:reels-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "212",
+        "source": "rkitect_ai",
+        "target": "prompts",
+        "label": "uses",
+        "sources": [
+          "brand:before-after-manifest"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "213",
+        "source": "rkitect_ai_marketing_work",
+        "target": "happymonk_drive_dump",
+        "label": "stored_in",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "214",
+        "source": "sales_motion",
+        "target": "sales_led",
+        "label": "is",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "215",
+        "source": "social_community_intel_report",
+        "target": "x_accounts",
+        "label": "identifies",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "216",
+        "source": "studio",
+        "target": "chief_architect",
+        "label": "employs",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "217",
+        "source": "thesis_deep_mode",
+        "target": "42_point_rubric",
+        "label": "uses",
+        "sources": [
+          "brand:brief-synthesis"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "218",
+        "source": "x",
+        "target": "content",
+        "label": "channel_for",
+        "sources": [
+          "project:claude-md"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "219",
+        "source": "x_accounts",
+        "target": "communities",
+        "label": "categorized_as",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "220",
+        "source": "x_accounts",
+        "target": "media",
+        "label": "categorized_as",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "221",
+        "source": "x_accounts",
+        "target": "thought_leaders",
+        "label": "categorized_as",
+        "sources": [
+          "project:references-readme"
+        ]
+      }
+    }
+  ]
+}

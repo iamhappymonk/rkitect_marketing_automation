@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>rkitect.ai · 30/60/90 growth plan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --ink: #0b0f17;
+    --ink-2: #1a2030;
+    --paper: #f7f6f1;
+    --accent: #e0623a;
+    --moss: #4e6e58;
+    --sand: #c8b691;
+    --slate: #5c6577;
+  }
+  html { background: var(--paper); color: var(--ink); }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Inter", sans-serif; font-feature-settings: "ss01","cv11"; }
+  .serif { font-family: "Iowan Old Style", "Apple Garamond", "Cormorant Garamond", Georgia, serif; }
+  .tab-btn[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+  .pill { display:inline-flex; align-items:center; gap:.35rem; padding:.15rem .55rem; border-radius:999px; font-size:.7rem; font-weight:500; letter-spacing:.02em; }
+  .pill-intern { background:#e9f0ec; color:#2f4a3a; }
+  .pill-founder { background:#fbe6dd; color:#8a3415; }
+  .pill-tool { background:#eee7d6; color:#6b5a32; }
+  .pill-gate { background:#0b0f17; color:#f7f6f1; }
+  .card { border:1px solid rgba(11,15,23,.08); background:#fff; border-radius:14px; padding:.95rem 1rem; box-shadow:0 1px 0 rgba(11,15,23,.03), 0 8px 22px -16px rgba(11,15,23,.18); }
+  .card-head { font-weight:600; font-size:.92rem; letter-spacing:-.005em; }
+  .card-sub { color: var(--slate); font-size: .78rem; margin-top: .15rem; }
+  .col-head { font-family: "Iowan Old Style", Georgia, serif; font-style: italic; }
+  .week-cell { border:1px solid rgba(11,15,23,.06); border-radius:10px; padding:.6rem; background:#fff; min-height: 6.5rem; }
+  .week-cell .wnum { font-family: Georgia, serif; font-style: italic; color: var(--slate); font-size: .72rem; }
+  .week-cell ul { margin-top:.35rem; display:flex; flex-direction:column; gap:.25rem; }
+  .week-cell li { font-size:.74rem; line-height:1.15; padding:.2rem .35rem; border-radius:6px; background:#f4f1ea; }
+  .week-cell li.intern { background:#e9f0ec; color:#2f4a3a; }
+  .week-cell li.founder { background:#fbe6dd; color:#8a3415; }
+  .week-cell li.gate { background:#0b0f17; color:#f7f6f1; font-weight:600; }
+  .rail-num { font-family: "Iowan Old Style", Georgia, serif; font-size: 2.2rem; line-height:1; }
+  .divider { height:1px; background:linear-gradient(90deg, transparent, rgba(11,15,23,.18), transparent); }
+  details > summary { list-style: none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  .grain::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(11,15,23,.04) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:multiply;z-index:0;}
+</style>
+</head>
+<body class="grain">
+<main class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-10 py-10">
+  <!-- HEADER -->
+  <header class="flex items-end justify-between gap-6 mb-8 flex-wrap">
+    <div>
+      <p class="text-[11px] tracking-[.22em] uppercase text-[var(--slate)] mb-2">rkitect.ai · marketing kickoff</p>
+      <h1 class="serif text-4xl md:text-5xl leading-[1.02] tracking-tight">30 · 60 · 90 day<br/><span class="italic text-[var(--accent)]">growth plan</span></h1>
+      <p class="mt-3 text-sm text-[var(--slate)] max-w-[44ch]">Pre-launch · solo founder + 1 intern · low-budget online expansion · target buyers: small studios, mid-size firms, real-estate/proptech.</p>
+    </div>
+    <div class="flex items-center gap-2 text-xs">
+      <span class="pill pill-intern">intern · daily</span>
+      <span class="pill pill-founder">founder · async</span>
+      <span class="pill pill-tool">tooling</span>
+      <span class="pill pill-gate">decision gate</span>
+    </div>
+  </header>
+
+  <!-- RAIL CARDS -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+    <div class="card">
+      <p class="text-[10px] tracking-[.2em] uppercase text-[var(--slate)]">Survival rail</p>
+      <p class="card-head mt-1">Revenue</p>
+      <div class="mt-3 flex items-end justify-between">
+        <div><p class="text-[10px] text-[var(--slate)]">Day 30</p><p class="rail-num">$0.3–1k</p></div>
+        <div><p class="text-[10px] text-[var(--slate)]">Day 60</p><p class="rail-num">$1–3k</p></div>
+        <div><p class="text-[10px] text-[var(--slate)]">Day 90</p><p class="rail-num">$3–10k</p></div>
+      </div>
+      <p class="card-sub mt-2">Pilots → paid pilots → open beta seats.</p>
+    </div>
+    <div class="card">
+      <p class="text-[10px] tracking-[.2em] uppercase text-[var(--slate)]">Top-of-funnel rail</p>
+      <p class="card-head mt-1">Signups + activation</p>
+      <div class="mt-3 flex items-end justify-between">
+        <div><p class="text-[10px] text-[var(--slate)]">Waitlist 30</p><p class="rail-num">100–300</p></div>
+        <div><p class="text-[10px] text-[var(--slate)]">60</p><p class="rail-num">500–1.5k</p></div>
+        <div><p class="text-[10px] text-[var(--slate)]">90</p><p class="rail-num">1.5–3k</p></div>
+      </div>
+      <p class="card-sub mt-2">≥80% pilots run first render in 48h.</p>
+    </div>
+    <div class="card">
+      <p class="text-[10px] tracking-[.2em] uppercase text-[var(--slate)]">Retention rail</p>
+      <p class="card-head mt-1">Return + repeat</p>
+      <div class="mt-3 flex items-end justify-between">
+        <div><p class="text-[10px] text-[var(--slate)]">Day 30</p><p class="rail-num">instrument</p></div>
+        <div><p class="text-[10px] text-[var(--slate)]">60</p><p class="rail-num">W2 ≥70%</p></div>
+        <div><p class="text-[10px] text-[var(--slate)]">90</p><p class="rail-num">W4 ≥40%</p></div>
+      </div>
+      <p class="card-sub mt-2">≥5 renders/user/month average by day 90.</p>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <div class="flex items-center gap-2 mb-6">
+    <button class="tab-btn px-4 py-2 rounded-full border border-[var(--ink)]/15 text-sm" data-tab="sales" aria-selected="true">Sales-led playbook</button>
+    <button class="tab-btn px-4 py-2 rounded-full border border-[var(--ink)]/15 text-sm" data-tab="methods" aria-selected="false">Methods (8)</button>
+    <button class="tab-btn px-4 py-2 rounded-full border border-[var(--ink)]/15 text-sm" data-tab="approaches" aria-selected="false">Approaches (6)</button>
+    <button class="tab-btn px-4 py-2 rounded-full border border-[var(--ink)]/15 text-sm" data-tab="kanban" aria-selected="false">Kanban</button>
+    <button class="tab-btn px-4 py-2 rounded-full border border-[var(--ink)]/15 text-sm" data-tab="calendar" aria-selected="false">Calendar (13 weeks)</button>
+    <button class="tab-btn px-4 py-2 rounded-full border border-[var(--ink)]/15 text-sm" data-tab="risks" aria-selected="false">Risks &amp; kill conditions</button>
+  </div>
+
+  <!-- SALES-LED PLAYBOOK -->
+  <section id="tab-sales" class="tab-pane">
+    <div class="card mb-5">
+      <p class="text-xs text-[var(--slate)]">Sales-led is locked as the primary motion. This is the run-book: segments → channels → cadence → scripts → objections → pipeline → pricing → activation. Built so the intern can execute most of it from this single page.</p>
+    </div>
+
+    <!-- Segments -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">1 · ICP segments</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">Three buyer slices, each with its own copy and pricing anchor.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="sales-segments"></div>
+    </div>
+
+    <!-- Channel stack -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">2 · Channel stack</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">Ordered by founder priority + cost of contact. Intern works top-down.</p>
+      <div class="card" id="sales-channels"></div>
+    </div>
+
+    <!-- Cadence -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">3 · 14-day touch cadence</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">Per prospect. Built so a single intern can run 100+ in parallel.</p>
+      <div class="card overflow-x-auto"><table class="w-full text-sm" id="sales-cadence"></table></div>
+    </div>
+
+    <!-- Scripts -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">4 · Opening scripts</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">Three angle-tested openers. Run A/B/C. Kill the worst at day 21.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="sales-scripts"></div>
+    </div>
+
+    <!-- Objections -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">5 · Objection map</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">If they say X, you say Y. Print this. Tape to monitor.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="sales-objections"></div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">6 · Pilot pricing structure</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">Three pre-pricing offers to float in calls. Lock public tier by Day 60.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="sales-pricing"></div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">7 · Pipeline stages + targets</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">Each stage has a target conversion rate. Miss it 2 weeks running → action.</p>
+      <div class="card overflow-x-auto"><table class="w-full text-sm" id="sales-pipeline"></table></div>
+    </div>
+
+    <!-- Activation -->
+    <div class="mb-8">
+      <h2 class="serif text-3xl mb-1">8 · White-glove activation</h2>
+      <p class="text-xs text-[var(--slate)] mb-4">First render is done WITH the customer on a call. Bottleneck on purpose — until day 60.</p>
+      <div class="card" id="sales-activation"></div>
+    </div>
+  </section>
+
+  <!-- METHODS -->
+  <section id="tab-methods" class="tab-pane hidden">
+    <div class="card mb-5">
+      <p class="text-xs text-[var(--slate)]">8 distinct go-to-market motions to debate with the team. These are not stacked combos — they are different <span class="serif italic">primary motions</span>. The "Approaches" tab stacks variants of one motion (sales-led). Pick the motion FIRST, then the layered approach.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="methods-grid"></div>
+  </section>
+
+  <!-- APPROACHES -->
+  <section id="tab-approaches" class="tab-pane hidden">
+    <div class="card mb-5">
+      <p class="text-xs text-[var(--slate)]"><span class="serif italic">A</span> = sales-led waitlist convert (sequential, low risk, revenue earliest). <span class="serif italic">B</span> = two-track parallel (intern daily + founder async). <span class="serif italic">C</span> = influencer bet. All 6 keep <span class="serif italic">A</span> as backbone — they differ in what gets layered on. Scores: <span class="text-[var(--moss)]">●●●</span> high, <span class="text-[var(--sand)]">●●○</span> mid, <span class="text-[var(--accent)]">●○○</span> low.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="approaches-grid"></div>
+  </section>
+
+  <!-- KANBAN -->
+  <section id="tab-kanban" class="tab-pane hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <!-- col 1 -->
+      <div>
+        <div class="flex items-baseline justify-between mb-3"><h2 class="col-head text-2xl">Day 0–30</h2><span class="text-xs text-[var(--slate)]">foundation</span></div>
+        <div class="flex flex-col gap-3" id="kb-30"></div>
+      </div>
+      <div>
+        <div class="flex items-baseline justify-between mb-3"><h2 class="col-head text-2xl">Day 31–60</h2><span class="text-xs text-[var(--slate)]">pilot revenue</span></div>
+        <div class="flex flex-col gap-3" id="kb-60"></div>
+      </div>
+      <div>
+        <div class="flex items-baseline justify-between mb-3"><h2 class="col-head text-2xl">Day 61–90</h2><span class="text-xs text-[var(--slate)]">open beta</span></div>
+        <div class="flex flex-col gap-3" id="kb-90"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section id="tab-calendar" class="tab-pane hidden">
+    <div class="card mb-5">
+      <p class="text-xs text-[var(--slate)]">13-week sprint · weeks ordered left → right, top → bottom. Each cell shows the top 1–3 items for the week.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3" id="cal-grid"></div>
+  </section>
+
+  <!-- RISKS -->
+  <section id="tab-risks" class="tab-pane hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="card">
+        <p class="card-head">Outbound underperforms</p>
+        <p class="card-sub">Kill: reply rate &lt; 3% after 100 sends &amp; 2 copy iterations.</p>
+        <p class="mt-3 text-sm">Mitigation: A/B subject + first-line. Test list quality (intent-aware Apollo filters vs raw scrapes). Switch from cold email to LI DMs.</p>
+      </div>
+      <div class="card">
+        <p class="card-head">Influencer flop</p>
+        <p class="card-sub">Kill: &lt; 50 signups per $1,000 spent on a creator.</p>
+        <p class="mt-3 text-sm">Mitigation: only contract micro-influencers with ≥3% engagement in AEC niche. Affiliate share-of-revenue tier instead of flat fee for unproven creators.</p>
+      </div>
+      <div class="card">
+        <p class="card-head">Founder bandwidth shock</p>
+        <p class="card-sub">Stroke-recovery reality: any week may need to pause.</p>
+        <p class="mt-3 text-sm">Mitigation: every workflow runnable from intern playbook. Founder owns only "review + close + influencer DM". Bus-factor = 1 but resumable mid-week.</p>
+      </div>
+      <div class="card">
+        <p class="card-head">Activation gap</p>
+        <p class="card-sub">Signups happen, nobody runs a render.</p>
+        <p class="mt-3 text-sm">Mitigation: Day-30 onboarding email = "Send us a floor plan, we'll render the first one with you." White-glove first render. Self-serve later.</p>
+      </div>
+      <div class="card">
+        <p class="card-head">Pricing wrong</p>
+        <p class="card-sub">Pilots ghost when invoiced.</p>
+        <p class="mt-3 text-sm">Mitigation: pre-pilot pricing chat. Float 3 tiers in a Notion page. Anchor on per-render or per-seat — let pilot pick. Lock by day 45.</p>
+      </div>
+      <div class="card">
+        <p class="card-head">SaaS sprawl</p>
+        <p class="card-sub">Tool stack grows faster than usage.</p>
+        <p class="mt-3 text-sm">Mitigation: budget ceiling $2.5k/mo. Add one tool at a time, kill one if adding a second. Track $$$/lead end of each month.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-14 border-t border-[var(--ink)]/10 pt-6 flex justify-between items-center text-xs text-[var(--slate)]">
+    <span>rkitect.ai · marketing kickoff · 2026-05-14</span>
+    <span class="serif italic">draft v0.1 · brainstorming output</span>
+  </footer>
+</main>
+
+<script>
+/* — SALES-LED PLAYBOOK DATA — */
+const salesSegments = [
+  {
+    name: "Small studios (2-15)",
+    titles: "Principal · Studio lead · Design director",
+    pain: "Render farm contracts eating margin. Client revisions take 2-3 days. Junior staff burning out on viz work.",
+    hook: "60-second revisions. Your juniors design — not render-wait.",
+    acv: "$200-800/mo · 1-3 seats",
+    list: "Boutique firms in design hubs (NYC, LA, Tel-Aviv, Bangalore, Mumbai, Berlin, Dubai). Source: Archello, Dezeen Hot 100, Instagram architecture tags.",
+  },
+  {
+    name: "Mid-size firms (15-75)",
+    titles: "Tech lead · Viz manager · Innovation lead",
+    pain: "Viz studio backlog 2 weeks. Pitch competitions lost to faster renderers. Junior retention crisis.",
+    hook: "Replace 1 viz seat. Free up the other 5 for design.",
+    acv: "$800-3,000/mo · 5-15 seats",
+    list: "LinkedIn search: 'architect' + 'BIM coordinator' at firms 15-75 headcount in target cities. Apollo filters: industry=architecture, headcount=15-75.",
+  },
+  {
+    name: "Real-estate / staging / proptech",
+    titles: "Marketing lead · Listing ops · Founder",
+    pain: "Staging cost $1-3k per listing. Virtual staging slow + cheap-looking. Renders for pre-construction marketing cost $500-2k each.",
+    hook: "Per-render economics. White-label option. Bulk credits.",
+    acv: "$500-2,500/mo · per-render or seat",
+    list: "Compass / Sotheby's regional teams · stagedhomes affiliates · proptech founders on Twitter · pre-construction developers.",
+  },
+];
+
+const salesChannels = [
+  { rank: 1, name: "LinkedIn DMs", who: "intern", cost: "free + LI Premium $80/mo", volume: "30-50/day", notes: "Primary. Highest reply rate for B2B AEC. Personalize first line per profile (recent post, project, award)." },
+  { rank: 2, name: "Cold email", who: "intern", cost: "Apollo + Instantly $200/mo", volume: "100-200/day", notes: "Apollo for emails. Instantly/Lemlist for sending. 3-step sequence. Mailbox warm-up first 2 weeks." },
+  { rank: 3, name: "Warm intros via founder network", who: "founder", cost: "free", volume: "2-5/week", notes: "Founder DMs 10 people/week asking for 1 intro each. Highest conversion. Scarce — use for top accounts only." },
+  { rank: 4, name: "X engagement → DM", who: "intern", cost: "free", volume: "10-20/day", notes: "Engage on 30+ target architect handles daily. After 3-5 thoughtful replies, slide into DM. Slow but warm." },
+  { rank: 5, name: "Reply-guying on architect tweets", who: "intern", cost: "free", volume: "15-25/day", notes: "Find architects posting renders + frustration. Reply with value. No pitch. Then DM days later." },
+  { rank: 6, name: "Communities (Discord, Slack, FB groups)", who: "intern", cost: "free", volume: "5-10 posts/week", notes: "AEC + viz + AI Discord/Slack groups. Helpful posts, no spam. Bio links to product." },
+  { rank: 7, name: "Conference list scraping", who: "intern", cost: "free", volume: "burst 50-100", notes: "Speakers/attendees of AIA, World Architecture Festival, Dubai Design Week, Wantedly. One-off bursts." },
+];
+
+const salesCadence = [
+  { day: "Day 0", channel: "LinkedIn", action: "Connection request + opener line", template: "Hey [first], saw [specific project / post]. Built something I think your studio would actually use. Open to a 2-min look?" },
+  { day: "Day 2", channel: "Email", action: "First email if no LI accept", template: "Subject: [studio] + AI render in 60s? — 3 line value · 1 line CTA." },
+  { day: "Day 4", channel: "LinkedIn", action: "If accepted, send before/after video", template: "Drop a 20s reel from /refs/before-after + 'pick a room style — I'll render yours free'." },
+  { day: "Day 7", channel: "Email", action: "Follow-up · case study", template: "Subject: 60s · same room · 3 styles — Attach P03/P05/P07 stills · 1 line CTA." },
+  { day: "Day 10", channel: "LinkedIn / Email", action: "Soft break-up + free render offer", template: "Last note — send me a floor plan, I'll render it tonight, no strings. If a no, all good." },
+  { day: "Day 14", channel: "LinkedIn", action: "Hard close OR park", template: "If silent → tag in CRM as 'park · re-engage Q3'. Move on." },
+];
+
+const salesScripts = [
+  {
+    angle: "Time-savings (vs render farm)",
+    headline: "3 hours vs 60 seconds. Same result.",
+    body: "Hey [name], your team's still queueing renders for client revisions? rkitect.ai cuts that loop to ~60 seconds with 92% segmentation accuracy. Built specifically for architects who refuse to wait 3 days for a sofa swap. Want a 2-min look?",
+    bestFor: "Mid-size firms · viz managers · time pain",
+  },
+  {
+    angle: "Cost-per-render",
+    headline: "$0.20 per render. No farm contracts.",
+    body: "[Name] — quick one. We've cut render cost from $300-1,200/cycle (farm) to $0.20 per shot. Real-time iteration with clients on Zoom. Worth showing your studio? Free pilot render on me — just send a plan.",
+    bestFor: "Solo / boutique studios · cost-conscious",
+  },
+  {
+    angle: "Pitch-win story (specific)",
+    headline: "Client called at 9. Pitch at 10. Won.",
+    body: "Real quote from a beta studio last week: 'Client called at 9am, presentation at 10, sent 5 interior options at 9:48, won the pitch.' That's not a typo. Want to see how?",
+    bestFor: "All segments · curiosity-driven open · highest CTR",
+  },
+];
+
+const salesObjections = [
+  { obj: "\"AI renders look fake.\"", reply: "Fair — most do. Ours hit photoreal because we segment the room first (92% confidence) before rendering. Send me a plan, I'll do one for free in 60s and you tell me if it's fake-looking." },
+  { obj: "\"We already use [Enscape / Lumion / V-Ray].\"", reply: "Those are great for hero shots. We're not replacing them. We're replacing the 30 iteration renders you do BEFORE the hero — where speed matters more than 8K." },
+  { obj: "\"How is this different from Midjourney/SDXL?\"", reply: "Midjourney guesses where your sofa is. We know — we segment first, render second. That means client says 'move that lamp' and we actually move that lamp, not regenerate a new room." },
+  { obj: "\"Pricing?\"", reply: "Pilot is $X for first 30 days — unlimited renders, white-glove onboarding. After that, $0.20/render or per-seat starting at $Y. I'd rather you try first." },
+  { obj: "\"Send me a deck.\"", reply: "I'd rather render your floor plan. Send one, you'll have output before any deck I could write. Decks lie. Renders don't." },
+  { obj: "\"We don't have budget right now.\"", reply: "Get it on the year-end demo list then. In the meantime — free render on me. When the budget conversation lands, you'll already know whether it's worth a line." },
+];
+
+const salesPricing = [
+  {
+    name: "Pilot · Sprint",
+    price: "$199",
+    duration: "30 days",
+    contents: "Unlimited renders · 1 hour white-glove onboarding · pricing rolls into seat plan if continued",
+    fitFor: "Small studios · first conversation · no friction",
+  },
+  {
+    name: "Pilot · Studio",
+    price: "$499",
+    duration: "30 days",
+    contents: "3 seats · unlimited renders · 2 hours white-glove · case-study commit (we feature them, they get credit)",
+    fitFor: "Mid-size firms · viz manager + 2 designers",
+  },
+  {
+    name: "Pilot · Custom",
+    price: "TBD",
+    duration: "30-60 days",
+    contents: "White-label trial · custom material palette · invoice + PO supported",
+    fitFor: "Real-estate / proptech / enterprise · founder-led",
+  },
+];
+
+const salesPipeline = [
+  { stage: "Sourced", target: "200/mo", conv: "100%", who: "intern", action: "Apollo + LinkedIn list" },
+  { stage: "Contacted", target: "200/mo", conv: "100%", who: "intern", action: "Sequence kicks off" },
+  { stage: "Replied", target: "30/mo", conv: "15%", who: "intern", action: "Triage to founder if hot · else continue cadence" },
+  { stage: "Demo scheduled", target: "10/mo", conv: "33%", who: "founder", action: "Calendly slot · 20-min Zoom · live render during call" },
+  { stage: "Demo completed", target: "8/mo", conv: "80%", who: "founder", action: "Send pilot offer same day" },
+  { stage: "Pilot signed", target: "3/mo", conv: "37%", who: "founder", action: "Stripe link · onboarding scheduled within 48h" },
+  { stage: "Activated (1+ render)", target: "3/mo", conv: "100%", who: "founder", action: "White-glove session · capture wins" },
+  { stage: "Converted to paid seat", target: "2/mo", conv: "66%", who: "founder", action: "Day 25 of pilot · pricing convo" },
+];
+
+const salesActivation = `
+  <ol class="text-sm space-y-3 list-decimal pl-5">
+    <li><strong>Day 0 — pilot signed.</strong> Calendar block 60 min within 48h. Send "send me a floor plan + 3 style references" form.</li>
+    <li><strong>Day 1 — onboarding session (founder + customer, 60 min).</strong> Founder runs first render LIVE on Zoom with customer. Render their actual project. They watch the 60-second cycle. Make them feel the speed in their body.</li>
+    <li><strong>Day 1 — leave behind kit.</strong> Loom of the session + Notion link with their first 5 renders + 3 prompts to try next.</li>
+    <li><strong>Day 3 — check-in (intern, 15 min).</strong> "Did you run anything yet?" If no — same Zoom format, 30 min. If yes — capture quote + screenshot for case study.</li>
+    <li><strong>Day 7 — first usage milestone.</strong> Email: "you've run X renders, your team's saved ~Y hours". Reinforce the value loop. Mem0 stores their numbers.</li>
+    <li><strong>Day 14 — qualitative interview (founder, 30 min).</strong> What's working? What's broken? Would you renew at $Y? Locks the pricing conversation upstream.</li>
+    <li><strong>Day 25 — pricing conversation.</strong> "Want to keep going? Here's the seat plan." If yes, Stripe link before call ends. If no, ask why specifically — that's product feedback.</li>
+    <li><strong>Day 30 — close.</strong> Renewed = case study commit. Not renewed = exit survey + 30-min decompression call with founder.</li>
+  </ol>`;
+
+/* — RENDER SALES TAB — */
+const tag = (txt, cls) => `<span class="pill ${cls||''}">${txt}</span>`;
+document.getElementById("sales-segments").innerHTML = salesSegments.map(s => `
+  <div class="card">
+    <p class="card-head">${s.name}</p>
+    <p class="text-[11px] text-[var(--slate)] mt-1 uppercase tracking-wider">${s.titles}</p>
+    <p class="mt-3 text-sm leading-snug"><strong>Pain — </strong>${s.pain}</p>
+    <p class="mt-2 text-sm leading-snug"><strong>Hook — </strong><em>${s.hook}</em></p>
+    <p class="mt-3 text-xs text-[var(--slate)]"><strong>ACV:</strong> ${s.acv}</p>
+    <p class="mt-1 text-xs text-[var(--slate)]"><strong>List source:</strong> ${s.list}</p>
+  </div>`).join("");
+
+document.getElementById("sales-channels").innerHTML = `
+  <table class="w-full text-sm">
+    <thead><tr class="text-left text-[var(--slate)] text-[11px] uppercase tracking-wider border-b border-[var(--ink)]/10">
+      <th class="py-2 pr-3">#</th><th class="py-2 pr-3">Channel</th><th class="py-2 pr-3">Owner</th><th class="py-2 pr-3">Cost</th><th class="py-2 pr-3">Volume/day</th><th class="py-2">Notes</th>
+    </tr></thead>
+    <tbody>${salesChannels.map(c => `<tr class="border-b border-[var(--ink)]/5">
+      <td class="py-2 pr-3 serif italic text-[var(--slate)]">${c.rank}</td>
+      <td class="py-2 pr-3 font-medium">${c.name}</td>
+      <td class="py-2 pr-3">${tag(c.who, c.who==='founder'?'pill-founder':'pill-intern')}</td>
+      <td class="py-2 pr-3 text-[var(--slate)]">${c.cost}</td>
+      <td class="py-2 pr-3">${c.volume}</td>
+      <td class="py-2 text-[var(--slate)] text-xs">${c.notes}</td>
+    </tr>`).join("")}</tbody>
+  </table>`;
+
+document.getElementById("sales-cadence").innerHTML = `
+  <thead><tr class="text-left text-[var(--slate)] text-[11px] uppercase tracking-wider border-b border-[var(--ink)]/10">
+    <th class="py-2 pr-3">Day</th><th class="py-2 pr-3">Channel</th><th class="py-2 pr-3">Action</th><th class="py-2">Template / snippet</th>
+  </tr></thead>
+  <tbody>${salesCadence.map(c => `<tr class="border-b border-[var(--ink)]/5">
+    <td class="py-2 pr-3 serif italic">${c.day}</td>
+    <td class="py-2 pr-3 text-[var(--slate)]">${c.channel}</td>
+    <td class="py-2 pr-3">${c.action}</td>
+    <td class="py-2 text-xs text-[var(--slate)]"><em>${c.template}</em></td>
+  </tr>`).join("")}</tbody>`;
+
+document.getElementById("sales-scripts").innerHTML = salesScripts.map(s => `
+  <div class="card flex flex-col">
+    <p class="text-[10px] uppercase tracking-[.2em] text-[var(--slate)]">${s.angle}</p>
+    <p class="card-head serif text-xl mt-1 italic">"${s.headline}"</p>
+    <p class="text-sm mt-3 leading-snug text-[var(--slate)]">${s.body}</p>
+    <p class="text-[11px] mt-3 pt-3 border-t border-[var(--ink)]/8 italic"><strong>Best for:</strong> ${s.bestFor}</p>
+  </div>`).join("");
+
+document.getElementById("sales-objections").innerHTML = salesObjections.map(o => `
+  <div class="card">
+    <p class="card-head text-base">${o.obj}</p>
+    <p class="text-sm mt-2 text-[var(--slate)] leading-snug">${o.reply}</p>
+  </div>`).join("");
+
+document.getElementById("sales-pricing").innerHTML = salesPricing.map(p => `
+  <div class="card flex flex-col">
+    <p class="text-[10px] uppercase tracking-[.2em] text-[var(--slate)]">${p.name}</p>
+    <p class="rail-num mt-1">${p.price}</p>
+    <p class="text-xs text-[var(--slate)]">${p.duration}</p>
+    <p class="text-sm mt-3 leading-snug">${p.contents}</p>
+    <p class="text-[11px] mt-3 pt-3 border-t border-[var(--ink)]/8 italic"><strong>Fit:</strong> ${p.fitFor}</p>
+  </div>`).join("");
+
+document.getElementById("sales-pipeline").innerHTML = `
+  <thead><tr class="text-left text-[var(--slate)] text-[11px] uppercase tracking-wider border-b border-[var(--ink)]/10">
+    <th class="py-2 pr-3">Stage</th><th class="py-2 pr-3">Target/mo</th><th class="py-2 pr-3">Conv from prev</th><th class="py-2 pr-3">Owner</th><th class="py-2">Action</th>
+  </tr></thead>
+  <tbody>${salesPipeline.map(p => `<tr class="border-b border-[var(--ink)]/5">
+    <td class="py-2 pr-3 font-medium">${p.stage}</td>
+    <td class="py-2 pr-3 serif italic">${p.target}</td>
+    <td class="py-2 pr-3 text-[var(--slate)]">${p.conv}</td>
+    <td class="py-2 pr-3">${tag(p.who, p.who==='founder'?'pill-founder':'pill-intern')}</td>
+    <td class="py-2 text-xs text-[var(--slate)]">${p.action}</td>
+  </tr>`).join("")}</tbody>`;
+
+document.getElementById("sales-activation").innerHTML = salesActivation;
+
+const methods = [
+  {
+    id: "sales-led",
+    name: "Sales-led / outbound",
+    mechanic: "Founder + intern email/LinkedIn 200–400 studios. Demo calls. Manual close. Custom pricing.",
+    fit: "Mid-market deals, complex buyer (architect/firm), budget per seat $200–$2k/mo, ICP small enough to enumerate.",
+    channels: "LinkedIn DM · cold email · referral intros · demo calls",
+    timeToFirstDollar: "2–6 weeks",
+    pros: "Earliest revenue. Direct buyer feedback. Low traffic needed.",
+    cons: "Doesn't scale past founder/intern hours. Deals lumpy.",
+    example: "Gong, Outreach, early Figma (enterprise side)",
+    score: 3,
+  },
+  {
+    id: "product-led",
+    name: "Product-led growth (PLG)",
+    mechanic: "Free tier or trial → user runs render in <60s → in-product upgrade prompt. Self-serve checkout. Product is the salesperson.",
+    fit: "Self-serve UX is real (you're pre-launch — gap), pricing is per-seat or per-render, fast time-to-value.",
+    channels: "Landing page · in-product upsell · word-of-mouth from free users",
+    timeToFirstDollar: "8–16 weeks (waiting on product readiness)",
+    pros: "Compounds. CAC drops over time. No human in loop at scale.",
+    cons: "Needs polished self-serve. Conversion < 5% of free users typical.",
+    example: "Figma, Notion, Linear",
+    score: 2,
+  },
+  {
+    id: "content-led",
+    name: "Content-led / SEO",
+    mechanic: "Publish 3–5 high-intent posts/wk targeting AEC keywords (\"AI render for architects\", \"floor plan to render\"). Compound traffic over 6–12 months.",
+    fit: "Founder/intern can write. Niche has searchable intent. Long horizon acceptable.",
+    channels: "Blog · YouTube tutorials · LinkedIn long-form · Medium · Indie Hackers",
+    timeToFirstDollar: "12–26 weeks",
+    pros: "Compounds. Becomes a moat. Bridge to PLG when product opens.",
+    cons: "Slow. Writing throughput limited by founder bandwidth.",
+    example: "Ahrefs, Buffer, ConvertKit",
+    score: 2,
+  },
+  {
+    id: "community-led",
+    name: "Community-led",
+    mechanic: "Build invite-only Slack/Discord/Circle for architects. Weekly live event. Members get early product access + status. Members evangelize.",
+    fit: "Founder enjoys hosting. Niche has identity (\"AI-curious architect\"). 6+ month commitment.",
+    channels: "Discord/Slack · weekly live render session · X spaces · in-person if local",
+    timeToFirstDollar: "10–20 weeks",
+    pros: "Highest defensibility. Members become co-builders. Free product feedback.",
+    cons: "Hosting load on founder. Slow if community manager not hired.",
+    example: "Pavilion (sales), Lenny's Newsletter community, On Deck",
+    score: 1,
+  },
+  {
+    id: "creator-led",
+    name: "Creator/influencer-led",
+    mechanic: "Pay 3–7 AEC micro-influencers ($500–2k each or rev share) to demo product. Their audience trusts them more than your ads.",
+    fit: "Visual product (you have this). Niche has identifiable creators (AEC YouTube/IG).",
+    channels: "YouTube · Instagram Reels · TikTok · LinkedIn creator posts · podcast guesting",
+    timeToFirstDollar: "4–10 weeks",
+    pros: "Fast top-of-funnel reach. Cheap if right creators picked. Repurposable assets.",
+    cons: "High variance per creator. Attribution noisy. One bad fit wastes budget.",
+    example: "Webflow (Flux), Riverside (creator partnerships), Notion (Marie Poulin)",
+    score: 2,
+  },
+  {
+    id: "abm",
+    name: "Account-based (ABM)",
+    mechanic: "Pick 50 named firms (e.g. top boutique studios in 5 cities). Custom landing page per firm. Multi-touch sequence: ad + DM + email + intro. White-glove pilots.",
+    fit: "ACV > $5k/yr. Buyer roster known. Founder can spend 1+ hr/account.",
+    channels: "LinkedIn ads (named accounts) · personalized video · custom microsite · partner intros",
+    timeToFirstDollar: "6–12 weeks",
+    pros: "Highest deal quality. Predictable pipeline. Strong case studies.",
+    cons: "Slow per account. Founder time-heavy. Doesn't scale beyond list.",
+    example: "Snowflake, MongoDB enterprise, Mutiny (their own ABM)",
+    score: 2,
+  },
+  {
+    id: "engineering-marketing",
+    name: "Engineering-as-marketing",
+    mechanic: "Ship free standalone tools (e.g. floor-plan-to-render demo, materials calculator, room-style detector) — no signup. Free tools rank for SEO + go viral on Twitter.",
+    fit: "Engineering bandwidth available. Product has reusable AI primitives. Long horizon.",
+    channels: "Free tool pages · Product Hunt · Hacker News · X demos · embed widget",
+    timeToFirstDollar: "10–18 weeks",
+    pros: "Compounds. Distinct moat. Press-friendly. Recruits + investors notice.",
+    cons: "Engineering cost upfront. Conversion to paid needs intentional bridge.",
+    example: "HubSpot Website Grader, Hotjar's free heatmap, Plausible's open dashboards",
+    score: 2,
+  },
+  {
+    id: "partnership",
+    name: "Partnership / channel",
+    mechanic: "Integrate or co-sell with existing AEC tools (Revit plugins, ArchiCAD addons, SketchUp marketplace, MagicPlan, Matterport). Their users are your users.",
+    fit: "Product has clear integration surface. Partner has incentive (their users want what you do).",
+    channels: "App marketplaces · co-marketing posts · referral fees · joint webinars",
+    timeToFirstDollar: "8–16 weeks (partnership cycle)",
+    pros: "Borrowed distribution. Trust transferred. Can be massive if partner is big.",
+    cons: "Partner dependency. Long deal cycle. Revenue share dilutes ACV.",
+    example: "Slack on Salesforce, Linear on GitHub, Loom on Notion",
+    score: 1,
+  },
+];
+
+const methodLabel = { revenue:"Revenue speed", signups:"Signup volume", founder:"Founder hours saved", intern:"Intern utilization", risk:"Risk control", budget:"Budget efficiency" };
+document.getElementById("methods-grid").innerHTML = methods.map(m => `
+  <div class="card flex flex-col">
+    <div class="flex items-baseline justify-between">
+      <p class="card-head text-base">${m.name}</p>
+      <span class="text-[10px] tracking-[.2em] uppercase text-[var(--slate)]">first $ in ${m.timeToFirstDollar}</span>
+    </div>
+    <p class="card-sub mt-2"><span class="text-[var(--ink)] font-medium">Mechanic — </span>${m.mechanic}</p>
+    <p class="card-sub mt-2"><span class="text-[var(--ink)] font-medium">Fit — </span>${m.fit}</p>
+    <p class="card-sub mt-2"><span class="text-[var(--ink)] font-medium">Channels — </span>${m.channels}</p>
+    <div class="mt-3 grid grid-cols-2 gap-2 text-[11px] border-t border-[var(--ink)]/8 pt-3">
+      <div><span class="text-[var(--moss)] font-medium">+ </span>${m.pros}</div>
+      <div><span class="text-[var(--accent)] font-medium">− </span>${m.cons}</div>
+    </div>
+    <p class="text-[10px] text-[var(--slate)] mt-3 italic">e.g. ${m.example}</p>
+  </div>
+`).join("");
+
+const approaches = [
+  {
+    code: "A+B",
+    name: "Two-track baseline",
+    summary: "Sales-led spine + intern daily / founder async split. The clean recommendation if you want one bet that moves all 3 rails without spreading thin.",
+    fit: "Default. Choose if intern bandwidth is reliable and you want lowest variance.",
+    scores: { revenue:3, signups:2, founder:3, intern:3, risk:3, budget:3 },
+    layers: ["Track 1: cadence + outbound + community", "Track 2: pilots + case studies", "Tooling: $800–1.2k/mo"],
+  },
+  {
+    code: "A+B+C-light",
+    name: "Two-track + 2 influencers",
+    summary: "Baseline + 2 micro-influencer drops in months 2 and 3. The originally-presented combo. Adds reach without betting the budget on creators.",
+    fit: "Choose if you want one calibrated influencer experiment per month, not a campaign.",
+    scores: { revenue:3, signups:3, founder:2, intern:3, risk:2, budget:2 },
+    layers: ["A+B above", "+ Influencer #1 (month 2, ≤$1.5k)", "+ Influencer #2 (month 3, ≤$1.5k)"],
+  },
+  {
+    code: "A+B+C-heavy",
+    name: "Two-track + 5 influencers",
+    summary: "Baseline + aggressive creator program: 5 AEC micro-influencers across IG/YT, mix of flat fees + revenue share. Front-loads top-of-funnel.",
+    fit: "Choose if your hypothesis is that AEC creator audiences are the cheapest channel for you.",
+    scores: { revenue:2, signups:3, founder:1, intern:2, risk:1, budget:1 },
+    layers: ["A+B above", "+ 3 flat-fee creators ($1k each)", "+ 2 rev-share creators (15% recurring)"],
+  },
+  {
+    code: "A+B+free-tool",
+    name: "Two-track + free tool",
+    summary: "Baseline + ship one engineering-as-marketing free tool by day 60 (e.g. floor-plan → quick render demo, no signup). Creates an SEO + virality moat.",
+    fit: "Choose if you can spare 1 founder-week for the tool build and want a long-tail compounding asset.",
+    scores: { revenue:2, signups:3, founder:1, intern:3, risk:2, budget:3 },
+    layers: ["A+B above", "+ Free tool spec by day 30", "+ Tool live + SEO post by day 60", "+ Programmatic SEO around tool by day 90"],
+  },
+  {
+    code: "A+B+paid-test",
+    name: "Two-track + paid micro-test",
+    summary: "Baseline + LinkedIn Ads micro-test from day 31 ($500–$1,500/mo). Buys attribution data faster, validates messaging beyond outbound replies.",
+    fit: "Choose if you trust your ICP enough to want quantitative CAC numbers by day 60.",
+    scores: { revenue:3, signups:3, founder:2, intern:3, risk:2, budget:2 },
+    layers: ["A+B above", "+ LI Ads test from day 31", "+ Retargeting pixel on landing", "+ Conversion event tracking"],
+  },
+  {
+    code: "A+B+community",
+    name: "Two-track + niche community",
+    summary: "Baseline + private invite-only architects' Discord/Slack (target 200 members by day 90). Slowest start, deepest moat. Ideal compounding asset for founder voice.",
+    fit: "Choose if you can host 1 weekly small event (live render + Q&A) and want a defensible distribution channel.",
+    scores: { revenue:2, signups:2, founder:1, intern:2, risk:3, budget:3 },
+    layers: ["A+B above", "+ Discord/Slack + 50 founding invites", "+ Weekly live render + Q&A", "+ Member-only beta access"],
+  },
+];
+
+const dotsFor = (n) => {
+  const colors = { 3:"text-[var(--moss)]", 2:"text-[var(--sand)]", 1:"text-[var(--accent)]" };
+  const filled = "●".repeat(n) + "○".repeat(3-n);
+  return `<span class="${colors[n]}">${filled}</span>`;
+};
+const scoreLabels = { revenue:"Revenue speed", signups:"Signup volume", founder:"Founder hours saved", intern:"Intern utilization", risk:"Risk control", budget:"Budget efficiency" };
+
+document.getElementById("approaches-grid").innerHTML = approaches.map(a => `
+  <div class="card flex flex-col">
+    <div class="flex items-start justify-between gap-3">
+      <div>
+        <p class="text-[10px] tracking-[.2em] uppercase text-[var(--slate)]">${a.code}</p>
+        <p class="card-head mt-1">${a.name}</p>
+      </div>
+    </div>
+    <p class="card-sub mt-2 leading-snug">${a.summary}</p>
+    <div class="mt-3 grid grid-cols-2 gap-x-3 gap-y-1 text-[11px] border-t border-[var(--ink)]/8 pt-3">
+      ${Object.entries(a.scores).map(([k,v]) => `<div class="flex items-center justify-between"><span class="text-[var(--slate)]">${scoreLabels[k]}</span>${dotsFor(v)}</div>`).join("")}
+    </div>
+    <details class="mt-3 group">
+      <summary class="text-xs text-[var(--accent)] hover:underline">layers + when to pick →</summary>
+      <p class="text-xs mt-2 text-[var(--slate)] italic">${a.fit}</p>
+      <ul class="mt-2 text-xs space-y-0.5">${a.layers.map(l=>`<li>· ${l}</li>`).join("")}</ul>
+    </details>
+  </div>
+`).join("");
+
+const items = {
+  30: [
+    { track:"intern", title:"Daily content cadence", body:"5 LinkedIn posts/wk + 4 X posts/wk from reference asset library. 1 reel/wk." },
+    { track:"intern", title:"Engage 30+ X target accounts daily", body:"Reply, quote, save threads. List in references/drive_dump/HappyMonk/marketing/." },
+    { track:"intern", title:"Outbound 200 studios", body:"LinkedIn + email. Reply triage to founder. Tool: Apollo + Lemlist/Instantly." },
+    { track:"founder", title:"Tighten landing + waitlist", body:"public/ landing in archiai. Hero + before-after slider + waitlist form. Posthog event hooks." },
+    { track:"founder", title:"Draft 3-tier pricing", body:"Notion doc, not locked yet. Floated in pilot calls only." },
+    { track:"founder", title:"5 pilot calls", body:"Warm + inbound. First paid pilot signed by day 30." },
+    { track:"founder", title:"1st influencer DM'd + contracted", body:"AEC micro-influencer (10–100k IG/YT). Affiliate or flat ≤$1.5k." },
+    { track:"tool", title:"Tooling spin-up", body:"Buffer/Publer · Apollo · Lemlist · Attio · mem0 (user_id rkitect-marketing) · PostHog/Plausible." },
+    { track:"gate", title:"Day 30 gate", body:"≥1 pilot signed · waitlist 100+ · cadence holding. Otherwise re-scope before day 31." },
+  ],
+  60: [
+    { track:"intern", title:"Cadence + win repurposing", body:"Pilot wins → carousels + reels in week. Recycle reference assets in new framings." },
+    { track:"intern", title:"Outbound expands to 400 studios", body:"Add proptech + staging firms. New copy variants A/B." },
+    { track:"intern", title:"Community deepening", body:"DMs to warm prospects from engagement. Move best replies into CRM." },
+    { track:"founder", title:"2–4 paid pilots active", body:"Onboard each with 1 white-glove render. Capture pricing/positioning feedback." },
+    { track:"founder", title:"3 case studies", body:"1 video + 2 written. Pulled from earliest pilots. Used in outbound + landing." },
+    { track:"founder", title:"1st influencer drop ships", body:"Brief + assets + tracking link sent. Measure signups per $." },
+    { track:"founder", title:"Activation analytics live", body:"PostHog or Mixpanel. Event: render-started, render-completed, return-day-2." },
+    { track:"founder", title:"Lock pricing", body:"Based on pilot conversations. Public price page goes live with beta plan." },
+    { track:"gate", title:"Day 45 gate", body:"Activation rate + reply rate review. Cut what isn't working before doubling down." },
+  ],
+  90: [
+    { track:"intern", title:"Waitlist conversion sequence", body:"5-email series, drip over 10 days. CTA = book beta slot." },
+    { track:"intern", title:"Cadence continues + reposts", body:"50% time shifts from outbound to inbound nurture." },
+    { track:"founder", title:"Open beta to 20–40 seats", body:"Phased: cohort A (10) day 65, cohort B (10–20) day 75, cohort C (rest) day 85." },
+    { track:"founder", title:"2nd influencer drop", body:"Top-performer from drop 1 doubles down. Drop 2 partners on revenue share." },
+    { track:"founder", title:"Retention dashboard", body:"Weekly return rate, renders/user, week-4 WAU. Mem0-backed weekly digest to founder." },
+    { track:"founder", title:"Paid ad decision", body:"Model CAC from organic + influencer data. Decide: start LI Ads micro-test or hold." },
+    { track:"gate", title:"Day 75 gate", body:"Continue beta as-is, expand seats, or close + iterate based on retention." },
+  ],
+};
+
+const trackLabel = { intern:"intern · daily", founder:"founder · async", tool:"tooling", gate:"decision gate" };
+function card(it){
+  return `<div class="card">
+    <div class="flex items-start justify-between gap-3 mb-2">
+      <p class="card-head">${it.title}</p>
+      <span class="pill pill-${it.track}">${trackLabel[it.track]}</span>
+    </div>
+    <p class="card-sub leading-snug">${it.body}</p>
+  </div>`;
+}
+document.getElementById("kb-30").innerHTML = items[30].map(card).join("");
+document.getElementById("kb-60").innerHTML = items[60].map(card).join("");
+document.getElementById("kb-90").innerHTML = items[90].map(card).join("");
+
+const weeks = [
+  { w:1, phase:30, items:[ {t:"intern", x:"Cadence start · 5 LI + 4 X"}, {t:"founder", x:"Landing + waitlist live"}, {t:"tool", x:"Tooling stack provisioned"} ]},
+  { w:2, phase:30, items:[ {t:"intern", x:"Outbound batch 1 · 50 studios"}, {t:"founder", x:"Pricing draft v1"}, {t:"founder", x:"2 pilot calls"} ]},
+  { w:3, phase:30, items:[ {t:"intern", x:"Outbound batch 2 · 50"}, {t:"founder", x:"Influencer #1 DM'd"}, {t:"intern", x:"X target engagement loop"} ]},
+  { w:4, phase:30, items:[ {t:"intern", x:"Outbound batch 3 · 100"}, {t:"founder", x:"3 pilot calls · 1 signed"}, {t:"gate", x:"Day-30 gate review"} ]},
+  { w:5, phase:60, items:[ {t:"intern", x:"Repurpose pilot win → carousel"}, {t:"founder", x:"Pilot #1 onboarded white-glove"}, {t:"founder", x:"Influencer #1 contract signed"} ]},
+  { w:6, phase:60, items:[ {t:"intern", x:"Outbound 200 (proptech + staging)"}, {t:"founder", x:"Pilot #2"}, {t:"founder", x:"Case study #1 (written)"} ]},
+  { w:7, phase:60, items:[ {t:"intern", x:"Community DMs to warm prospects"}, {t:"founder", x:"Activation analytics live"}, {t:"gate", x:"Day-45 gate review"} ]},
+  { w:8, phase:60, items:[ {t:"intern", x:"Outbound copy A/B test"}, {t:"founder", x:"Pilot #3 + #4"}, {t:"founder", x:"Influencer drop #1 ships"} ]},
+  { w:9, phase:60, items:[ {t:"founder", x:"Case study #2 (video)"}, {t:"founder", x:"Lock pricing publicly"}, {t:"intern", x:"Cadence continues"} ]},
+  { w:10, phase:90, items:[ {t:"founder", x:"Beta cohort A · 10 seats"}, {t:"intern", x:"Waitlist email #1 sent"}, {t:"founder", x:"Retention dashboard v1"} ]},
+  { w:11, phase:90, items:[ {t:"founder", x:"Beta cohort B · 10–20"}, {t:"intern", x:"Waitlist email #2–3"}, {t:"founder", x:"Case study #3"} ]},
+  { w:12, phase:90, items:[ {t:"founder", x:"Influencer drop #2 ships"}, {t:"intern", x:"Waitlist email #4–5"}, {t:"gate", x:"Day-75 gate review"} ]},
+  { w:13, phase:90, items:[ {t:"founder", x:"Beta cohort C · open rest"}, {t:"founder", x:"Paid-ad go/no-go"}, {t:"intern", x:"Retention digest weekly"} ]},
+];
+document.getElementById("cal-grid").innerHTML = weeks.map(w => `
+  <div class="week-cell">
+    <div class="flex items-center justify-between"><span class="wnum">week ${w.w}</span><span class="text-[10px] uppercase tracking-widest text-[var(--slate)]">day ${w.phase-29}–${w.phase}</span></div>
+    <ul>${w.items.map(i=>`<li class="${i.t}">${i.x}</li>`).join("")}</ul>
+  </div>
+`).join("");
+
+document.querySelectorAll(".tab-btn").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tab-btn").forEach(x => x.setAttribute("aria-selected", x===b ? "true":"false"));
+  document.querySelectorAll(".tab-pane").forEach(p => p.classList.add("hidden"));
+  document.getElementById("tab-"+b.dataset.tab).classList.remove("hidden");
+}));
+</script>
+</body>
+</html>

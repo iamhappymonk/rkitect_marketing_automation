@@ -1,0 +1,51 @@
+[
+  {
+    "id": "R1",
+    "title": "3 Hours vs 60 Seconds",
+    "post": "Section A, Post #1 — Pain→Solution reel",
+    "caption": "\"3 hours vs 60 seconds. Same result. Not going back.\" — rkitect.ai",
+    "model": "fal-ai/kling-video/v2.1/master/text-to-video",
+    "video_url": "https://v3b.fal.media/files/b/0a988013/XBXSQ6TVkjrDTL2ZxsZEz_output.mp4",
+    "mp4_file": "D:\\HappyMonk\\dekoraterAI\\archiai\\marketing-tool\\sample-content\\reels\\r1.mp4",
+    "status": "ok"
+  },
+  {
+    "id": "R2",
+    "title": "Client Calls — Presentation in 10 Minutes",
+    "post": "Section A, Post #2 — Scenario hook reel",
+    "caption": "\"Client called at 9am. Presentation at 10am. rkitect.ai saved me.\" — rkitect.ai",
+    "model": "fal-ai/kling-video/v2.1/master/text-to-video",
+    "video_url": "https://v3b.fal.media/files/b/0a988025/FSyI4b_41Z9fzIDP-P5lv_output.mp4",
+    "mp4_file": "D:\\HappyMonk\\dekoraterAI\\archiai\\marketing-tool\\sample-content\\reels\\r2.mp4",
+    "status": "ok"
+  },
+  {
+    "id": "R3",
+    "title": "Traditional Render Farm vs rkitect.ai",
+    "post": "Section A, Post #3 — Side-by-side comparison reel",
+    "caption": "\"Left vs right. You decide.\" — rkitect.ai",
+    "model": "fal-ai/bytedance/seedance-1.5/text-to-video",
+    "video_url": null,
+    "status": "failed"
+  },
+  {
+    "id": "R4",
+    "title": "Sketch → Render Before Coffee Gets Cold",
+    "post": "Section A, Post #4 — First-person POV reel",
+    "caption": "\"Sketch to render before the coffee cooled. ☕\" — rkitect.ai",
+    "model": "fal-ai/kling-video/v2.1/master/text-to-video",
+    "video_url": "https://v3b.fal.media/files/b/0a988039/snXbuOcWOPsQ-UvyIVPTZ_output.mp4",
+    "mp4_file": "D:\\HappyMonk\\dekoraterAI\\archiai\\marketing-tool\\sample-content\\reels\\r4.mp4",
+    "status": "ok"
+  },
+  {
+    "id": "R5",
+    "title": "Architects Before vs After AI Rendering",
+    "post": "Section A, Post #5 — Meme / humour reel",
+    "caption": "\"We don't talk about the 6-hour render nights anymore. 😌\" — rkitect.ai",
+    "model": "fal-ai/minimax/video-01-live",
+    "video_url": "https://v3b.fal.media/files/b/0a98804d/ZQzhQpXrFkwhhHWLGZybi_output.mp4",
+    "mp4_file": "D:\\HappyMonk\\dekoraterAI\\archiai\\marketing-tool\\sample-content\\reels\\r5.mp4",
+    "status": "ok"
+  }
+]

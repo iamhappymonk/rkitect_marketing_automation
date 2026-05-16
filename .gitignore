@@ -1,0 +1,25 @@
+# Python
+memory_kit/.venv/
+**/__pycache__/
+*.pyc
+
+# Local Claude config + locks
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+**/*.lock
+!memory_kit/uv.lock
+
+# mem0 / local stores (regenerable)
+.mem0/
+qdrant/
+*.kuzu
+kuzu.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.*
+!.env.example

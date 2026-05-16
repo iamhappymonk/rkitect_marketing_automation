@@ -1,0 +1,102 @@
+[
+  {
+    "id": "P01",
+    "room": "Living Room",
+    "style": "Japandi",
+    "caption": "Same room. One prompt. #rkitectai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987f98/sfRZKcsi_7o_KjYmQECcl_b5ed6ae9556544a499dcf7d9cdd53fa3.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987f99/WzZw6a3xf7goQ2qYQ5jpJ_a2aa81f4ccb34dcb81f4f51754caaf07.jpg",
+    "status": "ok",
+    "dir": "before-after/P01/"
+  },
+  {
+    "id": "P02",
+    "room": "Living Room",
+    "style": "Industrial",
+    "caption": "Before the AI. After the AI. #rkitectai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987f9b/1vRe3NQmvLh_-0USceLDw_f28faf57105b4184aff26e5508b5e58b.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987f9c/BIYcyJbO-zDIeVlMLtynz_e344fe6f430d43e8865c1ba074311a5f.jpg",
+    "status": "ok",
+    "dir": "before-after/P02/"
+  },
+  {
+    "id": "P03",
+    "room": "Living Room",
+    "style": "Luxury Modern",
+    "caption": "60 seconds. This is what rkitect.ai does.",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987f9d/E5DFWXu98dpl-5MI3OIBe_53ad2710ec1c473bb7181f6ae97278e2.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987f9f/xDiZ6V_wPnd6DBhO_hvcP_e1b184c40e724a8aaa72766e063d0a97.jpg",
+    "status": "ok",
+    "dir": "before-after/P03/"
+  },
+  {
+    "id": "P04",
+    "room": "Bedroom",
+    "style": "Scandinavian",
+    "caption": "Your client uploads a photo. You send this back. #rkitectai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987fa0/g_KagckFgrp7QxFG8-9Ca_7c5e2ee6c72b4b78a17dd31c7f92a7f1.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987fa1/wZ_1hBu62vRQnz4ymB5uZ_b857fed361b24880bf0325fef5e99200.jpg",
+    "status": "ok",
+    "dir": "before-after/P04/"
+  },
+  {
+    "id": "P05",
+    "room": "Bedroom",
+    "style": "Dark Academia",
+    "caption": "One room. Unlimited interpretations. rkitect.ai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987fa2/Xz2r93looYQsRm0kFw6Sx_c7f15f9cbe0a4380a586b90e425b6ba1.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987fa3/FovI7BJkSB6uuE0smrdtZ_03b4cd61e1e14a19988677b3b4b542c0.jpg",
+    "status": "ok",
+    "dir": "before-after/P05/"
+  },
+  {
+    "id": "P06",
+    "room": "Kitchen",
+    "style": "Minimal White",
+    "caption": "The gap between sketch and reality just closed. #rkitectai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987fa4/a1xrM9vPw1yhPOjXUq6-l_ebc23c5fec8f4f02b6a6e10c236a75fd.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987fa6/ly1McznA9mAwNQ0uIoKv3_b37cf283562a4145ad96566d642cebad.jpg",
+    "status": "ok",
+    "dir": "before-after/P06/"
+  },
+  {
+    "id": "P07",
+    "room": "Kitchen",
+    "style": "Dark Moody",
+    "caption": "Nobody talks about dark kitchens enough. rkitect.ai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987fa8/mw4C7Gwi1sj7-GrjnFF1e_3c3fd0444d92456995112b44a80c7719.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987fa9/_UOksSbrb0lF2XlnFcrzT_8744a68d955e43918f85b6f6429d1839.jpg",
+    "status": "ok",
+    "dir": "before-after/P07/"
+  },
+  {
+    "id": "P08",
+    "room": "Bathroom",
+    "style": "Spa Luxury",
+    "caption": "Your renders should feel like this. rkitect.ai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987faa/jJitSSSUqxI8t4lK_9qLr_3c218102b1b342d68f16e335f4a50c5b.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987fab/FASTI_hg6KO4_Y03kXe_f_e320f0bb8fbc4f95bbaede6c9fdc7f94.jpg",
+    "status": "ok",
+    "dir": "before-after/P08/"
+  },
+  {
+    "id": "P09",
+    "room": "Home Office",
+    "style": "Executive Minimal",
+    "caption": "From empty to client-ready in 60 seconds. rkitect.ai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987fac/G3OjJ86ut52wQskSPrTad_3dac6e56a5fc45fa99889d349b529b79.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987fad/rN95sIk4lg-NUsQW8lP4J_803f38b8d25449d8ba2ea16920f7aff0.jpg",
+    "status": "ok",
+    "dir": "before-after/P09/"
+  },
+  {
+    "id": "P10",
+    "room": "Dining Room",
+    "style": "Mediterranean",
+    "caption": "The same four walls. Completely different world. rkitect.ai",
+    "beforeUrl": "https://v3b.fal.media/files/b/0a987fae/ISyF6UAqk3i2MWP1zUR-W_bbd9f23cc2ca4f3683a2b2df1d90e176.jpg",
+    "afterUrl": "https://v3b.fal.media/files/b/0a987faf/M-uEl0OFo3TH7VSH2lxx3_3710a32f57684870b6d172c930e5e649.jpg",
+    "status": "ok",
+    "dir": "before-after/P10/"
+  }
+]

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>rkitect.ai · brand graph + facts</title>
+<link rel="icon" href="assets/brand/favicon.svg" />
+<link rel="stylesheet" href="landing.css" />
+<script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+<script src="https://unpkg.com/layout-base@2.0.1/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base@2.2.0/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
+<script src="https://unpkg.com/marked@13.0.3/marked.min.js"></script>
+<style>
+  body { background: var(--color-bg); }
+  .toolbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    padding: var(--space-md) var(--space-2xl);
+    background: color-mix(in oklab, var(--color-bg) 92%, transparent);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+  }
+  .toolbar .meta { font-family: var(--font-mono); font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: .14em; color: var(--color-text-muted); }
+  .toolbar .meta b { color: var(--color-text-primary); font-weight: 500; }
+  .toolbar .controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .toolbar select, .toolbar input {
+    font-family: var(--font-mono); font-size: var(--text-2xs);
+    padding: 7px 10px; border: 1px solid var(--color-border); border-radius: 6px;
+    background: var(--color-bg-elevated); color: var(--color-text-primary);
+    text-transform: uppercase; letter-spacing: .1em; outline: none;
+  }
+  .toolbar input:focus, .toolbar select:focus { border-color: var(--color-text-primary); }
+  .toolbar button {
+    font-family: var(--font-mono); font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: .14em;
+    padding: 7px 12px; border-radius: 999px; border: 1px solid var(--color-border);
+    background: var(--color-bg); color: var(--color-text-primary); cursor: pointer;
+  }
+  .toolbar button:hover { border-color: var(--color-text-primary); }
+  .toolbar .tabs { display: flex; gap: 4px; }
+  .toolbar .tab {
+    font-family: var(--font-mono); font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: .14em;
+    padding: 7px 14px; border-radius: 999px; border: 1px solid var(--color-border);
+    background: var(--color-bg); color: var(--color-text-secondary); cursor: pointer;
+  }
+  .toolbar .tab[aria-selected="true"] { background: var(--color-text-primary); color: var(--color-bg); border-color: var(--color-text-primary); }
+
+  #cy {
+    position: fixed; top: 64px; bottom: 0; left: 0; right: 380px;
+    background:
+      radial-gradient(ellipse at 50% 50%, var(--color-bg-elevated) 0%, var(--color-bg-muted) 100%);
+    display: block;
+  }
+  #cy.hidden { display: none; }
+  .toolbar.facts-mode .controls .graph-only { display: none; }
+  .toolbar:not(.facts-mode) .controls .facts-only { display: none; }
+
+  #panel {
+    position: fixed; top: 64px; bottom: 0; right: 0; width: 380px;
+    border-left: 1px solid var(--color-border); background: var(--color-bg);
+    overflow-y: auto; padding: var(--space-xl);
+  }
+  #panel h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); letter-spacing: -.005em; margin: 0 0 var(--space-sm); }
+  #panel .empty { color: var(--color-text-muted); font-style: italic; }
+  #panel .row { padding: 8px 0; border-bottom: 1px dashed var(--color-border); font-size: var(--text-sm); display: flex; justify-content: space-between; gap: 12px; }
+  #panel .row:last-child { border-bottom: none; }
+  #panel .row .l { font-family: var(--font-mono); font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: .14em; color: var(--color-text-muted); }
+  #panel .row .v { color: var(--color-text-primary); text-align: right; }
+  #panel .src { margin-top: var(--space-md); display: flex; flex-wrap: wrap; gap: 4px; }
+  #panel .src span {
+    font-family: var(--font-mono); font-size: var(--text-2xs);
+    padding: 2px 7px; border-radius: 4px;
+    background: var(--color-bg-muted); color: var(--color-text-secondary);
+  }
+
+  /* Facts view (full width, replaces graph) */
+  #facts {
+    position: fixed; top: 64px; bottom: 0; left: 0; right: 0;
+    overflow-y: auto; padding: var(--space-2xl) var(--space-3xl);
+    background: var(--color-bg);
+    display: none;
+  }
+  #facts.show { display: block; }
+  #facts .wrap { max-width: 920px; margin: 0 auto; }
+  #facts h1 { font-family: var(--font-display); font-weight: 400; letter-spacing: -.018em; font-size: var(--text-fluid-xl); margin: 0 0 var(--space-md); }
+  #facts h2 {
+    font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl);
+    margin: var(--space-2xl) 0 var(--space-sm); letter-spacing: -.005em;
+    padding-top: var(--space-md); border-top: 1px solid var(--color-border);
+  }
+  #facts h3 { font-family: var(--font-mono); font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: .14em; color: var(--color-text-muted); margin: var(--space-md) 0 var(--space-xs); }
+  #facts ul { padding-left: var(--space-md); margin: 0 0 var(--space-md); }
+  #facts li { margin: 6px 0; color: var(--color-text-primary); line-height: 1.55; font-size: var(--text-md); }
+  #facts li code { font-family: var(--font-mono); font-size: var(--text-2xs); padding: 1px 5px; border-radius: 3px; background: var(--color-bg-muted); color: var(--color-text-muted); }
+  #facts p { color: var(--color-text-secondary); }
+  #facts .src-jump {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin: var(--space-md) 0 var(--space-2xl);
+    padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-border);
+  }
+  #facts .src-jump a {
+    font-family: var(--font-mono); font-size: var(--text-2xs);
+    padding: 5px 10px; border-radius: 999px;
+    border: 1px solid var(--color-border); color: var(--color-text-secondary);
+    text-decoration: none; transition: border-color .2s, color .2s;
+  }
+  #facts .src-jump a:hover { border-color: var(--color-text-primary); color: var(--color-text-primary); }
+
+  @media (max-width: 880px) {
+    #cy { right: 0; bottom: 50%; }
+    #panel { width: 100%; top: 50%; }
+    #facts { padding: var(--space-xl) var(--space-md); }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar" id="tb">
+  <div class="tabs">
+    <button class="tab" data-tab="graph" aria-selected="true">Graph</button>
+    <button class="tab" data-tab="facts" aria-selected="false">Facts</button>
+  </div>
+  <div class="meta"><b id="t-nodes">0</b> entities · <b id="t-edges">0</b> relationships · <b id="t-preds">0</b> predicates · <b id="t-facts">0</b> facts</div>
+  <div class="controls">
+    <input id="filter" class="graph-only" type="search" placeholder="Filter entity…" />
+    <select id="predicate" class="graph-only">
+      <option value="">All predicates</option>
+    </select>
+    <button id="relayout" class="graph-only">Re-layout</button>
+    <input id="facts-filter" class="facts-only" type="search" placeholder="Search facts…" />
+    <a class="text-link" href="./" style="margin-left:8px">← Hub</a>
+  </div>
+</div>
+
+<div id="cy"></div>
+
+<aside id="panel">
+  <h2>Click an entity</h2>
+  <p class="empty">Hover for tooltip; click to inspect connections + sources.</p>
+</aside>
+
+<section id="facts">
+  <div class="wrap" id="facts-content">
+    <p class="empty">Loading facts…</p>
+  </div>
+</section>
+
+<script>
+// — Register fcose plugin · fall back to cose if missing —
+try {
+  if (typeof cytoscapeFcose !== "undefined") {
+    cytoscape.use(cytoscapeFcose);
+    console.log("[brand-graph] fcose registered");
+  } else {
+    console.warn("[brand-graph] fcose missing, will use built-in cose");
+  }
+} catch (e) { console.warn("[brand-graph] plugin register error", e); }
+
+let cy = null;
+let factsLoaded = false;
+
+// — Load + render graph —
+fetch("brand_graph.json")
+  .then(r => r.json())
+  .then(data => {
+    const nodes = data.nodes;
+    const edges = data.edges;
+    document.getElementById("t-nodes").textContent = nodes.length;
+    document.getElementById("t-edges").textContent = edges.length;
+    const preds = Array.from(new Set(edges.map(e => e.data.label))).sort();
+    document.getElementById("t-preds").textContent = preds.length;
+    const sel = document.getElementById("predicate");
+    preds.forEach(p => { const o = document.createElement("option"); o.value = p; o.textContent = p; sel.appendChild(o); });
+
+    const layoutName = (typeof cytoscapeFcose !== "undefined") ? "fcose" : "cose";
+    const layoutOpts = layoutName === "fcose"
+      ? { name: "fcose", animate: true, animationDuration: 800, randomize: true, idealEdgeLength: 130, nodeRepulsion: 8000, gravity: 0.25, padding: 30, fit: true }
+      : { name: "cose", animate: "end", randomize: true, idealEdgeLength: 130, nodeRepulsion: 400000, gravity: 80, padding: 30, fit: true };
+
+    cy = cytoscape({
+      container: document.getElementById("cy"),
+      elements: [...nodes, ...edges],
+      wheelSensitivity: 0.25,
+      style: [
+        { selector: "node", style: {
+            "background-color": "#ebe4ce",
+            "border-color": "#5c6577",
+            "border-width": 1,
+            "label": "data(label)",
+            "color": "#0b0f17",
+            "font-family": "Switzer, system-ui, sans-serif",
+            "font-size": 10,
+            "text-valign": "center",
+            "text-halign": "center",
+            "text-wrap": "wrap",
+            "text-max-width": 110,
+            "text-outline-color": "#f3eedc",
+            "text-outline-width": 2,
+            "padding": 6,
+            "shape": "round-rectangle",
+            "width": "label",
+            "height": "label",
+            "min-zoomed-font-size": 6,
+        }},
+        { selector: "node:selected", style: {
+            "background-color": "#d8e3f0",
+            "border-color": "#2c4566",
+            "border-width": 2,
+        }},
+        { selector: "node.dim", style: { "opacity": 0.18 }},
+        { selector: "node.highlight", style: { "background-color": "#f7e4dc", "border-color": "#a83423", "border-width": 2 }},
+        { selector: "edge", style: {
+            "width": 1,
+            "line-color": "#bdb6a3",
+            "target-arrow-color": "#bdb6a3",
+            "target-arrow-shape": "triangle",
+            "target-arrow-fill": "filled",
+            "arrow-scale": 0.8,
+            "curve-style": "bezier",
+            "label": "data(label)",
+            "font-family": "Geist Mono, monospace",
+            "font-size": 8,
+            "color": "#5c6577",
+            "text-rotation": "autorotate",
+            "text-background-color": "#f3eedc",
+            "text-background-opacity": 0.85,
+            "text-background-padding": 2,
+            "min-zoomed-font-size": 7,
+        }},
+        { selector: "edge.dim", style: { "opacity": 0.06 }},
+        { selector: "edge.highlight", style: { "line-color": "#2c4566", "target-arrow-color": "#2c4566", "width": 2 }},
+      ],
+      layout: layoutOpts,
+    });
+
+    // Force resize after mount + layout
+    requestAnimationFrame(() => { cy.resize(); cy.fit(undefined, 30); });
+
+    const panel = document.getElementById("panel");
+    function inspect(node) {
+      const label = node.data("label");
+      const outgoing = node.outgoers("edge");
+      const incoming = node.incomers("edge");
+      const allSources = new Set();
+      [...outgoing, ...incoming].forEach(e => (e.data("sources") || []).forEach(s => allSources.add(s)));
+      let html = `<h2>${label}</h2>`;
+      html += `<div class="row"><span class="l">Outgoing</span><span class="v">${outgoing.length}</span></div>`;
+      html += `<div class="row"><span class="l">Incoming</span><span class="v">${incoming.length}</span></div>`;
+      if (outgoing.length) {
+        html += `<h3 style="font-family:var(--font-mono);font-size:var(--text-2xs);text-transform:uppercase;letter-spacing:.14em;color:var(--color-text-muted);margin:var(--space-md) 0 4px">Out</h3>`;
+        outgoing.forEach(e => { html += `<div class="row"><span class="l">${e.data("label")}</span><span class="v">${e.target().data("label")}</span></div>`; });
+      }
+      if (incoming.length) {
+        html += `<h3 style="font-family:var(--font-mono);font-size:var(--text-2xs);text-transform:uppercase;letter-spacing:.14em;color:var(--color-text-muted);margin:var(--space-md) 0 4px">In</h3>`;
+        incoming.forEach(e => { html += `<div class="row"><span class="l">${e.source().data("label")}</span><span class="v">${e.data("label")}</span></div>`; });
+      }
+      if (allSources.size) {
+        html += `<h3 style="font-family:var(--font-mono);font-size:var(--text-2xs);text-transform:uppercase;letter-spacing:.14em;color:var(--color-text-muted);margin:var(--space-lg) 0 4px">Sources</h3>`;
+        html += `<div class="src">${[...allSources].sort().map(s => `<span>${s}</span>`).join("")}</div>`;
+      }
+      panel.innerHTML = html;
+    }
+
+    cy.on("tap", "node", e => {
+      cy.elements().removeClass("dim highlight");
+      const n = e.target;
+      const neigh = n.closedNeighborhood();
+      cy.elements().not(neigh).addClass("dim");
+      neigh.nodes().not(n).addClass("highlight");
+      neigh.edges().addClass("highlight");
+      inspect(n);
+    });
+    cy.on("tap", e => { if (e.target === cy) { cy.elements().removeClass("dim highlight"); panel.innerHTML = `<h2>Click an entity</h2><p class="empty">Hover for tooltip; click to inspect connections + sources.</p>`; }});
+
+    document.getElementById("filter").addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      cy.elements().removeClass("dim highlight");
+      if (!q) return;
+      const matches = cy.nodes().filter(n => n.data("label").toLowerCase().includes(q));
+      cy.elements().addClass("dim");
+      matches.removeClass("dim").addClass("highlight");
+      matches.connectedEdges().removeClass("dim");
+      matches.neighborhood().nodes().removeClass("dim");
+    });
+    document.getElementById("predicate").addEventListener("change", (e) => {
+      const p = e.target.value;
+      cy.elements().removeClass("dim highlight");
+      if (!p) return;
+      const edges = cy.edges().filter(ed => ed.data("label") === p);
+      cy.elements().addClass("dim");
+      edges.removeClass("dim").addClass("highlight");
+      edges.connectedNodes().removeClass("dim");
+    });
+    document.getElementById("relayout").addEventListener("click", () => {
+      cy.layout(layoutOpts).run();
+    });
+  })
+  .catch(err => {
+    console.error("[brand-graph] load error", err);
+    document.getElementById("cy").innerHTML = `<div style="padding:48px;font-family:'Geist Mono',monospace;color:#a83423">Failed to load brand_graph.json — ${err.message}</div>`;
+  });
+
+// — Facts loader —
+async function loadFacts() {
+  if (factsLoaded) return;
+  const wrap = document.getElementById("facts-content");
+  try {
+    const md = await fetch("facts.md").then(r => r.text());
+    const html = (typeof marked !== "undefined") ? marked.parse(md) : `<pre>${md}</pre>`;
+    // count list items
+    const tmp = document.createElement("div"); tmp.innerHTML = html;
+    const factCount = tmp.querySelectorAll("li").length;
+    document.getElementById("t-facts").textContent = factCount;
+    // build jump nav from h2 elements
+    const h2s = [...tmp.querySelectorAll("h2")];
+    const jump = document.createElement("div"); jump.className = "src-jump";
+    h2s.forEach((h, i) => {
+      const id = "src-" + i; h.id = id;
+      const a = document.createElement("a"); a.href = "#" + id; a.textContent = h.textContent;
+      jump.appendChild(a);
+    });
+    wrap.innerHTML = "";
+    const title = document.createElement("h1"); title.textContent = "Brand facts · extracted across 12 sources";
+    const lede = document.createElement("p");
+    lede.textContent = `${factCount} atomic facts pulled from references via direct Gemini extraction. Click a source chip to jump.`;
+    wrap.appendChild(title);
+    wrap.appendChild(lede);
+    wrap.appendChild(jump);
+    h2s.forEach(h => wrap.appendChild(h.cloneNode(false))); // re-add IDs for anchor jumps
+    // simpler: just append the parsed html in one go
+    wrap.innerHTML = "";
+    wrap.appendChild(title);
+    wrap.appendChild(lede);
+    wrap.appendChild(jump);
+    const body = document.createElement("div"); body.innerHTML = html;
+    // ensure h2 ids set
+    [...body.querySelectorAll("h2")].forEach((h, i) => { h.id = "src-" + i; });
+    wrap.appendChild(body);
+    factsLoaded = true;
+  } catch (e) {
+    wrap.innerHTML = `<p class="empty">Failed to load facts.md — ${e.message}</p>`;
+  }
+}
+
+// — Facts search filter —
+document.getElementById("facts-filter").addEventListener("input", (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  const lis = document.querySelectorAll("#facts-content li");
+  lis.forEach(li => {
+    const hit = !q || li.textContent.toLowerCase().includes(q);
+    li.style.display = hit ? "" : "none";
+  });
+});
+
+// — Tab switching —
+const tb = document.getElementById("tb");
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", x === b ? "true" : "false"));
+  const tab = b.dataset.tab;
+  if (tab === "graph") {
+    tb.classList.remove("facts-mode");
+    document.getElementById("cy").classList.remove("hidden");
+    document.getElementById("panel").style.display = "";
+    document.getElementById("facts").classList.remove("show");
+    if (cy) requestAnimationFrame(() => cy.resize());
+  } else {
+    tb.classList.add("facts-mode");
+    document.getElementById("cy").classList.add("hidden");
+    document.getElementById("panel").style.display = "none";
+    document.getElementById("facts").classList.add("show");
+    loadFacts();
+  }
+}));
+
+// Pre-load facts so counter populates immediately
+loadFacts();
+</script>
+
+</body>
+</html>
