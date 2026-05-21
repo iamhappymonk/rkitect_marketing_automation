@@ -36,7 +36,7 @@ from utils.context_loader import (
 )
 from utils.costs import load_costs, sum_costs_between, get_entries_between
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.secret_key = DASHBOARD_SECRET_KEY
 
 
@@ -89,11 +89,20 @@ def get_today_output() -> dict:
     folder = OUTPUT_DIR / str(date.today())
     outputs = {}
     if folder.exists():
+        # Only attempt to read text-based files. Binary files (images) will
+        # raise UnicodeDecodeError when read as UTF-8; skip them instead.
+        text_exts = {".md", ".txt", ".json", ".html", ".csv"}
         for fpath in folder.iterdir():
             key = fpath.stem
             try:
-                outputs[key] = fpath.read_text(encoding="utf-8")
-            except IOError:
+                if fpath.suffix.lower() in text_exts:
+                    outputs[key] = fpath.read_text(encoding="utf-8")
+                else:
+                    # Skip binary or unknown file types; the frontend only
+                    # expects textual outputs for today_output.
+                    continue
+            except (IOError, UnicodeDecodeError):
+                # Be resilient to corrupt or partially-written files.
                 continue
     return outputs
 
@@ -168,6 +177,70 @@ def get_calendar_entries() -> list:
     return sorted(entries, key=lambda item: item.get("date", ""))
 
 
+def get_today_images() -> dict:
+    """Collect today's generated images with metadata and briefs."""
+    folder = OUTPUT_DIR / str(date.today())
+    images = {}
+    
+    if not folder.exists():
+        return images
+    
+    # Parse image briefs from markdown files
+    def load_brief(name: str) -> str:
+        brief_path = folder / f"{name}_image_brief.md"
+        if brief_path.exists():
+            try:
+                text = brief_path.read_text(encoding="utf-8").strip()
+                # Extract just the brief content (remove markdown markers)
+                if text.startswith("[IMAGE BRIEF:"):
+                    return text
+                return f"[IMAGE BRIEF: {text}]"
+            except IOError:
+                pass
+        return ""
+    
+    # Carousel slides
+    carousel_dir = folder / "carousel_images"
+    if carousel_dir.exists():
+        slides = sorted(carousel_dir.glob("slide_*.jpg"))
+        if slides:
+            images["carousel"] = {
+                "type": "carousel",
+                "slides": [
+                    {
+                        "filename": s.name,
+                        "url": f"/output/{date.today()}/carousel_images/{s.name}",
+                        "order": int(s.stem.split("_")[1])
+                    }
+                    for s in slides
+                ],
+                "brief": load_brief("carousel"),
+                "count": len(slides)
+            }
+    
+    # LinkedIn hero image
+    linkedin_img = folder / "linkedin_image.jpg"
+    if linkedin_img.exists():
+        images["linkedin"] = {
+            "type": "linkedin",
+            "url": f"/output/{date.today()}/linkedin_image.jpg",
+            "brief": load_brief("linkedin"),
+            "filename": "linkedin_image.jpg"
+        }
+    
+    # Twitter card image
+    twitter_img = folder / "twitter_image.jpg"
+    if twitter_img.exists():
+        images["twitter"] = {
+            "type": "twitter",
+            "url": f"/output/{date.today()}/twitter_image.jpg",
+            "brief": load_brief("twitter"),
+            "filename": "twitter_image.jpg"
+        }
+    
+    return images
+
+
 # ── Routes ───────────────────────────────────────────────────────────────────
 
 @app.route("/")
@@ -196,6 +269,7 @@ def api_data():
     review_queue = get_review_queue()
     calendar_entries = get_calendar_entries()
     today_calendar = get_calendar_entry_for_date(str(date.today()))
+    images = get_today_images()
 
     # Compute average scores per format from perf log
     score_summary = {}
@@ -219,6 +293,7 @@ def api_data():
         "pending_review_count": len(review_queue),
         "calendar_entries": calendar_entries,
         "today_calendar": today_calendar,
+        "images": images,
     })
 
 
@@ -354,6 +429,25 @@ def trigger_pipeline():
     """Manually trigger a pipeline run from the dashboard."""
     subprocess.Popen([sys.executable, "main.py"])
     return jsonify({"status": "Pipeline triggered"})
+
+
+@app.route("/output/<date_str>/<path:subpath>")
+@requires_auth
+def serve_output(date_str: str, subpath: str):
+    """Serve generated images and files from the output directory."""
+    fpath = OUTPUT_DIR / date_str / subpath
+    if not fpath.exists() or not fpath.is_file():
+        return jsonify({"error": "File not found"}), 404
+    
+    # Security: only serve from OUTPUT_DIR
+    if not str(fpath).startswith(str(OUTPUT_DIR)):
+        return jsonify({"error": "Access denied"}), 403
+    
+    # Serve the file with appropriate content-type
+    import mimetypes
+    mimetype, _ = mimetypes.guess_type(str(fpath))
+    with open(fpath, 'rb') as f:
+        return Response(f.read(), mimetype=mimetype or 'application/octet-stream')
 
 
 # ── Entry Point ──────────────────────────────────────────────────────────────

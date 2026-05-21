@@ -127,7 +127,7 @@ DASHBOARD_PASSWORD = os.getenv("DASHBOARD_PASSWORD", "changeme")
 
 # ── Image Generation ─────────────────────────────────────────────────────────
 IMAGE_GENERATION_ENABLED = os.getenv("IMAGE_GENERATION_ENABLED", "true").lower() == "true"
-IMAGE_T2I_MODEL = "black-forest-labs/flux-1.1-pro"         # text-to-image (slide 1, LinkedIn)
+IMAGE_T2I_MODEL = "black-forest-labs/flux.2-klein-4b"      # text-to-image (slide 1, LinkedIn)
 IMAGE_I2I_MODEL = "black-forest-labs/flux-kontext-pro"      # img2img (slides 2-N)
 IMAGE_CAROUSEL_SIZE = "1080x1350"                           # Instagram portrait
 IMAGE_LINKEDIN_SIZE = "1200x627"                            # LinkedIn hero

@@ -22,8 +22,8 @@
 
 ## What still needs to be done
 
-- [ ] Add OpenRouter API key in `.env` / secret store (you will add)
-- [ ] Add Buffer bearer token in `.env` / secret store (you will add)
+- [x] Add OpenRouter API key in `.env` / secret store (you will add)
+- [x] Add Buffer bearer token in `.env` / secret store (you will add)
 - [x] Map rkitect brand context into the content generation prompt
 - [x] Map the template system into the prompt and output format
 - [x] Wire the dashboard approval step before Buffer publish

@@ -39,8 +39,8 @@
     async function load() {
       try {
         const [queueRes, settingsRes] = await Promise.all([
-          fetch("/api/review-queue"),
-          fetch("/api/publish-settings"),
+          fetch("/api/review-queue", { credentials: 'include' }),
+          fetch("/api/publish-settings", { credentials: 'include' }),
         ]);
         const queueData = await queueRes.json();
         publishSettings = await settingsRes.json();
@@ -119,7 +119,7 @@
     }
 
     async function approveItem(id) {
-      const res = await fetch(`/api/review-queue/${id}/approve`, { method: 'POST' });
+      const res = await fetch(`/api/review-queue/${id}/approve`, { method: 'POST', credentials: 'include' });
       if (!res.ok) {
         alert('Approval failed');
         return;
@@ -128,7 +128,7 @@
     }
 
     async function rejectItem(id) {
-      const res = await fetch(`/api/review-queue/${id}/reject`, { method: 'POST' });
+      const res = await fetch(`/api/review-queue/${id}/reject`, { method: 'POST', credentials: 'include' });
       if (!res.ok) {
         alert('Rejection failed');
         return;
@@ -141,6 +141,7 @@
       await fetch("/api/publish-settings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: 'include',
         body: JSON.stringify({ auto_publish: nextValue }),
       });
       await load();

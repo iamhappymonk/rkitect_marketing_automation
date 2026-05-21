@@ -1,0 +1,46 @@
+{
+  "name": "great-web-copy",
+  "owner": {
+    "name": "Akash Mahajan"
+  },
+  "metadata": {
+    "description": "Marketplace for high-converting website copywriting tools using proven frameworks like PAS, AIDA, BAB, and StoryBrand",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "great-web-copy",
+      "source": "./",
+      "description": "Write high-converting website copy using proven frameworks (PAS, AIDA, BAB, StoryBrand). Auto-activates for landing pages, hero sections, CTAs, and product copy.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Akash Mahajan",
+        "email": "akash@kloudle.com"
+      },
+      "homepage": "https://github.com/makash/great-web-copy",
+      "repository": "https://github.com/makash/great-web-copy",
+      "license": "MIT",
+      "keywords": [
+        "copywriting",
+        "landing-page",
+        "conversion",
+        "marketing",
+        "website-copy",
+        "cta",
+        "headlines"
+      ],
+      "category": "copywriting",
+      "tags": [
+        "copywriting",
+        "landing-page",
+        "conversion",
+        "marketing",
+        "website-copy",
+        "cta",
+        "headlines"
+      ],
+      "skills": "./skills/",
+      "commands": "./commands/"
+    }
+  ]
+}

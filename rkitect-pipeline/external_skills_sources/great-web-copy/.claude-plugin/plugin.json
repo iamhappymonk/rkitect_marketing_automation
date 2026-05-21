@@ -1,0 +1,23 @@
+{
+  "name": "great-web-copy",
+  "version": "1.0.0",
+  "description": "Claude Code plugin for high-converting website copy using PAS, AIDA, BAB, and StoryBrand.",
+  "author": {
+    "name": "Akash Mahajan",
+    "email": "akash@kloudle.com"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/makash/great-web-copy",
+  "keywords": [
+    "claude-code-plugin",
+    "copywriting",
+    "landing-page",
+    "conversion",
+    "marketing",
+    "website-copy",
+    "cta",
+    "headlines"
+  ],
+  "skills": "./skills/",
+  "commands": "./commands/"
+}

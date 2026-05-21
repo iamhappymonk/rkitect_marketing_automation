@@ -47,6 +47,90 @@ def _get_client() -> OpenAI:
     return _client
 
 
+def _size_to_aspect_ratio(size: str | None) -> str | None:
+    """Map a pixel size hint to a natural language aspect ratio."""
+    if not size:
+        return None
+    mapping = {
+        "1080x1350": "4:5 portrait",
+        "1200x627": "1.91:1 landscape",
+        "1600x900": "16:9 landscape",
+        "1024x1024": "1:1 square",
+    }
+    return mapping.get(size)
+
+
+def _extract_image_result(response_json: dict) -> str | None:
+    """Pull a generated image URL or data URL out of an OpenRouter response."""
+    choices = response_json.get("choices", []) or []
+    if not choices:
+        return None
+
+    message = choices[0].get("message", {}) or {}
+
+    images = message.get("images") or []
+    if images:
+        first_image = images[0] or {}
+        image_url = (first_image.get("image_url") or {}).get("url")
+        if image_url:
+            return image_url
+
+    content = message.get("content")
+    if isinstance(content, str):
+        if content.startswith("data:") or content.startswith("http"):
+            return content.strip()
+        return None
+
+    if isinstance(content, list):
+        for part in content:
+            if not isinstance(part, dict):
+                continue
+            image_url = (part.get("image_url") or {}).get("url")
+            if image_url:
+                return image_url
+            text = part.get("text")
+            if isinstance(text, str) and (text.startswith("data:") or text.startswith("http")):
+                return text.strip()
+
+    return None
+
+
+def _generate_openrouter_image(prompt: str, size: str | None = None) -> str | None:
+    """Generate an image through OpenRouter's image-capable chat endpoint."""
+    if not OPENROUTER_API_KEY:
+        return None
+
+    aspect_ratio = _size_to_aspect_ratio(size)
+    if aspect_ratio:
+        prompt = f"{prompt}\n\nTarget framing: {aspect_ratio}."
+
+    payload = {
+        "model": IMAGE_T2I_MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+        "modalities": ["image"],
+    }
+
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "rkitect-pipeline",
+        "X-Title": "rkitect.ai Content Pipeline",
+    }
+
+    try:
+        response = httpx.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json=payload,
+            timeout=120,
+        )
+        response.raise_for_status()
+        return _extract_image_result(response.json())
+    except Exception as e:
+        print(f"      [image_gen] openrouter image API error: {e}")
+        return None
+
+
 # ── Style Fingerprint (from image-style-lock skill) ─────────────────────────
 
 def extract_style_fingerprint(slide_1_brief: dict) -> dict:
@@ -228,27 +312,11 @@ def _download_image(url: str, save_path: Path) -> bool:
 
 def _generate_t2i(prompt: str, size: str = "1080x1350") -> str | None:
     """
-    Text-to-image via Flux 1.1 Pro (OpenRouter images.generate endpoint).
+    Text-to-image via OpenRouter image-capable chat completions.
 
     Returns the image URL on success, None on failure.
     """
-    client = _get_client()
-    try:
-        response = client.images.generate(
-            model=IMAGE_T2I_MODEL,
-            prompt=prompt,
-            n=1,
-            size=size,
-        )
-        if response.data and response.data[0].url:
-            return response.data[0].url
-        # Some responses return b64_json instead
-        if response.data and response.data[0].b64_json:
-            return f"data:image/jpeg;base64,{response.data[0].b64_json}"
-        return None
-    except Exception as e:
-        print(f"      [image_gen] t2i API error: {e}")
-        return None
+    return _generate_openrouter_image(prompt, size)
 
 
 def _generate_i2i(prompt: str, reference_image_url: str) -> str | None:

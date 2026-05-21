@@ -152,6 +152,15 @@
           <h2
             class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
           >
+            Generated Images
+          </h2>
+          <div id="generated-images" class="space-y-6"></div>
+        </section>
+
+        <section class="mb-8">
+          <h2
+            class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
+          >
             Image Briefs
           </h2>
           <div id="image-briefs" class="space-y-3"></div>
@@ -263,7 +272,7 @@
 
       async function load() {
         try {
-          const res = await fetch("/api/data");
+          const res = await fetch("/api/data", { credentials: 'include' });
           const data = await res.json();
 
           publishSettings = data.publish_settings || publishSettings;
@@ -281,6 +290,7 @@
           renderScoreCards(data.score_summary);
           renderTodayTopic(data.today_output);
           renderContentTabs(data.today_output);
+          renderGeneratedImages(data.images || {});
           renderImageBriefs(data.today_output);
           renderBufferPosts(data.scheduled);
           renderRunLog(data.recent_logs);
@@ -334,6 +344,7 @@
         const res = await fetch("/api/feedback", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          credentials: 'include',
           body: JSON.stringify({
             feedback,
             format: currentTab,
@@ -358,7 +369,7 @@
       async function loadCosts(range) {
         try {
           const rng = range || costRanges[currentCostIndex];
-          const res = await fetch(`/api/costs?range=${rng}`);
+          const res = await fetch(`/api/costs?range=${rng}`, { credentials: 'include' });
           const data = await res.json();
           costEntriesCache = data.entries || [];
           const total = (data.total || 0).toFixed(2);
@@ -482,6 +493,81 @@
         refreshFeedbackPreview();
       }
 
+      function renderGeneratedImages(images) {
+        const el = document.getElementById("generated-images");
+        
+        if (!images || Object.keys(images).length === 0) {
+          el.innerHTML = '<div class="text-gray-600 text-sm">No images generated yet.</div>';
+          return;
+        }
+
+        let html = "";
+
+        // Carousel slides
+        if (images.carousel) {
+          const carousel = images.carousel;
+          html += `
+          <div class="bg-gray-900 rounded-xl p-5 border border-gray-800">
+            <div class="mb-4">
+              <div class="text-xs text-teal-400 uppercase font-bold mb-2">📋 Carousel (Instagram)</div>
+              <div class="text-xs text-gray-400">${carousel.count} slides generated</div>
+              ${carousel.brief ? `<div class="text-xs text-gray-500 mt-2 italic">${escapeHtml(carousel.brief)}</div>` : ''}
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">`;
+          carousel.slides.forEach(slide => {
+            html += `
+              <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-teal-500 transition">
+                <img src="${slide.url}" alt="Slide ${slide.order}" class="w-full h-auto object-cover cursor-pointer" onclick="viewImageFullscreen('${slide.url}', 'Slide ${slide.order}')">
+                <div class="p-2 text-center text-xs text-gray-400">Slide ${slide.order}</div>
+              </div>`;
+          });
+          html += `</div></div>`;
+        }
+
+        // LinkedIn hero
+        if (images.linkedin) {
+          const img = images.linkedin;
+          html += `
+          <div class="bg-gray-900 rounded-xl p-5 border border-gray-800">
+            <div class="mb-4">
+              <div class="text-xs text-teal-400 uppercase font-bold mb-2">🔗 LinkedIn Hero (1200×627)</div>
+              ${img.brief ? `<div class="text-xs text-gray-500 italic">${escapeHtml(img.brief)}</div>` : ''}
+            </div>
+            <img src="${img.url}" alt="LinkedIn Hero" class="w-full h-auto max-h-80 object-cover rounded-lg border border-gray-700 cursor-pointer" onclick="viewImageFullscreen('${img.url}', 'LinkedIn Hero')">
+          </div>`;
+        }
+
+        // Twitter card
+        if (images.twitter) {
+          const img = images.twitter;
+          html += `
+          <div class="bg-gray-900 rounded-xl p-5 border border-gray-800">
+            <div class="mb-4">
+              <div class="text-xs text-teal-400 uppercase font-bold mb-2">𝕏 Twitter Card (1600×900)</div>
+              ${img.brief ? `<div class="text-xs text-gray-500 italic">${escapeHtml(img.brief)}</div>` : ''}
+            </div>
+            <img src="${img.url}" alt="Twitter Card" class="w-full h-auto max-h-64 object-cover rounded-lg border border-gray-700 cursor-pointer" onclick="viewImageFullscreen('${img.url}', 'Twitter Card')">
+          </div>`;
+        }
+
+        el.innerHTML = html;
+      }
+
+      function viewImageFullscreen(url, title) {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50';
+        modal.innerHTML = `
+          <div class="bg-gray-900 rounded-xl overflow-hidden max-w-4xl w-full border border-gray-800">
+            <div class="flex items-center justify-between p-4 border-b border-gray-800">
+              <h3 class="text-lg font-semibold text-white">${escapeHtml(title)}</h3>
+              <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+            </div>
+            <img src="${url}" alt="${title}" class="w-full h-auto max-h-96">
+          </div>
+        `;
+        document.body.appendChild(modal);
+      }
+
       function renderImageBriefs(outputs) {
         const el = document.getElementById("image-briefs");
         const briefKeys = Object.keys(outputs).filter((k) =>
@@ -591,6 +677,7 @@
         await fetch("/api/publish-settings", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          credentials: 'include',
           body: JSON.stringify({ auto_publish: nextValue }),
         });
         await load();
@@ -598,7 +685,7 @@
 
       async function triggerPipeline() {
         if (!confirm("Trigger a pipeline run now?")) return;
-        await fetch("/api/trigger", { method: "POST" });
+        await fetch("/api/trigger", { method: "POST", credentials: 'include' });
         alert("Pipeline triggered. Check back in a few minutes.");
       }
 
@@ -660,6 +747,7 @@
           const res = await fetch("/api/calendar", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
+            credentials: 'include',
             body: JSON.stringify({ entries: calendarEntries }),
           });
           if (res.ok) {

@@ -5,6 +5,18 @@
       "score": 86,
       "passed": true,
       "violations": []
+    },
+    {
+      "date": "2026-05-17",
+      "score": 86,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-18",
+      "score": 92,
+      "passed": true,
+      "violations": []
     }
   ],
   "reddit": [
@@ -13,12 +25,36 @@
       "score": 85,
       "passed": true,
       "violations": []
+    },
+    {
+      "date": "2026-05-17",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-18",
+      "score": 82,
+      "passed": true,
+      "violations": []
     }
   ],
   "carousel": [
     {
       "date": "2026-05-15",
       "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-17",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-18",
+      "score": 92,
       "passed": true,
       "violations": []
     }
@@ -34,6 +70,24 @@
         "No brand moat: Missing 'confirmed unmatched' or competitive claim; no mention of 'Agentic Spatial Intelligence' in context.",
         "Weak CTA: 'Try it now, risk-free' lacks conviction; needs to be more assertive about the value of rkitect.ai."
       ]
+    },
+    {
+      "date": "2026-05-17",
+      "score": 58,
+      "passed": false,
+      "violations": [
+        "Forbidden term: 'not just a tool' is vague; needs more specific positioning",
+        "Hedging: 'Say goodbye to tedious design iterations and hello to more control' \u2014 needs to be stated as fact",
+        "Forbidden term: 'revolutionizing' is unverified and vague; remove or rephrase",
+        "No brand moat: Missing 'confirmed unmatched' or competitive claim; no 'Agentic Spatial Intelligence' reference",
+        "Weak CTA: 'Try rkitect.ai for free and experience the difference' can be more assertive, e.g., 'Join the shift to agentic workflows.'"
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "score": 81,
+      "passed": true,
+      "violations": []
     }
   ]
 }
