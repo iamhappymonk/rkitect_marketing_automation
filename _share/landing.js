@@ -25,160 +25,118 @@ const prefersReduced = window.matchMedia(
   const s1 = document.getElementById("s1");
   const s2 = document.getElementById("s2");
   const s3 = document.getElementById("s3");
-  const btnRoute = document.getElementById("btn-route");
-  const btnSofa = document.getElementById("btn-sofa");
-  const btnLamp = document.getElementById("btn-lamp");
-  const btnRug = document.getElementById("btn-rug");
-  const styleChips = document.querySelectorAll("#console [data-style]");
+  const btnBrief = document.getElementById("btn-brief");
+  const btnPlan = document.getElementById("btn-plan");
+  const btnRender = document.getElementById("btn-render");
+  const beforeImg = document.getElementById("demo-before-img");
+  const afterImg = document.getElementById("demo-after-img");
+  const badge = document.getElementById("demo-badge");
 
-  const state = { segmented: false, style: "japandi", sofa: false };
+  // Pipeline assets, in order: input brief -> generated geometry -> render.
+  const ASSETS = {
+    brief: "refs/brief.png",
+    plan: "refs/plan.png",
+    render: "refs/generated/japandi_living_room.png",
+  };
+
+  const state = { read: false, planned: false, rendered: false };
+  let currentSrc = ASSETS.brief;
 
   // Initial active step
   s1.classList.add("active");
 
-  const refresh = () => {
-    s1.classList.toggle("done", state.segmented);
-    s1.classList.toggle("active", !state.segmented);
-
-    // Step 2 is Sofa placement. Active once routed, done once sofa is added.
-    s2.classList.toggle("active", state.segmented && !state.sofa);
-    s2.classList.toggle("done", state.segmented && state.sofa);
-
-    // Step 3 is Style selection. Active once sofa is added.
-    s3.classList.toggle("active", state.segmented && state.sofa);
-    s3.classList.toggle("done", false);
-
-    btnRoute.disabled = state.segmented;
-    btnRoute.textContent = state.segmented
-      ? "Routed \u2713"
-      : "Analyze With Chief Architect";
-
-    btnSofa.disabled = !state.segmented;
-    btnSofa.textContent = state.sofa ? "Sofa added \u2713" : "+ Add sofa";
-    btnSofa.classList.toggle("selected", state.sofa);
-
-    btnLamp.disabled = !state.sofa;
-    btnRug.disabled = !state.sofa;
-    if (!state.sofa) {
-      btnLamp.classList.remove("selected");
-      btnRug.classList.remove("selected");
-      btnLamp.textContent = "+ Lamp";
-      btnRug.textContent = "+ Rug";
-    }
-
-    styleChips.forEach((c) => {
-      c.disabled = !state.sofa;
-      const isSelected = c.dataset.style === state.style;
-      c.classList.toggle("selected", isSelected);
+  // Crossfade the visible frame to `src`. `final` adds .rendered so the
+  // "Rendered in 58s" pill only appears on the photoreal capture.
+  const crossfadeTo = (src, final) => {
+    beforeImg.src = currentSrc; // freeze the current frame underneath
+    demo.classList.remove("show-after");
+    if (!final) demo.classList.remove("rendered");
+    requestAnimationFrame(() => {
+      afterImg.src = src;
+      requestAnimationFrame(() => {
+        demo.classList.add("show-after");
+        if (final) demo.classList.add("rendered");
+      });
     });
+    currentSrc = src;
+  };
+
+  const refresh = () => {
+    s1.classList.toggle("done", state.read);
+    s1.classList.toggle("active", !state.read);
+    s2.classList.toggle("active", state.read && !state.planned);
+    s2.classList.toggle("done", state.planned);
+    s3.classList.toggle("active", state.planned && !state.rendered);
+    s3.classList.toggle("done", state.rendered);
+
+    btnBrief.disabled = state.read;
+    btnBrief.textContent = state.read ? "Brief read \u2713" : "Brief in";
+
+    btnPlan.disabled = !state.read || state.planned;
+    btnPlan.textContent = state.planned
+      ? "Plan generated \u2713"
+      : "Generate 3D plan";
+    btnPlan.classList.toggle("selected", state.planned);
+
+    btnRender.disabled = !state.planned || state.rendered;
+    btnRender.textContent = state.rendered
+      ? "Render captured \u2713"
+      : "Capture render";
+    btnRender.classList.toggle("selected", state.rendered);
   };
   refresh();
 
-  // Step 1: routing
-  btnRoute.addEventListener("click", (e) => {
-    if (state.segmented) return;
+  // Step 1: Chief Architect reads the brief
+  btnBrief.addEventListener("click", (e) => {
+    if (state.read) return;
 
     // Tactical ripple effect
     const ripple = document.createElement("span");
     ripple.classList.add("ripple-span");
-    const rect = btnRoute.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    ripple.style.left = `${x}px`;
-    ripple.style.top = `${y}px`;
-    btnRoute.appendChild(ripple);
+    const rect = btnBrief.getBoundingClientRect();
+    ripple.style.left = `${e.clientX - rect.left}px`;
+    ripple.style.top = `${e.clientY - rect.top}px`;
+    btnBrief.appendChild(ripple);
     setTimeout(() => ripple.remove(), 600);
 
-    demo.classList.add("segmenting");
-    setTimeout(() => {
-      demo.classList.remove("segmenting");
-      demo.classList.add("segmented");
-      state.segmented = true;
-      refresh();
-    }, 1100);
+    badge.textContent = "ARC-VUM \u00b7 reading brief";
+    state.read = true;
+    refresh();
   });
 
-  // Step 2: style selection (live filter on after layer)
-  styleChips.forEach((c) =>
-    c.addEventListener("click", () => {
-      state.style = c.dataset.style;
-      demo.dataset.style = c.dataset.style;
-      refresh();
-      updateDemoImage();
-    }),
-  );
-
-  const demoAfterImg = document.getElementById("demo-after-img");
-
-  const updateDemoImage = () => {
-    const style = state.style; // 'japandi', 'scandinavian', 'industrial', 'midcentury'
-    const hasLamp = btnLamp.classList.contains("selected");
-    const hasRug = btnRug.classList.contains("selected");
-
-    if (style === "japandi") {
-      // Japandi maps to the original names in landing.html/js to ensure absolute correctness and preloading
-      if (hasLamp && hasRug) {
-        demoAfterImg.src =
-          "refs/generated/demo_sofa_lamp_rug_1778960621299.png";
-      } else if (hasLamp) {
-        demoAfterImg.src = "refs/generated/demo_sofa_lamp_1778960589420.png";
-      } else if (hasRug) {
-        demoAfterImg.src = "refs/generated/demo_sofa_rug_1778960830041.png";
-      } else {
-        demoAfterImg.src = "refs/generated/demo_sofa_1778960568439.png";
-      }
-    } else {
-      // Other styles map to their respective clean-named files
-      let imgName = "";
-      if (hasLamp && hasRug) {
-        imgName = `${style}_sofa_lamp_rug.png`;
-      } else if (hasLamp) {
-        imgName = `${style}_sofa_lamp.png`;
-      } else if (hasRug) {
-        imgName = `${style}_sofa_rug.png`;
-      } else {
-        imgName = `${style}_sofa.png`;
-      }
-      demoAfterImg.src = "refs/generated/" + imgName;
-    }
-  };
-
-  // Step 3: add sofa â†’ ghost placement â†’ render crossfade
-  btnSofa.addEventListener("click", () => {
-    if (!state.segmented) return;
-
-    if (state.sofa) {
-      // Toggle off
-      state.sofa = false;
-      demo.classList.remove("rendered", "placing");
-      refresh();
-      updateDemoImage();
-    } else {
-      // Toggle on
-      state.sofa = true;
-      demo.classList.add("placing");
-      updateDemoImage(); // Load the correct styled image immediately as it begins placing!
-      refresh();
-      setTimeout(() => {
-        demo.classList.add("rendered");
-        setTimeout(() => demo.classList.remove("placing"), 300);
-      }, 700);
-    }
+  // Step 2: Planner + Modeler generate the 3D plan
+  btnPlan.addEventListener("click", () => {
+    if (!state.read || state.planned) return;
+    badge.textContent = "SEK-TURA · PLAX-IUM · drawing plan";
+    state.planned = true;
+    crossfadeTo(ASSETS.plan, false);
+    refresh();
   });
 
-  // Lamp / rug real image swaps
-  [btnLamp, btnRug].forEach((b) =>
-    b.addEventListener("click", () => {
-      if (b.classList.contains("selected")) {
-        b.classList.remove("selected");
-        b.textContent = "+ " + (b.id === "btn-lamp" ? "Lamp" : "Rug");
-      } else {
-        b.classList.add("selected");
-        b.textContent = (b.id === "btn-lamp" ? "Lamp" : "Rug") + " \u2713";
-      }
-      updateDemoImage();
-    }),
-  );
+  // Step 3: Renderer captures the photoreal output from that geometry
+  btnRender.addEventListener("click", () => {
+    if (!state.planned || state.rendered) return;
+    badge.textContent = "REND-RIX \u00b7 capturing render";
+    state.rendered = true;
+    crossfadeTo(ASSETS.render, true);
+    refresh();
+  });
+
+  // Replay: reset the pipeline back to the brief
+  const replay = document.getElementById("demo-replay");
+  if (replay) {
+    replay.addEventListener("click", () => {
+      state.read = false;
+      state.planned = false;
+      state.rendered = false;
+      currentSrc = ASSETS.brief;
+      demo.classList.remove("rendered", "show-after");
+      beforeImg.src = ASSETS.brief;
+      afterImg.src = ASSETS.brief;
+      badge.textContent = "Try it · the pipeline";
+      refresh();
+    });
+  }
 
   // Parallax + entrance untouched
   if (!prefersReduced && wrap) {
@@ -443,53 +401,7 @@ const prefersReduced = window.matchMedia(
   });
 })();
 
-/* â€” Demo replay button â€” */
-(function () {
-  const replay = document.getElementById("demo-replay");
-  const demo = document.getElementById("demo");
-  if (!replay || !demo) return;
-  replay.addEventListener("click", () => {
-    demo.classList.remove("rendered", "placing", "segmented", "segmenting");
-    demo.style.removeProperty("--cut");
-
-    // reset image
-    const afterImg = document.getElementById("demo-after-img");
-    if (afterImg) afterImg.src = "refs/generated/demo_sofa_1778960568439.png";
-
-    document.querySelectorAll(".console .chip").forEach((c) => {
-      c.classList.remove("selected");
-      if (c.id === "btn-route") {
-        c.disabled = false;
-        c.textContent = "Run route";
-      }
-      if (c.id === "btn-sofa") {
-        c.disabled = true;
-        c.textContent = "+ Add sofa";
-      }
-      if (c.id === "btn-lamp") {
-        c.disabled = true;
-        c.textContent = "+ Lamp";
-      }
-      if (c.id === "btn-rug") {
-        c.disabled = true;
-        c.textContent = "+ Rug";
-      }
-      if (c.dataset.style) {
-        c.disabled = true;
-      }
-    });
-    document.getElementById("s1").classList.remove("done");
-    document.getElementById("s1").classList.add("active");
-    document.getElementById("s2").classList.remove("done", "active");
-    document.getElementById("s3").classList.remove("done", "active");
-    demo.dataset.style = "japandi";
-    document.querySelectorAll("#console [data-style]").forEach((c) => {
-      c.classList.toggle("selected", c.dataset.style === "japandi");
-    });
-  });
-})();
-
-/* â€” Founder Easter egg in console â€” */
+/* — Founder Easter egg in console — */
 (function () {
   const styles = [
     "background: #0b0f17; color: #f3eedc; font-family: 'Spectral', serif; font-style: italic; font-size: 16px; padding: 12px 16px; border-left: 3px solid #ff2814;",

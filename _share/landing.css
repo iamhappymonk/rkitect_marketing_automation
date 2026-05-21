@@ -2819,10 +2819,12 @@ section.s.show::before {
 .demo .img.after {
   opacity: 0;
 }
-.demo.rendered .img.before {
+.demo.rendered .img.before,
+.demo.show-after .img.before {
   opacity: 0;
 }
-.demo.rendered .img.after {
+.demo.rendered .img.after,
+.demo.show-after .img.after {
   opacity: 1;
 }
 
@@ -3218,12 +3220,45 @@ section.s.show::before {
     margin-top: var(--space-2xl);
     margin-bottom: var(--space-xl);
   }
-  .demo .console {
-    padding: 8px;
+}
+
+/* — Mobile: stop hero + demo console overflowing the viewport — */
+@media (max-width: 600px) {
+  /* Hero heading: inline-block reveal spans can't wrap, so the phrase
+     overflowed. Let it wrap and shrink, drop the slide-up on small screens. */
+  .hero h1 {
+    font-size: clamp(2rem, 1.15rem + 5vw, 3rem);
+    line-height: 1.08;
   }
-  .demo .console .chip {
-    font-size: 9px;
-    padding: 5px 8px;
+  .hero h1 .mreveal {
+    display: inline;
+    overflow: visible;
+  }
+  .hero h1 .mreveal > span {
+    display: inline;
+    transform: none;
+    animation: none;
+  }
+
+  /* Console: single column so the agent labels never get clipped */
+  .console {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+  }
+  .console .step:first-child {
+    grid-column: auto;
+  }
+  .console .step {
+    padding: 11px 14px;
+  }
+  .console .label {
+    white-space: normal;
+    line-height: 1.35;
+  }
+  .console .chip {
+    font-size: 11px;
+    padding: 6px 10px;
   }
 }
 

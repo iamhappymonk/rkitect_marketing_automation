@@ -15,17 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inconsolata:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="refs/brief.png" />
+    <link rel="preload" as="image" href="refs/plan.png" />
     <link
       rel="preload"
       as="image"
-      href="refs/generated/demo_base_room_1778960544780.png"
+      href="refs/generated/japandi_living_room.png"
     />
-    <link
-      rel="preload"
-      as="image"
-      href="refs/generated/demo_sofa_1778960568439.png"
-    />
-    <link rel="stylesheet" href="landing.css?v=7" />
+    <link rel="stylesheet" href="landing.css?v=9" />
   </head>
 
   <body>
@@ -123,22 +120,23 @@
       </div>
 
       <div class="demo-wrap" id="slider-wrap">
-        <div class="demo" id="demo" data-style="japandi">
+        <div class="demo" id="demo" data-stage="brief">
           <div class="stage">
             <img
               class="img before"
-              src="refs/generated/demo_sofa_1778960568439.png"
-              alt="Living room with sofa"
+              id="demo-before-img"
+              src="refs/brief.png"
+              alt="Architect's brief — hand sketches and floor plan"
             />
             <img
               class="img after"
               id="demo-after-img"
-              src="refs/generated/demo_sofa_1778960568439.png"
-              alt="Living room dynamically styled"
+              src="refs/brief.png"
+              alt="rkitect.ai pipeline output"
             />
           </div>
 
-          <span class="badge">Try it · living room</span>
+          <span class="badge" id="demo-badge">Try it · the pipeline</span>
           <span class="meta-final"
             ><span class="dot"></span>Rendered in 58 seconds</span
           >
@@ -150,62 +148,34 @@
           >
             ↻ Replay
           </button>
-
-          <!-- Surface map overlay (viewBox normalized 100×75, matches 4/3 aspect to avoid stretching) -->
-          <svg
-            class="seg-svg"
-            viewBox="0 0 100 75"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <!-- Wall (back) -->
-            <rect x="6" y="4.8" width="88" height="26.4" rx="1.2" />
-            <rect class="lbl-bg" x="6" y="1.5" width="22" height="3" />
-            <text x="7.5" y="3.6">95% wall</text>
-            <!-- Floor -->
-            <rect x="4" y="46.8" width="92" height="25.2" rx="1.2" />
-            <rect class="lbl-bg" x="4" y="43.5" width="22" height="3" />
-            <text x="5.5" y="45.6">91% floor</text>
-            <!-- Sofa zone (target slot) -->
-            <rect x="22" y="34.8" width="56" height="13.2" rx="1.2" />
-            <rect class="lbl-bg" x="22" y="31.5" width="22" height="3" />
-            <text x="23.5" y="33.6">92% sofa</text>
-          </svg>
-
-          <div class="sofa-ghost" aria-hidden="true"></div>
         </div>
         <!-- End of .demo -->
 
+        <!-- Console: the studio pipeline — brief → 3D plan → render, run by named agents -->
         <div class="console" id="console">
           <div class="step" data-step="1" id="s1">
             <div class="n">1</div>
             <div class="row">
-              <button class="chip run" id="btn-route">routed</button>
-              <span class="label">Identify surfaces</span>
+              <button class="chip run" id="btn-brief">Brief in</button>
+              <span class="label">ARC-VUM reads scope &amp; intent</span>
             </div>
           </div>
           <div class="step" data-step="2" id="s2">
             <div class="n">2</div>
             <div class="row">
-              <button class="chip" id="btn-sofa" disabled>sofa</button>
-              <button class="chip" id="btn-lamp" disabled>lamp</button>
-              <button class="chip" id="btn-rug" disabled>rug</button>
+              <button class="chip" id="btn-plan" disabled>
+                Generate 3D plan
+              </button>
+              <span class="label">SEK-TURA · PLAX-IUM — geometry</span>
             </div>
           </div>
           <div class="step" data-step="3" id="s3">
             <div class="n">3</div>
             <div class="row">
-              <button class="chip" data-style="japandi" disabled>Japan</button>
-              <button class="chip" data-style="industrial" disabled>
-                Industrial
+              <button class="chip" id="btn-render" disabled>
+                Capture render
               </button>
-              <button class="chip" data-style="scandinavian" disabled>
-                Scandinavian
-              </button>
-              <button class="chip" data-style="midcentury" disabled>
-                Mid-century
-              </button>
-    
+              <span class="label">REND-RIX — photoreal capture</span>
             </div>
           </div>
         </div>
@@ -700,7 +670,7 @@
         </div>
       </div>
       <div style="margin-top: var(--space-lg); padding: var(--space-lg); border: 1px solid rgba(0,0,0,0.08); border-radius: var(--space-xs); background: rgba(0,0,0,0.015);">
-        <p style="margin: 0; font-size: var(--f-sm); color: var(--color-text-secondary);">Not AI magic, a practical architect workflow: brief → route → review → revise.</p>
+        <p style="margin: 0; font-size: var(--f-sm); color: var(--color-text-secondary);">Not prompt-to-pixel. A studio chain of command: the Chief Architect routes each brief to five specialists, and you sign off at every gate.</p>
       </div>
     </section>
 
@@ -799,8 +769,8 @@
   <p class="pricing-line">Pilots from <b>$199/mo</b> · Studio plans from <b>$499/mo</b> · founder onboards every cohort.</p>
 </section> -->
 
-    <!-- FAQ — pre-empt top 4 architect objections -->
-    <section id="faq" class="s fade-in">
+    <!-- FAQ — pre-empt top 4 architect objections (hidden) -->
+    <!-- <section id="faq" class="s fade-in">
       <div class="s-head">
         <div>
           <p class="eyebrow">Before you ask</p>
@@ -844,7 +814,7 @@
           </p>
         </details>
       </div>
-    </section>
+    </section> -->
 
     <!-- =========================================================
      QUOTE
@@ -1072,8 +1042,7 @@
           <ul class="f-links">
             <li><a href="#top">Overview</a></li>
             <li><a href="#agents">The Studio</a></li>
-            <li><a href="#workflow">Interactive Demo</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#top">Interactive Demo</a></li>
           </ul>
         </div>
 
@@ -1124,6 +1093,6 @@
       </div>
     </footer>
 
-    <script src="landing.js?v=2"></script>
+    <script src="landing.js?v=3"></script>
   </body>
 </html>
