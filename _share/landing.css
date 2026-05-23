@@ -1711,18 +1711,19 @@ section.s.show::before {
     order: 2;
     margin-top: 0;
   }
-  .hero > .demo-wrap {
-    order: 3;
-  }
   .hero > div:first-child > .hero-quote {
+    order: 3;
+    margin-top: var(--space-lg);
+  }
+  .hero > div:first-child > .cta-row {
     order: 4;
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
   }
   .hero > div:first-child > .type-chips {
     order: 5;
-    margin-top: var(--space-xl);
+    margin-top: var(--space-md);
   }
-  .hero > div:first-child > .cta-row {
+  .hero > .demo-wrap {
     order: 6;
     margin-top: var(--space-2xl);
   }
