@@ -283,4 +283,362 @@
   }
   .reveal, .reveal-word { opacity: 1 !important; transform: none !important; }
   .eyebrow::before { transform: scaleX(1) !important; }
+  .pin-up-card { transform: rotate(0) !important; }
+  .mask-reveal-line { transform: scaleX(1) !important; }
+  .stamp-press { opacity: 1 !important; transform: none !important; }
+}
+
+@layer components {
+  /* ─── Manifesto strip — single full-width brand declaration ─── */
+  .manifesto-strip {
+    position: relative;
+    background: var(--color-bg-muted);
+    padding-top: clamp(8rem, 14vw, 14rem);
+    padding-bottom: clamp(8rem, 14vw, 14rem);
+    text-align: center;
+  }
+  .manifesto-strip::before,
+  .manifesto-strip::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: min(720px, 80%);
+    height: 1px;
+    background: var(--color-border);
+    transition: transform 1.1s var(--ease-out-quint);
+  }
+  .manifesto-strip::before { top: clamp(4rem, 8vw, 7rem); }
+  .manifesto-strip::after { bottom: clamp(4rem, 8vw, 7rem); }
+  .manifesto-strip.in-view::before,
+  .manifesto-strip.in-view::after { transform: translateX(-50%) scaleX(1); }
+  .manifesto-strip__line {
+    font-family: 'Spectral', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.022em;
+    font-size: clamp(2rem, 1rem + 3vw, 4rem);
+    color: var(--color-text-primary);
+    max-width: 22ch;
+    margin-inline: auto;
+  }
+
+  /* ─── Day-in-the-studio timeline ─── */
+  .day-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 1fr);
+    gap: var(--space-lg);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-lg);
+    scrollbar-width: thin;
+  }
+  .day-rail > * { scroll-snap-align: start; }
+  @media (max-width: 880px) {
+    .day-rail {
+      grid-auto-flow: row;
+      grid-auto-columns: auto;
+      overflow-x: visible;
+      scroll-snap-type: none;
+    }
+  }
+  .day-card {
+    border-top: 1px solid var(--color-text-primary);
+    padding: var(--space-md) 0 var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transition: opacity 0.5s var(--ease-out-soft);
+  }
+  .day-card[data-active='true'] .day-card__time { color: var(--color-accent); }
+
+  /* ─── Stamp row — 6 architect stamps ─── */
+  .stamp-row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+  @media (max-width: 1100px) { .stamp-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 600px)  { .stamp-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); } }
+  .stamp-card {
+    position: relative;
+    padding: var(--space-md) var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-text-primary);
+    background: var(--color-bg-elevated);
+    text-align: center;
+    transition: transform 0.32s var(--ease-out-back);
+    overflow: hidden;
+  }
+  .stamp-card::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 0.5px solid var(--color-text-primary);
+    pointer-events: none;
+  }
+  .stamp-card:hover { transform: translateY(-3px); }
+  .stamp-card__active {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: var(--space-sm);
+    background: var(--color-text-primary);
+    color: var(--color-bg);
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    transform: translateY(101%);
+    transition: transform 0.32s var(--ease-out-soft);
+  }
+  .stamp-card:hover .stamp-card__active { transform: translateY(0); }
+
+  /* ─── Contrast pairs — was / now ─── */
+  .contrast-pair {
+    display: grid;
+    gap: var(--space-md);
+    padding: var(--space-xl) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .contrast-pair:last-child { border-bottom: 0; }
+  .contrast-pair__was {
+    font-family: 'Spectral', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    font-size: clamp(1.25rem, 0.8rem + 1.4vw, 1.875rem);
+    line-height: 1.25;
+  }
+  .contrast-pair__now {
+    font-family: 'Spectral', Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    font-size: clamp(2rem, 1.2rem + 2.6vw, 3.5rem);
+    line-height: 1.04;
+    letter-spacing: -0.022em;
+  }
+
+  /* ─── Pin-up wall — scattered images, slight rotation ─── */
+  .pin-up-wall {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--space-sm);
+    background-image:
+      linear-gradient(to right, oklch(0 0 0 / 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0 0 0 / 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+    padding: clamp(1rem, 4vw, 3rem);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-muted);
+  }
+  .pin-up-card {
+    position: relative;
+    transition: transform 0.5s var(--ease-out-quint), box-shadow 0.5s var(--ease-out-quint);
+    box-shadow: 0 6px 18px -10px oklch(0 0 0 / 0.25), 0 1px 0 oklch(0 0 0 / 0.04);
+  }
+  .pin-up-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--color-bg-elevated);
+  }
+  .pin-up-card::before,
+  .pin-up-card::after {
+    content: '';
+    position: absolute;
+    width: 28px; height: 6px;
+    background: color-mix(in oklab, var(--color-accent) 40%, transparent);
+    top: -3px;
+    box-shadow: 0 1px 2px oklch(0 0 0 / 0.08);
+  }
+  .pin-up-card::before { left: 12px; transform: rotate(-12deg); }
+  .pin-up-card::after  { right: 12px; transform: rotate(10deg); }
+  .pin-up-card:hover { transform: rotate(0) translateY(-4px) !important; }
+  /* 5-image scatter layout */
+  .pin-up-card--a { grid-column: 1 / span 5; transform: rotate(-2deg); }
+  .pin-up-card--b { grid-column: 7 / span 6; transform: rotate(1deg); margin-top: 1.5rem; }
+  .pin-up-card--c { grid-column: 2 / span 4; transform: rotate(-1deg); margin-top: -1rem; }
+  .pin-up-card--d { grid-column: 7 / span 5; transform: rotate(3deg); }
+  .pin-up-card--e { grid-column: 4 / span 6; transform: rotate(-2deg); margin-top: -1rem; }
+  @media (max-width: 880px) {
+    .pin-up-wall { grid-template-columns: 1fr; }
+    .pin-up-card { grid-column: 1 / -1 !important; margin-top: 0 !important; }
+    .pin-up-card--a, .pin-up-card--c, .pin-up-card--e { transform: rotate(-1.5deg); }
+    .pin-up-card--b, .pin-up-card--d { transform: rotate(1.5deg); }
+  }
+
+  /* ─── Mask reveal — hairline draws then text wipes ─── */
+  .mask-reveal {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .mask-reveal__text {
+    display: inline-block;
+    transform: translateX(-101%);
+    transition: transform 0.9s var(--ease-out-quint) 0.4s;
+  }
+  .mask-reveal__line {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0.05em;
+    height: 1px;
+    background: var(--color-accent);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s var(--ease-out-quint);
+  }
+  .mask-reveal.in-view .mask-reveal__line { transform: scaleX(1); }
+  .mask-reveal.in-view .mask-reveal__text { transform: translateX(0); }
+
+  /* ─── Intake CTA card — looks like a print intake sheet ─── */
+  .intake-card {
+    position: relative;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-text-primary);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background-image:
+      linear-gradient(to bottom, oklch(0 0 0 / 0.02) 1px, transparent 1px);
+    background-size: 100% 28px;
+    transition: transform 0.4s var(--ease-out-back), box-shadow 0.4s var(--ease-out-back);
+  }
+  .intake-card::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 0.5px solid var(--color-text-primary);
+    pointer-events: none;
+  }
+  .intake-card__row {
+    display: grid;
+    grid-template-columns: minmax(160px, 0.3fr) 1fr;
+    gap: var(--space-md);
+    align-items: baseline;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  @media (max-width: 600px) {
+    .intake-card__row { grid-template-columns: 1fr; gap: var(--space-xs); }
+  }
+  .intake-card__label {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+  .intake-card__value {
+    font-family: 'Spectral', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+  }
+
+  /* ─── Stamp-press animation (intake card pressed in) ─── */
+  .stamp-press {
+    opacity: 0;
+    transform: translateY(-8px) scale(1.01);
+  }
+  .stamp-press.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.5s var(--ease-out-soft), transform 0.5s var(--ease-out-back);
+  }
+
+  /* ─── Phase TOC — sticky 10-cell grid for /product hero ─── */
+  .phase-toc {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+  }
+  .phase-toc__cell {
+    position: relative;
+    padding: var(--space-md);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    font-family: 'Inconsolata', monospace;
+    font-feature-settings: 'tnum' 1;
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    transition: background 0.25s var(--ease-out-soft), color 0.25s var(--ease-out-soft);
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .phase-toc__cell:nth-child(5n) { border-right: 0; }
+  .phase-toc__cell:nth-last-child(-n+5) { border-bottom: 0; }
+  .phase-toc__cell[data-active='true'] {
+    background: var(--color-text-primary);
+    color: var(--color-bg);
+  }
+  .phase-toc__name {
+    font-family: 'Switzer', sans-serif;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  @media (max-width: 600px) {
+    .phase-toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .phase-toc__cell { border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+    .phase-toc__cell:nth-child(5n) { border-right: 1px solid var(--color-border); }
+    .phase-toc__cell:nth-last-child(-n+5) { border-bottom: 1px solid var(--color-border); }
+    .phase-toc__cell:nth-child(2n) { border-right: 0; }
+    .phase-toc__cell:last-child { border-bottom: 0; }
+  }
+
+  /* ─── Feature card variants ─── */
+  .feature-stack {
+    display: grid;
+    gap: var(--space-md);
+  }
+  .feature-block {
+    display: grid;
+    grid-template-columns: minmax(0, 0.18fr) minmax(0, 1fr);
+    gap: var(--space-lg);
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--color-border);
+  }
+  @media (max-width: 720px) {
+    .feature-block { grid-template-columns: 1fr; gap: var(--space-sm); padding: var(--space-lg) 0; }
+  }
+  .feature-block__num {
+    font-family: 'Inconsolata', monospace;
+    font-feature-settings: 'tnum' 1;
+    font-size: 2.5rem;
+    color: var(--color-text-muted);
+    line-height: 1;
+  }
+  .feature-block__name {
+    font-family: 'Spectral', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.875rem;
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+    color: var(--color-text-primary);
+  }
+  .feature-fires {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .feature-fires::before {
+    content: '';
+    width: 14px; height: 1px;
+    background: var(--color-accent);
+    display: inline-block;
+  }
 }

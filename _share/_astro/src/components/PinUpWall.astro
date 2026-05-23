@@ -1,0 +1,20 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const wall = [
+  { src: `${base}/refs/japandi_living_room.png`, alt: 'Residential living, japandi finish', cls: 'pin-up-card--a', cap: 'Residential · living' },
+  { src: `${base}/refs/japandi_bedroom.png`,     alt: 'Residential bedroom, japandi finish', cls: 'pin-up-card--b', cap: 'Residential · bedroom' },
+  { src: `${base}/refs/japandi_dining_room.png`, alt: 'Residential dining, japandi finish',  cls: 'pin-up-card--c', cap: 'Residential · dining' },
+  { src: `${base}/refs/japandi_bathroom.png`,    alt: 'Residential bath, japandi finish',    cls: 'pin-up-card--d', cap: 'Residential · bath' },
+  { src: `${base}/refs/japandi_lounge.png`,      alt: 'Hospitality lounge, japandi finish',  cls: 'pin-up-card--e', cap: 'Hospitality · lounge' },
+];
+---
+<div class="pin-up-wall" data-stagger>
+  {wall.map((w) => (
+    <figure class={`pin-up-card ${w.cls}`} data-stagger-item>
+      <img src={w.src} alt={w.alt} loading="lazy" decoding="async" />
+      <figcaption class="mono text-2xs uppercase tracking-eyebrow text-ink-mute px-sm py-xs bg-paper-elevated border-t border-rule">
+        {w.cap}
+      </figcaption>
+    </figure>
+  ))}
+</div>

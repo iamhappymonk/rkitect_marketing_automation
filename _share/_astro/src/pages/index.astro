@@ -1,168 +1,195 @@
 ---
 import Base from '../layouts/Base.astro';
-import RosterCard from '../components/RosterCard.astro';
-import { roster } from '../data/roster';
+import AtelierBadge from '../components/AtelierBadge.astro';
+import DayInStudio from '../components/DayInStudio.astro';
+import StampRow from '../components/StampRow.astro';
+import PinUpWall from '../components/PinUpWall.astro';
+import IntakeCard from '../components/IntakeCard.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const chief = roster.find((m) => m.role === 'chief')!;
-const specialists = roster.filter((m) => m.role === 'specialist');
 
-const heroH1 = ['A', 'studio', 'on', 'your', 'desk.'];
+const types = ['Residential', 'Commercial', 'Hospitality', 'Outdoor', 'Workspace', 'Retail', 'F&B', 'Wellness'];
 
-const types = ['Residential', 'Commercial', 'Hospitality', 'Outdoor', 'Workspace'];
-
-const stages = [
-  { n: '01', name: 'Brief', body: 'Bring a sketch, floor plan, photo, model, or written brief. The Principal Architect reads scope and intent.' },
-  { n: '02', name: 'Thesis', body: 'Materials Specialist sets palette, finishes, mood. Lighting Designer locks the light strategy.' },
-  { n: '03', name: 'Plan', body: 'Plan Drafter draws plans and sections. Space Planner sets programme, adjacencies, clearances.' },
-  { n: '04', name: 'Render', body: 'Renderer produces client-ready options. Trade-offs stay explicit. Every set comes back to you.' },
-  { n: '05', name: 'Revise', body: 'Each render is routed into controlled edit zones. Click walls, floors, furniture, lighting — iterate.' },
-];
-
-const work = [
-  { src: `${base}/refs/japandi_living_room.png`, alt: 'Japandi living room', caption: 'Residential · living' },
-  { src: `${base}/refs/japandi_bedroom.png`, alt: 'Japandi bedroom', caption: 'Residential · bedroom' },
-  { src: `${base}/refs/japandi_dining_room.png`, alt: 'Japandi dining room', caption: 'Residential · dining' },
-  { src: `${base}/refs/japandi_bathroom.png`, alt: 'Japandi bathroom', caption: 'Residential · bath' },
-  { src: `${base}/refs/japandi_lounge.png`, alt: 'Japandi lounge', caption: 'Hospitality · lounge' },
+const contrasts = [
+  { was: 'A client revision used to take a day.',     now: 'It takes a redline.' },
+  { was: 'A scheme used to need a junior.',           now: 'It needs a brief.' },
+  { was: 'Pin-up day was a Friday all-nighter.',      now: 'It is a Friday lunch.' },
 ];
 ---
 <Base title="rkitect.ai — A studio on your desk." path="/">
 
-  <!-- HERO -->
+  <!-- 1 · HERO — asymmetric editorial split (60 / 40) -->
   <section class="draft-paper">
     <div class="container-page section-pad section">
-      <p class="eyebrow">For practices &amp; offices · pre-launch</p>
-      <h1
-        class="mt-md font-display text-fluid-3xl text-ink"
-        data-hero-words
-      >
-        {heroH1.map((w, i) => (
-          <>
-            <span class="reveal-word" data-word>{w}</span>{i < heroH1.length - 1 ? ' ' : ''}
-          </>
-        ))}
-      </h1>
-      <p class="reveal mt-lg max-w-prose text-lg text-ink-soft">
-        Bring the brief. The studio runs the project — scheme to pin-up — with you as principal at every review.
-      </p>
-      <blockquote class="reveal mt-2xl max-w-prose font-display italic-display text-xl text-ink-soft">
-        &ldquo;Client called at nine. Review at ten. The studio sent five options at nine forty-eight. We won the work.&rdquo;
-        <footer class="mt-sm text-mono text-xs uppercase tracking-eyebrow text-ink-mute not-italic">— A.M., principal, NYC studio</footer>
-      </blockquote>
-      <div class="reveal mt-2xl flex flex-wrap items-center gap-lg">
-        <a href={`${base}/contact`} class="btn btn-primary">
-          <span class="dot"></span>
-          <span>Request beta access</span>
-        </a>
-        <span class="text-xs text-ink-mute mono uppercase tracking-eyebrow">25 seats open · 48h founder call</span>
+      <div class="grid gap-2xl lg:gap-3xl lg:grid-cols-12 items-center">
+
+        <!-- left 60% -->
+        <div class="lg:col-span-7">
+          <p class="eyebrow">For practices &amp; offices · pre-launch</p>
+
+          <h1 class="mt-md font-display text-fluid-3xl text-ink leading-none">
+            <span class="mask-reveal block">
+              <span class="mask-reveal__text italic-display">A studio</span>
+              <span class="mask-reveal__line"></span>
+            </span>
+            <span class="mask-reveal block mt-2">
+              <span class="mask-reveal__text italic-display">on your desk<span class="text-redline">.</span></span>
+              <span class="mask-reveal__line"></span>
+            </span>
+          </h1>
+
+          <p class="reveal mt-xl max-w-prose text-lg text-ink-soft leading-relaxed">
+            Bring the brief. We run the project — scheme to pin-up — with you as principal at every review.
+          </p>
+
+          <div class="reveal mt-2xl flex flex-col gap-md">
+            <div class="flex flex-wrap items-center gap-md">
+              <a href={`${base}/contact`} class="btn btn-primary">
+                <span class="dot"></span>
+                <span>Request beta access</span>
+              </a>
+              <a href={`${base}/product`} class="btn btn-ghost">
+                See the studio →
+              </a>
+            </div>
+            <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">48h founder call</span>
+          </div>
+        </div>
+
+        <!-- right 40% — drafting stamp -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="reveal w-full max-w-[360px]">
+            <AtelierBadge class="w-full h-auto" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TYPE CHIPS -->
-  <section class="border-y border-rule bg-paper-muted">
-    <div class="container-page section-pad py-lg md:py-xl flex flex-wrap items-center justify-center gap-md md:gap-xl">
-      {types.map((t) => (
-        <span class="mono text-xs uppercase tracking-eyebrow text-ink-soft">{t}</span>
-      ))}
+  <!-- 2 · MANIFESTO STRIP -->
+  <section class="manifesto-strip">
+    <div class="container-page section-pad">
+      <p class="manifesto-strip__line">
+        AI for iteration, not for fake architecture.
+      </p>
     </div>
   </section>
 
-  <!-- ROSTER -->
+  <!-- 3 · A DAY IN THE STUDIO — narrative timeline -->
   <section class="section section-pad">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">One Tuesday in the studio</p>
+        <h2 class="mt-md font-display text-fluid-2xl text-ink">
+          Brief in at nine. <span class="italic-display">Revisions back by five thirty.</span>
+        </h2>
+        <p class="mt-lg text-ink-soft">
+          Show, do not tell. A single day on the desk — six moments, one brief, the studio working.
+        </p>
+      </header>
+      <div class="mt-3xl">
+        <DayInStudio />
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · THE TEAM — single horizontal stamp row -->
+  <section class="section section-pad bg-paper-muted border-y border-rule">
     <div class="container-page">
       <header class="reveal max-w-prose">
         <p class="eyebrow">The team</p>
         <h2 class="mt-md font-display text-fluid-2xl text-ink">
-          Six on your desk. <span class="italic-display">One brief at a time.</span>
+          Six stamps. <span class="italic-display">One desk.</span>
         </h2>
         <p class="mt-lg text-ink-soft">
-          One Principal Architect routes the work. Five specialists carry the craft. You sign off at every gate.
+          One Principal Architect routes the work. Five specialists carry the craft. Hover any stamp to see when it fires.
         </p>
       </header>
-
-      <div class="mt-3xl" data-stagger>
-        <!-- Chief: full width on top -->
-        <div class="mb-md">
-          <RosterCard member={chief} />
-        </div>
-        <!-- Specialists: 3-col → 2-col → 1-col -->
-        <div class="grid gap-md grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {specialists.map((m) => (<RosterCard member={m} />))}
-        </div>
+      <div class="mt-3xl">
+        <StampRow />
       </div>
     </div>
   </section>
 
-  <!-- 5-STAGE FLOW -->
-  <section class="section section-pad bg-paper-muted border-y border-rule">
-    <div class="container-page">
+  <!-- 5 · WHAT CHANGES — was / now contrast statements -->
+  <section class="section section-pad">
+    <div class="container-page max-w-4xl">
       <header class="reveal max-w-prose">
-        <p class="eyebrow">How the project runs</p>
+        <p class="eyebrow">What changes</p>
         <h2 class="mt-md font-display text-fluid-2xl text-ink">
-          One brief in. <span class="italic-display">The studio runs the project.</span>
+          Studio rhythm, rewritten. <span class="italic-display">Three lines.</span>
         </h2>
       </header>
-
-      <div class="mt-3xl flow-cards" data-stagger>
-        {stages.map((s) => (
-          <article data-stagger-item class="flow-card">
-            <p class="flow-step">{s.n} · {s.name}</p>
-            <p class="flow-body">{s.body}</p>
-          </article>
+      <div class="mt-3xl" data-stagger>
+        {contrasts.map((c) => (
+          <div class="contrast-pair" data-stagger-item>
+            <p class="contrast-pair__was">Was: {c.was}</p>
+            <p class="contrast-pair__now">Now: {c.now}</p>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- SELECTED WORK -->
-  <section id="proof" class="section section-pad">
+  <!-- 6 · SELECTED WORK — pin-up wall -->
+  <section class="section section-pad">
     <div class="container-page">
       <header class="reveal max-w-prose">
         <p class="eyebrow">Selected work</p>
         <h2 class="mt-md font-display text-fluid-2xl text-ink">
-          Real rooms. <span class="italic-display">One brief.</span> Receipts attached.
+          Five pin-ups. <span class="italic-display">One week on the wall.</span>
         </h2>
-        <p class="mt-lg text-ink-soft">
-          Five renders from a single comprehension pass. Hover for project context.
-        </p>
       </header>
+      <div class="mt-3xl">
+        <PinUpWall />
+      </div>
+      <p class="reveal mt-lg mono text-2xs uppercase tracking-eyebrow text-ink-mute">
+        Five pin-ups from the cohort's last week.
+      </p>
+    </div>
+  </section>
 
-      <div class="mt-3xl grid gap-md grid-cols-2 md:grid-cols-3 lg:grid-cols-5" data-stagger>
-        {work.map((w) => (
-          <figure
-            data-stagger-item
-            class="group relative overflow-hidden rounded-lg border border-rule bg-paper-elevated"
-          >
-            <img
-              src={w.src}
-              alt={w.alt}
-              loading="lazy"
-              decoding="async"
-              class="block w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-            />
-            <figcaption class="absolute inset-x-0 bottom-0 bg-ink/85 text-paper px-md py-xs text-mono text-2xs uppercase tracking-eyebrow opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              {w.caption}
-            </figcaption>
-          </figure>
+  <!-- 7 · BIG QUOTE -->
+  <section class="section section-pad">
+    <div class="container-page max-w-4xl">
+      <div class="reveal">
+        <hr class="rule" />
+        <blockquote class="my-2xl font-display italic-display text-fluid-2xl text-ink leading-tight">
+          Client called at nine. Review at ten. The studio sent five options at nine forty-eight. We won the work.
+        </blockquote>
+        <footer class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">
+          — A.M., principal, NYC studio
+        </footer>
+        <hr class="rule mt-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · TYPE CHIPS — narrow strip -->
+  <section class="border-y border-rule bg-paper-muted">
+    <div class="container-page section-pad py-lg md:py-xl">
+      <p class="eyebrow mb-md">Built for every kind of brief</p>
+      <div class="flex flex-wrap items-center gap-md md:gap-xl overflow-x-auto">
+        {types.map((t, i) => (
+          <>
+            <span class="mono text-xs uppercase tracking-eyebrow text-ink-soft whitespace-nowrap">{t}</span>
+            {i < types.length - 1 && <span class="mono text-ink-mute" aria-hidden="true">·</span>}
+          </>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="section section-pad draft-paper border-t border-rule">
+  <!-- 9 · CTA — intake-form card -->
+  <section class="section section-pad draft-paper">
     <div class="container-page max-w-3xl">
-      <h2 class="reveal font-display text-fluid-2xl text-ink">
-        Want a <span class="italic-display">studio</span> on your desk?
-      </h2>
-      <div class="reveal mt-2xl">
-        <a href={`${base}/contact`} class="btn btn-primary">
-          <span class="dot"></span>
-          <span>Bring the brief</span>
-        </a>
-      </div>
+      <header class="reveal max-w-prose mb-2xl">
+        <p class="eyebrow">Bring the brief</p>
+        <h2 class="mt-md font-display text-fluid-2xl text-ink">
+          Fill the sheet. <span class="italic-display">We open the project.</span>
+        </h2>
+      </header>
+      <IntakeCard ctaHref={`${base}/contact`} ctaLabel="Bring the brief" />
     </div>
   </section>
 

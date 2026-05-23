@@ -1,0 +1,31 @@
+---
+export interface Props { ctaHref: string; ctaLabel?: string }
+const { ctaHref, ctaLabel = 'Bring the brief' } = Astro.props;
+---
+<div class="intake-card stamp-press">
+  <header class="flex items-center justify-between gap-md pb-md border-b border-ink">
+    <span class="mono text-2xs uppercase tracking-eyebrow text-ink">Project intake</span>
+    <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">FORM · 01</span>
+  </header>
+
+  <div class="intake-card__row">
+    <span class="intake-card__label">Project name</span>
+    <span class="intake-card__value">Your next residential, commercial, or fit-out.</span>
+  </div>
+  <div class="intake-card__row">
+    <span class="intake-card__label">Deliverable</span>
+    <span class="intake-card__value">Scheme · plan · render · pin-up deck.</span>
+  </div>
+  <div class="intake-card__row">
+    <span class="intake-card__label">Principal</span>
+    <span class="intake-card__value">You. Always.</span>
+  </div>
+
+  <div class="pt-xl flex flex-wrap items-center justify-between gap-md">
+    <a href={ctaHref} class="btn btn-primary">
+      <span class="dot"></span>
+      <span>{ctaLabel} →</span>
+    </a>
+    <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Founder call within 48h</span>
+  </div>
+</div>

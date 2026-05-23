@@ -1,0 +1,9 @@
+---
+import StudioStamp from './StudioStamp.astro';
+import { roster } from '../data/roster';
+---
+<div class="stamp-row" data-stagger>
+  {roster.map((m, i) => (
+    <StudioStamp member={m} idx={i} />
+  ))}
+</div>

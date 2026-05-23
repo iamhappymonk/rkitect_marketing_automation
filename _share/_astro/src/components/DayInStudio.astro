@@ -1,0 +1,16 @@
+---
+import { dayInStudio } from '../data/day-in-studio';
+---
+<div class="day-rail" data-day-rail>
+  {dayInStudio.map((m, i) => (
+    <article class="day-card" data-day-card data-idx={i}>
+      <div class="flex items-baseline justify-between gap-md">
+        <span class="day-card__time mono text-xl text-ink tracking-eyebrow">{m.time}</span>
+        <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">{String(i + 1).padStart(2, '0')} / 06</span>
+      </div>
+      <h3 class="font-display text-xl md:text-2xl text-ink tracking-tightish leading-tight">{m.headline}</h3>
+      <p class="text-sm text-ink-soft leading-relaxed">{m.body}</p>
+      <span class="mono text-2xs uppercase tracking-eyebrow text-redline mt-auto pt-md">{m.role}</span>
+    </article>
+  ))}
+</div>

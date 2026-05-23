@@ -1,0 +1,33 @@
+---
+import type { RosterMember } from '../data/roster';
+export interface Props { member: RosterMember; idx: number }
+const { member, idx } = Astro.props;
+const n = String(idx + 1).padStart(2, '0');
+const isChief = member.role === 'chief';
+---
+<article class="stamp-card" data-stagger-item>
+  <!-- north arrow corner -->
+  <svg viewBox="0 0 24 24" class="absolute top-2 left-2 w-4 h-4 opacity-50" aria-hidden="true">
+    <polygon points="12,3 16,18 12,15 8,18" fill="currentColor" />
+  </svg>
+  <!-- number top-right -->
+  <span class="absolute top-2 right-3 mono text-2xs uppercase tracking-eyebrow text-ink-mute">{n}</span>
+
+  <div class="mt-md mono text-2xs uppercase tracking-eyebrow text-ink-mute">
+    {isChief ? 'Chief' : 'Specialist'}
+  </div>
+  <h3 class="mt-xs font-display text-md md:text-lg text-ink leading-tight">
+    {member.name}
+  </h3>
+  <hr class="my-sm border-0 h-px bg-ink/30" />
+  <p class="text-xs text-ink-soft leading-snug">{member.craft}</p>
+
+  {isChief && (
+    <span class="absolute bottom-2 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-redline animate-pulse" aria-hidden="true" />
+  )}
+
+  <div class="stamp-card__active">
+    <strong class="block text-redline-light mono">WHEN ACTIVE</strong>
+    {member.active}
+  </div>
+</article>

@@ -63,18 +63,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           if (!items.length) return;
           items.forEach((el) => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(18px)';
+            el.style.transform = el.style.transform || 'translateY(18px)';
           });
           inView(parent, () => {
-            animate(
-              items,
-              { opacity: [0, 1], transform: ['translateY(18px)', 'translateY(0)'] },
-              { duration: 0.65, delay: stagger(0.08), easing: [0.22, 1, 0.36, 1] }
-            );
+            items.forEach((el, idx) => {
+              setTimeout(() => {
+                animate(
+                  el,
+                  { opacity: [0, 1], transform: [el.dataset.from || 'translateY(18px)', el.dataset.to || 'translateY(0)'] },
+                  { duration: 0.65, easing: [0.22, 1, 0.36, 1] }
+                );
+              }, idx * 80);
+            });
           }, { margin: '-5% 0px -10% 0px' });
         });
 
-        // Hero word-stagger
+        // Pin-up wall: respect each card's authored rotation. Just fade + lift, hold rotation.
+        document.querySelectorAll<HTMLElement>('.pin-up-card').forEach((el) => {
+          const styles = window.getComputedStyle(el);
+          const transform = styles.transform;
+          el.style.opacity = '0';
+          inView(el, () => {
+            animate(el, { opacity: [0, 1] }, { duration: 0.7, easing: [0.22, 1, 0.36, 1] });
+          }, { margin: '-5% 0px -5% 0px' });
+        });
+
+        // Hero word-stagger (fade-up — kept for fallback non-mask usage)
         document.querySelectorAll<HTMLElement>('[data-hero-words]').forEach((parent) => {
           const words = parent.querySelectorAll<HTMLElement>('[data-word]');
           if (!words.length) return;
@@ -89,10 +103,59 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             { duration: 0.85, delay: stagger(0.07, { start: 0.15 }), easing: [0.16, 1, 0.3, 1] }
           );
         });
+
+        // Mask-reveal (hero h1 v2): hairline draws, text wipes from left.
+        document.querySelectorAll<HTMLElement>('.mask-reveal').forEach((el) => {
+          inView(el, () => el.classList.add('in-view'), { margin: '0px 0px -10% 0px' });
+        });
+
+        // Manifesto strip: trigger hairline draws on in-view.
+        document.querySelectorAll<HTMLElement>('.manifesto-strip').forEach((el) => {
+          inView(el, () => el.classList.add('in-view'), { margin: '-15% 0px -15% 0px' });
+        });
+
+        // Stamp-press (intake card): in-view class.
+        document.querySelectorAll<HTMLElement>('.stamp-press').forEach((el) => {
+          inView(el, () => el.classList.add('in-view'), { margin: '-10% 0px -10% 0px' });
+        });
+
+        // Day-rail: highlight active card based on scroll position.
+        document.querySelectorAll<HTMLElement>('[data-day-rail]').forEach((rail) => {
+          const cards = Array.from(rail.querySelectorAll<HTMLElement>('[data-day-card]'));
+          if (!cards.length) return;
+          const update = () => {
+            const railRect = rail.getBoundingClientRect();
+            let best = 0;
+            let bestDist = Infinity;
+            cards.forEach((c, i) => {
+              const r = c.getBoundingClientRect();
+              const center = r.left + r.width / 2;
+              const dist = Math.abs(center - (railRect.left + railRect.width * 0.35));
+              if (dist < bestDist) { bestDist = dist; best = i; }
+            });
+            cards.forEach((c, i) => c.setAttribute('data-active', String(i === best)));
+          };
+          rail.addEventListener('scroll', update, { passive: true });
+          window.addEventListener('scroll', update, { passive: true });
+          update();
+        });
+
+        // Phase TOC: light up cells when corresponding feature section enters view.
+        document.querySelectorAll<HTMLElement>('[data-phase-section]').forEach((sec) => {
+          const num = sec.dataset.phaseSection;
+          if (!num) return;
+          inView(sec, () => {
+            document.querySelectorAll<HTMLElement>(`[data-phase-cell="${num}"]`).forEach((c) => c.setAttribute('data-active', 'true'));
+            return () => {
+              document.querySelectorAll<HTMLElement>(`[data-phase-cell="${num}"]`).forEach((c) => c.setAttribute('data-active', 'false'));
+            };
+          }, { margin: '-30% 0px -30% 0px' });
+        });
       } else {
         // Reduced motion: ensure everything's visible.
-        document.querySelectorAll<HTMLElement>('.reveal, [data-stagger-item], [data-word]')
-          .forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+        document.querySelectorAll<HTMLElement>('.reveal, [data-stagger-item], [data-word], .pin-up-card, .stamp-press, .mask-reveal')
+          .forEach((el) => { el.style.opacity = '1'; el.classList.add('in-view'); });
+        document.querySelectorAll<HTMLElement>('.manifesto-strip').forEach((el) => el.classList.add('in-view'));
       }
     </script>
   </body>
