@@ -3,6 +3,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/landing" }
+    { "source": "/", "destination": "/landing" },
+    { "source": "/v2", "destination": "/v2/index" },
+    { "source": "/v2/about", "destination": "/v2/about/index" },
+    { "source": "/v2/product", "destination": "/v2/product/index" },
+    { "source": "/v2/contact", "destination": "/v2/contact/index" }
   ]
 }
