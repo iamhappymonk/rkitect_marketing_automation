@@ -29,4 +29,11 @@
 | **(2026-05-23 Audit Q13)** Founder voice handles — confirm @handles per channel for Buffer wiring. See Q13. | Aman | 🟠 High | Buffer connection, posting start | Open |
 | **(2026-05-23 Audit Q14)** Email sender identity for Cohort 01 — `imagine@`, `bhavish@`, `patrick@`, `hello@`, `studio@`? See Q14. | Aman | 🟡 Medium | Cohort onboarding email setup | Open |
 | **(2026-05-23 Audit Q15)** Source-of-truth flip — round-trip vault → brand_alchemy, OR formal canonical flip (vault becomes source, brand_alchemy becomes archive)? See Q15. | Aman | 🟠 High | Unblocks Phase B+ of [[Prune-List]] execution | Open |
+| **(2026-05-23 Team)** Name the 5th team member (POC role — cohort + social + leads). | Bhavish | 🟠 High | Activates [[POC-Tasks]]; until then Patrick + Aman cover the work | Open |
+| **(2026-05-23 Team)** Pick meeting platform for 4 weekly meetings (Google Meet / Zoom / Whereby / WhatsApp Group). | Bhavish | 🟡 Medium | Required to populate Location field in `rkitect-team.ics` | Open |
+| **(2026-05-23 Team)** Approve WhatsApp Business API for notification infra (vs personal-number-only). | Bhavish | 🟡 Medium | Aman's notification upgrade path past daily-note-only | Open |
+| **(2026-05-23 Team)** Approve infra budget — n8n hosting + video gen subscription (Synthesia/Heygen/etc). | Bhavish | 🟠 High | Aman's marketing automation + video gen builds | Open |
+| **(2026-05-23 Team)** Confirm Revit + SketchUp plugin scope with Ananya (export-only / import-only / both). | Bhavish | 🟡 Medium | Ananya's plugin sprint | Open |
+| **(2026-05-23 Team)** Confirm cataloging target with Ananya (materials / furniture / styles / test-renders / multiple). | Bhavish | 🟡 Medium | Ananya's cataloging sprint | Open |
+| **(2026-05-23 Cohort)** Cohort cap moved 20 → 25 (founder decision 2026-05-23). All cohort docs updated. Sourcing pool bumped 60 → 75. New slots: 21-25 (Tier-2 city principal · mid-firm associate · landscape · sustainable · media operator). | Bhavish | ✅ Done | Cohort 01 plan execution | Resolved |
 | **(2026-05-23 reposition)** Run sub-60s render benchmark, capture evidence | Eng | High | Any speed claim | Open |
