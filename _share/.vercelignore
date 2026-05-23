@@ -3,3 +3,16 @@ index.html
 brand-graph.html
 plan.html
 how-it-works.html
+
+# Astro project — only ship built /dist; never source/node_modules/cache
+_astro/node_modules/
+_astro/src/
+_astro/public/
+_astro/.astro/
+_astro/astro.config.mjs
+_astro/tailwind.config.mjs
+_astro/tsconfig.json
+_astro/package.json
+_astro/package-lock.json
+_astro/DESIGN-SYSTEM.md
+_astro/.gitignore
