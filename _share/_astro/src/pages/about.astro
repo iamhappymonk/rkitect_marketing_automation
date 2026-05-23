@@ -1,0 +1,116 @@
+---
+import Base from '../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const heroWords = ['Built', 'by', 'people', 'who', 'know', 'what'];
+
+const manifesto = [
+  'AI for iteration, not for fake architecture.',
+  'Architects stay the principal.',
+  'Studio rhythm over magic.',
+  'Studio language, not software language.',
+  'Six on your desk, not a black box.',
+  'The redline matters more than the render.',
+  'Built for how studios actually run a job. Not how marketers imagine they do.',
+];
+---
+<Base title="About — rkitect.ai" path="/about">
+
+  <!-- HERO -->
+  <section class="draft-paper">
+    <div class="container-page section-pad section">
+      <p class="eyebrow">Behind the studio</p>
+      <h1
+        class="mt-md font-display text-fluid-2xl text-ink max-w-5xl"
+        data-hero-words
+      >
+        {heroWords.map((w, i) => (
+          <>
+            <span class="reveal-word" data-word>{w}</span>{i < heroWords.length - 1 ? ' ' : ''}
+          </>
+        ))}
+        <br />
+        <span class="reveal-word italic-display" data-word>11pm</span>{' '}
+        <span class="reveal-word italic-display" data-word>at</span>{' '}
+        <span class="reveal-word italic-display" data-word>the</span>{' '}
+        <span class="reveal-word italic-display" data-word>studio</span>{' '}
+        <span class="reveal-word" data-word>feels like.</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- FOUNDER STORY -->
+  <section class="section section-pad">
+    <div class="container-page max-w-prose reveal">
+      <p class="eyebrow">Founder note</p>
+      <div class="mt-lg space-y-md text-ink-soft leading-relaxed text-md">
+        <p class="first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:italic first-letter:font-light first-letter:text-7xl first-letter:leading-[0.85] first-letter:text-ink">
+          I started building rkitect.ai for a studio I was watching get crushed by the same week, over and over. The brief on Monday. The pitch on Friday. The renderer in the middle of the room asking which finish, again. We were good at the work. We were losing to the calendar.
+        </p>
+        <p>
+          Then I had a stroke. Weeks went out of the practice. I came back to a half-built OS and a question I hadn’t expected — who runs the studio when the principal can’t? Not “who replaces the principal”. Who does the legwork so the principal can still review every set, mark up every render, sign off every gate. The work of being principal — choosing, redlining, deciding — that wasn’t the part I wanted to give up. The part I needed back was the team.
+        </p>
+        <p>
+          So we built the team. A Principal Architect that takes the brief and routes the job. A Plan Drafter on the line set. A Space Planner on the programme. A Renderer on the views. A Materials Specialist on finishes. A Lighting Designer on mood. Six on the desk. One brief at a time. You stay the principal.
+        </p>
+        <p>
+          “Principal at every gate” isn’t a feature. It’s the value I needed myself when I couldn’t be in the room.
+        </p>
+        <p class="mono text-xs uppercase tracking-eyebrow text-ink-mute not-italic">— Bhavish, founder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAPPYMONK PARENT -->
+  <section class="section section-pad bg-paper-muted border-y border-rule">
+    <div class="container-page max-w-prose reveal">
+      <p class="eyebrow">Built by HappyMonk AI</p>
+      <h2 class="mt-md font-display text-fluid-xl text-ink">
+        An AI house in <span class="italic-display">Bengaluru.</span>
+      </h2>
+      <div class="mt-lg space-y-md text-ink-soft">
+        <p>
+          HappyMonk AI is the parent — a Bengaluru-based AI house building agentic systems for vertical domains. rkitect.ai is the studio for architects. The same team builds the agentic infrastructure, the project memory, the multi-specialist routing — under the architect's hand.
+        </p>
+        <!-- TODO: HappyMonk logo asset — request from founder -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="section section-pad">
+    <div class="container-page max-w-4xl">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">What we believe</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          Seven things <span class="italic-display">we hold to.</span>
+        </h2>
+      </header>
+
+      <ul class="mt-3xl divide-y divide-rule" data-stagger>
+        {manifesto.map((line, i) => (
+          <li data-stagger-item class="py-lg md:py-xl flex items-baseline gap-lg">
+            <span class="mono text-xs uppercase tracking-eyebrow text-ink-mute tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+            <p class="font-display text-2xl md:text-3xl text-ink tracking-tightish leading-tight">{line}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section-pad draft-paper border-t border-rule">
+    <div class="container-page max-w-3xl">
+      <h2 class="reveal font-display text-fluid-2xl text-ink">
+        Run a real brief through the <span class="italic-display">studio.</span>
+      </h2>
+      <div class="reveal mt-2xl">
+        <a href={`${base}/contact`} class="btn btn-primary">
+          <span class="dot"></span>
+          <span>Get in touch</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>
