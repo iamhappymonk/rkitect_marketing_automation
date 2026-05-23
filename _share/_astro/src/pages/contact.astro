@@ -1,0 +1,175 @@
+---
+import Base from '../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const heroWords = ['Bring', 'the', 'brief.'];
+---
+<Base title="Contact — rkitect.ai" path="/contact">
+
+  <!-- HERO -->
+  <section class="draft-paper">
+    <div class="container-page section-pad section">
+      <p class="eyebrow">Get in touch</p>
+      <h1 class="mt-md font-display text-fluid-2xl text-ink max-w-4xl" data-hero-words>
+        {heroWords.map((w, i) => (
+          <>
+            <span class="reveal-word" data-word>{w}</span>{i < heroWords.length - 1 ? ' ' : ''}
+          </>
+        ))}{' '}
+        <span class="reveal-word italic-display" data-word>We&rsquo;ll</span>{' '}
+        <span class="reveal-word italic-display" data-word>be</span>{' '}
+        <span class="reveal-word italic-display" data-word>in</span>{' '}
+        <span class="reveal-word italic-display" data-word>touch.</span>
+      </h1>
+      <p class="reveal mt-lg max-w-prose text-lg text-ink-soft">
+        Founder call within 48 hours. Email goes straight to Bhavish.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORM + CHANNELS -->
+  <section class="section section-pad">
+    <div class="container-page grid gap-3xl lg:grid-cols-5">
+
+      <!-- FORM -->
+      <div class="lg:col-span-3 reveal">
+        <form id="contact-form" class="space-y-lg" novalidate>
+          <div class="grid gap-lg sm:grid-cols-2">
+            <label class="block">
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Name *</span>
+              <input
+                type="text" name="name" required
+                class="mt-xs block w-full bg-paper-elevated border border-rule px-md py-sm text-md focus:outline-none focus:border-ink transition-colors"
+              />
+            </label>
+            <label class="block">
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Practice / studio</span>
+              <input
+                type="text" name="practice"
+                class="mt-xs block w-full bg-paper-elevated border border-rule px-md py-sm text-md focus:outline-none focus:border-ink transition-colors"
+              />
+            </label>
+            <label class="block">
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">City</span>
+              <input
+                type="text" name="city"
+                class="mt-xs block w-full bg-paper-elevated border border-rule px-md py-sm text-md focus:outline-none focus:border-ink transition-colors"
+              />
+            </label>
+            <label class="block">
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Email *</span>
+              <input
+                type="email" name="email" required
+                class="mt-xs block w-full bg-paper-elevated border border-rule px-md py-sm text-md focus:outline-none focus:border-ink transition-colors"
+              />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Channel preference</legend>
+            <div class="mt-sm flex flex-wrap gap-lg text-sm">
+              {['Email', 'WhatsApp', 'Calendly', 'Either'].map((c) => (
+                <label class="inline-flex items-center gap-xs cursor-pointer">
+                  <input type="radio" name="channel" value={c} class="accent-ink" checked={c === 'Either'} />
+                  <span>{c}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <label class="block">
+            <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">What you&rsquo;re working on *</span>
+            <textarea
+              name="brief" required maxlength="500" rows="5"
+              class="mt-xs block w-full bg-paper-elevated border border-rule px-md py-sm text-md focus:outline-none focus:border-ink transition-colors resize-y"
+            ></textarea>
+            <div class="mt-xs flex justify-end">
+              <span id="char-count" class="mono text-2xs text-ink-mute">0 / 500</span>
+            </div>
+          </label>
+
+          <div id="form-message" class="hidden text-sm" role="status" aria-live="polite"></div>
+
+          <div class="flex items-center gap-lg">
+            <button type="submit" class="btn btn-primary">
+              <span class="dot"></span>
+              <span id="submit-label">Send brief</span>
+            </button>
+            <span class="text-xs text-ink-mute">Founder call within 48 hours.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- CHANNELS -->
+      <aside class="lg:col-span-2 reveal">
+        <div class="rounded-lg border border-rule bg-paper-muted p-lg md:p-xl">
+          <p class="eyebrow">Direct lines</p>
+          <ul class="mt-lg space-y-md text-sm">
+            <li>
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute block">Email</span>
+              <a href="mailto:accounts@happymonk.co" class="mt-xs block text-ink hover:text-redline transition-colors break-all">accounts@happymonk.co</a>
+            </li>
+            <li>
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute block">WhatsApp</span>
+              <a href="https://wa.me/918296133123" target="_blank" rel="noopener noreferrer" class="mt-xs block text-ink hover:text-redline transition-colors">+91 82961 33123</a>
+            </li>
+            <li>
+              <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute block">Founder call</span>
+              <!-- TODO: confirm Calendly URL with founder -->
+              <a href="https://cal.com/bhavish/intro" target="_blank" rel="noopener noreferrer" class="mt-xs block text-ink hover:text-redline transition-colors">Book the call</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-lg text-xs text-ink-mute">
+          Bengaluru, India · Built by HappyMonk AI
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const charEl = document.getElementById('char-count');
+    const msgEl = document.getElementById('form-message');
+    const labelEl = document.getElementById('submit-label');
+    if (form && charEl && msgEl && labelEl) {
+      const ta = form.querySelector<HTMLTextAreaElement>('textarea[name="brief"]');
+      ta?.addEventListener('input', () => {
+        charEl.textContent = `${ta.value.length} / 500`;
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        msgEl.className = 'text-sm text-ink-mute';
+        msgEl.classList.remove('hidden');
+        msgEl.textContent = 'Sending…';
+        labelEl.textContent = 'Sending…';
+
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+
+        try {
+          // API lives at /api/contact (Vercel function in _share/api/), not under /v2.
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+          if (!res.ok) throw new Error(await res.text());
+          msgEl.className = 'text-sm text-ink';
+          msgEl.textContent = 'Brief received. Bhavish will be in touch within 48h.';
+          labelEl.textContent = 'Sent';
+          form.reset();
+          charEl.textContent = '0 / 500';
+        } catch (err) {
+          msgEl.className = 'text-sm text-redline';
+          msgEl.textContent = 'Could not send. Email accounts@happymonk.co or WhatsApp +91 82961 33123.';
+          labelEl.textContent = 'Send brief';
+        }
+      });
+    }
+  </script>
+
+</Base>
