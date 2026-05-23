@@ -86,7 +86,7 @@ const prefersReduced = window.matchMedia(
   };
   refresh();
 
-  // Step 1: Chief Architect reads the brief
+  // Step 1: Principal Architect reads the brief
   btnBrief.addEventListener("click", (e) => {
     if (state.read) return;
 
@@ -99,15 +99,15 @@ const prefersReduced = window.matchMedia(
     btnBrief.appendChild(ripple);
     setTimeout(() => ripple.remove(), 600);
 
-    badge.textContent = "ARC-VUM \u00b7 reading brief";
+    badge.textContent = "Principal Architect \u00b7 reading brief";
     state.read = true;
     refresh();
   });
 
-  // Step 2: Planner + Modeler generate the 3D plan
+  // Step 2: Plan Drafter + Space Planner draft the scheme + model
   btnPlan.addEventListener("click", () => {
     if (!state.read || state.planned) return;
-    badge.textContent = "SEK-TURA · PLAX-IUM · drawing plan";
+    badge.textContent = "Plan Drafter · Space Planner · drafting";
     state.planned = true;
     crossfadeTo(ASSETS.plan, false);
     refresh();
@@ -116,7 +116,7 @@ const prefersReduced = window.matchMedia(
   // Step 3: Renderer captures the photoreal output from that geometry
   btnRender.addEventListener("click", () => {
     if (!state.planned || state.rendered) return;
-    badge.textContent = "REND-RIX \u00b7 capturing render";
+    badge.textContent = "Renderer \u00b7 capturing output";
     state.rendered = true;
     crossfadeTo(ASSETS.render, true);
     refresh();
@@ -425,7 +425,7 @@ const prefersReduced = window.matchMedia(
       e: "Comprehending",
       v: "Reading your brief â€” residential, 2BHK, Japandi",
     },
-    { t: "0:02", e: "Interior Designer", v: "Drafting the design thesis" },
+    { t: "0:02", e: "Materials Specialist", v: "Drafting palette + finish direction" },
     {
       t: "0:04",
       e: "Palette proposed",
@@ -448,7 +448,7 @@ const prefersReduced = window.matchMedia(
     },
     {
       t: "0:14",
-      e: "3D Artist",
+      e: "Plan Drafter",
       v: "Setting the isometric, placing furniture at scale",
     },
     {
