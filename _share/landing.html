@@ -22,7 +22,7 @@
       as="image"
       href="refs/generated/japandi_living_room.png"
     />
-    <link rel="stylesheet" href="landing.css?v=11" />
+    <link rel="stylesheet" href="landing.css?v=12" />
   </head>
 
   <body>
@@ -642,35 +642,32 @@
         </div>
         <!-- <p class="desc">Built for real studio pressure: changing client notes and tight timelines. The Chief Architect routes each stage, specialists execute, and controlled edit loops keep revisions tight.</p> -->
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-md); margin-top: var(--space-xl);">
-        <div style="background: rgba(0,0,0,0.02); padding: var(--space-lg); border-radius: var(--space-xs); border-top: 2px solid var(--color-text-secondary);">
-          <img src="refs/brief.png" alt="Brief upload" style="width:100%; height:120px; object-fit:cover; border-radius: var(--space-xs); margin-bottom: var(--space-sm); display:block;" />
-          <p style="font-weight: 500; margin-bottom: var(--space-xs); font-size: var(--f-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary);">01 · Brief</p>
-          <p style="font-size: var(--f-sm); line-height: 1.55; margin: 0;">Bring a sketch, floor plan, photo, model, or written brief. The Principal Architect reads scope and intent.</p>
+      <div class="flow-cards">
+        <div class="flow-card" style="--accent: var(--color-text-secondary);">
+          <img src="refs/brief.png" alt="Brief upload" />
+          <p class="flow-step">01 · Brief</p>
+          <p class="flow-body">Bring a sketch, floor plan, photo, model, or written brief. The Principal Architect reads scope and intent.</p>
         </div>
-        <div style="background: rgba(0,0,0,0.02); padding: var(--space-lg); border-radius: var(--space-xs); border-top: 2px solid #2f6f58;">
-          <img src="refs/thesis.png" alt="Thesis" style="width:100%; height:120px; object-fit:cover; border-radius: var(--space-xs); margin-bottom: var(--space-sm); display:block;" />
-          <p style="font-weight: 500; margin-bottom: var(--space-xs); font-size: var(--f-sm); text-transform: uppercase; letter-spacing: 0.05em; color: #2f6f58;">02 · Thesis</p>
-          <p style="font-size: var(--f-sm); line-height: 1.55; margin: 0;">Materials Specialist sets palette, finishes, and reference moods. Lighting Designer locks light strategy.</p>
+        <div class="flow-card" style="--accent: #2f6f58;">
+          <img src="refs/thesis.png" alt="Thesis" />
+          <p class="flow-step">02 · Thesis</p>
+          <p class="flow-body">Materials Specialist sets palette, finishes, and reference moods. Lighting Designer locks light strategy.</p>
         </div>
-        <div style="background: rgba(0,0,0,0.02); padding: var(--space-lg); border-radius: var(--space-xs); border-top: 2px solid #7f5f2a;">
-          <img src="refs/plan.png" alt="Plan" style="width:100%; height:120px; object-fit:cover; border-radius: var(--space-xs); margin-bottom: var(--space-sm); display:block;" />
-          <p style="font-weight: 500; margin-bottom: var(--space-xs); font-size: var(--f-sm); text-transform: uppercase; letter-spacing: 0.05em; color: #7f5f2a;">03 · Plan</p>
-          <p style="font-size: var(--f-sm); line-height: 1.55; margin: 0;">Plan Drafter draws plans + sections. Space Planner sets programme, adjacencies, and clearances.</p>
+        <div class="flow-card" style="--accent: #7f5f2a;">
+          <img src="refs/plan.png" alt="Plan" />
+          <p class="flow-step">03 · Plan</p>
+          <p class="flow-body">Plan Drafter draws plans + sections. Space Planner sets programme, adjacencies, and clearances.</p>
         </div>
-        <div style="background: rgba(0,0,0,0.02); padding: var(--space-lg); border-radius: var(--space-xs); border-top: 2px solid #6b4d8f;">
-          <img src="refs/renderer.png" alt="Renderer" style="width:100%; height:120px; object-fit:cover; border-radius: var(--space-xs); margin-bottom: var(--space-sm); display:block;" />
-          <p style="font-weight: 500; margin-bottom: var(--space-xs); font-size: var(--f-sm); text-transform: uppercase; letter-spacing: 0.05em; color: #6b4d8f;">04 · Render</p>
-          <p style="font-size: var(--f-sm); line-height: 1.55; margin: 0;">Renderer produces client-ready options. The Principal Architect keeps trade-offs explicit and routes back to you.</p>
+        <div class="flow-card" style="--accent: #6b4d8f;">
+          <img src="refs/renderer.png" alt="Renderer" />
+          <p class="flow-step">04 · Render</p>
+          <p class="flow-body">Renderer produces client-ready options. The Principal Architect keeps trade-offs explicit and routes back to you.</p>
         </div>
-        <div style="background: rgba(0,0,0,0.02); padding: var(--space-lg); border-radius: var(--space-xs); border-top: 2px solid #0066cc;">
-          <img src="refs/revise.png" alt="Revise" style="width:100%; height:120px; object-fit:cover; border-radius: var(--space-xs); margin-bottom: var(--space-sm); display:block;" />
-          <p style="font-weight: 500; margin-bottom: var(--space-xs); font-size: var(--f-sm); text-transform: uppercase; letter-spacing: 0.05em; color: #0066cc;">05 · Revise</p>
-          <p style="font-size: var(--f-sm); line-height: 1.55; margin: 0;">Each render is routed into controlled edit zones. Click walls, floors, furniture, or lighting and iterate fast.</p>
+        <div class="flow-card" style="--accent: #0066cc;">
+          <img src="refs/revise.png" alt="Revise" />
+          <p class="flow-step">05 · Revise</p>
+          <p class="flow-body">Each render is routed into controlled edit zones. Click walls, floors, furniture, or lighting and iterate fast.</p>
         </div>
-      </div>
-      <div style="margin-top: var(--space-lg); padding: var(--space-lg); border: 1px solid rgba(0,0,0,0.08); border-radius: var(--space-xs); background: rgba(0,0,0,0.015);">
-        <p style="margin: 0; font-size: var(--f-sm); color: var(--color-text-secondary);">Not prompt-to-pixel. A studio chain of command: the Principal Architect routes each brief to the five specialists, and you sign off at every gate.</p>
       </div>
     </section>
 
