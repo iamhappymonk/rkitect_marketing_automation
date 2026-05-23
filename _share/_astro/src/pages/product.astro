@@ -1,26 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
-import RosterCard from '../components/RosterCard.astro';
-import { roster } from '../data/roster';
+import IntakeCard from '../components/IntakeCard.astro';
+import { phases } from '../data/features';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const chief = roster.find((m) => m.role === 'chief')!;
-const specialists = roster.filter((m) => m.role === 'specialist');
 
-const heroWords = ['Six', 'on', 'your', 'desk.'];
-
-const phases = [
-  { n: '01', name: 'Brief intake', body: 'Reads the brief and references, sets up the programme, asks the questions a good associate would.' },
-  { n: '02', name: 'Concept / pre-design', body: 'Site context, programme cards, mood and finishes references, early massing options.' },
-  { n: '03', name: 'Schematic design', body: 'Floor plans drafted and edited, spaces named and sized, adjacencies, parametric structure from sketch, CAD, or SKP.' },
-  { n: '04', name: 'Design development', body: '3D model from plan, material and lighting and finish specs per space, multi-angle views, hero shots.' },
-  { n: '05', name: 'Rendering', body: 'Photoreal renders. ControlNet plus diffusion routing. Multi-style options. Multi-angle decks.' },
-  { n: '06', name: 'Revision rounds', body: 'Click any rendered element to swap material, finish, fixture, or object. No full re-render. Background queue for batches.' },
-  { n: '07', name: 'Pin-up / client review', body: 'Moodboards, palettes, hero shots, multi-angle decks — ready for the pin-up wall.' },
-  { n: '08', name: 'Project memory', body: 'Brief, programme, spaces, finishes, revisions, redlines — carried across sessions. Pick the project up tomorrow without re-briefing.' },
-];
-
-const inputs = ['Hand sketch', 'Site photo', 'Floor plan image', 'CAD (.dwg, .dxf)', 'SketchUp (.skp)', '3D model', 'Written brief'];
+const inputs = ['Hand sketch', 'Site photo', 'Floor plan', '.dwg', '.dxf', '.skp', '3D model', 'Written brief'];
 
 const are = [
   'An agentic OS for architects',
@@ -36,142 +21,268 @@ const areNot = [
   'Built for hobbyists or prompt-tourists',
   'A black box that draws on its own',
 ];
+
+// Flatten capabilities for the 10-cell TOC
+const allCaps = phases.flatMap((p) => p.capabilities);
+
+// Phase 3 renders → 3 reference images
+const phase3Imgs = [
+  `${base}/refs/japandi_living_room.png`,
+  `${base}/refs/japandi_bedroom.png`,
+  `${base}/refs/japandi_lounge.png`,
+];
 ---
 <Base title="The studio — rkitect.ai" path="/product">
 
-  <!-- HERO -->
+  <!-- 1 · HERO — inverted asymmetric (40 / 60) -->
   <section class="draft-paper">
     <div class="container-page section-pad section">
-      <p class="eyebrow">The studio</p>
-      <h1
-        class="mt-md font-display text-fluid-2xl text-ink max-w-5xl"
-        data-hero-words
-      >
-        {heroWords.map((w, i) => (
-          <>
-            <span class="reveal-word" data-word>{w}</span>{i < heroWords.length - 1 ? ' ' : ''}
-          </>
-        ))}
-        <br />
-        <span class="reveal-word italic-display" data-word>One</span> <span class="reveal-word italic-display" data-word>brief</span> <span class="reveal-word italic-display" data-word>at</span> <span class="reveal-word italic-display" data-word>a</span> <span class="reveal-word italic-display" data-word>time.</span>
-      </h1>
-      <p class="reveal mt-lg max-w-prose text-lg text-ink-soft">
-        The agentic OS built for architects works the way a studio works: takes the brief, drafts the scheme, builds the model, runs the views, queues the revisions, sets up the pin-up. You stay the principal at every review.
-      </p>
-    </div>
-  </section>
+      <div class="grid gap-2xl lg:gap-3xl lg:grid-cols-12 items-start">
 
-  <!-- ROSTER (DEEP) -->
-  <section class="section section-pad">
-    <div class="container-page">
-      <header class="reveal max-w-prose">
-        <p class="eyebrow">Six on the desk</p>
-        <h2 class="mt-md font-display text-fluid-xl text-ink">
-          One chief. <span class="italic-display">Five specialists.</span> One brief.
-        </h2>
-        <p class="mt-lg text-ink-soft">
-          Each one carries a craft. The Principal Architect routes the work between them and routes every set back to you.
-        </p>
-      </header>
-
-      <div class="mt-3xl" data-stagger>
-        <div class="mb-md">
-          <RosterCard member={chief} deep={true} />
+        <!-- left 40% — headline -->
+        <div class="lg:col-span-5">
+          <p class="eyebrow">What's on the desk</p>
+          <h1 class="mt-md font-display text-fluid-2xl text-ink leading-none">
+            <span class="mask-reveal block">
+              <span class="mask-reveal__text">Ten things the studio does.</span>
+              <span class="mask-reveal__line"></span>
+            </span>
+            <span class="mask-reveal block mt-2">
+              <span class="mask-reveal__text italic-display">All at once<span class="text-redline">.</span></span>
+              <span class="mask-reveal__line"></span>
+            </span>
+          </h1>
+          <p class="reveal mt-xl max-w-prose text-lg text-ink-soft leading-relaxed">
+            The agentic OS for architects has twelve capabilities across five phases. They run together, like a real studio team.
+          </p>
+          <div class="reveal mt-2xl">
+            <a href={`${base}/contact`} class="btn btn-primary">
+              <span class="dot"></span>
+              <span>Request beta access</span>
+            </a>
+          </div>
         </div>
-        <div class="grid gap-md grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {specialists.map((m) => (<RosterCard member={m} deep={true} />))}
+
+        <!-- right 60% — TOC grid -->
+        <div class="lg:col-span-7">
+          <div class="phase-toc reveal">
+            {allCaps.slice(0, 10).map((c) => (
+              <div class="phase-toc__cell" data-phase-cell={c.n}>
+                <span>{c.n}</span>
+                <span class="phase-toc__name">{c.name}</span>
+              </div>
+            ))}
+          </div>
+          <p class="reveal mt-md mono text-2xs uppercase tracking-eyebrow text-ink-mute">
+            Cells light up as you scroll. Two more (11 · Project Memory, 12 · Approval Gates) live in Phase Five.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 8-STAGE WORKFLOW -->
+  <!-- 2 · PHASE 1 — BRIEF -->
+  <section class="section section-pad">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">{phases[0].label}</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          The studio takes whatever <span class="italic-display">you have.</span>
+        </h2>
+        <p class="mt-lg text-ink-soft">{phases[0].intro}</p>
+      </header>
+
+      <div class="feature-stack mt-3xl">
+        {phases[0].capabilities.map((c) => (
+          <article
+            class="feature-block"
+            data-phase-section={c.n}
+          >
+            <div class="feature-block__num">{c.n}</div>
+            <div>
+              <h3 class="feature-block__name">{c.name}</h3>
+              <p class="mt-md max-w-prose text-ink-soft leading-relaxed">{c.body}</p>
+              <p class="feature-fires mt-md">When it fires · {c.fires}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · PHASE 2 — SCHEME -->
   <section class="section section-pad bg-paper-muted border-y border-rule">
     <div class="container-page">
       <header class="reveal max-w-prose">
-        <p class="eyebrow">How the project runs</p>
+        <p class="eyebrow">{phases[1].label}</p>
         <h2 class="mt-md font-display text-fluid-xl text-ink">
-          Brief. Concept. Schematic. Design development.
-          <span class="italic-display">Render.</span>
-          Revision. Pin-up. Memory.
+          Plans. Sections. <span class="italic-display">Programme.</span>
         </h2>
+        <p class="mt-lg text-ink-soft">{phases[1].intro}</p>
       </header>
 
-      <ol class="mt-3xl grid gap-md md:grid-cols-2 lg:grid-cols-4" data-stagger>
-        {phases.map((p) => (
-          <li data-stagger-item class="flex flex-col rounded-lg border border-rule bg-paper-elevated p-lg">
-            <span class="mono text-2xs uppercase tracking-eyebrow text-redline">{p.n}</span>
-            <h3 class="mt-sm font-display text-xl text-ink tracking-tightish">{p.name}</h3>
-            <p class="mt-sm text-sm text-ink-soft leading-relaxed">{p.body}</p>
-          </li>
+      <div class="mt-3xl grid gap-md md:grid-cols-2" data-stagger>
+        {phases[1].capabilities.map((c) => (
+          <article class="bg-paper-elevated border border-rule p-xl flex flex-col gap-md" data-stagger-item data-phase-section={c.n}>
+            <div class="flex items-baseline justify-between gap-md">
+              <span class="mono text-xl text-ink-mute">{c.n}</span>
+              <!-- mini drafting motif -->
+              <svg viewBox="0 0 40 40" class="w-8 h-8 text-ink-mute" aria-hidden="true">
+                <rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="0.5" />
+                <line x1="2" y1="14" x2="38" y2="14" stroke="currentColor" stroke-width="0.5" />
+                <line x1="2" y1="26" x2="38" y2="26" stroke="currentColor" stroke-width="0.5" />
+                <line x1="14" y1="2" x2="14" y2="38" stroke="currentColor" stroke-width="0.5" />
+                <line x1="26" y1="2" x2="26" y2="38" stroke="currentColor" stroke-width="0.5" />
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl text-ink tracking-tightish">{c.name}</h3>
+            <p class="text-sm text-ink-soft leading-relaxed">{c.body}</p>
+            <p class="feature-fires mt-auto">When it fires · {c.fires}</p>
+          </article>
         ))}
-      </ol>
+      </div>
     </div>
   </section>
 
-  <!-- AUTO-SEGMENT REVISION DEMO -->
+  <!-- 4 · PHASE 3 — RENDER -->
   <section class="section section-pad">
     <div class="container-page">
       <header class="reveal max-w-prose">
-        <p class="eyebrow">Revision rounds</p>
+        <p class="eyebrow">{phases[2].label}</p>
         <h2 class="mt-md font-display text-fluid-xl text-ink">
-          Click any rendered element. <span class="italic-display">Swap the material.</span> Render stays.
+          Photoreal. <span class="italic-display">Multi-pass.</span>
         </h2>
+        <p class="mt-lg text-ink-soft">{phases[2].intro}</p>
       </header>
 
-      <div class="reveal mt-3xl grid gap-md md:grid-cols-2">
-        <figure class="overflow-hidden rounded-lg border border-rule bg-paper-elevated">
-          <img
-            src={`${base}/refs/contemporary_sofa.png`}
-            alt="Before: contemporary finish"
-            loading="lazy"
-            decoding="async"
-            class="block w-full aspect-[4/3] object-cover"
-          />
-          <figcaption class="px-md py-sm border-t border-rule">
-            <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Before · contemporary</span>
-          </figcaption>
-        </figure>
-        <figure class="overflow-hidden rounded-lg border border-rule bg-paper-elevated">
-          <img
-            src={`${base}/refs/midcentury_sofa.png`}
-            alt="After: mid-century finish, same render"
-            loading="lazy"
-            decoding="async"
-            class="block w-full aspect-[4/3] object-cover"
-          />
-          <figcaption class="px-md py-sm border-t border-rule">
-            <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">After · mid-century · no re-render</span>
-          </figcaption>
-        </figure>
+      <div class="mt-3xl grid gap-md md:grid-cols-3" data-stagger>
+        {phases[2].capabilities.map((c, i) => (
+          <article class="border border-rule bg-paper-elevated flex flex-col" data-stagger-item data-phase-section={c.n}>
+            <img
+              src={phase3Imgs[i]}
+              alt={`${c.name} reference render`}
+              loading="lazy"
+              decoding="async"
+              class="block w-full aspect-[4/3] object-cover border-b border-rule"
+            />
+            <div class="p-lg flex flex-col gap-sm flex-1">
+              <span class="mono text-2xs uppercase tracking-eyebrow text-redline">{c.n} · capability</span>
+              <h3 class="font-display text-xl text-ink tracking-tightish">{c.name}</h3>
+              <p class="text-sm text-ink-soft leading-relaxed">{c.body}</p>
+              <p class="feature-fires mt-auto pt-md">When it fires · {c.fires}</p>
+            </div>
+          </article>
+        ))}
       </div>
-
-      <p class="reveal mt-2xl max-w-prose text-ink-soft">
-        Rendered output is segmented into the elements an architect would mark up — walls, floors, finishes, fixtures, furniture, lighting. Click any one and swap. The rest of the scene stays put. No mask drawing. No full re-render of the room to change a sofa.
-      </p>
     </div>
   </section>
 
-  <!-- INPUTS -->
+  <!-- 5 · PHASE 4 — REVISION -->
+  <section class="section section-pad bg-paper-muted border-y border-rule">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">{phases[3].label}</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          Click. <span class="italic-display">Swap.</span> Render stays.
+        </h2>
+        <p class="mt-lg text-ink-soft">{phases[3].intro}</p>
+      </header>
+
+      <div class="mt-3xl flex flex-col gap-2xl">
+        {phases[3].capabilities.map((c, i) => (
+          <article
+            class={`grid gap-lg lg:gap-2xl items-center ${i % 2 === 0 ? 'lg:grid-cols-[1fr_minmax(0,0.9fr)]' : 'lg:grid-cols-[minmax(0,0.9fr)_1fr] lg:[&>*:first-child]:order-2'}`}
+            data-phase-section={c.n}
+          >
+            <div class="reveal">
+              <span class="mono text-2xs uppercase tracking-eyebrow text-redline">{c.n} · capability</span>
+              <h3 class="mt-md font-display text-3xl text-ink tracking-tightish">{c.name}</h3>
+              <p class="mt-md max-w-prose text-ink-soft leading-relaxed">{c.body}</p>
+              <p class="feature-fires mt-lg">When it fires · {c.fires}</p>
+            </div>
+            <div class="reveal grid grid-cols-2 gap-sm">
+              <figure class="border border-rule bg-paper-elevated overflow-hidden">
+                <img
+                  src={`${base}/refs/contemporary_sofa.png`}
+                  alt="Before — contemporary"
+                  loading="lazy"
+                  decoding="async"
+                  class="block w-full aspect-square object-cover"
+                />
+                <figcaption class="px-sm py-xs mono text-2xs uppercase tracking-eyebrow text-ink-mute border-t border-rule">Before</figcaption>
+              </figure>
+              <figure class="border border-rule bg-paper-elevated overflow-hidden">
+                <img
+                  src={`${base}/refs/midcentury_sofa.png`}
+                  alt="After — mid-century, same scene"
+                  loading="lazy"
+                  decoding="async"
+                  class="block w-full aspect-square object-cover"
+                />
+                <figcaption class="px-sm py-xs mono text-2xs uppercase tracking-eyebrow text-ink-mute border-t border-rule">After</figcaption>
+              </figure>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · PHASE 5 — STUDIO OPERATIONS -->
+  <section class="section section-pad">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">{phases[4].label}</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          Memory across the project. <span class="italic-display">Sign-off at every gate.</span>
+        </h2>
+        <p class="mt-lg text-ink-soft">{phases[4].intro}</p>
+      </header>
+
+      <div class="mt-3xl grid gap-md md:grid-cols-2" data-stagger>
+        {phases[4].capabilities.map((c) => (
+          <article class="border border-rule bg-paper-elevated p-xl flex flex-col gap-md" data-stagger-item data-phase-section={c.n}>
+            <div class="flex items-center justify-between gap-md">
+              <span class="mono text-xl text-ink-mute">{c.n}</span>
+              <!-- mini diagram -->
+              <svg viewBox="0 0 60 24" class="w-16 h-6 text-ink-mute" aria-hidden="true">
+                <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1" />
+                <line x1="9" y1="12" x2="27" y2="12" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" />
+                <circle cx="30" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1" />
+                <line x1="33" y1="12" x2="51" y2="12" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" />
+                <circle cx="54" cy="12" r="3" fill="oklch(0.55 0.18 25)" stroke="oklch(0.55 0.18 25)" stroke-width="1" />
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl text-ink tracking-tightish">{c.name}</h3>
+            <p class="text-sm text-ink-soft leading-relaxed">{c.body}</p>
+            <p class="feature-fires mt-auto">When it fires · {c.fires}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · INPUTS -->
   <section class="section section-pad bg-paper-muted border-y border-rule">
     <div class="container-page">
       <header class="reveal max-w-prose">
         <p class="eyebrow">What you can bring</p>
         <h2 class="mt-md font-display text-fluid-xl text-ink">
-          Whatever’s on the desk on Monday morning.
+          Whatever's on the desk <span class="italic-display">on Monday morning.</span>
         </h2>
       </header>
-      <ul class="reveal mt-2xl flex flex-wrap gap-sm">
-        {inputs.map((i) => (
-          <li class="border border-rule bg-paper-elevated px-md py-sm text-sm text-ink">
-            <span class="mono text-2xs uppercase tracking-eyebrow text-redline mr-sm">·</span>{i}
-          </li>
+      <ul class="reveal mt-2xl flex flex-wrap items-center gap-md">
+        {inputs.map((i, idx) => (
+          <>
+            <li class="mono text-sm uppercase tracking-eyebrow text-ink-soft whitespace-nowrap">{i}</li>
+            {idx < inputs.length - 1 && <li aria-hidden="true" class="text-redline mono">·</li>}
+          </>
         ))}
       </ul>
     </div>
   </section>
 
-  <!-- WE ARE / WE ARE NOT -->
+  <!-- 8 · WE ARE / WE ARE NOT -->
   <section class="section section-pad">
     <div class="container-page">
       <header class="reveal max-w-prose">
@@ -181,45 +292,35 @@ const areNot = [
         </h2>
       </header>
 
-      <div class="reveal mt-3xl grid gap-md md:grid-cols-2">
-        <div class="rounded-lg border border-ink bg-ink text-paper p-lg md:p-xl">
-          <p class="mono text-2xs uppercase tracking-eyebrow text-redline">We are</p>
-          <ul class="mt-md space-y-sm">
-            {are.map((line) => (
-              <li class="flex gap-sm text-sm">
-                <span class="text-redline mono">+</span>
-                <span>{line}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div class="rounded-lg border border-rule bg-paper-elevated p-lg md:p-xl">
-          <p class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">We are not</p>
-          <ul class="mt-md space-y-sm">
-            {areNot.map((line) => (
-              <li class="flex gap-sm text-sm text-ink-soft">
-                <span class="text-ink-mute mono">−</span>
-                <span>{line}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <table class="reveal mt-3xl w-full border-collapse">
+        <thead>
+          <tr class="border-y-2 border-ink">
+            <th class="text-left py-md pr-lg mono text-2xs uppercase tracking-eyebrow text-redline w-1/2">We are</th>
+            <th class="text-left py-md pl-lg mono text-2xs uppercase tracking-eyebrow text-ink-mute w-1/2">We are not</th>
+          </tr>
+        </thead>
+        <tbody>
+          {are.map((line, idx) => (
+            <tr class="border-b border-rule">
+              <td class="py-lg pr-lg font-display text-lg md:text-xl text-ink leading-snug">{line}</td>
+              <td class="py-lg pl-lg font-display italic-display text-lg md:text-xl text-ink-soft leading-snug border-l border-rule">{areNot[idx]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="section section-pad draft-paper border-t border-rule">
+  <!-- 9 · CTA — intake card (consistent with home) -->
+  <section class="section section-pad draft-paper">
     <div class="container-page max-w-3xl">
-      <h2 class="reveal font-display text-fluid-2xl text-ink">
-        Bring the <span class="italic-display">brief.</span>
-      </h2>
-      <div class="reveal mt-2xl">
-        <a href={`${base}/contact`} class="btn btn-primary">
-          <span class="dot"></span>
-          <span>Request beta access</span>
-        </a>
-      </div>
+      <header class="reveal max-w-prose mb-2xl">
+        <p class="eyebrow">Bring the brief</p>
+        <h2 class="mt-md font-display text-fluid-2xl text-ink">
+          Fill the sheet. <span class="italic-display">We open the project.</span>
+        </h2>
+      </header>
+      <IntakeCard ctaHref={`${base}/contact`} ctaLabel="Bring the brief" />
     </div>
   </section>
 
