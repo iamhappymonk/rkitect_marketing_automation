@@ -1,0 +1,99 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  path?: string;
+}
+const {
+  title,
+  description = 'The agentic OS built for architects. A studio on your desk — brief, scheme, model, render, revisions — with you as principal at every review.',
+  path = '/',
+} = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={`${base}/assets/favicon.svg`} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inconsolata:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#f6efe4" />
+  </head>
+  <body>
+    <Nav currentPath={path} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <script>
+      // Motion-driven reveal on scroll. Tree-shakes to ~12KB gzipped.
+      import { animate, inView, stagger } from 'motion';
+
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced) {
+        // Generic fade-up
+        inView('.reveal', (info) => {
+          animate(
+            info.target,
+            { opacity: [0, 1], transform: ['translateY(14px)', 'translateY(0)'] },
+            { duration: 0.7, easing: [0.22, 1, 0.36, 1] }
+          );
+        }, { margin: '-10% 0px -10% 0px' });
+
+        // Stagger groups: parent element with [data-stagger], children with [data-stagger-item]
+        document.querySelectorAll<HTMLElement>('[data-stagger]').forEach((parent) => {
+          const items = parent.querySelectorAll<HTMLElement>('[data-stagger-item]');
+          if (!items.length) return;
+          items.forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(18px)';
+          });
+          inView(parent, () => {
+            animate(
+              items,
+              { opacity: [0, 1], transform: ['translateY(18px)', 'translateY(0)'] },
+              { duration: 0.65, delay: stagger(0.08), easing: [0.22, 1, 0.36, 1] }
+            );
+          }, { margin: '-5% 0px -10% 0px' });
+        });
+
+        // Hero word-stagger
+        document.querySelectorAll<HTMLElement>('[data-hero-words]').forEach((parent) => {
+          const words = parent.querySelectorAll<HTMLElement>('[data-word]');
+          if (!words.length) return;
+          words.forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(28px)';
+            el.style.display = 'inline-block';
+          });
+          animate(
+            words,
+            { opacity: [0, 1], transform: ['translateY(28px)', 'translateY(0)'] },
+            { duration: 0.85, delay: stagger(0.07, { start: 0.15 }), easing: [0.16, 1, 0.3, 1] }
+          );
+        });
+      } else {
+        // Reduced motion: ensure everything's visible.
+        document.querySelectorAll<HTMLElement>('.reveal, [data-stagger-item], [data-word]')
+          .forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      }
+    </script>
+  </body>
+</html>

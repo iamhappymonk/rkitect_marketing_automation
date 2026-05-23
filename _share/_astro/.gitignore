@@ -1,0 +1,8 @@
+node_modules/
+dist/
+../_astro-dist/
+.astro/
+.env
+.env.production
+.env.local
+.DS_Store

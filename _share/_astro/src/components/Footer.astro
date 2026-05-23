@@ -1,0 +1,42 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<footer class="mt-24 md:mt-32 border-t border-rule">
+  <div class="container-page section-pad py-16 md:py-20 grid gap-12 md:grid-cols-4">
+    <div class="md:col-span-2">
+      <div class="font-display text-2xl tracking-tightish">rkitect<span class="text-redline">.</span>ai</div>
+      <p class="mt-4 max-w-prose text-sm text-ink-mute leading-relaxed">
+        The agentic OS built for architects. A studio on your desk — brief, scheme, model, render, revisions — with you as principal at every review.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-5 text-sm">
+        <a href="mailto:accounts@happymonk.co" class="hover:text-redline transition-colors">accounts@happymonk.co</a>
+        <span class="text-ink-mute">·</span>
+        <a href="https://wa.me/918296133123" target="_blank" rel="noopener noreferrer" class="hover:text-redline transition-colors">WhatsApp +91 82961 33123</a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="eyebrow">The studio</h3>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href={`${base}/`} class="hover:text-redline transition-colors">Home</a></li>
+        <li><a href={`${base}/product`} class="hover:text-redline transition-colors">The studio</a></li>
+        <li><a href={`${base}/about`} class="hover:text-redline transition-colors">About</a></li>
+        <li><a href={`${base}/contact`} class="hover:text-redline transition-colors">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="eyebrow">Office</h3>
+      <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+        <li>Bengaluru, India</li>
+        <li>Built by HappyMonk AI</li>
+        <li class="pt-2"><a href="mailto:accounts@happymonk.co" class="hover:text-redline transition-colors">accounts@happymonk.co</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-page section-pad py-6 border-t border-rule flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+    <div class="text-mono text-xs text-ink-mute uppercase tracking-eyebrow">RKITECT · 2026</div>
+    <div class="text-xs text-ink-mute">Built by HappyMonk AI · Bengaluru, India</div>
+  </div>
+</footer>

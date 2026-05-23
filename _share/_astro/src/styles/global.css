@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Tokens extracted 1:1 from _share/landing.css (impeccable extract mode).
+ * All colors OKLCH per impeccable color_principles.
+ * Hues tinted to warm cream (70°) for cohesion with redline-red (25°).
+ */
+@layer base {
+  :root {
+    /* Surfaces */
+    --color-bg: oklch(0.985 0.003 70);
+    --color-bg-elevated: oklch(0.995 0.003 70);
+    --color-bg-muted: oklch(0.965 0.004 70);
+    /* Text */
+    --color-text-primary: oklch(0.22 0.01 70);
+    --color-text-secondary: oklch(0.42 0.01 70);
+    --color-text-muted: oklch(0.55 0.01 70);
+    /* Borders */
+    --color-border: oklch(0.9 0.005 70);
+    --color-border-hover: oklch(0.82 0.006 70);
+    /* Redline accent — used sparingly */
+    --color-accent: oklch(0.55 0.18 25);
+    --color-accent-hover: oklch(0.49 0.18 25);
+    --color-accent-light: oklch(0.95 0.04 25);
+    /* Blueprint blue */
+    --color-ink-blue: oklch(0.32 0.07 240);
+
+    /* Spacing — 4pt scale */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+
+    /* Easing */
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-out-back: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    /* Cards */
+    --card-radius: 8px;
+    --card-shadow: 0 1px 0 oklch(0 0 0 / 0.04);
+    --card-shadow-hover: 0 1px 2px oklch(0 0 0 / 0.06), 0 1px 0 oklch(0 0 0 / 0.04);
+    --card-shadow-elevated: 0 4px 16px oklch(0 0 0 / 0.08), 0 1px 0 oklch(0 0 0 / 0.04);
+
+    --measure-prose: 60ch;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Switzer', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'ss01', 'cv11';
+    overflow-x: hidden;
+  }
+
+  h1, h2 {
+    font-family: 'Spectral', 'Iowan Old Style', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+  h3, h4 {
+    font-family: 'Switzer', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--color-accent-light); color: var(--color-text-primary); }
+
+  /* Drafting-paper background — subtle 1px grid, only on hero surfaces */
+  .draft-paper {
+    background-image:
+      linear-gradient(to right, oklch(0 0 0 / 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0 0 0 / 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+  }
+}
+
+@layer components {
+  /* ─── Eyebrow with animated hairline (the studio's section-label) ─── */
+  .eyebrow {
+    font-family: 'Inconsolata', ui-monospace, Menlo, monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--color-accent);
+    display: inline-block;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: drawX 0.8s var(--ease-out-quint) 0.1s forwards;
+  }
+  @keyframes drawX { to { transform: scaleX(1); } }
+
+  /* ─── Italic display flourish for single-word emphasis ─── */
+  .italic-display {
+    font-family: 'Spectral', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ─── Inconsolata mono with tabular numerals for stamps ─── */
+  .mono, .text-mono {
+    font-family: 'Inconsolata', ui-monospace, Menlo, monospace;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* ─── Buttons ─── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-family: 'Switzer', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: all 0.22s var(--ease-out-soft);
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--color-text-primary);
+    color: var(--color-bg);
+  }
+  .btn-primary:hover {
+    background: oklch(0.14 0.01 70);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-text-primary);
+  }
+  .btn .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: inline-block;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-accent) 18%, transparent);
+  }
+  .btn-primary .dot {
+    background: var(--color-bg);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-bg) 18%, transparent);
+  }
+
+  /* ─── Hairlines ─── */
+  .rule {
+    height: 1px;
+    background: var(--color-border);
+    border: 0;
+    width: 100%;
+  }
+
+  /* ─── Layout helpers ─── */
+  .section-pad {
+    padding-left: clamp(20px, 5vw, 64px);
+    padding-right: clamp(20px, 5vw, 64px);
+  }
+  .container-page {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
+  }
+  @media (max-width: 720px) {
+    .section { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+  }
+
+  /* ─── Reveal classes (Motion targets these) ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .reveal-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.6em);
+  }
+
+  /* ─── Drafting-stamp motifs ─── */
+  .stamp-frame {
+    position: relative;
+    padding: var(--space-md);
+    border: 1px solid var(--color-text-primary);
+  }
+  .stamp-frame::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 0.5px solid var(--color-text-primary);
+    pointer-events: none;
+  }
+
+  /* ─── 5-stage flow cards (same family as landing's .flow-card) ─── */
+  .flow-cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+  .flow-card {
+    background: var(--color-bg-muted);
+    padding: var(--space-lg);
+    border-radius: var(--card-radius);
+    border-top: 2px solid var(--accent, var(--color-text-secondary));
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .flow-card .flow-step {
+    font-family: 'Inconsolata', monospace;
+    font-feature-settings: 'tnum' 1;
+    font-weight: 500;
+    margin: 0 0 var(--space-xs) 0;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent, var(--color-text-secondary));
+  }
+  .flow-card .flow-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin: 0;
+    color: var(--color-text-secondary);
+  }
+  @media (max-width: 1100px) {
+    .flow-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .flow-card:nth-child(4) { grid-column: 1 / 2; }
+    .flow-card:nth-child(5) { grid-column: 2 / 3; }
+  }
+  @media (max-width: 720px) {
+    .flow-cards { grid-template-columns: 1fr; gap: var(--space-sm); }
+    .flow-card:nth-child(n) { grid-column: auto; }
+  }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .reveal-word { opacity: 1 !important; transform: none !important; }
+  .eyebrow::before { transform: scaleX(1) !important; }
+}
