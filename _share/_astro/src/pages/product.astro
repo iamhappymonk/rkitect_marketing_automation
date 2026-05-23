@@ -1,0 +1,226 @@
+---
+import Base from '../layouts/Base.astro';
+import RosterCard from '../components/RosterCard.astro';
+import { roster } from '../data/roster';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const chief = roster.find((m) => m.role === 'chief')!;
+const specialists = roster.filter((m) => m.role === 'specialist');
+
+const heroWords = ['Six', 'on', 'your', 'desk.'];
+
+const phases = [
+  { n: '01', name: 'Brief intake', body: 'Reads the brief and references, sets up the programme, asks the questions a good associate would.' },
+  { n: '02', name: 'Concept / pre-design', body: 'Site context, programme cards, mood and finishes references, early massing options.' },
+  { n: '03', name: 'Schematic design', body: 'Floor plans drafted and edited, spaces named and sized, adjacencies, parametric structure from sketch, CAD, or SKP.' },
+  { n: '04', name: 'Design development', body: '3D model from plan, material and lighting and finish specs per space, multi-angle views, hero shots.' },
+  { n: '05', name: 'Rendering', body: 'Photoreal renders. ControlNet plus diffusion routing. Multi-style options. Multi-angle decks.' },
+  { n: '06', name: 'Revision rounds', body: 'Click any rendered element to swap material, finish, fixture, or object. No full re-render. Background queue for batches.' },
+  { n: '07', name: 'Pin-up / client review', body: 'Moodboards, palettes, hero shots, multi-angle decks — ready for the pin-up wall.' },
+  { n: '08', name: 'Project memory', body: 'Brief, programme, spaces, finishes, revisions, redlines — carried across sessions. Pick the project up tomorrow without re-briefing.' },
+];
+
+const inputs = ['Hand sketch', 'Site photo', 'Floor plan image', 'CAD (.dwg, .dxf)', 'SketchUp (.skp)', '3D model', 'Written brief'];
+
+const are = [
+  'An agentic OS for architects',
+  'A studio on your desk',
+  'The team that takes the brief and runs the project',
+  'Built around how studios actually run a job',
+  'Architect-controlled at every review',
+];
+const areNot = [
+  'A render tool',
+  'A generic AI image generator',
+  'A plug-in for someone else’s drawing board',
+  'Built for hobbyists or prompt-tourists',
+  'A black box that draws on its own',
+];
+---
+<Base title="The studio — rkitect.ai" path="/product">
+
+  <!-- HERO -->
+  <section class="draft-paper">
+    <div class="container-page section-pad section">
+      <p class="eyebrow">The studio</p>
+      <h1
+        class="mt-md font-display text-fluid-2xl text-ink max-w-5xl"
+        data-hero-words
+      >
+        {heroWords.map((w, i) => (
+          <>
+            <span class="reveal-word" data-word>{w}</span>{i < heroWords.length - 1 ? ' ' : ''}
+          </>
+        ))}
+        <br />
+        <span class="reveal-word italic-display" data-word>One</span> <span class="reveal-word italic-display" data-word>brief</span> <span class="reveal-word italic-display" data-word>at</span> <span class="reveal-word italic-display" data-word>a</span> <span class="reveal-word italic-display" data-word>time.</span>
+      </h1>
+      <p class="reveal mt-lg max-w-prose text-lg text-ink-soft">
+        The agentic OS built for architects works the way a studio works: takes the brief, drafts the scheme, builds the model, runs the views, queues the revisions, sets up the pin-up. You stay the principal at every review.
+      </p>
+    </div>
+  </section>
+
+  <!-- ROSTER (DEEP) -->
+  <section class="section section-pad">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">Six on the desk</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          One chief. <span class="italic-display">Five specialists.</span> One brief.
+        </h2>
+        <p class="mt-lg text-ink-soft">
+          Each one carries a craft. The Principal Architect routes the work between them and routes every set back to you.
+        </p>
+      </header>
+
+      <div class="mt-3xl" data-stagger>
+        <div class="mb-md">
+          <RosterCard member={chief} deep={true} />
+        </div>
+        <div class="grid gap-md grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {specialists.map((m) => (<RosterCard member={m} deep={true} />))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8-STAGE WORKFLOW -->
+  <section class="section section-pad bg-paper-muted border-y border-rule">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">How the project runs</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          Brief. Concept. Schematic. Design development.
+          <span class="italic-display">Render.</span>
+          Revision. Pin-up. Memory.
+        </h2>
+      </header>
+
+      <ol class="mt-3xl grid gap-md md:grid-cols-2 lg:grid-cols-4" data-stagger>
+        {phases.map((p) => (
+          <li data-stagger-item class="flex flex-col rounded-lg border border-rule bg-paper-elevated p-lg">
+            <span class="mono text-2xs uppercase tracking-eyebrow text-redline">{p.n}</span>
+            <h3 class="mt-sm font-display text-xl text-ink tracking-tightish">{p.name}</h3>
+            <p class="mt-sm text-sm text-ink-soft leading-relaxed">{p.body}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- AUTO-SEGMENT REVISION DEMO -->
+  <section class="section section-pad">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">Revision rounds</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          Click any rendered element. <span class="italic-display">Swap the material.</span> Render stays.
+        </h2>
+      </header>
+
+      <div class="reveal mt-3xl grid gap-md md:grid-cols-2">
+        <figure class="overflow-hidden rounded-lg border border-rule bg-paper-elevated">
+          <img
+            src={`${base}/refs/contemporary_sofa.png`}
+            alt="Before: contemporary finish"
+            loading="lazy"
+            decoding="async"
+            class="block w-full aspect-[4/3] object-cover"
+          />
+          <figcaption class="px-md py-sm border-t border-rule">
+            <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">Before · contemporary</span>
+          </figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-lg border border-rule bg-paper-elevated">
+          <img
+            src={`${base}/refs/midcentury_sofa.png`}
+            alt="After: mid-century finish, same render"
+            loading="lazy"
+            decoding="async"
+            class="block w-full aspect-[4/3] object-cover"
+          />
+          <figcaption class="px-md py-sm border-t border-rule">
+            <span class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">After · mid-century · no re-render</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="reveal mt-2xl max-w-prose text-ink-soft">
+        Rendered output is segmented into the elements an architect would mark up — walls, floors, finishes, fixtures, furniture, lighting. Click any one and swap. The rest of the scene stays put. No mask drawing. No full re-render of the room to change a sofa.
+      </p>
+    </div>
+  </section>
+
+  <!-- INPUTS -->
+  <section class="section section-pad bg-paper-muted border-y border-rule">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">What you can bring</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          Whatever’s on the desk on Monday morning.
+        </h2>
+      </header>
+      <ul class="reveal mt-2xl flex flex-wrap gap-sm">
+        {inputs.map((i) => (
+          <li class="border border-rule bg-paper-elevated px-md py-sm text-sm text-ink">
+            <span class="mono text-2xs uppercase tracking-eyebrow text-redline mr-sm">·</span>{i}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- WE ARE / WE ARE NOT -->
+  <section class="section section-pad">
+    <div class="container-page">
+      <header class="reveal max-w-prose">
+        <p class="eyebrow">For the record</p>
+        <h2 class="mt-md font-display text-fluid-xl text-ink">
+          We are. <span class="italic-display">We are not.</span>
+        </h2>
+      </header>
+
+      <div class="reveal mt-3xl grid gap-md md:grid-cols-2">
+        <div class="rounded-lg border border-ink bg-ink text-paper p-lg md:p-xl">
+          <p class="mono text-2xs uppercase tracking-eyebrow text-redline">We are</p>
+          <ul class="mt-md space-y-sm">
+            {are.map((line) => (
+              <li class="flex gap-sm text-sm">
+                <span class="text-redline mono">+</span>
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-lg border border-rule bg-paper-elevated p-lg md:p-xl">
+          <p class="mono text-2xs uppercase tracking-eyebrow text-ink-mute">We are not</p>
+          <ul class="mt-md space-y-sm">
+            {areNot.map((line) => (
+              <li class="flex gap-sm text-sm text-ink-soft">
+                <span class="text-ink-mute mono">−</span>
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section-pad draft-paper border-t border-rule">
+    <div class="container-page max-w-3xl">
+      <h2 class="reveal font-display text-fluid-2xl text-ink">
+        Bring the <span class="italic-display">brief.</span>
+      </h2>
+      <div class="reveal mt-2xl">
+        <a href={`${base}/contact`} class="btn btn-primary">
+          <span class="dot"></span>
+          <span>Request beta access</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>
