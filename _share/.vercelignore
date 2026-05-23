@@ -1,8 +1,9 @@
 # Internal team artifacts — never publish on the public domain
-index.html
-brand-graph.html
-plan.html
-how-it-works.html
+# Leading slash = anchored at deploy root (won't match nested files in v2/, _astro/, etc.)
+/index.html
+/brand-graph.html
+/plan.html
+/how-it-works.html
 
 # Astro project — only ship built /dist; never source/node_modules/cache
 _astro/node_modules/
