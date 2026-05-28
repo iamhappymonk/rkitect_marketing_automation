@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Send — drip_mail{% endblock %}
+{% block content %}
+<h1>Send Email</h1>
+
+{% if result %}
+  {% if result.success %}
+  <div class="alert success">{{ result.message }}</div>
+  {% else %}
+  <div class="alert error">{{ result.message }}</div>
+  {% endif %}
+{% endif %}
+
+<form method="post" action="/send">
+  <div class="field">
+    <label for="template_id">Template</label>
+    <select id="template_id" name="template_id" required>
+      <option value="">— select —</option>
+      {% for t in templates %}
+      <option value="{{ t.id }}" {% if t.id == selected %}selected{% endif %}>{{ t.id }} — {{ t.subject }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label for="to_email">Recipient email</label>
+    <input id="to_email" name="to_email" type="email" placeholder="you@example.com" required>
+  </div>
+  <div class="field">
+    <label for="name">Name <span style="color:#999;font-weight:400;">(optional)</span></label>
+    <input id="name" name="name" type="text" placeholder="Jane Doe">
+  </div>
+  <button type="submit">Send</button>
+</form>
+{% endblock %}

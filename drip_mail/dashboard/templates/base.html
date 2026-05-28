@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}drip_mail{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">drip_mail</span>
+    <a href="/" {% if active == 'overview' %}class="active"{% endif %}>Overview</a>
+    <a href="/templates" {% if active == 'templates' %}class="active"{% endif %}>Templates</a>
+    <a href="/send" {% if active == 'send' %}class="active"{% endif %}>Send</a>
+  </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

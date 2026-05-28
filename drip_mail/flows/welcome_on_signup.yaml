@@ -1,0 +1,6 @@
+id: welcome_on_signup
+enabled: true
+step_id: welcome
+trigger:
+  type: on_signup
+template: welcome_signup

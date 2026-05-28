@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Templates — drip_mail{% endblock %}
+{% block content %}
+<h1>Templates</h1>
+
+{% if templates %}
+<div class="tmpl-grid">
+  {% for t in templates %}
+  <div class="tmpl-card">
+    <h3>{{ t.id }}</h3>
+    <div class="subject">{{ t.subject }}</div>
+    {% if t.required_fields %}
+    <div class="tags">
+      {% for f in t.required_fields %}
+      <span class="tag">{{ f }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <a href="/send?template={{ t.id }}" style="font-size:12px;color:#0070f3;text-decoration:none;">Send test &rarr;</a>
+    {% if t.html_source %}
+    <details style="margin-top:12px;">
+      <summary>View HTML source</summary>
+      <pre>{{ t.html_source }}</pre>
+    </details>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">No templates found in templates/ directory.</p>
+{% endif %}
+{% endblock %}

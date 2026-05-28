@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Overview — drip_mail{% endblock %}
+{% block content %}
+<h1>Overview</h1>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Contacts</div>
+    <div class="value">{{ stats.contacts }}</div>
+  </div>
+  <div class="card">
+    <div class="label">Flows</div>
+    <div class="value">{{ stats.flows }}</div>
+  </div>
+  <div class="card">
+    <div class="label">Sent</div>
+    <div class="value">{{ stats.sent }}</div>
+  </div>
+  <div class="card {% if stats.failed > 0 %}red{% endif %}">
+    <div class="label">Failed</div>
+    <div class="value">{{ stats.failed }}</div>
+  </div>
+</div>
+
+<h2>Recent Failures</h2>
+{% if errors %}
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Flow Step</th>
+      <th>Error</th>
+      <th>At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for e in errors %}
+    <tr>
+      <td>{{ e.email }}</td>
+      <td>{{ e.step }}</td>
+      <td class="error-text">{{ e.error }}</td>
+      <td>{{ e.sent_at }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="empty">No failures.</p>
+{% endif %}
+{% endblock %}
