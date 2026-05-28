@@ -1,1 +1,4490 @@
-[]
+[
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "research",
+    "cost": 0.00131205,
+    "meta": {
+      "input_tokens": 6275,
+      "output_tokens": 618
+    },
+    "timestamp": "2026-05-25T12:38:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009735,
+    "meta": {
+      "input_tokens": 5674,
+      "output_tokens": 204
+    },
+    "timestamp": "2026-05-25T12:38:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012923999999999998,
+    "meta": {
+      "input_tokens": 6384,
+      "output_tokens": 558
+    },
+    "timestamp": "2026-05-25T12:38:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010921499999999998,
+    "meta": {
+      "input_tokens": 6609,
+      "output_tokens": 168
+    },
+    "timestamp": "2026-05-25T12:39:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00116085,
+    "meta": {
+      "input_tokens": 6947,
+      "output_tokens": 198
+    },
+    "timestamp": "2026-05-25T12:39:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009635999999999999,
+    "meta": {
+      "input_tokens": 5732,
+      "output_tokens": 173
+    },
+    "timestamp": "2026-05-25T12:39:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011074499999999998,
+    "meta": {
+      "input_tokens": 6583,
+      "output_tokens": 200
+    },
+    "timestamp": "2026-05-25T12:39:46Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00096,
+    "meta": {
+      "input_tokens": 5740,
+      "output_tokens": 165
+    },
+    "timestamp": "2026-05-25T12:39:51Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110985,
+    "meta": {
+      "input_tokens": 6575,
+      "output_tokens": 206
+    },
+    "timestamp": "2026-05-25T12:40:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.000969,
+    "meta": {
+      "input_tokens": 5740,
+      "output_tokens": 180
+    },
+    "timestamp": "2026-05-25T12:40:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011255999999999998,
+    "meta": {
+      "input_tokens": 6588,
+      "output_tokens": 229
+    },
+    "timestamp": "2026-05-25T12:40:14Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00134505,
+    "meta": {
+      "input_tokens": 6463,
+      "output_tokens": 626
+    },
+    "timestamp": "2026-05-25T12:40:25Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010697999999999999,
+    "meta": {
+      "input_tokens": 7020,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T12:40:27Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.00099645,
+    "meta": {
+      "input_tokens": 5715,
+      "output_tokens": 232
+    },
+    "timestamp": "2026-05-25T12:40:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00096855,
+    "meta": {
+      "input_tokens": 5653,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-25T12:54:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010906499999999999,
+    "meta": {
+      "input_tokens": 6607,
+      "output_tokens": 166
+    },
+    "timestamp": "2026-05-25T12:54:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00094725,
+    "meta": {
+      "input_tokens": 5711,
+      "output_tokens": 151
+    },
+    "timestamp": "2026-05-25T12:54:56Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011181,
+    "meta": {
+      "input_tokens": 6562,
+      "output_tokens": 223
+    },
+    "timestamp": "2026-05-25T12:55:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009693000000000001,
+    "meta": {
+      "input_tokens": 5714,
+      "output_tokens": 187
+    },
+    "timestamp": "2026-05-25T12:55:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00100875,
+    "meta": {
+      "input_tokens": 6597,
+      "output_tokens": 32
+    },
+    "timestamp": "2026-05-25T12:55:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012610499999999999,
+    "meta": {
+      "input_tokens": 6363,
+      "output_tokens": 511
+    },
+    "timestamp": "2026-05-25T12:55:27Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00117015,
+    "meta": {
+      "input_tokens": 6905,
+      "output_tokens": 224
+    },
+    "timestamp": "2026-05-25T12:55:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013773,
+    "meta": {
+      "input_tokens": 6434,
+      "output_tokens": 687
+    },
+    "timestamp": "2026-05-25T12:55:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010785,
+    "meta": {
+      "input_tokens": 7078,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T12:55:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.784e-05,
+    "meta": {
+      "input_tokens": 604,
+      "output_tokens": 84
+    },
+    "timestamp": "2026-05-25T12:55:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00109875,
+    "meta": {
+      "input_tokens": 6497,
+      "output_tokens": 207
+    },
+    "timestamp": "2026-05-25T12:56:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.740000000000001e-05,
+    "meta": {
+      "input_tokens": 613,
+      "output_tokens": 67
+    },
+    "timestamp": "2026-05-25T12:56:08Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0009893999999999999,
+    "meta": {
+      "input_tokens": 6484,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T12:56:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.000912,
+    "meta": {
+      "input_tokens": 5236,
+      "output_tokens": 211
+    },
+    "timestamp": "2026-05-25T12:56:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011116499999999998,
+    "meta": {
+      "input_tokens": 6603,
+      "output_tokens": 202
+    },
+    "timestamp": "2026-05-25T12:56:41Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009631499999999999,
+    "meta": {
+      "input_tokens": 5653,
+      "output_tokens": 192
+    },
+    "timestamp": "2026-05-25T12:57:00Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009100499999999999,
+    "meta": {
+      "input_tokens": 5307,
+      "output_tokens": 190
+    },
+    "timestamp": "2026-05-25T12:57:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00112185,
+    "meta": {
+      "input_tokens": 6587,
+      "output_tokens": 223
+    },
+    "timestamp": "2026-05-25T12:57:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113025,
+    "meta": {
+      "input_tokens": 6599,
+      "output_tokens": 234
+    },
+    "timestamp": "2026-05-25T12:57:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009693000000000001,
+    "meta": {
+      "input_tokens": 5734,
+      "output_tokens": 182
+    },
+    "timestamp": "2026-05-25T12:57:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00090465,
+    "meta": {
+      "input_tokens": 5331,
+      "output_tokens": 175
+    },
+    "timestamp": "2026-05-25T12:57:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011161499999999998,
+    "meta": {
+      "input_tokens": 6589,
+      "output_tokens": 213
+    },
+    "timestamp": "2026-05-25T12:57:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010605,
+    "meta": {
+      "input_tokens": 6570,
+      "output_tokens": 125
+    },
+    "timestamp": "2026-05-25T12:57:27Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00095955,
+    "meta": {
+      "input_tokens": 5725,
+      "output_tokens": 168
+    },
+    "timestamp": "2026-05-25T12:57:27Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010031999999999999,
+    "meta": {
+      "input_tokens": 6576,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T12:57:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009547499999999999,
+    "meta": {
+      "input_tokens": 5653,
+      "output_tokens": 178
+    },
+    "timestamp": "2026-05-25T12:57:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011229,
+    "meta": {
+      "input_tokens": 6586,
+      "output_tokens": 225
+    },
+    "timestamp": "2026-05-25T12:57:36Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009681000000000001,
+    "meta": {
+      "input_tokens": 5714,
+      "output_tokens": 185
+    },
+    "timestamp": "2026-05-25T12:57:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010060499999999999,
+    "meta": {
+      "input_tokens": 6595,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T12:57:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013174499999999997,
+    "meta": {
+      "input_tokens": 6363,
+      "output_tokens": 605
+    },
+    "timestamp": "2026-05-25T12:57:55Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00126765,
+    "meta": {
+      "input_tokens": 6363,
+      "output_tokens": 522
+    },
+    "timestamp": "2026-05-25T12:57:55Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00112125,
+    "meta": {
+      "input_tokens": 6903,
+      "output_tokens": 143
+    },
+    "timestamp": "2026-05-25T12:58:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00119985,
+    "meta": {
+      "input_tokens": 6995,
+      "output_tokens": 251
+    },
+    "timestamp": "2026-05-25T12:58:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013369499999999997,
+    "meta": {
+      "input_tokens": 6449,
+      "output_tokens": 616
+    },
+    "timestamp": "2026-05-25T12:58:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011892,
+    "meta": {
+      "input_tokens": 7052,
+      "output_tokens": 219
+    },
+    "timestamp": "2026-05-25T12:58:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012716999999999997,
+    "meta": {
+      "input_tokens": 6402,
+      "output_tokens": 519
+    },
+    "timestamp": "2026-05-25T12:58:25Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013067999999999999,
+    "meta": {
+      "input_tokens": 6440,
+      "output_tokens": 568
+    },
+    "timestamp": "2026-05-25T12:58:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011887499999999997,
+    "meta": {
+      "input_tokens": 6901,
+      "output_tokens": 256
+    },
+    "timestamp": "2026-05-25T12:58:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00123765,
+    "meta": {
+      "input_tokens": 6955,
+      "output_tokens": 324
+    },
+    "timestamp": "2026-05-25T12:58:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009547499999999999,
+    "meta": {
+      "input_tokens": 5653,
+      "output_tokens": 178
+    },
+    "timestamp": "2026-05-25T12:58:46Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013073999999999998,
+    "meta": {
+      "input_tokens": 6428,
+      "output_tokens": 572
+    },
+    "timestamp": "2026-05-25T12:58:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.718e-05,
+    "meta": {
+      "input_tokens": 604,
+      "output_tokens": 72
+    },
+    "timestamp": "2026-05-25T12:58:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011349,
+    "meta": {
+      "input_tokens": 6586,
+      "output_tokens": 245
+    },
+    "timestamp": "2026-05-25T12:58:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001161,
+    "meta": {
+      "input_tokens": 7000,
+      "output_tokens": 185
+    },
+    "timestamp": "2026-05-25T12:58:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009588,
+    "meta": {
+      "input_tokens": 5732,
+      "output_tokens": 165
+    },
+    "timestamp": "2026-05-25T12:58:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010959000000000001,
+    "meta": {
+      "input_tokens": 6486,
+      "output_tokens": 205
+    },
+    "timestamp": "2026-05-25T12:58:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.784e-05,
+    "meta": {
+      "input_tokens": 604,
+      "output_tokens": 84
+    },
+    "timestamp": "2026-05-25T12:58:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00111885,
+    "meta": {
+      "input_tokens": 6575,
+      "output_tokens": 221
+    },
+    "timestamp": "2026-05-25T12:59:00Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00109575,
+    "meta": {
+      "input_tokens": 6497,
+      "output_tokens": 202
+    },
+    "timestamp": "2026-05-25T12:59:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009722999999999999,
+    "meta": {
+      "input_tokens": 5730,
+      "output_tokens": 188
+    },
+    "timestamp": "2026-05-25T12:59:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.8005e-05,
+    "meta": {
+      "input_tokens": 612,
+      "output_tokens": 79
+    },
+    "timestamp": "2026-05-25T12:59:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011006999999999998,
+    "meta": {
+      "input_tokens": 6594,
+      "output_tokens": 186
+    },
+    "timestamp": "2026-05-25T12:59:11Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.7795e-05,
+    "meta": {
+      "input_tokens": 603,
+      "output_tokens": 266
+    },
+    "timestamp": "2026-05-25T12:59:12Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010849499999999999,
+    "meta": {
+      "input_tokens": 6489,
+      "output_tokens": 186
+    },
+    "timestamp": "2026-05-25T12:59:12Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011139,
+    "meta": {
+      "input_tokens": 6642,
+      "output_tokens": 196
+    },
+    "timestamp": "2026-05-25T12:59:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.8115e-05,
+    "meta": {
+      "input_tokens": 609,
+      "output_tokens": 84
+    },
+    "timestamp": "2026-05-25T12:59:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00106095,
+    "meta": {
+      "input_tokens": 6497,
+      "output_tokens": 144
+    },
+    "timestamp": "2026-05-25T12:59:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00087,
+    "meta": {
+      "input_tokens": 5236,
+      "output_tokens": 141
+    },
+    "timestamp": "2026-05-25T12:59:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00119505,
+    "meta": {
+      "input_tokens": 6899,
+      "output_tokens": 267
+    },
+    "timestamp": "2026-05-25T12:59:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001095,
+    "meta": {
+      "input_tokens": 6544,
+      "output_tokens": 189
+    },
+    "timestamp": "2026-05-25T12:59:34Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00091725,
+    "meta": {
+      "input_tokens": 5295,
+      "output_tokens": 205
+    },
+    "timestamp": "2026-05-25T12:59:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110775,
+    "meta": {
+      "input_tokens": 6605,
+      "output_tokens": 195
+    },
+    "timestamp": "2026-05-25T12:59:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008799,
+    "meta": {
+      "input_tokens": 5306,
+      "output_tokens": 140
+    },
+    "timestamp": "2026-05-25T12:59:47Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00134415,
+    "meta": {
+      "input_tokens": 6453,
+      "output_tokens": 627
+    },
+    "timestamp": "2026-05-25T12:59:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00099735,
+    "meta": {
+      "input_tokens": 6537,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T12:59:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.2095e-05,
+    "meta": {
+      "input_tokens": 620,
+      "output_tokens": 509
+    },
+    "timestamp": "2026-05-25T12:59:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011899499999999997,
+    "meta": {
+      "input_tokens": 7021,
+      "output_tokens": 228
+    },
+    "timestamp": "2026-05-25T12:59:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00097815,
+    "meta": {
+      "input_tokens": 5653,
+      "output_tokens": 217
+    },
+    "timestamp": "2026-05-25T12:59:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011574,
+    "meta": {
+      "input_tokens": 6828,
+      "output_tokens": 222
+    },
+    "timestamp": "2026-05-25T12:59:56Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010999500000000001,
+    "meta": {
+      "input_tokens": 6617,
+      "output_tokens": 179
+    },
+    "timestamp": "2026-05-25T12:59:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00099555,
+    "meta": {
+      "input_tokens": 5669,
+      "output_tokens": 242
+    },
+    "timestamp": "2026-05-25T13:00:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009071999999999999,
+    "meta": {
+      "input_tokens": 5236,
+      "output_tokens": 203
+    },
+    "timestamp": "2026-05-25T13:00:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00095415,
+    "meta": {
+      "input_tokens": 5733,
+      "output_tokens": 157
+    },
+    "timestamp": "2026-05-25T13:00:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "template_renderer",
+    "cost": 0.00068865,
+    "meta": {
+      "input_tokens": 4223,
+      "output_tokens": 92
+    },
+    "timestamp": "2026-05-25T13:00:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010768499999999999,
+    "meta": {
+      "input_tokens": 6599,
+      "output_tokens": 145
+    },
+    "timestamp": "2026-05-25T13:00:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00117915,
+    "meta": {
+      "input_tokens": 7049,
+      "output_tokens": 203
+    },
+    "timestamp": "2026-05-25T13:00:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008968499999999999,
+    "meta": {
+      "input_tokens": 5283,
+      "output_tokens": 174
+    },
+    "timestamp": "2026-05-25T13:00:10Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.718e-05,
+    "meta": {
+      "input_tokens": 604,
+      "output_tokens": 72
+    },
+    "timestamp": "2026-05-25T13:00:14Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001083,
+    "meta": {
+      "input_tokens": 6572,
+      "output_tokens": 162
+    },
+    "timestamp": "2026-05-25T13:00:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011079,
+    "meta": {
+      "input_tokens": 6486,
+      "output_tokens": 225
+    },
+    "timestamp": "2026-05-25T13:00:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011127,
+    "meta": {
+      "input_tokens": 6566,
+      "output_tokens": 213
+    },
+    "timestamp": "2026-05-25T13:00:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.7675e-05,
+    "meta": {
+      "input_tokens": 616,
+      "output_tokens": 69
+    },
+    "timestamp": "2026-05-25T13:00:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009557999999999999,
+    "meta": {
+      "input_tokens": 5728,
+      "output_tokens": 161
+    },
+    "timestamp": "2026-05-25T13:00:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00088095,
+    "meta": {
+      "input_tokens": 5285,
+      "output_tokens": 147
+    },
+    "timestamp": "2026-05-25T13:00:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010941,
+    "meta": {
+      "input_tokens": 6490,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-25T13:00:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010023,
+    "meta": {
+      "input_tokens": 6570,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T13:00:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0009983999999999998,
+    "meta": {
+      "input_tokens": 6544,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T13:00:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00132285,
+    "meta": {
+      "input_tokens": 6363,
+      "output_tokens": 614
+    },
+    "timestamp": "2026-05-25T13:00:47Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011415,
+    "meta": {
+      "input_tokens": 6998,
+      "output_tokens": 153
+    },
+    "timestamp": "2026-05-25T13:00:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "video_prompt_writer",
+    "cost": 0.0004839,
+    "meta": {
+      "input_tokens": 2374,
+      "output_tokens": 213
+    },
+    "timestamp": "2026-05-25T13:01:11Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00100395,
+    "meta": {
+      "input_tokens": 6581,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T13:01:13Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010563,
+    "meta": {
+      "input_tokens": 6930,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T13:01:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013276499999999999,
+    "meta": {
+      "input_tokens": 6427,
+      "output_tokens": 606
+    },
+    "timestamp": "2026-05-25T13:01:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00115755,
+    "meta": {
+      "input_tokens": 6989,
+      "output_tokens": 182
+    },
+    "timestamp": "2026-05-25T13:01:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012917999999999998,
+    "meta": {
+      "input_tokens": 6432,
+      "output_tokens": 545
+    },
+    "timestamp": "2026-05-25T13:01:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011591999999999998,
+    "meta": {
+      "input_tokens": 6936,
+      "output_tokens": 198
+    },
+    "timestamp": "2026-05-25T13:01:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.7015000000000004e-05,
+    "meta": {
+      "input_tokens": 604,
+      "output_tokens": 69
+    },
+    "timestamp": "2026-05-25T13:01:55Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011094,
+    "meta": {
+      "input_tokens": 6484,
+      "output_tokens": 228
+    },
+    "timestamp": "2026-05-25T13:02:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.7674999999999994e-05,
+    "meta": {
+      "input_tokens": 610,
+      "output_tokens": 75
+    },
+    "timestamp": "2026-05-25T13:02:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010813499999999998,
+    "meta": {
+      "input_tokens": 6489,
+      "output_tokens": 180
+    },
+    "timestamp": "2026-05-25T13:02:12Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.037e-05,
+    "meta": {
+      "input_tokens": 617,
+      "output_tokens": 117
+    },
+    "timestamp": "2026-05-25T13:02:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 0.00012562,
+    "meta": {
+      "input_tokens": 608,
+      "output_tokens": 1676
+    },
+    "timestamp": "2026-05-25T13:02:25Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110205,
+    "meta": {
+      "input_tokens": 6527,
+      "output_tokens": 205
+    },
+    "timestamp": "2026-05-25T13:02:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008688,
+    "meta": {
+      "input_tokens": 5236,
+      "output_tokens": 139
+    },
+    "timestamp": "2026-05-25T13:02:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001065,
+    "meta": {
+      "input_tokens": 6536,
+      "output_tokens": 141
+    },
+    "timestamp": "2026-05-25T13:02:34Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008749499999999999,
+    "meta": {
+      "input_tokens": 5277,
+      "output_tokens": 139
+    },
+    "timestamp": "2026-05-25T13:02:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012721499999999999,
+    "meta": {
+      "input_tokens": 7801,
+      "output_tokens": 170
+    },
+    "timestamp": "2026-05-25T13:02:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010872,
+    "meta": {
+      "input_tokens": 6540,
+      "output_tokens": 177
+    },
+    "timestamp": "2026-05-25T13:02:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009054,
+    "meta": {
+      "input_tokens": 5236,
+      "output_tokens": 200
+    },
+    "timestamp": "2026-05-25T13:02:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110625,
+    "meta": {
+      "input_tokens": 6595,
+      "output_tokens": 195
+    },
+    "timestamp": "2026-05-25T13:03:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009408,
+    "meta": {
+      "input_tokens": 5320,
+      "output_tokens": 238
+    },
+    "timestamp": "2026-05-25T13:03:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.000939,
+    "meta": {
+      "input_tokens": 5316,
+      "output_tokens": 236
+    },
+    "timestamp": "2026-05-25T13:03:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00101145,
+    "meta": {
+      "input_tokens": 6631,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T13:03:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011057999999999999,
+    "meta": {
+      "input_tokens": 6628,
+      "output_tokens": 186
+    },
+    "timestamp": "2026-05-25T13:03:23Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.0010810499999999998,
+    "meta": {
+      "input_tokens": 5735,
+      "output_tokens": 368
+    },
+    "timestamp": "2026-05-25T13:03:25Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008916,
+    "meta": {
+      "input_tokens": 5296,
+      "output_tokens": 162
+    },
+    "timestamp": "2026-05-25T13:03:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00100995,
+    "meta": {
+      "input_tokens": 5657,
+      "output_tokens": 269
+    },
+    "timestamp": "2026-05-25T13:03:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00100695,
+    "meta": {
+      "input_tokens": 6605,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-25T13:03:34Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010752000000000001,
+    "meta": {
+      "input_tokens": 6560,
+      "output_tokens": 152
+    },
+    "timestamp": "2026-05-25T13:03:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013414499999999999,
+    "meta": {
+      "input_tokens": 6367,
+      "output_tokens": 644
+    },
+    "timestamp": "2026-05-25T13:03:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00117075,
+    "meta": {
+      "input_tokens": 7029,
+      "output_tokens": 194
+    },
+    "timestamp": "2026-05-25T13:03:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.00110175,
+    "meta": {
+      "input_tokens": 5877,
+      "output_tokens": 367
+    },
+    "timestamp": "2026-05-25T13:03:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013371,
+    "meta": {
+      "input_tokens": 6418,
+      "output_tokens": 624
+    },
+    "timestamp": "2026-05-25T13:04:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00122205,
+    "meta": {
+      "input_tokens": 7051,
+      "output_tokens": 274
+    },
+    "timestamp": "2026-05-25T13:04:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00132675,
+    "meta": {
+      "input_tokens": 6433,
+      "output_tokens": 603
+    },
+    "timestamp": "2026-05-25T13:05:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010654500000000001,
+    "meta": {
+      "input_tokens": 6995,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-25T13:05:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.193000000000001e-05,
+    "meta": {
+      "input_tokens": 619,
+      "output_tokens": 507
+    },
+    "timestamp": "2026-05-25T13:05:36Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011499,
+    "meta": {
+      "input_tokens": 6818,
+      "output_tokens": 212
+    },
+    "timestamp": "2026-05-25T13:05:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.4845e-05,
+    "meta": {
+      "input_tokens": 639,
+      "output_tokens": 540
+    },
+    "timestamp": "2026-05-25T13:06:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011554500000000001,
+    "meta": {
+      "input_tokens": 6875,
+      "output_tokens": 207
+    },
+    "timestamp": "2026-05-25T13:06:23Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.995e-05,
+    "meta": {
+      "input_tokens": 637,
+      "output_tokens": 453
+    },
+    "timestamp": "2026-05-25T13:06:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011736,
+    "meta": {
+      "input_tokens": 6800,
+      "output_tokens": 256
+    },
+    "timestamp": "2026-05-25T13:06:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009258,
+    "meta": {
+      "input_tokens": 5240,
+      "output_tokens": 233
+    },
+    "timestamp": "2026-05-25T13:07:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110925,
+    "meta": {
+      "input_tokens": 6631,
+      "output_tokens": 191
+    },
+    "timestamp": "2026-05-25T13:07:10Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009507000000000001,
+    "meta": {
+      "input_tokens": 5310,
+      "output_tokens": 257
+    },
+    "timestamp": "2026-05-25T13:07:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00108825,
+    "meta": {
+      "input_tokens": 6647,
+      "output_tokens": 152
+    },
+    "timestamp": "2026-05-25T13:07:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00090795,
+    "meta": {
+      "input_tokens": 5309,
+      "output_tokens": 186
+    },
+    "timestamp": "2026-05-25T13:07:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110325,
+    "meta": {
+      "input_tokens": 6583,
+      "output_tokens": 193
+    },
+    "timestamp": "2026-05-25T13:07:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.0011393999999999998,
+    "meta": {
+      "input_tokens": 5988,
+      "output_tokens": 402
+    },
+    "timestamp": "2026-05-25T13:07:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.000972,
+    "meta": {
+      "input_tokens": 5676,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-25T13:07:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011043,
+    "meta": {
+      "input_tokens": 6606,
+      "output_tokens": 189
+    },
+    "timestamp": "2026-05-25T13:08:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009938999999999998,
+    "meta": {
+      "input_tokens": 5738,
+      "output_tokens": 222
+    },
+    "timestamp": "2026-05-25T13:08:08Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010107,
+    "meta": {
+      "input_tokens": 6630,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-25T13:08:10Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013040999999999999,
+    "meta": {
+      "input_tokens": 6386,
+      "output_tokens": 577
+    },
+    "timestamp": "2026-05-25T13:08:17Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00106215,
+    "meta": {
+      "input_tokens": 6973,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-25T13:08:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.3615e-05,
+    "meta": {
+      "input_tokens": 624,
+      "output_tokens": 169
+    },
+    "timestamp": "2026-05-25T13:08:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010892999999999999,
+    "meta": {
+      "input_tokens": 6566,
+      "output_tokens": 174
+    },
+    "timestamp": "2026-05-25T13:08:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.939e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 283
+    },
+    "timestamp": "2026-05-25T13:08:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00090945,
+    "meta": {
+      "input_tokens": 5259,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-25T14:30:17Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010839,
+    "meta": {
+      "input_tokens": 6590,
+      "output_tokens": 159
+    },
+    "timestamp": "2026-05-25T14:30:23Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00098715,
+    "meta": {
+      "input_tokens": 5309,
+      "output_tokens": 318
+    },
+    "timestamp": "2026-05-25T14:30:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010227,
+    "meta": {
+      "input_tokens": 6710,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-25T14:30:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.00114525,
+    "meta": {
+      "input_tokens": 5895,
+      "output_tokens": 435
+    },
+    "timestamp": "2026-05-25T14:30:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00096795,
+    "meta": {
+      "input_tokens": 5653,
+      "output_tokens": 200
+    },
+    "timestamp": "2026-05-25T14:30:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011237999999999999,
+    "meta": {
+      "input_tokens": 6604,
+      "output_tokens": 222
+    },
+    "timestamp": "2026-05-25T14:30:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009825,
+    "meta": {
+      "input_tokens": 5722,
+      "output_tokens": 207
+    },
+    "timestamp": "2026-05-25T14:31:00Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011210999999999999,
+    "meta": {
+      "input_tokens": 6614,
+      "output_tokens": 215
+    },
+    "timestamp": "2026-05-25T14:31:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009606,
+    "meta": {
+      "input_tokens": 5700,
+      "output_tokens": 176
+    },
+    "timestamp": "2026-05-25T14:31:10Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00112755,
+    "meta": {
+      "input_tokens": 6585,
+      "output_tokens": 233
+    },
+    "timestamp": "2026-05-25T14:31:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013000499999999999,
+    "meta": {
+      "input_tokens": 6363,
+      "output_tokens": 576
+    },
+    "timestamp": "2026-05-25T14:31:55Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010618499999999998,
+    "meta": {
+      "input_tokens": 6967,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T14:31:59Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.9245e-05,
+    "meta": {
+      "input_tokens": 622,
+      "output_tokens": 637
+    },
+    "timestamp": "2026-05-25T14:32:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012176999999999997,
+    "meta": {
+      "input_tokens": 6906,
+      "output_tokens": 303
+    },
+    "timestamp": "2026-05-25T14:32:46Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.3625e-05,
+    "meta": {
+      "input_tokens": 607,
+      "output_tokens": 368
+    },
+    "timestamp": "2026-05-25T14:33:11Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011445,
+    "meta": {
+      "input_tokens": 6730,
+      "output_tokens": 225
+    },
+    "timestamp": "2026-05-25T14:33:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.7025e-05,
+    "meta": {
+      "input_tokens": 635,
+      "output_tokens": 220
+    },
+    "timestamp": "2026-05-25T14:33:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001131,
+    "meta": {
+      "input_tokens": 6608,
+      "output_tokens": 233
+    },
+    "timestamp": "2026-05-25T14:33:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009203999999999999,
+    "meta": {
+      "input_tokens": 5236,
+      "output_tokens": 225
+    },
+    "timestamp": "2026-05-25T14:33:47Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110415,
+    "meta": {
+      "input_tokens": 6617,
+      "output_tokens": 186
+    },
+    "timestamp": "2026-05-25T14:33:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00090765,
+    "meta": {
+      "input_tokens": 5295,
+      "output_tokens": 189
+    },
+    "timestamp": "2026-05-25T14:34:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00107625,
+    "meta": {
+      "input_tokens": 6583,
+      "output_tokens": 148
+    },
+    "timestamp": "2026-05-25T14:34:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009476999999999999,
+    "meta": {
+      "input_tokens": 5278,
+      "output_tokens": 260
+    },
+    "timestamp": "2026-05-25T14:34:22Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011166,
+    "meta": {
+      "input_tokens": 6652,
+      "output_tokens": 198
+    },
+    "timestamp": "2026-05-25T14:34:27Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.0011712,
+    "meta": {
+      "input_tokens": 6060,
+      "output_tokens": 437
+    },
+    "timestamp": "2026-05-25T14:34:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "template_renderer",
+    "cost": 0.0014146500000000002,
+    "meta": {
+      "input_tokens": 6635,
+      "output_tokens": 699
+    },
+    "timestamp": "2026-05-25T14:35:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "video_prompt_writer",
+    "cost": 0.00052215,
+    "meta": {
+      "input_tokens": 2477,
+      "output_tokens": 251
+    },
+    "timestamp": "2026-05-25T14:36:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009640499999999999,
+    "meta": {
+      "input_tokens": 5647,
+      "output_tokens": 195
+    },
+    "timestamp": "2026-05-25T14:36:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010073999999999999,
+    "meta": {
+      "input_tokens": 6604,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-25T14:36:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012571499999999998,
+    "meta": {
+      "input_tokens": 6357,
+      "output_tokens": 506
+    },
+    "timestamp": "2026-05-25T14:36:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001179,
+    "meta": {
+      "input_tokens": 6928,
+      "output_tokens": 233
+    },
+    "timestamp": "2026-05-25T14:36:55Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00139485,
+    "meta": {
+      "input_tokens": 6583,
+      "output_tokens": 679
+    },
+    "timestamp": "2026-05-25T14:37:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010803,
+    "meta": {
+      "input_tokens": 7078,
+      "output_tokens": 31
+    },
+    "timestamp": "2026-05-25T14:37:17Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 8.327000000000001e-05,
+    "meta": {
+      "input_tokens": 623,
+      "output_tokens": 891
+    },
+    "timestamp": "2026-05-25T14:38:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00124935,
+    "meta": {
+      "input_tokens": 7069,
+      "output_tokens": 315
+    },
+    "timestamp": "2026-05-25T14:38:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.478e-05,
+    "meta": {
+      "input_tokens": 617,
+      "output_tokens": 379
+    },
+    "timestamp": "2026-05-25T14:38:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011592,
+    "meta": {
+      "input_tokens": 6736,
+      "output_tokens": 248
+    },
+    "timestamp": "2026-05-25T14:39:08Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.38e-05,
+    "meta": {
+      "input_tokens": 614,
+      "output_tokens": 546
+    },
+    "timestamp": "2026-05-25T14:39:51Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011925,
+    "meta": {
+      "input_tokens": 6854,
+      "output_tokens": 274
+    },
+    "timestamp": "2026-05-25T14:39:56Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008895,
+    "meta": {
+      "input_tokens": 5230,
+      "output_tokens": 175
+    },
+    "timestamp": "2026-05-25T14:40:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010062,
+    "meta": {
+      "input_tokens": 6580,
+      "output_tokens": 32
+    },
+    "timestamp": "2026-05-25T14:40:08Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.00120135,
+    "meta": {
+      "input_tokens": 6153,
+      "output_tokens": 464
+    },
+    "timestamp": "2026-05-25T14:40:27Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.5375e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 210
+    },
+    "timestamp": "2026-05-26T14:46:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009748499999999999,
+    "meta": {
+      "input_tokens": 5643,
+      "output_tokens": 214
+    },
+    "timestamp": "2026-05-26T14:46:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00125115,
+    "meta": {
+      "input_tokens": 6353,
+      "output_tokens": 497
+    },
+    "timestamp": "2026-05-26T14:46:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0010041,
+    "meta": {
+      "input_tokens": 5226,
+      "output_tokens": 367
+    },
+    "timestamp": "2026-05-26T14:46:34Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110595,
+    "meta": {
+      "input_tokens": 6585,
+      "output_tokens": 197
+    },
+    "timestamp": "2026-05-26T14:46:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010978499999999998,
+    "meta": {
+      "input_tokens": 6619,
+      "output_tokens": 175
+    },
+    "timestamp": "2026-05-26T14:47:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011836499999999998,
+    "meta": {
+      "input_tokens": 6927,
+      "output_tokens": 241
+    },
+    "timestamp": "2026-05-26T14:47:22Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011198999999999998,
+    "meta": {
+      "input_tokens": 6754,
+      "output_tokens": 178
+    },
+    "timestamp": "2026-05-26T14:47:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.7045e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 604
+    },
+    "timestamp": "2026-05-26T14:48:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011710499999999999,
+    "meta": {
+      "input_tokens": 6907,
+      "output_tokens": 225
+    },
+    "timestamp": "2026-05-26T14:48:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00099015,
+    "meta": {
+      "input_tokens": 5637,
+      "output_tokens": 241
+    },
+    "timestamp": "2026-05-26T14:48:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.9765e-05,
+    "meta": {
+      "input_tokens": 613,
+      "output_tokens": 110
+    },
+    "timestamp": "2026-05-26T14:48:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00128325,
+    "meta": {
+      "input_tokens": 6347,
+      "output_tokens": 552
+    },
+    "timestamp": "2026-05-26T14:48:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113475,
+    "meta": {
+      "input_tokens": 6589,
+      "output_tokens": 244
+    },
+    "timestamp": "2026-05-26T14:48:55Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.2105e-05,
+    "meta": {
+      "input_tokens": 621,
+      "output_tokens": 690
+    },
+    "timestamp": "2026-05-26T14:49:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011056500000000001,
+    "meta": {
+      "input_tokens": 6511,
+      "output_tokens": 215
+    },
+    "timestamp": "2026-05-26T14:49:17Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010586999999999999,
+    "meta": {
+      "input_tokens": 6946,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-26T14:49:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00095175,
+    "meta": {
+      "input_tokens": 5729,
+      "output_tokens": 154
+    },
+    "timestamp": "2026-05-26T14:49:34Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011826,
+    "meta": {
+      "input_tokens": 6956,
+      "output_tokens": 232
+    },
+    "timestamp": "2026-05-26T14:49:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00112785,
+    "meta": {
+      "input_tokens": 6563,
+      "output_tokens": 239
+    },
+    "timestamp": "2026-05-26T14:49:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009504,
+    "meta": {
+      "input_tokens": 5728,
+      "output_tokens": 152
+    },
+    "timestamp": "2026-05-26T14:50:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00109815,
+    "meta": {
+      "input_tokens": 6561,
+      "output_tokens": 190
+    },
+    "timestamp": "2026-05-26T14:50:11Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.8475e-05,
+    "meta": {
+      "input_tokens": 618,
+      "output_tokens": 627
+    },
+    "timestamp": "2026-05-26T14:50:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010561499999999998,
+    "meta": {
+      "input_tokens": 6917,
+      "output_tokens": 31
+    },
+    "timestamp": "2026-05-26T14:50:22Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009572999999999999,
+    "meta": {
+      "input_tokens": 5706,
+      "output_tokens": 169
+    },
+    "timestamp": "2026-05-26T14:50:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00111855,
+    "meta": {
+      "input_tokens": 6577,
+      "output_tokens": 220
+    },
+    "timestamp": "2026-05-26T14:50:46Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009669,
+    "meta": {
+      "input_tokens": 5722,
+      "output_tokens": 181
+    },
+    "timestamp": "2026-05-26T14:50:46Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011265,
+    "meta": {
+      "input_tokens": 6590,
+      "output_tokens": 230
+    },
+    "timestamp": "2026-05-26T14:51:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009614999999999999,
+    "meta": {
+      "input_tokens": 5738,
+      "output_tokens": 168
+    },
+    "timestamp": "2026-05-26T14:51:28Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.623e-05,
+    "meta": {
+      "input_tokens": 626,
+      "output_tokens": 760
+    },
+    "timestamp": "2026-05-26T14:51:36Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00111675,
+    "meta": {
+      "input_tokens": 6577,
+      "output_tokens": 217
+    },
+    "timestamp": "2026-05-26T14:51:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009729,
+    "meta": {
+      "input_tokens": 5738,
+      "output_tokens": 187
+    },
+    "timestamp": "2026-05-26T14:51:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011734499999999997,
+    "meta": {
+      "input_tokens": 7019,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-26T14:51:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00111825,
+    "meta": {
+      "input_tokens": 6595,
+      "output_tokens": 215
+    },
+    "timestamp": "2026-05-26T14:52:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.664e-05,
+    "meta": {
+      "input_tokens": 621,
+      "output_tokens": 227
+    },
+    "timestamp": "2026-05-26T14:52:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00035459999999999995,
+    "meta": {
+      "input_tokens": 1576,
+      "output_tokens": 197
+    },
+    "timestamp": "2026-05-26T14:52:10Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011057999999999999,
+    "meta": {
+      "input_tokens": 6612,
+      "output_tokens": 190
+    },
+    "timestamp": "2026-05-26T14:52:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.423e-05,
+    "meta": {
+      "input_tokens": 623,
+      "output_tokens": 363
+    },
+    "timestamp": "2026-05-26T14:52:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010248,
+    "meta": {
+      "input_tokens": 6720,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-26T14:52:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00128325,
+    "meta": {
+      "input_tokens": 6455,
+      "output_tokens": 525
+    },
+    "timestamp": "2026-05-26T14:52:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 3.9985e-05,
+    "meta": {
+      "input_tokens": 609,
+      "output_tokens": 118
+    },
+    "timestamp": "2026-05-26T14:52:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00094185,
+    "meta": {
+      "input_tokens": 5635,
+      "output_tokens": 161
+    },
+    "timestamp": "2026-05-26T14:52:56Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011929500000000001,
+    "meta": {
+      "input_tokens": 6945,
+      "output_tokens": 252
+    },
+    "timestamp": "2026-05-26T14:52:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00111225,
+    "meta": {
+      "input_tokens": 6519,
+      "output_tokens": 224
+    },
+    "timestamp": "2026-05-26T14:53:22Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012975,
+    "meta": {
+      "input_tokens": 6442,
+      "output_tokens": 552
+    },
+    "timestamp": "2026-05-26T14:53:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010566,
+    "meta": {
+      "input_tokens": 6936,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-26T14:53:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.000948,
+    "meta": {
+      "input_tokens": 5292,
+      "output_tokens": 257
+    },
+    "timestamp": "2026-05-26T14:53:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011435999999999998,
+    "meta": {
+      "input_tokens": 6568,
+      "output_tokens": 264
+    },
+    "timestamp": "2026-05-26T14:53:51Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011056500000000001,
+    "meta": {
+      "input_tokens": 6651,
+      "output_tokens": 180
+    },
+    "timestamp": "2026-05-26T14:53:59Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009521999999999999,
+    "meta": {
+      "input_tokens": 5292,
+      "output_tokens": 264
+    },
+    "timestamp": "2026-05-26T14:54:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.5175e-05,
+    "meta": {
+      "input_tokens": 608,
+      "output_tokens": 577
+    },
+    "timestamp": "2026-05-26T14:54:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011456999999999997,
+    "meta": {
+      "input_tokens": 6874,
+      "output_tokens": 191
+    },
+    "timestamp": "2026-05-26T14:54:36Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011353499999999998,
+    "meta": {
+      "input_tokens": 6657,
+      "output_tokens": 228
+    },
+    "timestamp": "2026-05-26T14:54:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009342,
+    "meta": {
+      "input_tokens": 5320,
+      "output_tokens": 227
+    },
+    "timestamp": "2026-05-26T14:54:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.6970000000000006e-05,
+    "meta": {
+      "input_tokens": 613,
+      "output_tokens": 241
+    },
+    "timestamp": "2026-05-26T14:54:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011164499999999997,
+    "meta": {
+      "input_tokens": 6623,
+      "output_tokens": 205
+    },
+    "timestamp": "2026-05-26T14:55:08Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001137,
+    "meta": {
+      "input_tokens": 6620,
+      "output_tokens": 240
+    },
+    "timestamp": "2026-05-26T14:55:12Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0010233,
+    "meta": {
+      "input_tokens": 5226,
+      "output_tokens": 399
+    },
+    "timestamp": "2026-05-26T14:55:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00102105,
+    "meta": {
+      "input_tokens": 5643,
+      "output_tokens": 291
+    },
+    "timestamp": "2026-05-26T14:55:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.4175e-05,
+    "meta": {
+      "input_tokens": 616,
+      "output_tokens": 369
+    },
+    "timestamp": "2026-05-26T14:55:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00129675,
+    "meta": {
+      "input_tokens": 6353,
+      "output_tokens": 573
+    },
+    "timestamp": "2026-05-26T14:55:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011547,
+    "meta": {
+      "input_tokens": 6730,
+      "output_tokens": 242
+    },
+    "timestamp": "2026-05-26T14:55:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.183000000000001e-05,
+    "meta": {
+      "input_tokens": 616,
+      "output_tokens": 690
+    },
+    "timestamp": "2026-05-26T14:55:59Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00093255,
+    "meta": {
+      "input_tokens": 5753,
+      "output_tokens": 116
+    },
+    "timestamp": "2026-05-26T14:56:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011382,
+    "meta": {
+      "input_tokens": 6756,
+      "output_tokens": 208
+    },
+    "timestamp": "2026-05-26T14:56:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010998,
+    "meta": {
+      "input_tokens": 6528,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-26T14:56:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011181,
+    "meta": {
+      "input_tokens": 6634,
+      "output_tokens": 205
+    },
+    "timestamp": "2026-05-26T14:56:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009434999999999999,
+    "meta": {
+      "input_tokens": 5738,
+      "output_tokens": 138
+    },
+    "timestamp": "2026-05-26T14:56:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00121035,
+    "meta": {
+      "input_tokens": 6957,
+      "output_tokens": 278
+    },
+    "timestamp": "2026-05-26T14:56:28Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012078,
+    "meta": {
+      "input_tokens": 6940,
+      "output_tokens": 278
+    },
+    "timestamp": "2026-05-26T14:56:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011116499999999998,
+    "meta": {
+      "input_tokens": 6547,
+      "output_tokens": 216
+    },
+    "timestamp": "2026-05-26T14:56:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009534,
+    "meta": {
+      "input_tokens": 5732,
+      "output_tokens": 156
+    },
+    "timestamp": "2026-05-26T14:56:42Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0010018499999999999,
+    "meta": {
+      "input_tokens": 5323,
+      "output_tokens": 339
+    },
+    "timestamp": "2026-05-26T14:57:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011420999999999998,
+    "meta": {
+      "input_tokens": 6566,
+      "output_tokens": 262
+    },
+    "timestamp": "2026-05-26T14:57:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012251999999999999,
+    "meta": {
+      "input_tokens": 6344,
+      "output_tokens": 456
+    },
+    "timestamp": "2026-05-26T14:57:12Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113325,
+    "meta": {
+      "input_tokens": 6723,
+      "output_tokens": 208
+    },
+    "timestamp": "2026-05-26T14:57:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012506999999999998,
+    "meta": {
+      "input_tokens": 6846,
+      "output_tokens": 373
+    },
+    "timestamp": "2026-05-26T14:57:41Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00097755,
+    "meta": {
+      "input_tokens": 5313,
+      "output_tokens": 301
+    },
+    "timestamp": "2026-05-26T14:57:52Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011308499999999999,
+    "meta": {
+      "input_tokens": 6687,
+      "output_tokens": 213
+    },
+    "timestamp": "2026-05-26T14:57:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0010309499999999999,
+    "meta": {
+      "input_tokens": 5297,
+      "output_tokens": 394
+    },
+    "timestamp": "2026-05-26T14:58:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011388,
+    "meta": {
+      "input_tokens": 6768,
+      "output_tokens": 206
+    },
+    "timestamp": "2026-05-26T14:58:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013191,
+    "meta": {
+      "input_tokens": 6434,
+      "output_tokens": 590
+    },
+    "timestamp": "2026-05-26T14:58:28Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00100815,
+    "meta": {
+      "input_tokens": 5729,
+      "output_tokens": 248
+    },
+    "timestamp": "2026-05-26T14:58:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00101415,
+    "meta": {
+      "input_tokens": 6653,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-26T14:58:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011972999999999999,
+    "meta": {
+      "input_tokens": 6978,
+      "output_tokens": 251
+    },
+    "timestamp": "2026-05-26T14:58:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013212,
+    "meta": {
+      "input_tokens": 6420,
+      "output_tokens": 597
+    },
+    "timestamp": "2026-05-26T14:59:00Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012006000000000002,
+    "meta": {
+      "input_tokens": 6988,
+      "output_tokens": 254
+    },
+    "timestamp": "2026-05-26T14:59:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013518,
+    "meta": {
+      "input_tokens": 6472,
+      "output_tokens": 635
+    },
+    "timestamp": "2026-05-26T14:59:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011918999999999999,
+    "meta": {
+      "input_tokens": 7066,
+      "output_tokens": 220
+    },
+    "timestamp": "2026-05-26T14:59:47Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013129499999999998,
+    "meta": {
+      "input_tokens": 6477,
+      "output_tokens": 569
+    },
+    "timestamp": "2026-05-26T14:59:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010615499999999999,
+    "meta": {
+      "input_tokens": 6965,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-26T14:59:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00130635,
+    "meta": {
+      "input_tokens": 6429,
+      "output_tokens": 570
+    },
+    "timestamp": "2026-05-26T15:00:00Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009522,
+    "meta": {
+      "input_tokens": 5640,
+      "output_tokens": 177
+    },
+    "timestamp": "2026-05-26T15:00:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.015000000000001e-05,
+    "meta": {
+      "input_tokens": 617,
+      "output_tokens": 113
+    },
+    "timestamp": "2026-05-26T15:00:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011543999999999999,
+    "meta": {
+      "input_tokens": 7024,
+      "output_tokens": 168
+    },
+    "timestamp": "2026-05-26T15:00:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012663,
+    "meta": {
+      "input_tokens": 6350,
+      "output_tokens": 523
+    },
+    "timestamp": "2026-05-26T15:00:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110745,
+    "meta": {
+      "input_tokens": 6587,
+      "output_tokens": 199
+    },
+    "timestamp": "2026-05-26T15:00:37Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011216999999999998,
+    "meta": {
+      "input_tokens": 6518,
+      "output_tokens": 240
+    },
+    "timestamp": "2026-05-26T15:00:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00129375,
+    "meta": {
+      "input_tokens": 6421,
+      "output_tokens": 551
+    },
+    "timestamp": "2026-05-26T15:00:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011914500000000001,
+    "meta": {
+      "input_tokens": 6975,
+      "output_tokens": 242
+    },
+    "timestamp": "2026-05-26T15:00:51Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011731499999999998,
+    "meta": {
+      "input_tokens": 6921,
+      "output_tokens": 225
+    },
+    "timestamp": "2026-05-26T15:01:01Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009632999999999999,
+    "meta": {
+      "input_tokens": 5718,
+      "output_tokens": 176
+    },
+    "timestamp": "2026-05-26T15:01:06Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011045999999999999,
+    "meta": {
+      "input_tokens": 6584,
+      "output_tokens": 195
+    },
+    "timestamp": "2026-05-26T15:01:22Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009898499999999998,
+    "meta": {
+      "input_tokens": 5711,
+      "output_tokens": 222
+    },
+    "timestamp": "2026-05-26T15:01:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113715,
+    "meta": {
+      "input_tokens": 6629,
+      "output_tokens": 238
+    },
+    "timestamp": "2026-05-26T15:01:44Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.8705e-05,
+    "meta": {
+      "input_tokens": 625,
+      "output_tokens": 806
+    },
+    "timestamp": "2026-05-26T15:01:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.000984,
+    "meta": {
+      "input_tokens": 5756,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-26T15:01:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010075499999999999,
+    "meta": {
+      "input_tokens": 6609,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-26T15:01:51Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.4880000000000004e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 201
+    },
+    "timestamp": "2026-05-26T15:02:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011863499999999999,
+    "meta": {
+      "input_tokens": 7045,
+      "output_tokens": 216
+    },
+    "timestamp": "2026-05-26T15:02:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011124000000000002,
+    "meta": {
+      "input_tokens": 6596,
+      "output_tokens": 205
+    },
+    "timestamp": "2026-05-26T15:02:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.000499999999999e-05,
+    "meta": {
+      "input_tokens": 609,
+      "output_tokens": 482
+    },
+    "timestamp": "2026-05-26T15:02:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113955,
+    "meta": {
+      "input_tokens": 6785,
+      "output_tokens": 203
+    },
+    "timestamp": "2026-05-26T15:02:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.0015e-05,
+    "meta": {
+      "input_tokens": 620,
+      "output_tokens": 653
+    },
+    "timestamp": "2026-05-26T15:03:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00116775,
+    "meta": {
+      "input_tokens": 6933,
+      "output_tokens": 213
+    },
+    "timestamp": "2026-05-26T15:03:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.594499999999999e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 584
+    },
+    "timestamp": "2026-05-26T15:03:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.4725e-05,
+    "meta": {
+      "input_tokens": 617,
+      "output_tokens": 378
+    },
+    "timestamp": "2026-05-26T15:03:46Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012225,
+    "meta": {
+      "input_tokens": 6878,
+      "output_tokens": 318
+    },
+    "timestamp": "2026-05-26T15:03:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011530499999999999,
+    "meta": {
+      "input_tokens": 6719,
+      "output_tokens": 242
+    },
+    "timestamp": "2026-05-26T15:03:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0011921999999999998,
+    "meta": {
+      "input_tokens": 6352,
+      "output_tokens": 399
+    },
+    "timestamp": "2026-05-26T15:04:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.1855000000000005e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 146
+    },
+    "timestamp": "2026-05-26T15:04:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009626999999999999,
+    "meta": {
+      "input_tokens": 5642,
+      "output_tokens": 194
+    },
+    "timestamp": "2026-05-26T15:04:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00129255,
+    "meta": {
+      "input_tokens": 6413,
+      "output_tokens": 551
+    },
+    "timestamp": "2026-05-26T15:04:11Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00097575,
+    "meta": {
+      "input_tokens": 5225,
+      "output_tokens": 320
+    },
+    "timestamp": "2026-05-26T15:04:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010449,
+    "meta": {
+      "input_tokens": 6858,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-26T15:04:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011842499999999998,
+    "meta": {
+      "input_tokens": 6951,
+      "output_tokens": 236
+    },
+    "timestamp": "2026-05-26T15:04:29Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011028,
+    "meta": {
+      "input_tokens": 6536,
+      "output_tokens": 204
+    },
+    "timestamp": "2026-05-26T15:04:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110415,
+    "meta": {
+      "input_tokens": 6597,
+      "output_tokens": 191
+    },
+    "timestamp": "2026-05-26T15:04:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012881999999999998,
+    "meta": {
+      "input_tokens": 6444,
+      "output_tokens": 536
+    },
+    "timestamp": "2026-05-26T15:04:45Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010618499999999998,
+    "meta": {
+      "input_tokens": 6955,
+      "output_tokens": 31
+    },
+    "timestamp": "2026-05-26T15:04:47Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00111075,
+    "meta": {
+      "input_tokens": 6713,
+      "output_tokens": 173
+    },
+    "timestamp": "2026-05-26T15:04:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009528,
+    "meta": {
+      "input_tokens": 5636,
+      "output_tokens": 179
+    },
+    "timestamp": "2026-05-26T15:04:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.4395e-05,
+    "meta": {
+      "input_tokens": 621,
+      "output_tokens": 368
+    },
+    "timestamp": "2026-05-26T15:05:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.001125,
+    "meta": {
+      "input_tokens": 6728,
+      "output_tokens": 193
+    },
+    "timestamp": "2026-05-26T15:05:21Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013262999999999999,
+    "meta": {
+      "input_tokens": 6346,
+      "output_tokens": 624
+    },
+    "timestamp": "2026-05-26T15:05:39Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00110775,
+    "meta": {
+      "input_tokens": 6585,
+      "output_tokens": 200
+    },
+    "timestamp": "2026-05-26T15:05:56Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.37e-05,
+    "meta": {
+      "input_tokens": 625,
+      "output_tokens": 715
+    },
+    "timestamp": "2026-05-26T15:06:09Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011706,
+    "meta": {
+      "input_tokens": 6972,
+      "output_tokens": 208
+    },
+    "timestamp": "2026-05-26T15:06:14Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0012078,
+    "meta": {
+      "input_tokens": 7004,
+      "output_tokens": 262
+    },
+    "timestamp": "2026-05-26T15:06:16Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00095655,
+    "meta": {
+      "input_tokens": 5729,
+      "output_tokens": 162
+    },
+    "timestamp": "2026-05-26T15:06:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010026,
+    "meta": {
+      "input_tokens": 6572,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-26T15:06:23Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 4.6585e-05,
+    "meta": {
+      "input_tokens": 619,
+      "output_tokens": 228
+    },
+    "timestamp": "2026-05-26T15:06:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012945,
+    "meta": {
+      "input_tokens": 6450,
+      "output_tokens": 545
+    },
+    "timestamp": "2026-05-26T15:06:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011945999999999999,
+    "meta": {
+      "input_tokens": 6932,
+      "output_tokens": 258
+    },
+    "timestamp": "2026-05-26T15:06:47Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011353499999999998,
+    "meta": {
+      "input_tokens": 6605,
+      "output_tokens": 241
+    },
+    "timestamp": "2026-05-26T15:06:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00094155,
+    "meta": {
+      "input_tokens": 5721,
+      "output_tokens": 139
+    },
+    "timestamp": "2026-05-26T15:06:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011128499999999999,
+    "meta": {
+      "input_tokens": 6547,
+      "output_tokens": 218
+    },
+    "timestamp": "2026-05-26T15:06:59Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00140115,
+    "meta": {
+      "input_tokens": 6441,
+      "output_tokens": 725
+    },
+    "timestamp": "2026-05-26T15:07:02Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00095925,
+    "meta": {
+      "input_tokens": 5731,
+      "output_tokens": 166
+    },
+    "timestamp": "2026-05-26T15:07:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010821,
+    "meta": {
+      "input_tokens": 7106,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-26T15:07:04Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011030999999999999,
+    "meta": {
+      "input_tokens": 6574,
+      "output_tokens": 195
+    },
+    "timestamp": "2026-05-26T15:07:08Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0009542999999999999,
+    "meta": {
+      "input_tokens": 5730,
+      "output_tokens": 158
+    },
+    "timestamp": "2026-05-26T15:07:13Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011240999999999998,
+    "meta": {
+      "input_tokens": 6566,
+      "output_tokens": 232
+    },
+    "timestamp": "2026-05-26T15:07:19Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009054,
+    "meta": {
+      "input_tokens": 5280,
+      "output_tokens": 189
+    },
+    "timestamp": "2026-05-26T15:07:33Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00109395,
+    "meta": {
+      "input_tokens": 6581,
+      "output_tokens": 178
+    },
+    "timestamp": "2026-05-26T15:07:37Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0008959500000000001,
+    "meta": {
+      "input_tokens": 5289,
+      "output_tokens": 171
+    },
+    "timestamp": "2026-05-26T15:07:41Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00112155,
+    "meta": {
+      "input_tokens": 6573,
+      "output_tokens": 226
+    },
+    "timestamp": "2026-05-26T15:07:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00093645,
+    "meta": {
+      "input_tokens": 5319,
+      "output_tokens": 231
+    },
+    "timestamp": "2026-05-26T15:08:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010098,
+    "meta": {
+      "input_tokens": 6624,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-26T15:08:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0010257,
+    "meta": {
+      "input_tokens": 5642,
+      "output_tokens": 299
+    },
+    "timestamp": "2026-05-26T15:08:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0012641999999999998,
+    "meta": {
+      "input_tokens": 6352,
+      "output_tokens": 519
+    },
+    "timestamp": "2026-05-26T15:08:24Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.00096495,
+    "meta": {
+      "input_tokens": 5225,
+      "output_tokens": 302
+    },
+    "timestamp": "2026-05-26T15:08:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.798000000000001e-05,
+    "meta": {
+      "input_tokens": 615,
+      "output_tokens": 621
+    },
+    "timestamp": "2026-05-26T15:08:51Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113205,
+    "meta": {
+      "input_tokens": 6699,
+      "output_tokens": 212
+    },
+    "timestamp": "2026-05-26T15:08:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010551,
+    "meta": {
+      "input_tokens": 6910,
+      "output_tokens": 31
+    },
+    "timestamp": "2026-05-26T15:08:59Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00112185,
+    "meta": {
+      "input_tokens": 6695,
+      "output_tokens": 196
+    },
+    "timestamp": "2026-05-26T15:09:14Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011948999999999998,
+    "meta": {
+      "input_tokens": 6886,
+      "output_tokens": 270
+    },
+    "timestamp": "2026-05-26T15:09:20Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00097425,
+    "meta": {
+      "input_tokens": 5739,
+      "output_tokens": 189
+    },
+    "timestamp": "2026-05-26T15:09:35Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010086000000000001,
+    "meta": {
+      "input_tokens": 6596,
+      "output_tokens": 32
+    },
+    "timestamp": "2026-05-26T15:09:39Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009934499999999999,
+    "meta": {
+      "input_tokens": 5291,
+      "output_tokens": 333
+    },
+    "timestamp": "2026-05-26T15:10:05Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011109,
+    "meta": {
+      "input_tokens": 6722,
+      "output_tokens": 171
+    },
+    "timestamp": "2026-05-26T15:10:18Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0010206,
+    "meta": {
+      "input_tokens": 5296,
+      "output_tokens": 377
+    },
+    "timestamp": "2026-05-26T15:10:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011518499999999998,
+    "meta": {
+      "input_tokens": 6767,
+      "output_tokens": 228
+    },
+    "timestamp": "2026-05-26T15:10:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0009155999999999999,
+    "meta": {
+      "input_tokens": 5316,
+      "output_tokens": 197
+    },
+    "timestamp": "2026-05-26T15:10:37Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010061999999999998,
+    "meta": {
+      "input_tokens": 6596,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-26T15:10:40Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 7.568000000000001e-05,
+    "meta": {
+      "input_tokens": 608,
+      "output_tokens": 768
+    },
+    "timestamp": "2026-05-26T15:11:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00117,
+    "meta": {
+      "input_tokens": 7048,
+      "output_tokens": 188
+    },
+    "timestamp": "2026-05-26T15:11:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.1315e-05,
+    "meta": {
+      "input_tokens": 620,
+      "output_tokens": 313
+    },
+    "timestamp": "2026-05-26T15:11:58Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011156999999999999,
+    "meta": {
+      "input_tokens": 6658,
+      "output_tokens": 195
+    },
+    "timestamp": "2026-05-26T15:12:13Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 6.4625e-05,
+    "meta": {
+      "input_tokens": 617,
+      "output_tokens": 558
+    },
+    "timestamp": "2026-05-26T15:12:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011893499999999998,
+    "meta": {
+      "input_tokens": 6861,
+      "output_tokens": 267
+    },
+    "timestamp": "2026-05-26T15:12:57Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.0004001999999999999,
+    "meta": {
+      "input_tokens": 1576,
+      "output_tokens": 273
+    },
+    "timestamp": "2026-05-26T15:13:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0007365,
+    "meta": {
+      "input_tokens": 2286,
+      "output_tokens": 656
+    },
+    "timestamp": "2026-05-26T15:13:39Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 5.478e-05,
+    "meta": {
+      "input_tokens": 651,
+      "output_tokens": 345
+    },
+    "timestamp": "2026-05-26T15:14:03Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "reddit",
+    "cost": 0.0003861,
+    "meta": {
+      "input_tokens": 1158,
+      "output_tokens": 354
+    },
+    "timestamp": "2026-05-26T15:14:28Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "linkedin",
+    "cost": 0.00094065,
+    "meta": {
+      "input_tokens": 5651,
+      "output_tokens": 155
+    },
+    "timestamp": "2026-05-27T13:01:15Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.00131895,
+    "meta": {
+      "input_tokens": 6361,
+      "output_tokens": 608
+    },
+    "timestamp": "2026-05-27T13:01:26Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 0.00033363000000000007,
+    "meta": {
+      "input_tokens": 5696,
+      "output_tokens": 370
+    },
+    "timestamp": "2026-05-27T13:01:31Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "template_renderer",
+    "cost": 0.0013944,
+    "meta": {
+      "input_tokens": 7440,
+      "output_tokens": 464
+    },
+    "timestamp": "2026-05-27T13:01:50Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "video_prompt_writer",
+    "cost": 0.00053535,
+    "meta": {
+      "input_tokens": 2477,
+      "output_tokens": 273
+    },
+    "timestamp": "2026-05-27T13:02:32Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010008,
+    "meta": {
+      "input_tokens": 6564,
+      "output_tokens": 27
+    },
+    "timestamp": "2026-05-27T13:02:38Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011875499999999999,
+    "meta": {
+      "input_tokens": 6997,
+      "output_tokens": 230
+    },
+    "timestamp": "2026-05-27T13:02:49Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011516999999999999,
+    "meta": {
+      "input_tokens": 6698,
+      "output_tokens": 245
+    },
+    "timestamp": "2026-05-27T13:03:07Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "carousel",
+    "cost": 0.0013433999999999998,
+    "meta": {
+      "input_tokens": 6448,
+      "output_tokens": 627
+    },
+    "timestamp": "2026-05-27T13:03:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010761,
+    "meta": {
+      "input_tokens": 7062,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-27T13:03:56Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 0.00034496,
+    "meta": {
+      "input_tokens": 5789,
+      "output_tokens": 483
+    },
+    "timestamp": "2026-05-27T13:04:30Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.00113475,
+    "meta": {
+      "input_tokens": 6669,
+      "output_tokens": 224
+    },
+    "timestamp": "2026-05-27T13:04:53Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 0.000347875,
+    "meta": {
+      "input_tokens": 5811,
+      "output_tokens": 514
+    },
+    "timestamp": "2026-05-27T13:05:34Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0011104499999999998,
+    "meta": {
+      "input_tokens": 6683,
+      "output_tokens": 180
+    },
+    "timestamp": "2026-05-27T13:05:54Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "mistralai/mistral-7b-instruct-v0.1",
+    "task": "twitter",
+    "cost": 0.00035342999999999996,
+    "meta": {
+      "input_tokens": 5788,
+      "output_tokens": 638
+    },
+    "timestamp": "2026-05-27T13:06:43Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "qa",
+    "cost": 0.0010226999999999999,
+    "meta": {
+      "input_tokens": 6706,
+      "output_tokens": 28
+    },
+    "timestamp": "2026-05-27T13:06:48Z"
+  },
+  {
+    "provider": "openrouter",
+    "model": "openai/gpt-4o-mini",
+    "task": "self_improve",
+    "cost": 0.0012320999999999999,
+    "meta": {
+      "input_tokens": 6066,
+      "output_tokens": 537
+    },
+    "timestamp": "2026-05-27T13:07:34Z"
+  }
+]

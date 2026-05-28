@@ -21,6 +21,7 @@ from openai import OpenAI
 from config import (
     OPENROUTER_API_KEY,
     IMAGE_GENERATION_ENABLED,
+    IMAGE_TEMPLATE_ENABLED,
     IMAGE_T2I_MODEL,
     IMAGE_I2I_MODEL,
     IMAGE_CAROUSEL_SIZE,
@@ -204,7 +205,9 @@ def build_style_lock_block(fingerprint: dict) -> str:
         f"Materials: {fingerprint['material_language']}\n"
         f"Mood: {fingerprint['mood']}\n"
         f"Composition: {fingerprint['composition_principle']}\n"
-        f"Text in image: NONE\n"
+        f"ABSOLUTE NO TEXT RULE: render ZERO text, letters, numbers, words, labels, "
+        f"captions, watermarks, logos, or typography of any kind anywhere in the image. "
+        f"Pure photographic/architectural scene only. Any characters = automatic failure.\n"
         f"---\n"
         f"SCENE FOR THIS SLIDE:\n"
     )
@@ -221,18 +224,23 @@ def build_slide_prompt(
     """
     scene = brief.get("prompt", "")
 
+    _no_text = (
+        "CRITICAL: NO text, letters, numbers, words, labels, captions, watermarks, "
+        "logos, or typography of ANY kind rendered in image. Pure scene only."
+    )
     if slide_index == 0:
         return (
             f"{scene}\n\n"
             f"Photography: photorealistic architectural, soft diffuse natural light.\n"
-            f"Format: portrait 4:5 ratio. No text in image. No watermarks."
+            f"Format: portrait 4:5 ratio.\n"
+            f"{_no_text}"
         )
     else:
         return (
             f"{style_lock}{scene}\n\n"
             f"Critical: maintain the exact color palette and lighting from the reference image.\n"
             f"Only the subject and spatial composition should differ.\n"
-            f"No text in image. No watermarks."
+            f"{_no_text}"
         )
 
 
@@ -419,17 +427,18 @@ def generate_carousel_images(
                 print(f"      [image_gen] FATAL: Slide 1 failed. Aborting carousel generation.")
                 return []  # Abort entire carousel if slide 1 fails
         else:
-            # Slides 2-N: image-to-image using previous slide
+            # Slides 2-N: image-to-image using previous slide (only if i2i model is configured)
             image_url = None
-            if previous_image_url:
+            if IMAGE_I2I_MODEL and previous_image_url:
                 image_url = _generate_with_retry(
                     _generate_i2i, prompt, previous_image_url
                 )
+                if image_url is None:
+                    print(f"      [image_gen] slide_{slide_num:02d}: i2i failed, falling back to t2i")
+                    errors.append(f"slide_{slide_num:02d}: img2img failed, used t2i fallback")
 
             if image_url is None:
-                # Fallback: t2i with full style block + scene content
-                print(f"      [image_gen] slide_{slide_num:02d}: i2i failed, falling back to t2i")
-                errors.append(f"slide_{slide_num:02d}: img2img failed, used t2i fallback")
+                # t2i with full style lock block for visual consistency
                 image_url = _generate_with_retry(_generate_t2i, prompt, IMAGE_CAROUSEL_SIZE)
 
             if image_url is None:
@@ -467,23 +476,28 @@ def generate_carousel_images(
 # ── Single Image Generation (LinkedIn, Twitter) ─────────────────────────────
 
 # Platform-specific guards and image size mappings
+_NO_TEXT_GUARD = (
+    "\n\nCRITICAL: NO text, letters, numbers, words, labels, captions, watermarks, "
+    "logos, or typography of ANY kind rendered in image. Pure scene only."
+)
+
 _PLATFORM_IMAGE_CONFIG = {
     "linkedin": {
         "size": IMAGE_LINKEDIN_SIZE,
         "guards": (
-            "\n\nNo text or watermarks in image. "
-            "Wide 16:9 landscape composition. "
+            "\n\nWide 16:9 landscape composition. "
             "Professional architectural photography."
+            + _NO_TEXT_GUARD
         ),
         "label": "LinkedIn hero",
     },
     "twitter": {
         "size": IMAGE_TWITTER_SIZE,
         "guards": (
-            "\n\nNo text in image. "
-            "High contrast for dark mode. "
+            "\n\nHigh contrast for dark mode. "
             "Center-heavy composition. "
             "16:9 landscape. Professional architectural photography."
+            + _NO_TEXT_GUARD
         ),
         "label": "Twitter card",
     },
@@ -603,35 +617,42 @@ def run_image_generation(generated: dict, output_dir: Path) -> dict:
         print("      [image_gen] No carousel image briefs found, skipping carousel images")
 
     # ── LinkedIn Hero Image ──────────────────────────────────────────────
-    linkedin_brief = parse_linkedin_brief(
-        generated.get("linkedin_image_brief", "")
-    )
-
-    if linkedin_brief:
-        linkedin_path = generate_single_image(
-            linkedin_brief, output_dir / "linkedin_image.jpg", platform="linkedin"
-        )
-        if linkedin_path:
-            result["linkedin"] = [linkedin_path]
-        else:
-            result["errors"].append("LinkedIn hero image generation failed")
+    # In template mode, LinkedIn/Twitter images are sourced from carousel slides
+    # via build_platform_image_paths() in template_engine.py. Standalone generation
+    # is skipped to avoid free-form drift and text-rendering failures.
+    if IMAGE_TEMPLATE_ENABLED:
+        print("      [image_gen] Template mode — LinkedIn image sourced from carousel slides (skipping standalone)")
     else:
-        print("      [image_gen] No LinkedIn image brief found, skipping LinkedIn image")
+        linkedin_brief = parse_linkedin_brief(
+            generated.get("linkedin_image_brief", "")
+        )
+        if linkedin_brief:
+            linkedin_path = generate_single_image(
+                linkedin_brief, output_dir / "linkedin_image.jpg", platform="linkedin"
+            )
+            if linkedin_path:
+                result["linkedin"] = [linkedin_path]
+            else:
+                result["errors"].append("LinkedIn hero image generation failed")
+        else:
+            print("      [image_gen] No LinkedIn image brief found, skipping LinkedIn image")
 
     # ── Twitter Card Image ───────────────────────────────────────────────
-    twitter_brief = parse_twitter_brief(
-        generated.get("twitter_image_brief", "")
-    )
-
-    if twitter_brief:
-        twitter_path = generate_single_image(
-            twitter_brief, output_dir / "twitter_image.jpg", platform="twitter"
-        )
-        if twitter_path:
-            result["twitter"] = [twitter_path]
-        else:
-            result["errors"].append("Twitter card image generation failed")
+    if IMAGE_TEMPLATE_ENABLED:
+        print("      [image_gen] Template mode — Twitter image sourced from carousel slides (skipping standalone)")
     else:
-        print("      [image_gen] No Twitter image brief found, skipping Twitter image")
+        twitter_brief = parse_twitter_brief(
+            generated.get("twitter_image_brief", "")
+        )
+        if twitter_brief:
+            twitter_path = generate_single_image(
+                twitter_brief, output_dir / "twitter_image.jpg", platform="twitter"
+            )
+            if twitter_path:
+                result["twitter"] = [twitter_path]
+            else:
+                result["errors"].append("Twitter card image generation failed")
+        else:
+            print("      [image_gen] No Twitter image brief found, skipping Twitter image")
 
     return result

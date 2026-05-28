@@ -1,6 +1,72 @@
 {
   "version": 1,
   "skills": {
+    "growthub-auth": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-auth/SKILL.md",
+      "computedHash": "5feb5e4ecfb3111f47bbe1304f3d4f13423f8e278a8a36d0479ed7dad6df571e"
+    },
+    "growthub-cms-sdk-v1": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-cms-sdk-v1/SKILL.md",
+      "computedHash": "221d7ab2a5a9d705586bd089741a046bcabb463ad3fdefd8d31b65b0c9809356"
+    },
+    "growthub-creative-video-pipeline": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-creative-video-pipeline/SKILL.md",
+      "computedHash": "e4a435eb974a7962cc5bd0d00616ba54c9ab26f8b3039ca2668cfcfda80f9f34"
+    },
+    "growthub-discover": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-discover/SKILL.md",
+      "computedHash": "34027f5211b25bfb866d0ddae38f5ef059987363f1a8ecad28da8a3c81e936a1"
+    },
+    "growthub-kit-fork-authority": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-kit-fork-authority/SKILL.md",
+      "computedHash": "040c395bb673d49e28bfda231aa9f06287da7cab1327c7106e457d7bcf0d5694"
+    },
+    "growthub-marketing-operator": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-marketing-operator/SKILL.md",
+      "computedHash": "41d16ecb9caf28fab5159c07be64ee0df36c937923fbae455747a48a2052b999"
+    },
+    "growthub-pipeline-execute": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-pipeline-execute/SKILL.md",
+      "computedHash": "af8ad6caeb0d0fe36acf5cee88fa544e7679a66e39272fffcc467e2b8fe9dcc9"
+    },
+    "growthub-t3code-harness": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-t3code-harness/SKILL.md",
+      "computedHash": "369481706376fad4f810785e432851379a3b9fcbe126ee4ce38d008d84985007"
+    },
+    "growthub-video-generation": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-video-generation/SKILL.md",
+      "computedHash": "4b90c0d80670173850e1b9b6bc1a618da2554e258c0e64fbfbee655ac704cf74"
+    },
+    "growthub-worker-kits": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-worker-kits/SKILL.md",
+      "computedHash": "a63ad39aae1b1589898f871cacf817814fd2a01c0b45006d44bb4ef1d6a25ba7"
+    },
+    "growthub-workspace-helper": {
+      "source": "Growthub-ai/growthub-local",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/growthub-workspace-helper/SKILL.md",
+      "computedHash": "d76a9d680dcf9d76c2450e4534958679d11cdbbf058c22cc8638d48cfd4a2982"
+    },
     "responsive-web-design": {
       "source": "aj-geddes/useful-ai-prompts",
       "sourceType": "github",

@@ -8,7 +8,7 @@ Routes to Claude (Anthropic) or OpenRouter based on config.py MODEL_ROUTING.
 import anthropic
 from openai import OpenAI
 from config import ANTHROPIC_API_KEY, OPENROUTER_API_KEY, MODEL_ROUTING
-from utils.costs import add_cost_entry
+from utils.costs import add_cost_entry, calculate_cost
 
 
 def _get_anthropic_client() -> anthropic.Anthropic:
@@ -83,22 +83,18 @@ def call_model(
             ]
 
         response = _anthropic_client.messages.create(**kwargs)
-        # Attempt to capture any usage/cost information the client returns
+        # Extract token counts from the Usage object (not a dict — use getattr)
         try:
-            # response may be object-like or dict-like
-            usage = getattr(response, "usage", None) or (response.get("usage") if isinstance(response, dict) else None)
-        except Exception:
-            usage = None
-        try:
-            cost = None
-            if isinstance(usage, dict) and "total_cost" in usage:
-                cost = usage.get("total_cost")
+            usage = getattr(response, "usage", None)
+            input_tokens = int(getattr(usage, "input_tokens", 0) or 0)
+            output_tokens = int(getattr(usage, "output_tokens", 0) or 0)
+            cost = calculate_cost(model, input_tokens, output_tokens)
             add_cost_entry({
                 "provider": "anthropic",
                 "model": model,
                 "task": task,
                 "cost": cost,
-                "meta": {"usage": usage} if usage else None,
+                "meta": {"input_tokens": input_tokens, "output_tokens": output_tokens},
             })
         except Exception:
             pass
@@ -120,23 +116,19 @@ def call_model(
             max_tokens=max_tokens,
             messages=messages,
         )
-        # Try to extract usage/cost if available and persist
+        # Extract token counts from the CompletionUsage object (not a dict — use getattr)
         try:
-            usage = None
-            # openrouter/OpenAI-like responses often have 'usage' or similar
-            if hasattr(response, "usage"):
-                usage = getattr(response, "usage")
-            elif isinstance(response, dict) and "usage" in response:
-                usage = response.get("usage")
-            cost = None
-            if isinstance(usage, dict) and "total_cost" in usage:
-                cost = usage.get("total_cost")
+            usage = getattr(response, "usage", None)
+            # OpenAI-compatible: prompt_tokens / completion_tokens
+            input_tokens = int(getattr(usage, "prompt_tokens", 0) or 0)
+            output_tokens = int(getattr(usage, "completion_tokens", 0) or 0)
+            cost = calculate_cost(model, input_tokens, output_tokens)
             add_cost_entry({
                 "provider": "openrouter",
                 "model": model,
                 "task": task,
                 "cost": cost,
-                "meta": {"usage": usage} if usage else None,
+                "meta": {"input_tokens": input_tokens, "output_tokens": output_tokens},
             })
         except Exception:
             pass

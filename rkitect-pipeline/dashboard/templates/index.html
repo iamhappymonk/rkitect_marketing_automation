@@ -16,30 +16,36 @@
           <h1 class="text-2xl font-bold text-white">rkitect.ai</h1>
           <p class="text-gray-500 text-sm">Content Pipeline Dashboard</p>
         </div>
-        <div class="flex flex-wrap items-center gap-3">
-          <span id="today-date" class="text-gray-500 text-sm"></span>
+        <div class="flex items-center gap-3 overflow-x-auto pb-1 min-w-0">
+          <span id="today-date" class="text-gray-500 text-sm flex-shrink-0 whitespace-nowrap"></span>
           <button
             onclick="openCalendarModal()"
-            class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700 flex items-center gap-2"
+            class="flex-shrink-0 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700 flex items-center gap-2 whitespace-nowrap"
           >
             📅 Calendar
           </button>
           <a
             href="/review"
-            class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700"
+            class="flex-shrink-0 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700 whitespace-nowrap"
           >
             Review Queue
+          </a>
+          <a
+            href="/templates"
+            class="flex-shrink-0 px-4 py-2 bg-teal-700 hover:bg-teal-600 text-white text-sm rounded-lg transition border border-teal-600 whitespace-nowrap font-semibold"
+          >
+            🖼 Templates
           </a>
           <button
             onclick="toggleAutoPublish()"
             id="auto-publish-btn"
-            class="px-4 py-2 text-sm rounded-lg transition border border-gray-700"
+            class="flex-shrink-0 px-4 py-2 text-sm rounded-lg transition border border-gray-700 whitespace-nowrap"
           >
             Auto Publish: ...
           </button>
           <button
             onclick="triggerPipeline()"
-            class="px-4 py-2 bg-teal-600 hover:bg-teal-500 text-white text-sm rounded-lg transition"
+            class="flex-shrink-0 px-4 py-2 bg-teal-600 hover:bg-teal-500 text-white text-sm rounded-lg transition whitespace-nowrap"
           >
             ▶ Run Now
           </button>
@@ -172,6 +178,12 @@
           >
             Scheduled in Buffer
           </h2>
+          <button
+            class="px-3 py-1 text-xs bg-gray-800 hover:bg-gray-700 text-white rounded-lg border border-gray-700 mb-3"
+            onclick="loadBufferIdeas()"
+          >
+            Load Buffer ideas
+          </button>
           <div id="buffer-posts" class="space-y-3"></div>
         </section>
 
@@ -629,7 +641,7 @@
         const el = document.getElementById("buffer-posts");
         if (!posts || posts.length === 0) {
           el.innerHTML =
-            '<div class="text-gray-600 text-sm">No scheduled posts found.</div>';
+            '<div class="text-gray-600 text-sm">Click “Load Buffer ideas” to fetch.</div>';
           return;
         }
         el.innerHTML = posts
@@ -643,6 +655,19 @@
         </div>`,
           )
           .join("");
+      }
+
+      async function loadBufferIdeas() {
+        try {
+          const res = await fetch("/api/buffer/ideas", { credentials: 'include' });
+          if (!res.ok) {
+            throw new Error("Failed to load Buffer ideas");
+          }
+          const data = await res.json();
+          renderBufferPosts(data.scheduled || []);
+        } catch (e) {
+          renderBufferPosts([{ error: e.message }]);
+        }
       }
 
       function renderRunLog(logs) {
@@ -762,7 +787,6 @@
       }
 
       load();
-      setInterval(load, 60000);
     </script>
   </body>
 </html>

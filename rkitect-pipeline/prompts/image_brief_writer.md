@@ -228,7 +228,7 @@ Lighting: soft, diffuse, professional architectural photography. No text except 
 For multi-slide carousels, generate a separate JSON brief for each slide:
 
 1. Read the [VISUAL:] notes from carousel_writer.md (they should describe each slide's visual intent)
-2. Generate individual JSON briefs for slides 1–7
+2. Generate individual JSON briefs for every slide present in the input carousel content (do not add or remove slides)
 3. Return as JSON array: `[{ slide 1 brief }, { slide 2 brief }, …]`
 4. Ensure visual consistency across slides (same color palette, typography style, lighting direction)
 
@@ -265,6 +265,62 @@ For multi-slide carousels, generate a separate JSON brief for each slide:
 - Actual image generation (this prompt only writes briefs)
 - Post-production editing (use external tools if needed)
 - Video or animation (static images only)
+
+---
+
+## MERGED VISUAL GENERATION GUIDELINES (rkitect.ai)
+
+These guidelines are merged from the rkitect.ai Visual Generation Skill to ensure every brief meets brand and creative standards. Use when writing the `prompt` field and when deciding `style`, `mood`, and `sektura_visual`.
+
+Brand Positioning:
+- rkitect.ai = AI-native architecture workflow platform. Visuals must feel premium, minimal, architectural, and editorial.
+- Sektura is the internal segmentation engine; use only as a subtle supporting technology and small caption ("Powered by Sektura") when relevant. Never let Sektura visually dominate.
+
+Composition Rules:
+- Preferred: centered composition, split composition, before-vs-after, single strong focal point, floating architectural panels, large negative space.
+- Avoid crowded dashboards, excessive UI, dense paragraphs, random futuristic elements, or glowing cyberpunk aesthetics.
+
+Typography Rules:
+- Bold, oversized, minimal, high-contrast typography. Use short hooks only (5–12 words preferred). Keep on-image text minimal and purposeful.
+
+Color System:
+- Primary palette: warm ivory, sand, clay, concrete beige, muted stone, soft white.
+- Accent colors: muted architectural green, soft olive, subtle neon-lime accents (use sparingly).
+- Avoid saturated blue SaaS gradients, rainbow neon, bright purple, or harsh red.
+
+Rendering Style:
+- Ultra-realistic, cinematic, modern luxury residential. Preferred materials: concrete, oak, travertine, glass, brushed metal. Lighting: soft daylight or dusk, soft shadows, premium materials.
+
+UI Design Rules (if UI appears):
+- Keep UI floating, minimal, translucent (dark glassmorphism), and supportive of the architecture (material selectors, lighting toggle, segmentation overlay). Avoid analytics panels or dense dashboards.
+
+Visual Metaphors That Work:
+- Tangled workflows becoming clean, grayscale turning into color, stacked revisions collapsing into a single clean solution, segmentation overlays, realtime interaction.
+- Avoid robots, humanoid AI, brains, hologram clichés, floating code/binary.
+
+Emotional Goal:
+- The image should evoke relief, speed, clarity, control, and creative freedom. Communicate: "This removes friction from architecture." Not: "This is AI magic."
+
+Recommended Prompt Formula:
+1. Strong headline
+2. Clear visual contrast
+3. Minimal architecture UI
+4. Premium render
+5. Large negative space
+6. Single accent color
+7. Clean hierarchy
+
+Quality Control Checklist (apply before approving any image brief):
+- Is the message understandable in 1 second?
+- Is there enough negative space?
+- Does it feel premium and stop the scroll?
+- Is the architecture the hero?
+- Is on-image text within 5–12 words?
+- Is the green accent restrained and purposeful?
+- Does the brief avoid AI-bro / neon / crypto aesthetics?
+
+Desired Brand Perception:
+- rkitect.ai should read as "The future operating system for architectural creativity." Reject visuals that read "Another AI tool."
 
 ---
 

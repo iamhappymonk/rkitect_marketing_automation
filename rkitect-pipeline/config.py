@@ -56,12 +56,45 @@ MODEL_ROUTING = {
     # Image brief — generates image prompts from content. (Testing: GPT-4o-mini)
     "image_brief":   {"provider": "openrouter", "model": "openai/gpt-4o-mini"},
 
+    # Template renderer — fills {slots} in image templates. (Testing: GPT-4o-mini)
+    "template_renderer": {"provider": "openrouter", "model": "openai/gpt-4o-mini"},
+
+    # Video prompt writer — generates model-specific text prompts for AI video tools.
+    "video_prompt_writer": {"provider": "openrouter", "model": "openai/gpt-4o-mini"},
+
+    # AI video generation — text-to-video via Veo. (Testing: veo-3.1-lite)
+    "video_generation": {"provider": "openrouter", "model": "google/veo-3.1-lite"},
+
     # ── PRODUCTION MODE (uncomment and swap when ready) ──────────────────
     # "linkedin":    {"provider": "claude",     "model": "claude-sonnet-4-20250514"},
     # "qa":          {"provider": "claude",     "model": "claude-sonnet-4-20250514"},
     # "self_improve":{"provider": "claude",     "model": "claude-sonnet-4-20250514"},
     # "carousel":    {"provider": "openrouter", "model": "openai/gpt-4o"},
     # "image_brief": {"provider": "openrouter", "model": "openai/gpt-4o"},
+}
+
+# ── Model Pricing (USD per 1M tokens) ───────────────────────────────────────
+# Used by utils/costs.py::calculate_cost() to convert token usage → dollar cost.
+# Add new models here when MODEL_ROUTING is updated.
+MODEL_PRICING: dict = {
+    # Anthropic direct
+    "claude-sonnet-4-20250514":             {"input": 3.00,  "output": 15.00},
+    "claude-haiku-4-5-20251001":            {"input": 0.80,  "output":  4.00},
+    "claude-opus-4-7":                      {"input": 15.00, "output": 75.00},
+    # OpenRouter — OpenAI
+    "openai/gpt-4o-mini":                   {"input": 0.15,  "output":  0.60},
+    "openai/gpt-4o":                        {"input": 2.50,  "output": 10.00},
+    # OpenRouter — Mistral
+    "mistralai/mistral-7b-instruct-v0.1":   {"input": 0.055, "output":  0.055},
+    # OpenRouter — Google
+    "google/gemini-flash-1.5":              {"input": 0.075, "output":  0.30},
+    # OpenRouter — Meta
+    "meta-llama/llama-3.1-8b-instruct":     {"input": 0.055, "output":  0.055},
+    # OpenRouter — Claude via OpenRouter
+    "anthropic/claude-sonnet-4-5":          {"input": 3.00,  "output": 15.00},
+    # Image/video models — no per-token pricing (billed per image/second)
+    "black-forest-labs/flux.2-klein-4b":    {"input": 0.0,   "output":  0.0},
+    "google/veo-3.1-lite":                  {"input": 0.0,   "output":  0.0},
 }
 
 # ── Content Formats ──────────────────────────────────────────────────────────
@@ -100,7 +133,7 @@ QA_PASS_THRESHOLD = 80
 QA_MAX_RETRIES = 3
 
 # ── Self-Improvement ─────────────────────────────────────────────────────────
-SELF_IMPROVE_EVERY_N_RUNS = 7     # Rewrite underperforming prompts every 7 runs
+SELF_IMPROVE_EVERY_N_RUNS = 2   # Rewrite underperforming prompts every 7 runs
 SELF_IMPROVE_THRESHOLD = 75       # Rewrite prompt if average score is below this
 
 # ── Paths (relative from rkitect-pipeline/ root) ─────────────────────────────
@@ -124,11 +157,14 @@ DASHBOARD_PORT = int(os.getenv("DASHBOARD_PORT", 5050))
 DASHBOARD_SECRET_KEY = os.getenv("DASHBOARD_SECRET_KEY", "dev-secret")
 DASHBOARD_USERNAME = os.getenv("DASHBOARD_USERNAME", "admin")
 DASHBOARD_PASSWORD = os.getenv("DASHBOARD_PASSWORD", "changeme")
+PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "")
 
 # ── Image Generation ─────────────────────────────────────────────────────────
 IMAGE_GENERATION_ENABLED = os.getenv("IMAGE_GENERATION_ENABLED", "true").lower() == "true"
+IMAGE_TEMPLATE_ENABLED = os.getenv("IMAGE_TEMPLATE_ENABLED", "true").lower() == "true"
+IMAGE_TEMPLATES_DIR = BASE_DIR / "image_templates"
 IMAGE_T2I_MODEL = "black-forest-labs/flux.2-klein-4b"      # text-to-image (slide 1, LinkedIn)
-IMAGE_I2I_MODEL = "black-forest-labs/flux-kontext-pro"      # img2img (slides 2-N)
+IMAGE_I2I_MODEL = ""    # img2img disabled — model unavailable on OpenRouter; t2i used for all slides
 IMAGE_CAROUSEL_SIZE = "1080x1350"                           # Instagram portrait
 IMAGE_LINKEDIN_SIZE = "1200x627"                            # LinkedIn hero
 IMAGE_TWITTER_SIZE = "1600x900"                              # Twitter card (16:9)

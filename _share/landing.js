@@ -246,7 +246,7 @@ const prefersReduced = window.matchMedia(
 
   // Replace this with your Google Apps Script Web App URL or n8n/Zapier Webhook URL
   const WEBHOOK_URL =
-    "https://script.google.com/macros/s/AKfycbyhn_nrc1Bb2rjiS5VXICGKlp6WLByQL2KjhrvHwtWdNQ9BEspfusHxpt6Y0zW3dT5b/exec";
+    "https://script.google.com/macros/s/AKfycbxSxd2TIpOAkB5ZwZCVXLNEopDAtTyrzP5F6xbpiUzXciv-D9g-XdnPiB-bX7wI6EqA/exec";
 
   // Dynamic Validation UI Helpers
   const showError = (input, message) => {
@@ -425,7 +425,11 @@ const prefersReduced = window.matchMedia(
       e: "Comprehending",
       v: "Reading your brief â€” residential, 2BHK, Japandi",
     },
-    { t: "0:02", e: "Materials Specialist", v: "Drafting palette + finish direction" },
+    {
+      t: "0:02",
+      e: "Materials Specialist",
+      v: "Drafting palette + finish direction",
+    },
     {
       t: "0:04",
       e: "Palette proposed",

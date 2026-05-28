@@ -17,6 +17,152 @@
       "score": 92,
       "passed": true,
       "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 87,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 72,
+      "passed": false,
+      "violations": [
+        "Hedging: 'This is not just a dream. It's the reality we aim to redefine' \u2014 state the impact as fact, not a possibility.",
+        "Weak brand moat: Missing explicit competitive claims like 'confirmed unmatched' or the specific phrase 'agentic segmentation'.",
+        "No category mention: Fails to refer to 'Agentic Spatial Intelligence' directly in the main text.",
+        "Weak CTA: 'experience the speed and control that rkitect.ai brings' is vague; needs a stronger, more direct invitation."
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "score": 82,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 90,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 62,
+      "passed": false,
+      "violations": [
+        "Hedging: 'shouldn\u2019t mean sacrificing efficiency or control' \u2014 state as fact, not opinion",
+        "Forbidden term: 'revolutionize' \u2014 use a more grounded term like 'enhance' or 'improve'",
+        "Weak category reference: 'Agentic Spatial Intelligence' is mentioned but not built upon; frame it more impactfully",
+        "Missing competitive claim: No mention of 'confirmed unmatched' regarding Sektura's capabilities",
+        "Generic closing: 'Follow us for more insights' lacks conviction; should end with a stronger statement about building the future of architecture"
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 82,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 80,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 76,
+      "passed": false,
+      "violations": [
+        "Hedging: 'It's time for a shift' is vague; state a specific fact about the need for change.",
+        "Corporate tone: 'we're leading the charge in redefining design workflows' lacks specificity; needs to clearly explain what differentiates rkitect.ai.",
+        "Weak CTA: 'Experience the revolution\u2014try it free today' is generic; end with a stronger conviction about the product and its impact."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 77,
+      "passed": false,
+      "violations": [
+        "Hedging: 'Imagine transforming a single design concept' \u2014 state as fact, not an invitation to imagine.",
+        "Forbidden term: 'dynamic tool' is not specific; avoid vague descriptors and elaborate on functionality.",
+        "No brand moat: Missing 'confirmed unmatched' or competitive claim; needs a stronger competitive assertion.",
+        "Weak CTA: 'Experience the future of architectural visualization' is generic; needs a more direct conviction statement."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-27",
+      "score": 90,
+      "passed": true,
+      "violations": []
     }
   ],
   "reddit": [
@@ -37,6 +183,134 @@
       "score": 82,
       "passed": true,
       "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 75,
+      "passed": false,
+      "violations": [
+        "Promotional tone: 'I'm curious to hear how others handle these situations.' \u2014 avoid direct engagement prompts; instead, offer value first.",
+        "No mention of rkitect.ai: To align with brand guidelines, consider mentioning how rkitect.ai could support managing client expectations."
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 75,
+      "passed": false,
+      "violations": [
+        "Promotional tone: The text doesn't specifically mention rkitect.ai but implies a tool can help manage workflows; should be more value-first without suggesting product benefits.",
+        "Lacks specific mention of rkitect.ai in a soft manner; should integrate the platform context as part of the discussion.",
+        "Generic language: Phrases like 'streamline our workflow' and 'efficient tools' are vague; should reference specific architect challenges or terms.",
+        "Not entirely respectful of subreddit rules: Needs to acknowledge that the audience is already knowledgeable about the topic."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 67,
+      "passed": false,
+      "violations": [
+        "Promotional tone: 'tools like rkitect.ai helped us bridge that gap effectively' is too promotional; mention rkitect.ai softly or in comments",
+        "Value-first: The post lacks direct educational value; it should focus more on insights or lessons learned rather than showcasing the product directly",
+        "Hedging: 'only for it to fall flat in conveying the vision' gives a vague implication; make this assertive",
+        "No brand moat: Missing competitive claim or 'Agentic Spatial Intelligence' reference"
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 68,
+      "passed": false,
+      "violations": [
+        "Promotional tone: 'such as rkitect.ai, which has allowed us to explore designs quickly' is too direct; mention rkitect.ai softly or in a comment instead."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 82,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 80,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 74,
+      "passed": false,
+      "violations": [
+        "Promotional tone: 'I've been experimenting with some AI tools like rkitect.ai' suggests direct promotion; mention rkitect.ai more softly or in a comment instead.",
+        "Weak CTA: 'What are your thoughts?' is generic; replace with a more engaging invite for specific insights."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 68,
+      "passed": false,
+      "violations": [
+        "Promotional tone: 'I\u2019ve heard of tools that can help with quick changes post-rendering' \u2014 this is too promotional for a Reddit context; focus on sharing knowledge and asking for advice.",
+        "No value-first angle: The post could better resonate with the community by sharing more about specific challenges faced and seeking advice rather than mentioning tools.",
+        "No mention of rkitect.ai or agentic segmentation: If appropriate, mention your experiences or tie in how software like rkitect.ai could fit into the workflow."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 80,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 62,
+      "passed": false,
+      "violations": [
+        "Promotional tone: 'Our latest project utilized a tool that helped us iterate faster' \u2014 this seems like a promotional statement for rkitect.ai; soften or remove to abide by value-first approach",
+        "Missing mention of rkitect.ai: The content does not softly mention rkitect.ai as part of the conversation about design; need to include the platform organically",
+        "No clear value-first approach: The post focuses on personal experience and insights without providing substantial value or knowledge to the community; it should share insights or lessons learned that others can apply"
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 86,
+      "passed": true,
+      "violations": []
     }
   ],
   "carousel": [
@@ -54,6 +328,161 @@
     },
     {
       "date": "2026-05-18",
+      "score": 92,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 78,
+      "passed": false,
+      "violations": [
+        "Brand moat missing: No mention of 'confirmed unmatched' segmentation or category thesis like 'Agentic Spatial Intelligence'",
+        "Hedging: 'could mean losing potential contracts' \u2014 state as fact, not possibility",
+        "Weak CTA: 'Try rkitect.ai free today and accelerate your design process!' is generic; needs more conviction or a stronger call to action",
+        "Missing [VISUAL:] brief: Each slide must include visual direction."
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 92,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": [],
+      "image_human_feedback": "make sure the 3d image is made using the exact same 2d floor plan",
+      "image_feedback_at": "2026-05-25T11:06:10Z"
+    },
+    {
+      "date": "2026-05-25",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": false,
+      "violations": [
+        "Missing [VISUAL:] brief on slide 1.",
+        "Caption contains a minor issue: 'Try rkitect.ai for free today! \u2192 [link in bio]' is not specific enough as a CTA; needs to offer conviction.",
+        "Slide 7 copy includes generic call to action: 'Try rkitect.ai for free today.' should state as a fact related to the impact or benefit of the platform."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 62,
+      "passed": false,
+      "violations": [
+        "Weak cover slide: 'Elevate Your Spaces with Unique Styles.' does not capture immediate interest or convey urgency.",
+        "Lacks a strong category-building statement: No mention of 'Agentic Spatial Intelligence' or referencing the core capabilities of rkitect.ai.",
+        "No direct mention of rkitect.ai in slides 1-6; should integrate product benefits clearly in context.",
+        "Slide 5 uses vague terminology: 'Transform Your Workflow with Instant Iteration.' should specify rkitect.ai's unique capability instead of a general claim.",
+        "Slide 6 doesn't state category clearly: 'Agentic Spatial Intelligence Sets You Free.'\u2014needs to be context-rich with a descriptor on how it applies to architects and designers.",
+        "The CTA on slide 7 is not compelling: 'Try it free today.' Should invoke more urgency or be more assertive.",
+        "Caption does not reinforce 'Agentic Spatial Intelligence' with clear messaging on how it specifically enhances the design process."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 72,
+      "passed": false,
+      "violations": [
+        "Missing [VISUAL:] brief on every single slide; include this on each slide description.",
+        "Slide 7: lacks a clear CTA; consider rephrasing to encourage action, e.g., 'Start your design journey with rkitect.ai today.'",
+        "Slide 1: weak hook; consider starting with a more provocative statement that speaks directly to the audience's pain or desire.",
+        "The overall caption is promotional and does not respect platform rules; it needs to emphasize value first without pushing a hard sell."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 65,
+      "passed": false,
+      "violations": [
+        "Weak cover: 'Every style change shouldn\u2019t mean starting over!' is not a bold enough hook to stop the scroll; consider making it more impactful.",
+        "Forbidden term: 'Try free now' is a hard CTA; soften this to align with brand tone.",
+        "Missing visual brief: No [VISUAL:] present for any slide; this is non-negotiable.",
+        "Lacks category mention: No reference to 'Agentic Spatial Intelligence' or Sektura as a defining feature in the copy."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 87,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-27",
       "score": 92,
       "passed": true,
       "violations": []
@@ -86,6 +515,188 @@
     {
       "date": "2026-05-18",
       "score": 81,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 55,
+      "passed": false,
+      "violations": [
+        "Forbidden term: 'revolutionize' used in Tweet 7; replace with 'transform' or a similar non-hyperbolic term.",
+        "Prohibited phrasing: 'revolutionary design process'; use a factual statement instead.",
+        "Competitive advantage not clear: 'Save 40% of your revision time' lacks verification; should not be included without specific proof.",
+        "Hedging: 'Experience the power of agentic segmentation' implies uncertainty; state capabilities as confirmed facts."
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "score": 80,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-22",
+      "score": 70,
+      "passed": false,
+      "violations": [
+        "Hedging language: 'lets you iterate 40% quicker' \u2014 this should be stated as a confirmed fact.",
+        "Forbidden term: 'Try it free:' is a hard CTA; needs to be softened or framed better.",
+        "No category thesis present: Missing reference to 'Agentic Spatial Intelligence' or equivalent."
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "score": 88,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 85,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-23",
+      "score": 70,
+      "passed": false,
+      "violations": [
+        "Hedging: 'Join the shift to agentic workflows and save up to 40% of your revision time.' The phrase 'save up to 40%' implies uncertainty; state as a fact.",
+        "Corporate tone: 'Empowering architects to finish designs faster and smarter' is vague and generic; use specific pain points or outcomes.",
+        "No category reference: The term 'Agentic Spatial Intelligence' is present but lacks a strong market thesis or competitive advantage explicitly stated."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 65,
+      "passed": false,
+      "violations": [
+        "Forbidden term: 'AI' used in context of 'AI' is vague and doesn't align with category description; use 'agentic spatial intelligence' instead.",
+        "Generic wording: 'cutting your revision time in half' is unverified and hedging; state capabilities as confirmed facts instead.",
+        "Weak CTA: 'Join the shift to agentic workflows' is generic; needs more conviction or clear next steps."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 0,
+      "passed": false,
+      "violations": [
+        "Formatting error: The content provided is not a valid draft but an error message."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 56,
+      "passed": false,
+      "violations": [
+        "Weak hooks: 'Spot the difference' and 'Transformative change' do not evoke strong curiosity or pain points; use bolder statements.",
+        "Uses hedging language: 'experience Agentic Spatial Intelligence' needs to be more assertive; say 'Experience the proven benefits of Agentic Spatial Intelligence.'",
+        "Forbidden term: 'game-changer' in psychological hook; avoid buzzwords and state facts.",
+        "CTA needs conviction: 'Join the future of architectural design with rkitect.ai' is vague; it should assert an ambition or clear benefit.",
+        "No direct statement of rkitect.ai\u2019s unique capabilities in captions; they should reinforce the confirmed unmatched aspect of the platform."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 82,
+      "passed": true,
+      "violations": []
+    },
+    {
+      "date": "2026-05-25",
+      "score": 72,
+      "passed": false,
+      "violations": [
+        "Weak hook: 'Endless revisions are dead.' is not bold enough for tweet 1; needs stronger impact.",
+        "Forbidden term: Uses 'unmatched' without defining the context; needs specific competitive advantage.",
+        "Hashtags in tweet body: '#AgenticAI #InteriorDesign #DesignRevolution' should only appear in tweet 7."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 62,
+      "passed": false,
+      "violations": [
+        "Hedging: 'Save up to 40%' is vague; state the claim as a fact if verified.",
+        "Forbidden term: 're-rendering hassles' includes 'hassles', which is negative language not in line with brand voice.",
+        "Lacks category reference: No mention of 'Agentic Spatial Intelligence' in the tweet.",
+        "Weak hook: The opening lacks a strong curiosity or bold claim to engage readers immediately.",
+        "Missing CTA: The tweet does not contain a clear point of view or conviction at the end and only has a link instead."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 54,
+      "passed": false,
+      "violations": [
+        "Weak hook: 'Struggling to find the perfect room style for your project?' is not strong enough; make it more provocative.",
+        "Hedging: 'rkitect.ai solves this pain by offering' should state as fact \u2014 remove 'solves this pain by' and directly state the benefit.",
+        "Forbidden term: 'Try it now' is a soft CTA but lacks conviction; rephrase for a stronger close.",
+        "Missing category reference: No mention of 'Agentic Spatial Intelligence' which is required for brand compliance."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 50,
+      "passed": false,
+      "violations": [
+        "Missing strong hook: 'Are slow design iterations holding you back...' instead of a bold statement.",
+        "Constraint violation: 'Save up to 40% on revisions' specifies a product feature; instead, focus on the disruption agentic segmentation brings.",
+        "Weak future statement: 'Discover the future of design...' should be more powerful.",
+        "No direct link inclusion: '[link]' should be rephrased; avoid presenters and focus on implications."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 32,
+      "passed": false,
+      "violations": [
+        "Forbidden term: 'AI-powered' used in second tweet; should use 'agentic segmentation' or 'spatial intelligence platform' instead.",
+        "Hedging in the first tweet: 'stunning' is vague; rephrase to emphasize specificity.",
+        "Corporate tone: 'Transform your 2D floorplans into stunning 3D interiors' is too feature-oriented; needs to articulate the category and control it offers.",
+        "No mention of Agentic Spatial Intelligence in any tweet; essential for category-building.",
+        "Weak CTA in all tweets: direct action like 'Try free' or a clear invitation is needed instead of '[link]'."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 0,
+      "passed": false,
+      "violations": [
+        "QA model error: Connection error."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 30,
+      "passed": false,
+      "violations": [
+        "Forbidden term: 'Transform your interior design projects with rkitect.ai.' - must avoid 'transform'; use direct positioning.",
+        "Hedging language: 'without the need for re-rendering' in multiple tweets - state capabilities as confirmed facts.",
+        "Generic hashtags: '#DesignRevolution', '#InteriorDesignHacks', '#DesignInnovation', '#DesignEfficiency', '#DesignProductivity' - avoid vague terms, focus on specific benefits.",
+        "No category mention: Missing 'Agentic Spatial Intelligence' reference which is essential for positioning.",
+        "Weak CTAs: All tweets contain generic encouragements - must close with a strong conviction statement or invite, not just hashtags."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "score": 53,
+      "passed": false,
+      "violations": [
+        "Hedging language: 'No more back-and-forth.' is vague; state as fact.",
+        "Hedging language: 'No need for time-consuming re-renders.' is vague; state as fact.",
+        "Hedging language: 'No more guesswork.' is vague; state as fact.",
+        "Hedging language: 'No more miscommunications.' is vague; state as fact.",
+        "Hedging language: 'No more design bottlenecks.' is vague; state as fact.",
+        "Weak and generic claims: 'boost your design productivity by 40%' needs more specificity and verification.",
+        "Missing category mention: Should include a reference to 'Agentic Spatial Intelligence' in every tweet.",
+        "Missing strong standalone hook in Tweet 1; needs to grab attention more effectively."
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "score": 80,
       "passed": true,
       "violations": []
     }

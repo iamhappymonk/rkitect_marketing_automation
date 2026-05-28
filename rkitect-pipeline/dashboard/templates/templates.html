@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rkitect.ai · Template Launcher</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 font-mono min-h-screen p-6">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
+      <div>
+        <h1 class="text-2xl font-bold text-white">Template Launcher</h1>
+        <p class="text-gray-500 text-sm">Pick a template → pipeline runs → posts appear in Review Queue</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="/review"
+          class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700">
+          Review Queue
+        </a>
+        <a href="/"
+          class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded-lg transition border border-gray-700">
+          Dashboard
+        </a>
+      </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="hidden fixed top-6 right-6 z-50 max-w-sm px-5 py-4 rounded-xl border text-sm font-mono shadow-xl"></div>
+
+    <!-- Loading state -->
+    <div id="loading" class="text-center py-20 text-gray-600">Loading templates...</div>
+
+    <!-- Template grid -->
+    <div id="grid" class="hidden grid gap-5 md:grid-cols-2"></div>
+
+    <!-- Empty state -->
+    <div id="empty" class="hidden bg-gray-900 rounded-xl p-8 border border-gray-800 text-gray-500 text-sm">
+      No templates found in <code class="text-gray-400">image_templates/</code>.
+    </div>
+
+  </div>
+
+  <script>
+    let runningId = null;
+
+    const platformColors = {
+      instagram: 'bg-pink-500/15 text-pink-300 border-pink-500/30',
+      linkedin:  'bg-blue-500/15 text-blue-300 border-blue-500/30',
+      twitter:   'bg-sky-500/15 text-sky-300 border-sky-500/30',
+    };
+    const pillarColor = 'bg-gray-700/60 text-gray-300 border-gray-600';
+
+    function pill(label, cls) {
+      return `<span class="text-xs px-2 py-0.5 rounded-full border ${cls}">${escapeHtml(label)}</span>`;
+    }
+
+    function transitionLabel(t) {
+      const map = { wipe: '↔ wipe', fade: '◌ fade', zoom: '⊕ zoom', pan: '→ pan' };
+      return map[t] || t || '';
+    }
+
+    function renderCard(t) {
+      const platformPills = (t.compatible_platforms || [])
+        .map(p => pill(p, platformColors[p] || pillarColor)).join(' ');
+      const pillarPills = (t.compatible_pillars || [])
+        .map(p => pill(p, pillarColor)).join(' ');
+
+      return `
+        <div class="bg-gray-900 rounded-xl border border-gray-800 p-5 flex flex-col gap-4 hover:border-gray-700 transition">
+
+          <!-- Name + slide count -->
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex-1 min-w-0">
+              <h2 class="text-base font-semibold text-white leading-snug">${escapeHtml(t.name || t.id)}</h2>
+              <p class="text-xs text-gray-500 mt-0.5">${escapeHtml(t.id)}</p>
+            </div>
+            <div class="flex-shrink-0 text-right">
+              <span class="text-2xl font-bold text-white">${t.slide_count}</span>
+              <p class="text-xs text-gray-500">slides</p>
+            </div>
+          </div>
+
+          <!-- Platform + pillar pills -->
+          <div class="flex flex-wrap gap-1.5">
+            ${platformPills}
+            ${pillarPills}
+          </div>
+
+          <!-- Specs -->
+          <div class="flex flex-wrap gap-4 text-xs text-gray-500">
+            ${t.image_size ? `<span>${escapeHtml(t.image_size)}</span>` : ''}
+            ${t.video_transition ? `<span>${transitionLabel(t.video_transition)}</span>` : ''}
+            ${t.video_duration_hint ? `<span>~${t.video_duration_hint}s video</span>` : ''}
+          </div>
+
+          <!-- Start button -->
+          <button
+            id="btn-${escapeHtml(t.id)}"
+            onclick="runTemplate('${escapeHtml(t.id)}', '${escapeHtml((t.name || t.id).replace(/'/g, "\\'"))}')"
+            class="mt-auto w-full py-2.5 rounded-lg text-sm font-semibold
+                   bg-teal-600 hover:bg-teal-500 text-white transition
+                   disabled:opacity-40 disabled:cursor-not-allowed">
+            Start Pipeline →
+          </button>
+
+          <!-- Per-card status line -->
+          <p id="status-${escapeHtml(t.id)}"
+             class="hidden text-xs text-center -mt-2 pb-0.5 text-gray-400"></p>
+        </div>`;
+    }
+
+    async function load() {
+      try {
+        const res = await fetch('/api/templates', { credentials: 'include' });
+        const data = await res.json();
+        document.getElementById('loading').classList.add('hidden');
+
+        if (!data.templates || !data.templates.length) {
+          document.getElementById('empty').classList.remove('hidden');
+          return;
+        }
+
+        const grid = document.getElementById('grid');
+        grid.classList.remove('hidden');
+        grid.innerHTML = data.templates.map(renderCard).join('');
+      } catch (e) {
+        document.getElementById('loading').textContent = 'Error: ' + e.message;
+      }
+    }
+
+    async function runTemplate(templateId, templateName) {
+      if (runningId) {
+        showToast(`"${runningId}" is already running. Wait for it to finish.`, 'warn');
+        return;
+      }
+
+      const btn = document.getElementById(`btn-${templateId}`);
+      const statusEl = document.getElementById(`status-${templateId}`);
+      if (!btn) return;
+
+      runningId = templateId;
+      btn.disabled = true;
+      btn.innerHTML = '<span style="display:inline-block;animation:spin 1s linear infinite">⟳</span>&nbsp; Starting…';
+      statusEl.classList.remove('hidden');
+      statusEl.textContent = 'Sending to pipeline…';
+
+      try {
+        const res = await fetch('/api/run-template', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({ template_id: templateId }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+
+        btn.innerHTML = '✓ Running';
+        btn.classList.remove('bg-teal-600', 'hover:bg-teal-500');
+        btn.classList.add('bg-teal-800');
+        statusEl.textContent = 'Posts will appear in Review Queue in 2–4 min';
+        statusEl.classList.replace('text-gray-400', 'text-teal-400');
+
+        showToast(`"${templateName}" started — check Review Queue in 2–4 min`, 'ok');
+
+        // Re-enable after 5 min
+        setTimeout(() => {
+          runningId = null;
+          btn.disabled = false;
+          btn.innerHTML = 'Start Pipeline →';
+          btn.classList.add('bg-teal-600', 'hover:bg-teal-500');
+          btn.classList.remove('bg-teal-800');
+          statusEl.classList.add('hidden');
+          statusEl.classList.replace('text-teal-400', 'text-gray-400');
+        }, 5 * 60 * 1000);
+
+      } catch (e) {
+        runningId = null;
+        btn.disabled = false;
+        btn.innerHTML = 'Start Pipeline →';
+        statusEl.textContent = 'Error: ' + e.message;
+        statusEl.classList.replace('text-gray-400', 'text-red-400');
+        showToast('Failed: ' + e.message, 'error');
+        setTimeout(() => {
+          statusEl.classList.add('hidden');
+          statusEl.classList.replace('text-red-400', 'text-gray-400');
+        }, 8000);
+      }
+    }
+
+    function showToast(msg, type) {
+      const styles = {
+        ok:    'bg-teal-900 border-teal-500 text-teal-100',
+        warn:  'bg-yellow-900 border-yellow-500 text-yellow-100',
+        error: 'bg-red-900 border-red-500 text-red-100',
+      };
+      const el = document.getElementById('toast');
+      el.className = `fixed top-6 right-6 z-50 max-w-sm px-5 py-4 rounded-xl border text-sm font-mono shadow-xl ${styles[type] || styles.ok}`;
+      el.textContent = msg;
+      el.classList.remove('hidden');
+      setTimeout(() => el.classList.add('hidden'), 6000);
+    }
+
+    function escapeHtml(str) {
+      if (str == null) return '';
+      const d = document.createElement('div');
+      d.textContent = String(str);
+      return d.innerHTML;
+    }
+
+    load();
+  </script>
+
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</body>
+</html>

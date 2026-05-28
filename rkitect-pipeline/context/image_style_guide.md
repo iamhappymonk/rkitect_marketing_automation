@@ -51,3 +51,41 @@ The signature visual: a flat architectural render that gradually "lights up" as 
 - Dark blurred stock photography
 - Unsupported quality claim graphics
 - Device frames (laptops, phones) unless specifically requested
+
+## Composition Rules
+
+- Preferred: centered composition, split composition, before-vs-after, single strong focal point, floating architectural panels, and large negative space.
+- Avoid: crowded dashboards, too many labels, excessive UI, dense paragraphs, glowing cyberpunk, and random futuristic elements.
+
+## Typography Rules
+
+- Use bold, oversized, minimal, high-contrast typography for on-image hooks. Keep text short (5–12 words preferred). Examples: "STOP WAITING.", "START CREATING." Use Inter, DM Sans, or similar clean sans-serif.
+
+## Color System
+
+- Primary palette: warm ivory, sand, clay, concrete beige, muted stone, soft white.
+- Accent colors: muted architectural green, soft olive, subtle neon-lime (sparingly).
+- Avoid saturated SaaS blues, rainbow neons, bright purples, and harsh reds.
+
+## Rendering Style
+
+- Ultra-realistic cinematic architectural renders are preferred for product imagery: soft shadows, clean geometry, premium materials (concrete, oak, travertine, glass, brushed metal).
+- Lighting: calm daylight or soft dusk depending on mood; avoid hyper-stylized neon lighting.
+
+## Sektura Guidance
+
+- Use Sektura visuals only when the content explicitly focuses on product functionality, segmentation, or editability. Label segments subtly ("Powered by Sektura" caption allowed). Keep Sektura secondary to the rkitect.ai brand.
+
+## Quality Control Checklist
+
+- Is the message understandable in 1 second?
+- Is there sufficient negative space?
+- Does the image feel premium and editorial?
+- Is the architecture the hero of the composition?
+- Is on-image text concise (5–12 words) and legible at mobile sizes?
+- Are accent colors used sparingly and purposefully?
+
+## Example Prompts
+
+- See `prompts/image_brief_writer.md` for practical prompt templates and platform-specific examples.
+

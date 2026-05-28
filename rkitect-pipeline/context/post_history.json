@@ -1,19 +1,39 @@
 {
   "last_7_days": [
     {
-      "date": "2026-05-15",
-      "pillar": "unknown",
-      "topic": "unknown"
+      "date": "2026-05-25",
+      "pillar": "visual",
+      "topic": "Room Style Variants Carousel"
     },
     {
-      "date": "2026-05-17",
-      "pillar": "education_insight",
-      "topic": "unknown"
+      "date": "2026-05-25",
+      "pillar": "visual",
+      "topic": "Room Style Variants Carousel"
     },
     {
-      "date": "2026-05-18",
-      "pillar": "social_proof_transformation",
-      "topic": "unknown"
+      "date": "2026-05-25",
+      "pillar": "visual",
+      "topic": "Floorplan 2D To 3D"
+    },
+    {
+      "date": "2026-05-25",
+      "pillar": "portfolio",
+      "topic": "Living Room Transformation Case Study"
+    },
+    {
+      "date": "2026-05-25",
+      "pillar": "visual",
+      "topic": "Room Style Variants Carousel"
+    },
+    {
+      "date": "2026-05-25",
+      "pillar": "education",
+      "topic": "T1"
+    },
+    {
+      "date": "2026-05-27",
+      "pillar": "visual",
+      "topic": ""
     }
   ]
 }

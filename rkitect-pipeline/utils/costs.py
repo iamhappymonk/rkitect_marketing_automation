@@ -10,7 +10,19 @@ from datetime import datetime, date
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
-from config import COSTS_FILE
+from config import COSTS_FILE, MODEL_PRICING
+
+
+def calculate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
+    """Return USD cost for a model call given token counts.
+
+    Uses MODEL_PRICING from config. Unknown models return 0.0.
+    Formula: (input_tokens * price_in + output_tokens * price_out) / 1_000_000
+    """
+    pricing = MODEL_PRICING.get(model)
+    if not pricing:
+        return 0.0
+    return (input_tokens * pricing["input"] + output_tokens * pricing["output"]) / 1_000_000
 
 
 def _ensure_file():
